@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/image": "^0.7.1",
+    "@nuxtjs/google-fonts": "3.0.0-1",
+    "nuxt": "3.0.0",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "1.0.0-beta.12",
+    "@vueuse/nuxt": "^9.9.0",
+    "gorko": "^0.9.1"
+  }
+}

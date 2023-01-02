@@ -1,0 +1,44 @@
+@import './tokens';
+@import './reset';
+
+// Global CSS starts
+body {
+	line-height: 1.5;
+	overflow-x: hidden;
+	padding-bottom: get-size('600');
+	font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1;
+}
+
+h1 {
+	font-size: var(--size-l-5);
+}
+
+h2 {
+	font-size: var(--size-l-4);
+}
+h3 {
+	font-size: var(--size-l-3);
+}
+
+a {
+	color: currentColor;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	text-align: left;
+}
+
+:focus {
+	outline: 2px dotted;
+	outline-offset: 0.25rem;
+}
