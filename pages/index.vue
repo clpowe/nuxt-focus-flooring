@@ -169,9 +169,6 @@
 
 		<section>
 			<h2>Testimonials</h2>
-			<video src="/Focus.mov"></video>
-			<video src="/Focus.mov"></video>
-			<video src="/Focus.mov"></video>
 		</section>
 	</main>
 </template>
