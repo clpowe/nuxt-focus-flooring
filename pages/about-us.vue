@@ -198,7 +198,7 @@
 					<a href="#project-execution">Project execution</a>
 				</li>
 				<li>
-					<a href="#system-genetated-tools">System genetated tools</a>
+					<a href="#system-generated-tools">System genetated tools</a>
 				</li>
 				<li>
 					<a href="#our-purpose">Our purpose</a>
@@ -214,9 +214,9 @@
 		<main id="main">
 			<article>
 				<h2>Our Process</h2>
-				<section id="preconstrunction">
+				<section id="preconstruction">
 					<h3>Preconstrunction</h3>
-					<Cardz
+					<Card
 						v-for="item in preconstrunction"
 						:key="item.id"
 						:image="item.image"
@@ -224,7 +224,7 @@
 						:component="item.component"
 					>
 						<p>{{ item.content }}</p>
-					</Cardz>
+					</Card>
 				</section>
 
 				<section id="project-planning">

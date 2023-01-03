@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	const value = ref<string>('All')
+	const catagory = ref<string>('All')
 
 	type TeamMember = {
 		id: number
@@ -8,7 +8,7 @@
 		lastName: string
 		title: string
 		bio: string
-		group: string
+		catagory: string
 	}
 
 	const curruntMember = ref<TeamMember | null>(null)
@@ -21,7 +21,7 @@
 			lastName: 'Greene',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Leadership'
+			catagory: 'Leadership'
 		},
 		{
 			id: 2,
@@ -30,7 +30,7 @@
 			lastName: 'Duval',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Leadership'
+			catagory: 'Leadership'
 		},
 		{
 			id: 3,
@@ -39,7 +39,7 @@
 			lastName: 'Melanson',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Leadership'
+			catagory: 'Leadership'
 		},
 		{
 			id: 4,
@@ -48,7 +48,7 @@
 			lastName: 'Jackson',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Preconstruction'
+			catagory: 'Preconstruction'
 		},
 		{
 			id: 5,
@@ -57,7 +57,7 @@
 			lastName: 'Henriquez',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Preconstruction'
+			catagory: 'Preconstruction'
 		},
 		{
 			id: 6,
@@ -66,7 +66,7 @@
 			lastName: 'Rolle',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Marketing/BD'
+			catagory: 'Marketing/BD'
 		},
 		{
 			id: 7,
@@ -75,7 +75,7 @@
 			lastName: 'Cooke',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Project Planning'
+			catagory: 'Project Planning'
 		},
 		{
 			id: 8,
@@ -84,7 +84,7 @@
 			lastName: 'Lampkin',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Project Planning'
+			catagory: 'Project Planning'
 		},
 		{
 			id: 9,
@@ -93,7 +93,7 @@
 			lastName: 'Doe???',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Project Planning'
+			catagory: 'Project Planning'
 		},
 		{
 			id: 10,
@@ -102,7 +102,7 @@
 			lastName: 'Ramos',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Field Management'
+			catagory: 'Field Management'
 		},
 		{
 			id: 11,
@@ -111,7 +111,7 @@
 			lastName: 'Melanson',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Field Management'
+			catagory: 'Field Management'
 		},
 		{
 			id: 12,
@@ -120,7 +120,7 @@
 			lastName: 'Greene',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Admin'
+			catagory: 'Admin'
 		},
 		{
 			id: 13,
@@ -129,15 +129,12 @@
 			lastName: 'Goyens',
 			title: 'Some Title',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			group: 'Admin'
+			catagory: 'Admin'
 		}
 	])
 
 	const filtered = computed(() => {
-		if (value.value === 'All' || value.value === '') {
-			return team.value
-		}
-		return team.value.filter((member) => value.value === member.group)
+		return useFilter(team.value, catagory.value)
 	})
 
 	const handleClick = (index: number) => {
@@ -154,7 +151,7 @@
 		<h1>Meet the team</h1>
 		<div>
 			<FormKit
-				v-model="value"
+				v-model="catagory"
 				type="radio"
 				:options="[
 					'All',
@@ -166,7 +163,6 @@
 					'Admin'
 				]"
 			/>
-			<pre wrap>{{ value }}</pre>
 		</div>
 		<main id="main">
 			<div v-if="curruntMember">
@@ -180,6 +176,7 @@
 					<p>{{ curruntMember.bio }}</p>
 				</div>
 			</div>
+			<h2>{{ catagory }}</h2>
 			<TeamMember
 				v-for="member in filtered"
 				:key="member.id"
