@@ -70,105 +70,113 @@
 			<NuxtLink to="#">contact us</NuxtLink>
 			<NuxtLink to="#">Learn more</NuxtLink>
 		</header>
+		<Stack size="--s5">
+			<section>
+				<img src="/placeholder.webp" alt="" />
+				<h2>Who we are</h2>
+				<p>
+					At Focus Flooring, our advanced solutions in commercial flooring
+					coupled with our 55+ years of combined flooring expertise, allows us
+					to be a leader in the flooring industry.
+				</p>
+				<p>
+					Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
+					<strong
+						>guarantee to eliminate your risk through our internal
+						processes.</strong
+					>
+				</p>
+			</section>
 
-		<section>
-			<img src="/placeholder.webp" alt="" />
-			<h2>Who we are</h2>
-			<p>
-				At Focus Flooring, our advanced solutions in commercial flooring coupled
-				with our 55+ years of combined flooring expertise, allows us to be a
-				leader in the flooring industry.
-			</p>
-			<p>
-				Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
-				<strong
-					>guarantee to eliminate your risk through our internal
-					processes.</strong
-				>
-			</p>
-		</section>
+			<section>
+				<Stack size="--s-3">
+					<h2>What we do</h2>
+					<p>Commercial flooring Services</p>
+				</Stack>
+				<div>
+					<Box v-for="item in whatWeDo">
+						<Card
+							:key="item.id"
+							:image="item.image"
+							:title="item.title"
+							:component="item.component"
+						>
+							<p>{{ item.content }}</p>
+						</Card>
+					</Box>
+				</div>
+			</section>
 
-		<section>
-			<h2>What we do</h2>
-			<p>Commercial flooring Services</p>
-			<Card
-				v-for="item in whatWeDo"
-				:key="item.id"
-				:image="item.image"
-				:title="item.title"
-				:component="item.component"
-			>
-				<p>{{ item.content }}</p>
-			</Card>
-		</section>
+			<section>
+				<h2>Sectores we serve</h2>
+				<article>
+					<h3>Industrial</h3>
+				</article>
+				<article>
+					<h3>Healthcare</h3>
+				</article>
+				<article>
+					<h3>Aviation</h3>
+				</article>
+				<article>
+					<h3>Residential & Hospitality</h3>
+				</article>
+				<article>
+					<h3>Worship Centers</h3>
+				</article>
+				<article>
+					<h3>Education</h3>
+				</article>
+				<article>
+					<h3>Office & Retail</h3>
+				</article>
+			</section>
 
-		<section>
-			<h2>Sectores we serve</h2>
-			<article>
-				<h3>Industrial</h3>
-			</article>
-			<article>
-				<h3>Healthcare</h3>
-			</article>
-			<article>
-				<h3>Aviation</h3>
-			</article>
-			<article>
-				<h3>Residential & Hospitality</h3>
-			</article>
-			<article>
-				<h3>Worship Centers</h3>
-			</article>
-			<article>
-				<h3>Education</h3>
-			</article>
-			<article>
-				<h3>Office & Retail</h3>
-			</article>
-		</section>
+			<section>
+				<h2>How we do it</h2>
+				<ol type="1">
+					<Stack size="--s0">
+						<li>
+							<h3>Preconstrunction</h3>
+							<p>
+								Through our comprehensive preconstruction process, our team will
+								produce a quality and detailed proposal and an overall
+								preconstruction experience that you can count on.
+							</p>
+						</li>
+						<li>
+							<h3>System Generated Tools</h3>
+							<p>
+								Project planning ensures a smooth transition occurs from
+								preconstruction to project execution to ensure we get ahead of
+								potential issues and eliminate risk for our clients early on.
+							</p>
+						</li>
+						<li>
+							<h3>Project Planning</h3>
+							<p>
+								Our internal tools such as our “Material Lead Time” report,
+								“Production” report and “Mobilization” report, are system
+								generated to equip you with what you need, when you need it.
+							</p>
+						</li>
+						<li>
+							<h3>Project Execution</h3>
+							<p>
+								Our process and approach to execution comes from many years of
+								experience, staying up to date with the latest installation
+								methods, products, trainings in the market and our overall
+								desire to please our clients.
+							</p>
+						</li>
+					</Stack>
+				</ol>
+				<img src="" alt="" />
+			</section>
 
-		<section>
-			<h2>How we do it</h2>
-			<ol type="1">
-				<li>
-					<h3>Preconstrunction</h3>
-					<p>
-						Through our comprehensive preconstruction process, our team will
-						produce a quality and detailed proposal and an overall
-						preconstruction experience that you can count on.
-					</p>
-				</li>
-				<li>
-					<h3>System Generated Tools</h3>
-					<p>
-						Project planning ensures a smooth transition occurs from
-						preconstruction to project execution to ensure we get ahead of
-						potential issues and eliminate risk for our clients early on.
-					</p>
-				</li>
-				<li>
-					<h3>Project Planning</h3>
-					<p>
-						Our internal tools such as our “Material Lead Time” report,
-						“Production” report and “Mobilization” report, are system generated
-						to equip you with what you need, when you need it.
-					</p>
-				</li>
-				<li>
-					<h3>Project Execution</h3>
-					<p>
-						Our process and approach to execution comes from many years of
-						experience, staying up to date with the latest installation methods,
-						products, trainings in the market and our overall desire to please
-						our clients.
-					</p>
-				</li>
-			</ol>
-			<img src="" alt="" />
-		</section>
-
-		<section>
-			<h2>Testimonials</h2>
-		</section>
+			<section>
+				<h2>Testimonials</h2>
+			</section>
+		</Stack>
 	</main>
 </template>

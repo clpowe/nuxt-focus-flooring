@@ -14,10 +14,10 @@
 				Interested in joining us? We want to hear from you.
 			</p>
 		</div>
-		<div>
-			<h2>General Contact</h2>
-		</div>
 		<main id="main">
+			<div>
+				<h2>General Contact</h2>
+			</div>
 			<p>
 				To reach us, simply fill out the form below, and we’ll be in contact as
 				soon as possible. Or, you can call us at any of our locations.

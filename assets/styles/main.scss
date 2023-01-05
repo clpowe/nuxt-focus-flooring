@@ -7,6 +7,7 @@ body {
 	overflow-x: hidden;
 	padding-bottom: get-size('600');
 	font-family: 'Inter', sans-serif;
+	background-color: #fff;
 }
 
 h1,
@@ -16,14 +17,17 @@ h3 {
 }
 
 h1 {
-	font-size: var(--size-l-5);
+	font-size: var(--s5);
 }
 
 h2 {
-	font-size: var(--size-l-4);
+	font-size: var(--s4);
 }
 h3 {
-	font-size: var(--size-l-3);
+	font-size: var(--s3);
+}
+h3 {
+	font-size: var(--s2);
 }
 
 a {
@@ -41,4 +45,27 @@ th {
 :focus {
 	outline: 2px dotted;
 	outline-offset: 0.25rem;
+}
+
+* {
+	box-sizing: border-box;
+	max-inline-size: 60ch;
+}
+
+html,
+body,
+div,
+header,
+nav,
+main,
+footer {
+	max-inline-size: none;
+}
+
+.box {
+	padding: var(--s1);
+
+	& * {
+		color: inherit;
+	}
 }

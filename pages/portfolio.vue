@@ -479,8 +479,9 @@
 
 <template>
 	<div>
-		<div>
-			<h1>Portfolio</h1>
+		<h1>Portfolio</h1>
+
+		<Sidebar>
 			<div>
 				<FormKit
 					v-model="catagory"
@@ -497,15 +498,17 @@
 					]"
 				/>
 			</div>
-		</div>
 
-		<main id="main">
-			<h2>{{ catagory }}</h2>
-			<ProjectCard
-				v-for="item in filteredProjects"
-				:key="item.id"
-				v-bind="item"
-			/>
-		</main>
+			<main id="main">
+				<h2>{{ catagory }}</h2>
+				<Stack size="2">
+					<ProjectCard
+						v-for="item in filteredProjects"
+						:key="item.id"
+						v-bind="item"
+					/>
+				</Stack>
+			</main>
+		</Sidebar>
 	</div>
 </template>
