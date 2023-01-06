@@ -180,3 +180,5 @@
 		</Stack>
 	</main>
 </template>
+
+<style></style>

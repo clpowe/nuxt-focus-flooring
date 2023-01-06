@@ -15,5 +15,15 @@ export default defineNuxtConfig({
 		families: {
 			Inter: [400, 700]
 		}
+	},
+	postcss: {
+		plugins: {
+			'postcss-preset-env': {
+				stage: 3,
+				features: {
+					'nesting-rules': true
+				}
+			}
+		}
 	}
 })

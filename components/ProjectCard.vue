@@ -32,7 +32,7 @@
 
 <template>
 	<div>
-		<Stack size="0.25">
+		<Stack size="--s-1">
 			<img :src="image" :alt="alt" />
 			<h3>{{ name }}</h3>
 			<p>Size: {{ size }}</p>

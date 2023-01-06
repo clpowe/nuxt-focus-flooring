@@ -1,21 +1,38 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxt/image": "^0.7.1",
-    "@nuxtjs/google-fonts": "3.0.0-1",
-    "nuxt": "3.0.0",
-    "sass": "^1.57.1"
-  },
-  "dependencies": {
-    "@formkit/nuxt": "1.0.0-beta.12",
-    "@vueuse/nuxt": "^9.9.0",
-    "gorko": "^0.9.1"
-  }
+	"private": true,
+	"scripts": {
+		"build": "nuxt build",
+		"dev": "nuxt dev",
+		"generate": "nuxt generate",
+		"preview": "nuxt preview",
+		"postinstall": "nuxt prepare"
+	},
+	"devDependencies": {
+		"@nuxt/image": "^0.7.1",
+		"@nuxtjs/google-fonts": "3.0.0-1",
+		"nuxt": "3.0.0",
+		"sass": "^1.57.1"
+	},
+	"dependencies": {
+		"@formkit/nuxt": "1.0.0-beta.12",
+		"@vueuse/nuxt": "^9.9.0",
+		"postcss-preset-env": "^7.8.3"
+	},
+	"browserslist": [
+		">0.3%",
+		"not ie 11",
+		"not dead",
+		"not op_mini all",
+		"last 3 version",
+		"Chrome >= 35",
+		"Firefox >= 38",
+		"Edge >= 10",
+		"Explorer >= 10",
+		"ie >= 10",
+		"iOS >= 8",
+		"Safari >= 8",
+		"Android 2.3",
+		"Android >= 4",
+		"Opera >= 12"
+	]
 }

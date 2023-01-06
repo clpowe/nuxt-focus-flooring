@@ -1,3 +1,57 @@
+<script setup>
+	const formData = ref({
+		firstName: '',
+		lastName: '',
+		email: '',
+		telephoneNumber: '',
+		jobTitle: '',
+		industry: '',
+		hearAboutUs: '',
+		commentMessage: '',
+		requst: ''
+	})
+
+	async function handleSubmit(data) {
+		const fData = new FormData()
+
+		for (let [key, value] of Object.entries(data)) {
+			fData.append(key, value)
+		}
+
+		try {
+			await $fetch(
+				'https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec',
+				{
+					method: 'POST',
+					body: fData
+				}
+			)
+		} catch (e) {
+			console.error(e)
+		}
+
+		// const action =
+		// 	'https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec'
+
+		// fetch(action, {
+		// 	method: 'Post',
+		// 	body: data
+		// }).then(() => {
+		// 	formData.value = {
+		// 		firstName: '',
+		// 		lastName: '',
+		// 		email: '',
+		// 		telephoneNumber: '',
+		// 		jobTitle: '',
+		// 		industry: '',
+		// 		hearAboutUs: '',
+		// 		commentMessage: '',
+		// 		requst: ''
+		// 	}
+		// })
+	}
+</script>
+
 <template>
 	<div>
 		<div>
@@ -23,7 +77,13 @@
 				soon as possible. Or, you can call us at any of our locations.
 			</p>
 			<ClientOnly>
-				<FormKit type="form">
+				<FormKit
+					type="form"
+					method="post"
+					action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
+					:value="formData"
+					@submit="handleSubmit"
+				>
 					<FormKit
 						type="text"
 						name="firstName"
@@ -90,6 +150,7 @@
 					/>
 					<FormKit
 						type="radio"
+						name="request"
 						label="To help us fulfill your request, please select your area(s) of interest:"
 						:options="[
 							'Request A Quote',
