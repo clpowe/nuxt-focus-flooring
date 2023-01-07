@@ -64,12 +64,12 @@
 </script>
 
 <template>
-	<main id="main">
-		<header>
-			<h1>Eliminating your risk through our process</h1>
-			<NuxtLink to="#">contact us</NuxtLink>
-			<NuxtLink to="#">Learn more</NuxtLink>
-		</header>
+	<header>
+		<h1>Eliminating your risk through our process</h1>
+		<NuxtLink to="#">contact us</NuxtLink>
+		<NuxtLink to="#">Learn more</NuxtLink>
+	</header>
+	<main id="main" class="container">
 		<Stack size="--s5">
 			<section>
 				<img src="/placeholder.webp" alt="" />

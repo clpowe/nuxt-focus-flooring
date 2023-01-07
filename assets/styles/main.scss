@@ -62,10 +62,10 @@ footer {
 	max-inline-size: none;
 }
 
-.box {
-	padding: var(--s1);
-
-	& * {
-		color: inherit;
-	}
+.container {
+	max-width: 1440px;
+	box-sizing: content-box;
+	margin-inline: auto;
+	padding-inline-start: 1rem;
+	padding-inline-end: 1rem;
 }

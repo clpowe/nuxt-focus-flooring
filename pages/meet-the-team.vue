@@ -160,32 +160,34 @@
 				<p>{{ curruntMember.bio }}</p>
 			</div>
 		</div>
-		<Sidebar>
-			<div>
-				<FormKit
-					v-model="catagory"
-					type="radio"
-					:options="[
-						'All',
-						'Leadership',
-						'Preconstruction',
-						'Marketing/BD',
-						'Project Planning',
-						'Field Management',
-						'Admin'
-					]"
-				/>
-			</div>
-			<main id="main">
-				<h2>{{ catagory }}</h2>
+		<div class="container">
+			<Sidebar>
+				<div>
+					<FormKit
+						v-model="catagory"
+						type="radio"
+						:options="[
+							'All',
+							'Leadership',
+							'Preconstruction',
+							'Marketing/BD',
+							'Project Planning',
+							'Field Management',
+							'Admin'
+						]"
+					/>
+				</div>
+				<main id="main">
+					<h2>{{ catagory }}</h2>
 
-				<TeamMember
-					v-for="member in filtered"
-					:key="member.id"
-					v-bind="member"
-					@click="handleClick(member.id)"
-				/>
-			</main>
-		</Sidebar>
+					<TeamMember
+						v-for="member in filtered"
+						:key="member.id"
+						v-bind="member"
+						@click="handleClick(member.id)"
+					/>
+				</main>
+			</Sidebar>
+		</div>
 	</div>
 </template>

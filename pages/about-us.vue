@@ -85,8 +85,8 @@
 
 <template>
 	<div>
-		<h1>Core Values</h1>
-		<main id="main">
+		<h1>About Us</h1>
+		<main id="main" class="container">
 			<article id="our-purpose">
 				<Stack size="--s-1">
 					<h2>Our Purpose</h2>
