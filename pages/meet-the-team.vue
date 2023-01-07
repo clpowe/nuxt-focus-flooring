@@ -1,4 +1,8 @@
 <script setup lang="ts">
+	useHead({
+		title: 'Focus Flooring - Meet the team'
+	})
+
 	const catagory = ref<string>('All')
 
 	type TeamMember = {

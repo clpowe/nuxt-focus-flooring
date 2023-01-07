@@ -1,4 +1,8 @@
 <script setup>
+	useHead({
+		title: 'Focus Flooring - Culture and Comunity'
+	})
+
 	const communityList = [
 		'ACE Mentor',
 		'American Heart Association',

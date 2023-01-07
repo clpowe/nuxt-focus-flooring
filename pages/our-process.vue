@@ -1,4 +1,8 @@
 <script setup>
+	useHead({
+		title: 'Focus Flooring - Our Process'
+	})
+
 	const preconstrunction = [
 		{
 			id: 1,

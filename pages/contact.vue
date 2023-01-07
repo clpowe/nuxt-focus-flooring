@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+	useHead({
+		title: 'Focus Flooring - Contact'
+	})
+</script>
 
 <template>
 	<div>

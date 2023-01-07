@@ -1,4 +1,8 @@
 <script setup lang="ts">
+	useHead({
+		title: 'Focus Flooring - Portfolio'
+	})
+
 	const catagory = ref<string>('All')
 
 	type Project = {

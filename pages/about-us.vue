@@ -1,4 +1,8 @@
 <script setup>
+	useHead({
+		title: 'Focus Flooring - About us'
+	})
+
 	const coreValues = [
 		{
 			id: 1,

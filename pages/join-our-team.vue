@@ -1,4 +1,8 @@
 <script setup>
+	useHead({
+		title: 'Focus Flooring - Join our team'
+	})
+
 	const success = ref(false)
 	const fail = ref(false)
 
