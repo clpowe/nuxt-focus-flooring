@@ -56,10 +56,16 @@ html,
 body,
 div,
 header,
+section,
 nav,
 main,
 footer {
 	max-inline-size: none;
+}
+
+ol {
+	list-style-type: none;
+	padding: 0;
 }
 
 .container {

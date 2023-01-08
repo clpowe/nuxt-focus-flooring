@@ -93,7 +93,7 @@
 					<h2>What we do</h2>
 					<p>Commercial flooring Services</p>
 				</Stack>
-				<div>
+				<Grid>
 					<Box v-for="item in whatWeDo">
 						<Card
 							:key="item.id"
@@ -104,7 +104,7 @@
 							<p>{{ item.content }}</p>
 						</Card>
 					</Box>
-				</div>
+				</Grid>
 			</section>
 
 			<section>

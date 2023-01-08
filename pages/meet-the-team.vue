@@ -4,6 +4,7 @@
 	})
 
 	const catagory = ref<string>('All')
+	const drawer = ref<boolean>(false)
 
 	type TeamMember = {
 		id: number
@@ -143,27 +144,31 @@
 
 	const handleClick = (index: number) => {
 		curruntMember.value = team.value[index - 1]
+		drawer.value = true
 	}
 
 	const handleClose = () => {
-		curruntMember.value = null
+		drawer.value = false
 	}
 </script>
 
 <template>
 	<div>
 		<h1>Meet the team</h1>
-		<div v-if="curruntMember">
-			<button @click="handleClose">X</button>
-			<div>
-				<img :src="curruntMember.image" alt="" />
-				<p>{{ curruntMember.firstName }}</p>
-				<p>{{ curruntMember.lastName }}</p>
-				<p>{{ curruntMember.title }}</p>
-				<p>Bio</p>
-				<p>{{ curruntMember.bio }}</p>
+		<Drawer :show="drawer">
+			<div v-if="curruntMember">
+				<button @click="handleClose">X</button>
+				<div>
+					<img :src="curruntMember.image" alt="" />
+					<p>{{ curruntMember.firstName }}</p>
+					<p>{{ curruntMember.lastName }}</p>
+					<p>{{ curruntMember.title }}</p>
+					<p>Bio</p>
+					<p>{{ curruntMember.bio }}</p>
+				</div>
 			</div>
-		</div>
+		</Drawer>
+
 		<div class="container">
 			<Sidebar>
 				<div>

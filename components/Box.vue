@@ -20,6 +20,7 @@
 <style scoped>
 	.box {
 		padding: v-bind(cssPadding);
+		max-inline-size: none !important;
 	}
 
 	.box * {

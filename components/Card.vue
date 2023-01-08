@@ -9,16 +9,13 @@
 <script setup>
 	defineProps({
 		image: {
-			type: String,
-			required: false
+			type: String
 		},
 		title: {
-			type: String,
-			required: true
+			type: String
 		},
 		component: {
-			type: String,
-			required: true
+			type: String
 		}
 	})
 </script>

@@ -8,7 +8,9 @@
       {
         "ignore": [
           "text-decoration-skip-ink",
-          "scroll-behavior"
+          "scroll-behavior",
+          "max-inline-size",
+          "outline-offset"
         ]
       }
     ]

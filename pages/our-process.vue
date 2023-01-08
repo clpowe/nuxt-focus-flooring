@@ -34,6 +34,29 @@
 		}
 	]
 
+	const projectExecutionSteps = [
+		{
+			id: 1,
+			content:
+				'Before installation, we have a dedicated superintendent survey the job site to determine how materials will be staged.'
+		},
+		{
+			id: 2,
+			content:
+				'Then, our highly trained crews follow a clear plan to rapidly install your flooring. Depending on the complexity of your materials and installation, our crews may train specifically for your project.'
+		},
+		{
+			id: 3,
+			content:
+				'Our team has a “zero-punch” philosophy. As we progress through the project, our teams are creating our own internal punch list and correcting items as we go. The goal of this approach is to ensure that once we receive the client and owner’s punch list, our items to correct are minimum.'
+		},
+		{
+			id: 4,
+			content:
+				'Because of our execution system, our team can efficiently complete any commercial flooring installation project. Our experienced team will coordinate material procurement so that you’re never waiting on a specialty floor. We will also find time-sensitive material alternatives to help stay in line with your project schedule'
+		}
+	]
+
 	const projectExecution = [
 		{
 			id: 1,
@@ -130,16 +153,18 @@
 							<Stack size="--s5">
 								<section id="preconstruction">
 									<h2>Preconstrunction</h2>
-									<Box v-for="item in preconstrunction">
-										<Card
-											:key="item.id"
-											:image="item.image"
-											:title="item.title"
-											:component="item.component"
-										>
-											<p>{{ item.content }}</p>
-										</Card>
-									</Box>
+									<Grid>
+										<Box v-for="item in preconstrunction">
+											<Card
+												:key="item.id"
+												:image="item.image"
+												:title="item.title"
+												:component="item.component"
+											>
+												<p>{{ item.content }}</p>
+											</Card>
+										</Box>
+									</Grid>
 								</section>
 
 								<section id="project-planning">
@@ -185,61 +210,35 @@
 											your job site highly organized and clean, so you enjoy the
 											fastest installation.
 										</p>
-										<Box>
-											<ol>
-												<li>
-													<p>
-														Before installation, we have a dedicated
-														superintendent survey the job site to determine how
-														materials will be staged.
-													</p>
-												</li>
-												<li>
-													<p>
-														Then, our highly trained crews follow a clear plan
-														to rapidly install your flooring. Depending on the
-														complexity of your materials and installation, our
-														crews may train specifically for your project.
-													</p>
-												</li>
-												<li>
-													<p>
-														Our team has a “zero-punch” philosophy. As we
-														progress through the project, our teams are creating
-														our own internal punch list and correcting items as
-														we go. The goal of this approach is to ensure that
-														once we receive the client and owner’s punch list,
-														our items to correct are minimum.
-													</p>
-												</li>
-												<li>
-													<p>
-														Because of our execution system, our team can
-														efficiently complete any commercial flooring
-														installation project. Our experienced team will
-														coordinate material procurement so that you’re never
-														waiting on a specialty floor. We will also find
-														time-sensitive material alternatives to help stay in
-														line with your project schedule
-													</p>
-												</li>
-											</ol>
-										</Box>
 
-										<Box v-for="item in projectExecution">
-											<Card
-												:key="item.id"
-												:title="item.title"
-												:component="item.component"
-											>
-												<p>{{ item.content }}</p>
-												<ul v-if="item.list">
-													<li v-for="item in item.list">
-														{{ item }}
-													</li>
-												</ul>
-											</Card>
-										</Box>
+										<ol>
+											<Grid>
+												<li
+													v-for="item in projectExecutionSteps"
+													:key="item.id"
+												>
+													<Card component="h4">
+														<p>{{ item.content }}</p>
+													</Card>
+												</li>
+											</Grid>
+										</ol>
+										<MasonaryGrid>
+											<Box v-for="item in projectExecution">
+												<Card
+													:key="item.id"
+													:title="item.title"
+													:component="item.component"
+												>
+													<p>{{ item.content }}</p>
+													<ul v-if="item.list">
+														<li v-for="item in item.list">
+															{{ item }}
+														</li>
+													</ul>
+												</Card>
+											</Box>
+										</MasonaryGrid>
 									</Stack>
 								</section>
 
