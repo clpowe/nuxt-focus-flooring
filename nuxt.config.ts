@@ -8,6 +8,20 @@ export default defineNuxtConfig({
 			meta: [
 				// <meta name="description" content="My amazing site">
 				{ name: 'description', content: 'My amazing site.' }
+			],
+			link: [
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: '/favicon-light.svg',
+					media: '(prefers-color-scheme: dark)'
+				},
+				{
+					rel: 'icon',
+					type: 'image/x-icon',
+					href: '/favicon-dark.svg',
+					media: '(prefers-color-scheme: light)'
+				}
 			]
 		}
 	},
