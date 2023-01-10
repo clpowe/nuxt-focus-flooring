@@ -1,7 +1,12 @@
 <template>
 	<header class="">
 		<div class="container">
-			<img src="" alt="" />
+			<img
+				src="/FocusLogo.svg"
+				alt="Focus Flooring Logo"
+				height="37"
+				width="134"
+			/>
 
 			<nav class="nav" aria-label="primary">
 				<Cluster>

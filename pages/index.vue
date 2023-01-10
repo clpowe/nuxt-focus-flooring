@@ -7,7 +7,7 @@
 		{
 			id: 1,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconSeven.svg',
 			title: 'Carpet Flooring',
 			content:
 				'We will help you specify, procure and install carpet for any commercial application.'
@@ -15,7 +15,7 @@
 		{
 			id: 2,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconThirteen.svg',
 			title: 'Wood Flooring',
 			content:
 				'With countless solid and engineered wood flooring options available today, we’ll guide you to the best hardwood for your budget, design and facility.'
@@ -31,7 +31,7 @@
 		{
 			id: 4,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconThree.svg',
 			title: 'Concrete Surfacing',
 			content:
 				'From concrete polish to resinous flooring or terrazzo, concrete surfacing may be the perfect solution for your facility.'
@@ -39,7 +39,7 @@
 		{
 			id: 5,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconTen.svg',
 			title: 'LVT Flooring',
 			content:
 				'Luxury vinyl tile (LVT) is one of the most popular selections for a  range of commercial applications with beautiful design and patterns available to meet the performance demands of your building.'
@@ -47,7 +47,7 @@
 		{
 			id: 6,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconFour.svg',
 			title: 'Resilient Flooring',
 			content:
 				'With innovative, new materials and constructions emerging in the market, resilient flooring can help you achieve a one-of-a-kind look  that lasts. Heat weld sheet vinyl, athletic. flooring, and more.'
@@ -55,7 +55,7 @@
 		{
 			id: 7,
 			component: 'h3',
-			image: '/IconOne.svg',
+			image: '/IconSix.svg',
 			title: 'Flooring Accessories',
 			content:
 				'From transitions to stair treads, flooring accessories are specialty products that will tie together your design and product needs.'
