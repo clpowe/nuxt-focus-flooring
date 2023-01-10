@@ -7,6 +7,7 @@
 		{
 			id: 1,
 			component: 'h3',
+			image: '/detailed.svg',
 			title: 'Detailed Proposal',
 			content:
 				'We go above and beyond as it relates to the level of detail provided in our proposals. This approach ensures our clients have all of the essential information they need at their fingertips and allows for quick reference as project changes come about.'
@@ -14,6 +15,7 @@
 		{
 			id: 2,
 			component: 'h3',
+			image: '/spec.svg',
 			title: 'Specification and Design',
 			content:
 				'Whether you require expert assistance specifying the best flooring materials or already have complete specifications, we can meet any design vision. We’ll show you samples of different materials and ensure you start your project with the right solution.'
@@ -21,6 +23,7 @@
 		{
 			id: 3,
 			component: 'h3',
+			image: '/Leed.svg',
 			title: 'LEED Certification',
 			content:
 				'We have extensive experience delivering the biggest LEED-certified flooring installations and can identify energy-efficient flooring materials that support your sustainability efforts.'
@@ -28,6 +31,7 @@
 		{
 			id: 4,
 			component: 'h3',
+			image: '/LifeCycle.svg',
 			title: 'Life Cycle Costing',
 			content:
 				'Flooring maintenance costs often outweigh the initial costs of flooring installation and materials. That’s why we provide a Life Cycle Costing report—an objective, unbiased analysis of the long-term value you’ll receive from various flooring options.Flooring maintenance costs often outweigh the initial costs of flooring installation and materials. That’s why we provide a Life Cycle Costing report—an objective, unbiased analysis of the long-term value you’ll receive from various flooring options.'
@@ -37,40 +41,31 @@
 	const projectExecutionSteps = [
 		{
 			id: 1,
+			image: '/01.svg',
 			content:
 				'Before installation, we have a dedicated superintendent survey the job site to determine how materials will be staged.'
 		},
 		{
 			id: 2,
+			image: '/02.svg',
 			content:
 				'Then, our highly trained crews follow a clear plan to rapidly install your flooring. Depending on the complexity of your materials and installation, our crews may train specifically for your project.'
 		},
 		{
 			id: 3,
+			image: '/03.svg',
 			content:
 				'Our team has a “zero-punch” philosophy. As we progress through the project, our teams are creating our own internal punch list and correcting items as we go. The goal of this approach is to ensure that once we receive the client and owner’s punch list, our items to correct are minimum.'
 		},
 		{
 			id: 4,
+			image: '/04.svg',
 			content:
 				'Because of our execution system, our team can efficiently complete any commercial flooring installation project. Our experienced team will coordinate material procurement so that you’re never waiting on a specialty floor. We will also find time-sensitive material alternatives to help stay in line with your project schedule'
 		}
 	]
 
 	const projectExecution = [
-		{
-			id: 1,
-			component: 'h3',
-			title: 'Logistics',
-			content:
-				'Our end-to-end logistics network allows us to meet even the tightest project schedules. With our trained personnel, we have experience rapidly moving materials no matter how big. A dedicated manager coordinates deliveries to ensure materials and personnel arrive at your job site when needed. We have:',
-			list: [
-				'Dedicated personnel who track every shipment',
-				'The appropriate support staff and equipment to efficiently install your flooring',
-				'Specialty contractors who work at the same time to maintain a well managed and clean job site',
-				'Our goal is to produce the outcome our client desires, without compromising standards or'
-			]
-		},
 		{
 			id: 2,
 			component: 'h3',
@@ -98,6 +93,19 @@
 			title: 'Safety',
 			content:
 				'Safety is our top priority. We care for the safety and health of both our customers and associates. Our comprehensive safety program has a dedicated safety officer and covers personal protective equipment, material handling, first aid, and safety procedures to make sure everyone leaves work healthy and safe.'
+		},
+		{
+			id: 1,
+			component: 'h3',
+			title: 'Logistics',
+			content:
+				'Our end-to-end logistics network allows us to meet even the tightest project schedules. With our trained personnel, we have experience rapidly moving materials no matter how big. A dedicated manager coordinates deliveries to ensure materials and personnel arrive at your job site when needed. We have:',
+			list: [
+				'Dedicated personnel who track every shipment',
+				'The appropriate support staff and equipment to efficiently install your flooring',
+				'Specialty contractors who work at the same time to maintain a well managed and clean job site',
+				'Our goal is to produce the outcome our client desires, without compromising standards or'
+			]
 		}
 	]
 
@@ -217,13 +225,13 @@
 													v-for="item in projectExecutionSteps"
 													:key="item.id"
 												>
-													<Card component="h4">
+													<Card component="h4" :image="item.image">
 														<p>{{ item.content }}</p>
 													</Card>
 												</li>
 											</Grid>
 										</ol>
-										<MasonaryGrid>
+										<Grid>
 											<Box v-for="item in projectExecution">
 												<Card
 													:key="item.id"
@@ -238,7 +246,7 @@
 													</ul>
 												</Card>
 											</Box>
-										</MasonaryGrid>
+										</Grid>
 									</Stack>
 								</section>
 

@@ -1,9 +1,11 @@
 <template>
-	<div>
-		<img :src="image" role="presentation" />
+	<Stack size="--s-1">
+		<Framer :width="1" height="1">
+			<img :src="image" role="presentation" />
+		</Framer>
 		<component :is="component">{{ title }}</component>
 		<slot />
-	</div>
+	</Stack>
 </template>
 
 <script setup>

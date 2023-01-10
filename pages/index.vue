@@ -72,7 +72,9 @@
 	<main id="main" class="container">
 		<Stack size="--s5">
 			<section>
-				<img src="/placeholder.webp" alt="" />
+				<Framer :width="16" :height="9">
+					<img src="/placeholder.webp" alt="" />
+				</Framer>
 				<h2>Who we are</h2>
 				<p>
 					At Focus Flooring, our advanced solutions in commercial flooring
@@ -176,6 +178,17 @@
 
 			<section>
 				<h2>Testimonials</h2>
+				<Grid>
+					<Framer :width="16" :height="9">
+						<img src="/placeholder.webp" alt="" />
+					</Framer>
+					<Framer :width="16" :height="9">
+						<img src="/placeholder.webp" alt="" />
+					</Framer>
+					<Framer :width="16" :height="9">
+						<img src="/placeholder.webp" alt="" />
+					</Framer>
+				</Grid>
 			</section>
 		</Stack>
 	</main>
