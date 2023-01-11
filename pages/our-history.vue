@@ -6,6 +6,6 @@
 
 <template>
 	<div>
-		<h1>Our history</h1>
+		<Hero>Our <span>history</span> </Hero>
 	</div>
 </template>

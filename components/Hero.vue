@@ -6,13 +6,11 @@
 
 <template>
 	<div class="hero">
-		<div class="container">
-			<div class="content">
-				<h1>
-					<slot />
-				</h1>
-				<div class="dot"></div>
-			</div>
+		<div class="container content">
+			<h1>
+				<slot />
+			</h1>
+			<div class="dot"></div>
 		</div>
 		<div class="image"></div>
 	</div>
@@ -23,6 +21,8 @@
 		position: relative;
 		height: 30vh;
 		width: 100%;
+		display: flex;
+		align-items: center;
 	}
 	.image {
 		position: absolute;
@@ -44,13 +44,12 @@
 		display: flex;
 		width: 100%;
 		align-items: baseline;
-		height: 100%;
 		justify-items: center;
 	}
 
 	.dot {
 		position: relative;
-		z-index: 100;
+		z-index: 10;
 		height: 1rem;
 		width: 1rem;
 		background-color: var(--focus-yellow);

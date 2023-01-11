@@ -40,9 +40,8 @@
 
 <template>
 	<div>
-		<div>
-			<h1>Join our team</h1>
-		</div>
+		<Hero>Join our <span>team</span></Hero>
+
 		<main id="main" class="container">
 			<div>
 				<p>

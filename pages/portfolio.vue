@@ -483,7 +483,7 @@
 
 <template>
 	<div>
-		<h1>Portfolio</h1>
+		<Hero>Portfolio</Hero>
 		<div class="container">
 			<Sidebar>
 				<div>

@@ -154,7 +154,7 @@
 
 <template>
 	<div>
-		<h1>Meet the team</h1>
+		<Hero>Meet the <span>team</span></Hero>
 		<Drawer :show="drawer">
 			<div v-if="curruntMember">
 				<button @click="handleClose">X</button>

@@ -49,12 +49,12 @@
 
 <style scoped>
 	.header {
+		position: relative;
 		background-color: var(--midnight);
 		color: var(--focus-white);
 		padding-block: var(--s-1);
 		border-bottom: 2px solid var(--focus-yellow);
-		/* position: absolute;
-		width: 100%; */
+		z-index: 50;
 	}
 
 	.navigation {

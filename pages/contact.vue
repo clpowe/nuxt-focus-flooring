@@ -6,7 +6,8 @@
 
 <template>
 	<div>
-		<h1>Contact</h1>
+		<Hero>Contact</Hero>
+
 		<div class="container">
 			<Sidebar>
 				<div>

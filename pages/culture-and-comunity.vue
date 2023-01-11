@@ -47,7 +47,7 @@
 <template>
 	<div>
 		<Stack size="4">
-			<h1>Culture and Comunity</h1>
+			<Hero>Culture and <span>Comunity</span></Hero>
 
 			<main id="main" class="container">
 				<article>

@@ -136,7 +136,7 @@
 
 <template>
 	<div>
-		<h1>Our Process</h1>
+		<Hero>Our <span>Process</span> </Hero>
 		<div class="container">
 			<Sidebar>
 				<nav>
