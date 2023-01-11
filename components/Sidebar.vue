@@ -20,7 +20,7 @@
 	.with-sidebar > :last-child {
 		flex-basis: 0;
 		flex-grow: 999;
-		min-inline-size: 55%;
+		min-inline-size: 60%;
 		align-items: flex-start;
 	}
 </style>

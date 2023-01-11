@@ -85,3 +85,13 @@ ol {
 	white-space: nowrap;
 	width: 1px;
 }
+
+h1 {
+	z-index: 100;
+	color: var(--focus-white);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+h1 > span {
+	color: var(--focus-yellow);
+}
