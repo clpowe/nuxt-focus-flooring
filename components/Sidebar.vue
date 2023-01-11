@@ -13,14 +13,14 @@
 
 	.with-sidebar > :first-child {
 		flex-grow: 1;
-		flex-basis: 20rem;
-		max-inline-size: 20rem;
+		flex-basis: 15rem;
+		max-inline-size: 15rem;
 	}
 
 	.with-sidebar > :last-child {
 		flex-basis: 0;
 		flex-grow: 999;
-		min-inline-size: 50%;
+		min-inline-size: 55%;
 		align-items: flex-start;
 	}
 </style>

@@ -14,5 +14,14 @@
         ]
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not edge <= 18",
+    "not firefox <= 53",
+    "not ie <= 11",
+    "not ios_saf <= 10.2",
+    "not safari <= 10"
+  ]
 }
