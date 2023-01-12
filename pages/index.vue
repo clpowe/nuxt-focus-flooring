@@ -65,7 +65,9 @@
 
 <template>
 	<header>
-		<Hero>Eliminating your risk through our process</Hero>
+		<HomeHero
+			>Eliminating your <span>risk</span> through <span>our process</span>
+		</HomeHero>
 		<NuxtLink to="#">contact us</NuxtLink>
 		<NuxtLink to="#">Learn more</NuxtLink>
 	</header>

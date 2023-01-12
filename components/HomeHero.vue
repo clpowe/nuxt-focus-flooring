@@ -19,7 +19,7 @@
 <style scoped>
 	.hero {
 		position: relative;
-		height: 30vh;
+		height: 600px;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -27,15 +27,14 @@
 	}
 	.image {
 		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		background-image: url('../aviation.jpeg');
+		top: 0%;
+		right: 0%;
+		background: url('../aviation.jpeg'), var(--midnight);
 		background-position: center center;
 		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
-		mix-blend-mode: luminosity;
-		height: 30vh;
-		width: 100%;
+		//mix-blend-mode: luminosity;
+		height: 725px;
+		width: 50%;
 		margin: auto;
 		max-width: 2000px;
 		background-repeat: no-repeat;
@@ -49,6 +48,25 @@
 		justify-items: center;
 	}
 
-	.dot {
+	@media (max-width: 670px) {
+		.hero {
+			height: 100vh;
+		}
+
+		.image {
+			position: absolute;
+			top: 0%;
+
+			background: url('../aviation.jpeg'), var(--midnight);
+			background-position: center center;
+			filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
+			//mix-blend-mode: luminosity;
+			height: 100%;
+			width: 100%;
+			margin: auto;
+			max-width: 2000px;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
 	}
 </style>
