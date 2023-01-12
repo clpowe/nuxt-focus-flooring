@@ -65,11 +65,17 @@
 
 <template>
 	<header>
-		<HomeHero
-			>Eliminating your <span>risk</span> through <span>our process</span>
+		<HomeHero>
+			<template v-slot:header>
+				Eliminating your <span>risk</span> through <span>our process</span>
+			</template>
+			<template v-slot:actions>
+				<div class="actions">
+					<NuxtLink to="#" class="btn btn-yellow">contact us</NuxtLink>
+					<NuxtLink to="#" class="btn btn-outline">Learn more</NuxtLink>
+				</div>
+			</template>
 		</HomeHero>
-		<NuxtLink to="#">contact us</NuxtLink>
-		<NuxtLink to="#">Learn more</NuxtLink>
 	</header>
 	<main id="main" class="container">
 		<Stack size="--s5">
@@ -196,4 +202,10 @@
 	</main>
 </template>
 
-<style></style>
+<style scoped>
+	.actions {
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+	}
+</style>

@@ -5,8 +5,8 @@
 				<img
 					src="/FocusLogo.svg"
 					alt="Focus Flooring Logo"
-					height="37"
-					width="134"
+					height="50"
+					width="176"
 				/>
 			</NuxtLink>
 

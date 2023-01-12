@@ -7,9 +7,12 @@
 <template>
 	<div class="hero">
 		<div class="container content">
-			<h1>
-				<slot />
-			</h1>
+			<Stack size="--s1">
+				<h1>
+					<slot name="header" />
+				</h1>
+				<slot name="actions" />
+			</Stack>
 			<div class="dot"></div>
 		</div>
 		<div class="image"></div>
@@ -33,7 +36,7 @@
 		background-position: center center;
 		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
 		//mix-blend-mode: luminosity;
-		height: 725px;
+		height: 110%;
 		width: 50%;
 		margin: auto;
 		max-width: 2000px;
@@ -56,7 +59,6 @@
 		.image {
 			position: absolute;
 			top: 0%;
-
 			background: url('../aviation.jpeg'), var(--midnight);
 			background-position: center center;
 			filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);

@@ -102,7 +102,7 @@
 				</Stack>
 			</article>
 			<article id="core-values">
-				<Stack size="1">
+				<Stack size="--s-1">
 					<h2>Core Values</h2>
 					<p>
 						Our core values are the framework in which we evaluate our choices
@@ -127,7 +127,7 @@
 			<article id="three-uniques">
 				<Stack size="--s-1">
 					<h2>Three Uniqes</h2>
-					<Box v-for="item in threeUniqes">
+					<Box v-for="item in threeUniqes" padding="--s-1">
 						<Card
 							:key="item.id"
 							:title="item.title"
