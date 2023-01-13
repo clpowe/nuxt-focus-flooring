@@ -111,6 +111,22 @@ h1::after {
 	border-radius: 4px;
 }
 
+h2 {
+	position: relative;
+	padding-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+
+h2::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 8px;
+	background-color: var(--focus-yellow);
+	width: 15%;
+}
+
 .btn {
 	position: relative;
 	padding-inline: var(--s-1);

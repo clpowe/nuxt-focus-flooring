@@ -1,22 +1,14 @@
 <script setup>
-	defineProps({
-		show: {
-			type: Boolean,
-			required: true,
-			default: false
-		}
-	})
+	const drawerVisible = useDrawer()
 </script>
 
 <template>
-	<Teleport to="body">
-		<div v-if="show">
-			<div class="drawer">
-				<slot />
-			</div>
-			<div class="drawer-mask"></div>
+	<Transition>
+		<div class="drawer" v-if="drawerVisible">
+			<slot />
 		</div>
-	</Teleport>
+	</Transition>
+	<div class="drawer-mask" @click="drawerVisible = false"></div>
 </template>
 
 <style scoped>
@@ -24,21 +16,22 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		overflow: hidden;
+		max-width: 40ch; /* initially */
 		height: 100%;
+		padding-left: 0; /* initially */
+		border-left: 1px solid whitesmoke;
 		background: white;
-		z-index: 200;
-		transition: all 0.2s;
+		z-index: 500;
 	}
 
-	.drawer-mask {
-		position: fixed;
-		left: 0;
-		top: 0;
-		height: 100%;
-		width: 100%;
-		background: #000;
-		opacity: 0.3;
-		z-index: 199;
+	.v-enter-active,
+	.v-leave-active {
+		transform: translateX(0);
+		transition: all 0.3s ease;
+	}
+
+	.v-enter-from,
+	.v-leave-to {
+		transform: translateX(-100%);
 	}
 </style>

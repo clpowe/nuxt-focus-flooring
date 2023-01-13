@@ -4,7 +4,7 @@
 	})
 
 	const catagory = ref<string>('All')
-	const drawer = ref<boolean>(false)
+	const drawerVisible = useDrawer()
 
 	type TeamMember = {
 		id: number
@@ -144,18 +144,18 @@
 
 	const handleClick = (index: number) => {
 		curruntMember.value = team.value[index - 1]
-		drawer.value = true
+		drawerVisible.value = true
 	}
 
 	const handleClose = () => {
-		drawer.value = false
+		drawerVisible.value = false
 	}
 </script>
 
 <template>
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
-		<Drawer :show="drawer">
+		<Drawer :drawerVisible="drawerVisible">
 			<div v-if="curruntMember">
 				<button @click="handleClose">X</button>
 				<div>
