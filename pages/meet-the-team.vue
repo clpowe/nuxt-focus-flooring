@@ -188,13 +188,14 @@
 				</div>
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-
-					<TeamMember
-						v-for="member in filtered"
-						:key="member.id"
-						v-bind="member"
-						@click="handleClick(member.id)"
-					/>
+					<Grid>
+						<TeamMember
+							v-for="member in filtered"
+							:key="member.id"
+							v-bind="member"
+							@click="handleClick(member.id)"
+						/>
+					</Grid>
 				</main>
 			</Sidebar>
 		</div>

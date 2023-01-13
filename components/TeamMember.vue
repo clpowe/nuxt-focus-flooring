@@ -11,10 +11,12 @@
 </script>
 
 <template>
-	<div>
+	<div class="team-member">
 		<img :src="image" alt="" />
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>
 		<p>{{ title }}</p>
 	</div>
 </template>
+
+<style></style>
