@@ -71,14 +71,16 @@
 			</template>
 			<template v-slot:actions>
 				<div class="actions">
-					<NuxtLink to="#" class="btn btn-yellow">contact us</NuxtLink>
-					<NuxtLink to="#" class="btn btn-outline">Learn more</NuxtLink>
+					<NuxtLink to="/contact/general-contact" class="btn btn-yellow"
+						>contact us</NuxtLink
+					>
+					<NuxtLink to="/about-us" class="btn btn-outline">Learn more</NuxtLink>
 				</div>
 			</template>
 		</HomeHero>
 	</header>
 	<main id="main" class="container">
-		<Stack size="--s5">
+		<Stack size="--s9">
 			<section>
 				<Stack size="--s-1">
 					<Framer :width="16" :height="9">
@@ -145,58 +147,41 @@
 			</section>
 
 			<section>
-				<h2>How we do it</h2>
-				<ol type="1">
-					<Stack size="--s0">
-						<li>
-							<h3>Preconstrunction</h3>
-							<p>
-								Through our comprehensive preconstruction process, our team will
-								produce a quality and detailed proposal and an overall
-								preconstruction experience that you can count on.
-							</p>
-						</li>
-						<li>
-							<h3>System Generated Tools</h3>
-							<p>
-								Project planning ensures a smooth transition occurs from
-								preconstruction to project execution to ensure we get ahead of
-								potential issues and eliminate risk for our clients early on.
-							</p>
-						</li>
-						<li>
-							<h3>Project Planning</h3>
-							<p>
-								Our internal tools such as our “Material Lead Time” report,
-								“Production” report and “Mobilization” report, are system
-								generated to equip you with what you need, when you need it.
-							</p>
-						</li>
-						<li>
-							<h3>Project Execution</h3>
-							<p>
-								Our process and approach to execution comes from many years of
-								experience, staying up to date with the latest installation
-								methods, products, trainings in the market and our overall
-								desire to please our clients.
-							</p>
-						</li>
-					</Stack>
-				</ol>
-				<img src="" alt="" />
+				<How />
 			</section>
 
 			<section>
 				<h2>Testimonials</h2>
 				<Grid>
 					<Framer :width="16" :height="9">
-						<img src="/placeholder.webp" alt="" />
+						<video controls>
+							<source
+								src="construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
+								type="video/mp4"
+							/>
+
+							Your browser does not support the video tag.
+						</video>
 					</Framer>
 					<Framer :width="16" :height="9">
-						<img src="/placeholder.webp" alt="" />
+						<video controls>
+							<source
+								src="construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
+								type="video/mp4"
+							/>
+
+							Your browser does not support the video tag.
+						</video>
 					</Framer>
 					<Framer :width="16" :height="9">
-						<img src="/placeholder.webp" alt="" />
+						<video controls>
+							<source
+								src="construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
+								type="video/mp4"
+							/>
+
+							Your browser does not support the video tag.
+						</video>
 					</Framer>
 				</Grid>
 			</section>

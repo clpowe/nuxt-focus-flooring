@@ -8,6 +8,7 @@ body {
 	padding-bottom: get-size('600');
 	font-family: 'Inter', sans-serif;
 	background-color: #fff;
+	min-height: 100vh;
 }
 
 h1,
@@ -125,6 +126,10 @@ h2::after {
 	height: 8px;
 	background-color: var(--focus-yellow);
 	width: 15%;
+}
+
+h3 {
+	text-transform: uppercase;
 }
 
 .btn {

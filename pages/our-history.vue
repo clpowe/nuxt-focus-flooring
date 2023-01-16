@@ -7,5 +7,6 @@
 <template>
 	<div>
 		<Hero>Our <span>history</span> </Hero>
+		Content goes here
 	</div>
 </template>

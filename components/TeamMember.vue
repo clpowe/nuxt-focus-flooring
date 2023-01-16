@@ -19,4 +19,8 @@
 	</div>
 </template>
 
-<style></style>
+<style>
+	.team-member {
+		max-inline-size: 25ch;
+	}
+</style>

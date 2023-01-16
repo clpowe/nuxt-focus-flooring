@@ -1,8 +1,10 @@
 <template>
 	<a href="#main" class="skip-link button visually-hidden">Skip to main</a>
-	<Navigation />
-	<div>
-		<slot />
-	</div>
-	<Footer />
+	<PancakeStack>
+		<Navigation />
+		<div>
+			<slot />
+		</div>
+		<Footer />
+	</PancakeStack>
 </template>

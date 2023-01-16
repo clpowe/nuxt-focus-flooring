@@ -35,5 +35,12 @@
 	footer {
 		background-color: var(--midnight);
 		color: var(--focus-white);
+
+		& h2 {
+			color: var(--focus-yellow);
+		}
+		& h2::after {
+			color: var(--focus-yellow);
+		}
 	}
 </style>

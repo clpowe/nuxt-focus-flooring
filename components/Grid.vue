@@ -12,7 +12,7 @@
 
 	@supports (width: min(30ch, 100%)) {
 		.grid {
-			grid-template-columns: repeat(auto-fit, minmax(min(29ch, 100%), 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(min(30ch, 100%), 1fr));
 		}
 	}
 </style>
