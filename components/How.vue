@@ -18,6 +18,7 @@
 		gsap.set(cards, { position: 'absolute' })
 
 		gsap.from('.how-con', {
+			bottom: '100%',
 			yPercent: 150,
 			stagger: 0.5,
 			scrollTrigger: {
