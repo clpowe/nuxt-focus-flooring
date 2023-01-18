@@ -155,30 +155,21 @@
 				<Grid>
 					<Framer :width="16" :height="9">
 						<video controls>
-							<source
-								src="/construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
-								type="video/mp4"
-							/>
+							<source src="" type="video/mp4" />
 
 							Your browser does not support the video tag.
 						</video>
 					</Framer>
 					<Framer :width="16" :height="9">
 						<video controls>
-							<source
-								src="/construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
-								type="video/mp4"
-							/>
+							<source src="" type="video/mp4" />
 
 							Your browser does not support the video tag.
 						</video>
 					</Framer>
 					<Framer :width="16" :height="9">
 						<video controls>
-							<source
-								src="/construction-worker-in-noise-canceling-earmuffs-2022-08-10-09-02-36-utc.mov"
-								type="video/mp4"
-							/>
+							<source src="" type="video/mp4" />
 
 							Your browser does not support the video tag.
 						</video>
