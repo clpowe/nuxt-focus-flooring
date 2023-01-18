@@ -1,9 +1,46 @@
-<script setup></script>
+<script setup>
+	import gsap from 'gsap'
+	import ScrollTrigger from 'gsap/ScrollTrigger'
+
+	const howcontainer = ref(null)
+	const how = ref(null)
+	const how2 = ref(null)
+	const how3 = ref(null)
+	const how4 = ref(null)
+
+	// get other plugins:
+
+	onMounted(() => {
+		gsap.registerPlugin(ScrollTrigger)
+
+		const cards = gsap.utils.toArray('.how-con')
+
+		gsap.set(cards, { position: 'absolute' })
+
+		gsap.from('.how-con', {
+			yPercent: 150,
+			stagger: 0.5,
+			scrollTrigger: {
+				trigger: howcontainer.value,
+				pin: true,
+				markers: true,
+				scrub: 1,
+				start: 'top top',
+				end: 'bottom top',
+				snap: {
+					snapTo: 0.33,
+					duration: { min: 0.1, max: 0.4 },
+					ease: 'power1.inOut'
+				}
+			}
+		})
+	})
+</script>
 <template>
-	<div>
-		<h2>How we do it</h2>
+	<div class="howcontainer" ref="howcontainer">
+		<h2 ref="title">How we do it</h2>
 		<ol type="1">
-			<li class="how">
+			<li class="how-con how" ref="how">
 				<div>
 					<svg
 						width="173"
@@ -234,7 +271,7 @@
 				</div>
 			</li>
 
-			<li class="how">
+			<li class="how-con how2" ref="how2">
 				<div>
 					<svg
 						width="144"
@@ -348,8 +385,8 @@
 				</div>
 			</li>
 
-			<li class="how">
-				<div class="image">
+			<li class="how-con how3" ref="how3">
+				<div class="">
 					<svg
 						width="156"
 						height="156"
@@ -431,7 +468,7 @@
 				</div>
 			</li>
 
-			<li class="how">
+			<li class="how-con how4" ref="how4">
 				<div>
 					<svg
 						width="166"
@@ -589,12 +626,39 @@
 </template>
 
 <style scoped>
-	.how {
-		display: grid;
-		height: 100vh;
+	.howcontainer {
+		position: relative;
+	}
+	.how-con {
+		display: flex;
+		position: relative;
 		align-content: center;
+		background-color: #fff;
+		height: calc(60vh - var(--s3) * 4);
+		align-items: center;
+		width: 60ch;
+		padding: var(--s3);
+		border-radius: var(--s2);
+		gap: var(--s2);
+		margin-inline: auto;
+		margin-bottom: 50px;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		z-index: 1;
+		top: var(--s2);
 	}
 
+	.how-con:nth-child(2) {
+		top: calc(var(--s2) * 2);
+		z-index: 2;
+	}
+	.how-con:nth-child(3) {
+		top: calc(var(--s2) * 3);
+		z-index: 3;
+	}
+	.how-con:nth-child(4) {
+		top: calc(var(--s2) * 4);
+		z-index: 4;
+	}
 	.image {
 		width: 100%;
 	}
@@ -611,5 +675,17 @@
 	.number {
 		font-size: 64px;
 		font-weight: 700;
+	}
+
+	ol {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		min-height: 100vh;
+		padding: 0;
+		margin: auto;
+		max-inline-size: 75ch;
 	}
 </style>

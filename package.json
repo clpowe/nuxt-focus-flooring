@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@formkit/nuxt": "1.0.0-beta.12",
 		"@vueuse/nuxt": "^9.9.0",
+		"gsap": "^3.11.4",
 		"postcss-preset-env": "^7.8.3"
 	},
 	"browserslist": [

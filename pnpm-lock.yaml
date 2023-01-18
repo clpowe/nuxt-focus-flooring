@@ -5,6 +5,7 @@ specifiers:
   '@nuxt/image': ^0.7.1
   '@nuxtjs/google-fonts': 3.0.0-1
   '@vueuse/nuxt': ^9.9.0
+  gsap: ^3.11.4
   nuxt: 3.0.0
   postcss-preset-env: ^7.8.3
   sass: ^1.57.1
@@ -12,6 +13,7 @@ specifiers:
 dependencies:
   '@formkit/nuxt': 1.0.0-beta.12_vue@3.2.45
   '@vueuse/nuxt': 9.9.0_xsv3vwo4hvye53m3n4ybcmydue
+  gsap: 3.11.4
   postcss-preset-env: 7.8.3_postcss@8.4.20
 
 devDependencies:
@@ -2411,6 +2413,10 @@ packages:
 
   /graceful-fs/4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
+    dev: false
 
   /gzip-size/7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
