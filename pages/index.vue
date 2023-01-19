@@ -79,9 +79,9 @@
 			</template>
 		</HomeHero>
 	</header>
-	<main id="main" class="container">
+	<main id="main" class="">
 		<Stack size="--s9">
-			<section>
+			<section class="container">
 				<Stack size="--s-1">
 					<Framer :width="16" :height="9">
 						<img src="/placeholder.webp" alt="" />
@@ -102,7 +102,7 @@
 				</Stack>
 			</section>
 
-			<section>
+			<section class="container">
 				<Stack size="--s-3">
 					<h2>What we do</h2>
 					<p>Commercial flooring Services</p>
@@ -121,7 +121,7 @@
 				</Grid>
 			</section>
 
-			<section>
+			<section class="container">
 				<h2>Sectores we serve</h2>
 				<article>
 					<h3>Industrial</h3>
@@ -150,7 +150,7 @@
 				<How />
 			</section>
 
-			<section>
+			<section class="container">
 				<h2>Testimonials</h2>
 				<Grid>
 					<Framer :width="16" :height="9">

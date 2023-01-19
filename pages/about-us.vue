@@ -91,8 +91,8 @@
 	<div>
 		<Hero> About Us </Hero>
 
-		<main id="main" class="container">
-			<article id="our-purpose">
+		<main id="main">
+			<article id="our-purpose" class="container">
 				<Stack size="--s-1">
 					<h2>Our Purpose</h2>
 					<p>
@@ -101,7 +101,8 @@
 					</p>
 				</Stack>
 			</article>
-			<article id="core-values">
+
+			<article id="core-values" class="container">
 				<Stack size="--s-1">
 					<h2>Core Values</h2>
 					<p>
@@ -124,7 +125,8 @@
 					</Card>
 				</Stack>
 			</article>
-			<article id="three-uniques">
+
+			<article id="three-uniques" class="container">
 				<Stack size="--s-1">
 					<h2>Three Uniqes</h2>
 					<Box v-for="item in threeUniqes" padding="--s-1">

@@ -49,8 +49,8 @@
 		<Stack size="4">
 			<Hero>Culture and <span>Comunity</span></Hero>
 
-			<main id="main" class="container">
-				<article>
+			<main id="main">
+				<article class="container">
 					<Stack size="2">
 						<h2>Culture</h2>
 						<p>
@@ -93,7 +93,7 @@
 					</Stack>
 				</article>
 
-				<article>
+				<article class="container">
 					<Stack size="2">
 						<h2>Our commitment to our community</h2>
 						<ul>

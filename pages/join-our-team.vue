@@ -42,8 +42,8 @@
 	<div>
 		<Hero>Join our <span>team</span></Hero>
 
-		<main id="main" class="container">
-			<div>
+		<main id="main">
+			<div class="container">
 				<p>
 					At Focus Flooring, we see each one of our projects as an opportunity
 					to eliminate our clients’ risks through our processes. When you join
