@@ -10,44 +10,82 @@
 				/>
 			</NuxtLink>
 
-			<nav role="navigation" class="nav" aria-label="primary">
-				<Cluster>
-					<NuxtLink prefetch to="/">Home</NuxtLink>
-					<div class="dropdown">
-						<NuxtLink prefetch to="/about-us">About us</NuxtLink>
-
-						<ul class="dropdown-content">
-							<li>
-								<NuxtLink prefetch to="/our-history">Our History</NuxtLink>
-							</li>
-
-							<li>
-								<NuxtLink prefetch to="/meet-the-team">Meet the team</NuxtLink>
-							</li>
-
-							<li>
-								<NuxtLink prefetch to="/culture-and-comunity"
-									>Culture and comunity</NuxtLink
+			<nav role="navigation" class="menubar-navigation" aria-label="primary">
+				<ul
+					class="menubar-navigation"
+					role="menubar"
+					aria-label="Mythical University"
+				>
+					<Cluster>
+						<li role="none">
+							<NuxtLink prefetch to="/" role="menuitem">Home</NuxtLink>
+						</li>
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/about-us"
+								role="menuitem"
+								aria-haspopup="true"
+								aria-expanded="false"
+								>About us
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="down"
+									width="12"
+									height="9"
+									viewBox="0 0 12 9"
 								>
-							</li>
+									<polygon points="1 0, 11 0, 6 8"></polygon></svg
+							></NuxtLink>
+							<ul class="" role="menu" aria-label="About">
+								<li role="none">
+									<NuxtLink prefetch to="/our-history" role="menuitem"
+										>Our History</NuxtLink
+									>
+								</li>
 
-							<li>
-								<NuxtLink prefetch to="/join-our-team">Join our team</NuxtLink>
-							</li>
-						</ul>
-					</div>
-					<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
+								<li role="none">
+									<NuxtLink prefetch to="/meet-the-team" role="menuitem"
+										>Meet the team</NuxtLink
+									>
+								</li>
 
-					<NuxtLink prefetch to="/portfolio">Portfolio</NuxtLink>
+								<li role="none">
+									<NuxtLink prefetch to="/culture-and-comunity" role="menuitem"
+										>Culture and comunity</NuxtLink
+									>
+								</li>
+								<li role="none">
+									<NuxtLink prefetch to="/join-our-team" role="menuitem"
+										>Join our team</NuxtLink
+									>
+								</li>
+							</ul>
+						</li>
+						<li role="none">
+							<NuxtLink prefetch to="/our-process" role="menuitem"
+								>Our Process</NuxtLink
+							>
+						</li>
 
-					<NuxtLink prefetch to="/contact/general-contact">Contact</NuxtLink>
-				</Cluster>
+						<li role="none">
+							<NuxtLink prefetch to="/portfolio" role="menuitem"
+								>Portfolio</NuxtLink
+							>
+						</li>
+						<li role="none">
+							<NuxtLink prefetch to="/contact/general-contact" role="menuitem"
+								>Contact</NuxtLink
+							>
+						</li>
+					</Cluster>
+				</ul>
 			</nav>
 		</div>
 	</header>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 	.header {
 		position: relative;
 		background-color: var(--midnight);
@@ -61,60 +99,62 @@
 		display: flex;
 	}
 
-	.nav {
+	.menubar-navigation {
 		display: flex;
 		margin-left: auto;
 		text-transform: uppercase;
 		text-decoration: none;
 
-		& .dropdown {
+		& li li {
 			display: block;
-			position: relative;
-			clear: both;
-			transition-duration: 0.5s;
 		}
 
-		& .dropdown:hover {
-			cursor: pointer;
+		& > li > [role='menuitem'] {
+			display: inline-block;
 		}
 
-		& .dropdown .dropdown-content {
-			visibility: hidden;
-			opacity: 0;
-			min-width: 5rem;
+		& [role='menuitem'] svg {
+			fill: currentcolor;
+			stroke: currentcolor;
+		}
+
+		& [role='menuitem'] svg.down {
+			padding-left: 0.125em;
+		}
+
+		& [role='menuitem'] svg.right {
 			position: absolute;
-			transition: all 0.5s ease;
-			left: -200%;
-			display: none;
+			padding-top: 0.35em;
+			right: 0.75em;
 		}
 
-		& .dropdown:hover > .dropdown-content,
-		& .dropdown:focus-within > .dropdown-content,
-		& .dropdown .dropdown-content:hover,
-		& .dropdown .dropdown-content:focus {
-			visibility: visible;
-			opacity: 1;
-			display: flex;
+		& [role='menuitem'][aria-expanded='true'] svg.down {
+			transform: rotate(180deg);
 		}
 
-		& .dropdown .dropdown-content li {
-			clear: both;
-			max-inline-size: none;
+		& [role='menuitem'][aria-expanded='true'] svg.right {
+			transform: rotate(90deg) translate(5px, -5px);
 		}
-	}
 
-	.dropdown-content {
-		background-color: var(--midnight);
-		padding: var(--s-1);
-		width: auto;
-		display: flex;
-		max-inline-size: none;
-		gap: var(--s-1);
-	}
-	.dropdown-content li {
-		max-inline-size: none;
-		font-size: 0.8em;
-		width: max-content;
+		/* focus styling */
+		&.focus {
+			padding: 0;
+			border: #034575 solid 3px;
+		}
+
+		& > li > [aria-expanded='true'],
+		& > li > [role='menuitem']:focus,
+		& > li > [role='menuitem']:hover {
+			outline: none;
+			color: var(--focus-yellow);
+		}
+
+		& > li > [role='menuitem']:focus,
+		& > li > [role='menuitem']:hover {
+			padding: 2px;
+			padding-bottom: 4px;
+			border: 2px solid #034575;
+		}
 	}
 
 	a:link {
