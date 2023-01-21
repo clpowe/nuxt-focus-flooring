@@ -1,8 +1,25 @@
 <script setup>
 	const expanded = ref(false)
 
+	const mobileNav = ref(null)
+
+	const { width } = useWindowSize()
+
+	const mobile = computed(() => {
+		if (width.value <= 800) {
+			return true
+		} else {
+			mobileNav.value = false
+			return false
+		}
+	})
+
 	function handleClick() {
 		expanded.value = !expanded.value
+	}
+
+	function toggleMobileNav() {
+		mobileNav.value = !mobileNav.value
 	}
 </script>
 
@@ -20,13 +37,20 @@
 
 			<nav role="navigation" class="menubar-navigation" aria-label="primary">
 				<ul
+					v-show="!mobile"
 					class="menubar-navigation disclosure-nav"
 					role="menubar"
 					aria-label="Focus Flooring"
 				>
 					<Cluster>
 						<li role="none">
-							<NuxtLink prefetch to="/" role="menuitem">Home</NuxtLink>
+							<NuxtLink
+								prefetch
+								to="/"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Home</NuxtLink
+							>
 						</li>
 						<li role="none" ref="menulink">
 							<NuxtLink
@@ -36,6 +60,7 @@
 								to="/about-us"
 								role="menuitem"
 								aria-haspopup="true"
+								exactActiveClass="nuxt-link-active"
 								:aria-expanded="expanded"
 								>About us
 							</NuxtLink>
@@ -66,47 +91,184 @@
 								@mouseover="expanded = true"
 							>
 								<li role="none">
-									<NuxtLink prefetch to="/our-history" role="menuitem"
+									<NuxtLink
+										prefetch
+										to="/our-history"
+										role="menuitem"
+										exactActiveClass="nuxt-link-active"
 										>Our History</NuxtLink
 									>
 								</li>
 
 								<li role="none">
-									<NuxtLink prefetch to="/meet-the-team" role="menuitem"
+									<NuxtLink
+										prefetch
+										to="/meet-the-team"
+										role="menuitem"
+										exactActiveClass="nuxt-link-active"
 										>Meet the team</NuxtLink
 									>
 								</li>
 
 								<li role="none">
-									<NuxtLink prefetch to="/culture-and-comunity" role="menuitem"
+									<NuxtLink
+										prefetch
+										to="/culture-and-comunity"
+										role="menuitem"
+										exactActiveClass="nuxt-link-active"
 										>Culture and comunity</NuxtLink
 									>
 								</li>
 								<li role="none">
-									<NuxtLink prefetch to="/join-our-team" role="menuitem"
+									<NuxtLink
+										prefetch
+										to="/join-our-team"
+										role="menuitem"
+										exactActiveClass="nuxt-link-active"
 										>Join our team</NuxtLink
 									>
 								</li>
 							</ul>
 						</li>
 						<li role="none">
-							<NuxtLink prefetch to="/our-process" role="menuitem"
+							<NuxtLink
+								prefetch
+								to="/our-process"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
 								>Our Process</NuxtLink
 							>
 						</li>
 
 						<li role="none">
-							<NuxtLink prefetch to="/portfolio" role="menuitem"
+							<NuxtLink
+								prefetch
+								to="/portfolio"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
 								>Portfolio</NuxtLink
 							>
 						</li>
 						<li role="none">
-							<NuxtLink prefetch to="/contact/general-contact" role="menuitem"
+							<NuxtLink
+								prefetch
+								to="/contact/general-contact"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
 								>Contact</NuxtLink
 							>
 						</li>
 					</Cluster>
 				</ul>
+				<div class="icon" v-show="mobile">
+					<Icon
+						v-if="mobileNav"
+						name="line-md:menu-to-close-alt-transition"
+						size="1.25em"
+						@click="toggleMobileNav"
+					/>
+					<Icon
+						v-else
+						name="line-md:menu"
+						size="1.25em"
+						@click="toggleMobileNav"
+					/>
+				</div>
+				<transition name="mobile-nav">
+					<ul
+						v-show="mobileNav"
+						class="dropDownNav"
+						role="menubar"
+						aria-label="Focus Flooring"
+					>
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Home</NuxtLink
+							>
+						</li>
+						<li role="none" ref="menulink">
+							<NuxtLink
+								prefetch
+								to="/about-us"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>About us
+							</NuxtLink>
+						</li>
+
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/our-history"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Our History</NuxtLink
+							>
+						</li>
+
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/meet-the-team"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Meet the team</NuxtLink
+							>
+						</li>
+
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/culture-and-comunity"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Culture and comunity</NuxtLink
+							>
+						</li>
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/join-our-team"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Join our team</NuxtLink
+							>
+						</li>
+
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/our-process"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Our Process</NuxtLink
+							>
+						</li>
+
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/portfolio"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Portfolio</NuxtLink
+							>
+						</li>
+						<li role="none">
+							<NuxtLink
+								prefetch
+								to="/contact/general-contact"
+								role="menuitem"
+								exactActiveClass="nuxt-link-active"
+								>Contact</NuxtLink
+							>
+						</li>
+					</ul>
+				</transition>
 			</nav>
 		</div>
 	</header>
@@ -120,6 +282,8 @@
 		padding-block: var(--s-1);
 		border-bottom: 2px solid var(--focus-yellow);
 		z-index: 50;
+		width: 100%;
+		position: fixed;
 	}
 
 	.navigation {
@@ -192,5 +356,43 @@
 
 	a:visited {
 		text-decoration: none;
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		right: 1rem;
+	}
+	.dropDownNav {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		width: 100%;
+		max-width: 250px;
+		height: 100%;
+		background-color: var(--midnight);
+		top: 0;
+		left: 0;
+		padding-block: var(--s5);
+		padding-inline: var(--s1);
+		gap: var(--s-1);
+	}
+
+	.mobile-nav-enter-active,
+	.mobile-nav-leave-active {
+		transition: 1s ease all;
+	}
+	.mobile-nav-enter-from {
+		transform: translateX(-100%);
+	}
+	.mobile-nav-leave-to {
+		transform: translateX(-100%);
+	}
+
+	.nuxt-link-active {
+		color: var(--focus-yellow);
 	}
 </style>

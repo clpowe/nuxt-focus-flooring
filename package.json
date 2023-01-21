@@ -11,6 +11,7 @@
 		"@nuxt/image": "^0.7.1",
 		"@nuxtjs/google-fonts": "3.0.0-1",
 		"nuxt": "3.0.0",
+		"nuxt-icon": "^0.2.6",
 		"sass": "^1.57.1"
 	},
 	"dependencies": {

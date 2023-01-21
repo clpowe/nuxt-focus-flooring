@@ -35,7 +35,12 @@ export default defineNuxtConfig({
 			}
 		}
 	},
-	modules: ['@vueuse/nuxt', '@formkit/nuxt', '@nuxtjs/google-fonts'],
+	modules: [
+		'@vueuse/nuxt',
+		'@formkit/nuxt',
+		'@nuxtjs/google-fonts',
+		'nuxt-icon'
+	],
 	googleFonts: {
 		families: {
 			Inter: [400, 700]
