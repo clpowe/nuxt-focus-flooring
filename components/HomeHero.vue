@@ -35,7 +35,7 @@
 		background: url('../aviation.jpeg'), var(--midnight);
 		background-position: center center;
 		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
-		//mix-blend-mode: luminosity;
+
 		height: 110%;
 		width: 50%;
 		margin: auto;
@@ -62,7 +62,6 @@
 			background: url('../aviation.jpeg'), var(--midnight);
 			background-position: center center;
 			filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
-			//mix-blend-mode: luminosity;
 			height: 100%;
 			width: 100%;
 			margin: auto;

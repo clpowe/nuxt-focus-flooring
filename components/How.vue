@@ -26,12 +26,7 @@
 				pin: true,
 				scrub: 1,
 				start: 'top top',
-				end: 'bottom top',
-				snap: {
-					snapTo: 0.55,
-					duration: { min: 0.1, max: 0.4 },
-					ease: 'power1.inOut'
-				}
+				end: '+=1500'
 			}
 		})
 	})
@@ -633,25 +628,32 @@
 <style scoped>
 	.howcontainer {
 		position: relative;
+		padding-block: var(--s3);
 		background-color: var(--midnight);
 	}
+
+	h2 {
+		color: var(--focus-white);
+	}
 	.how-con {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
 		box-sizing: border-box;
 		position: relative;
 		align-content: center;
 		background-color: #fff;
 		align-items: center;
 		max-inline-size: 60ch;
-		/* padding: var(--s3); */
+		padding: var(--s3);
+		height: calc(100vh - var(--s5) * 8);
 		border-radius: var(--s2);
 		gap: var(--s2);
 		margin-inline: auto;
 		margin-bottom: 50px;
-		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+			rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 		z-index: 1;
 		top: var(--s2);
-		transform: translateY(50%);
 	}
 
 	.how-con:nth-child(2) {
@@ -695,5 +697,9 @@
 		margin: auto;
 
 		max-inline-size: 75ch;
+	}
+
+	svg {
+		width: 100%;
 	}
 </style>

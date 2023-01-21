@@ -48,7 +48,4 @@
 		align-items: baseline;
 		justify-items: center;
 	}
-
-	.dot {
-	}
 </style>

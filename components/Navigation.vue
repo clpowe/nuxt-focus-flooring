@@ -1,3 +1,11 @@
+<script setup>
+	const expanded = ref(false)
+
+	function handleClick() {
+		expanded.value = !expanded.value
+	}
+</script>
+
 <template>
 	<header class="header">
 		<div class="container navigation">
@@ -12,22 +20,33 @@
 
 			<nav role="navigation" class="menubar-navigation" aria-label="primary">
 				<ul
-					class="menubar-navigation"
+					class="menubar-navigation disclosure-nav"
 					role="menubar"
-					aria-label="Mythical University"
+					aria-label="Focus Flooring"
 				>
 					<Cluster>
 						<li role="none">
 							<NuxtLink prefetch to="/" role="menuitem">Home</NuxtLink>
 						</li>
-						<li role="none">
+						<li role="none" ref="menulink">
 							<NuxtLink
 								prefetch
+								class="has-submenu"
+								:class="{ open: expanded }"
 								to="/about-us"
 								role="menuitem"
 								aria-haspopup="true"
-								aria-expanded="false"
+								:aria-expanded="expanded"
 								>About us
+							</NuxtLink>
+							<button
+								ref="button"
+								type="button"
+								:aria-expanded="expanded"
+								aria-controls="id_about_menu"
+								aria-label="More About pages"
+								@click="handleClick"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="down"
@@ -35,9 +54,17 @@
 									height="9"
 									viewBox="0 0 12 9"
 								>
-									<polygon points="1 0, 11 0, 6 8"></polygon></svg
-							></NuxtLink>
-							<ul class="" role="menu" aria-label="About">
+									<polygon points="1 0, 11 0, 6 8"></polygon>
+								</svg>
+							</button>
+							<ul
+								:class="{ grid: expanded }"
+								class="sub-menu"
+								role="menu"
+								aria-label="About"
+								ref="submenu"
+								@mouseover="expanded = true"
+							>
 								<li role="none">
 									<NuxtLink prefetch to="/our-history" role="menuitem"
 										>Our History</NuxtLink
@@ -85,7 +112,7 @@
 	</header>
 </template>
 
-<style scoped lang="postcss">
+<style scoped>
 	.header {
 		position: relative;
 		background-color: var(--midnight);
@@ -113,48 +140,50 @@
 			display: inline-block;
 		}
 
-		& [role='menuitem'] svg {
-			fill: currentcolor;
-			stroke: currentcolor;
+		& .sub-menu {
+			position: absolute;
+			background-color: var(--midnight);
+			padding: var(--s-1);
+			top: 70%;
+			display: v-bind(`${expanded ? 'grid': 'none'}`);
 		}
 
-		& [role='menuitem'] svg.down {
+		& button {
+			background: transparent;
+			border: none;
+		}
+
+		& button svg {
+			fill: var(--focus-white);
+			stroke: fill;
+		}
+
+		& button:hover svg {
+			fill: var(--focus-yellow);
+			stroke: fill;
+		}
+
+		& button svg.down {
 			padding-left: 0.125em;
 		}
 
-		& [role='menuitem'] svg.right {
+		& button svg.right {
 			position: absolute;
 			padding-top: 0.35em;
 			right: 0.75em;
 		}
 
-		& [role='menuitem'][aria-expanded='true'] svg.down {
+		& button[aria-expanded='true'] svg.down {
 			transform: rotate(180deg);
 		}
 
-		& [role='menuitem'][aria-expanded='true'] svg.right {
+		& button[aria-expanded='true'] svg.right {
 			transform: rotate(90deg) translate(5px, -5px);
 		}
+	}
 
-		/* focus styling */
-		&.focus {
-			padding: 0;
-			border: #034575 solid 3px;
-		}
-
-		& > li > [aria-expanded='true'],
-		& > li > [role='menuitem']:focus,
-		& > li > [role='menuitem']:hover {
-			outline: none;
-			color: var(--focus-yellow);
-		}
-
-		& > li > [role='menuitem']:focus,
-		& > li > [role='menuitem']:hover {
-			padding: 2px;
-			padding-bottom: 4px;
-			border: 2px solid #034575;
-		}
+	.grid {
+		display: grid;
 	}
 
 	a:link {
