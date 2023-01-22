@@ -122,28 +122,7 @@
 			</section>
 
 			<section class="container">
-				<h2>Sectores we serve</h2>
-				<article>
-					<h3>Industrial</h3>
-				</article>
-				<article>
-					<h3>Healthcare</h3>
-				</article>
-				<article>
-					<h3>Aviation</h3>
-				</article>
-				<article>
-					<h3>Residential & Hospitality</h3>
-				</article>
-				<article>
-					<h3>Worship Centers</h3>
-				</article>
-				<article>
-					<h3>Education</h3>
-				</article>
-				<article>
-					<h3>Office & Retail</h3>
-				</article>
+				<Sectores />
 			</section>
 
 			<section>
