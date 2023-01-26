@@ -23,3 +23,9 @@
 		</p>
 	</article>
 </template>
+
+<style scoped>
+	article {
+		width: 100%;
+	}
+</style>

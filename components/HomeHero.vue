@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<div class="hero">
+	<!-- <div class="hero">
 		<div class="container content">
 			<Stack size="--s1">
 				<h1>
@@ -16,10 +16,26 @@
 			<div class="dot"></div>
 		</div>
 		<div class="image"></div>
+	</div> -->
+	<div class="holder">
+		<div class="red">hello</div>
+		<div class="blue">hello</div>
 	</div>
 </template>
 
 <style scoped>
+	.holder {
+		display: grid;
+		height: 600px;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.red {
+		background-color: red;
+	}
+	.blue {
+		background-color: blue;
+	}
 	.hero {
 		position: relative;
 		height: 600px;
@@ -27,19 +43,19 @@
 		display: flex;
 		align-items: center;
 		background-color: var(--midnight);
+		grid-template-columns: 1fr 1fr;
 	}
 	.image {
-		position: absolute;
+		/* position: absolute; */
 		top: 0%;
 		right: 0%;
 		background: url('../aviation.jpeg'), var(--midnight);
 		background-position: center center;
 		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
-
-		height: 110%;
+		height: 100%;
 		width: 50%;
 		margin: auto;
-		max-width: 2000px;
+		/* max-width: 2000px; */
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

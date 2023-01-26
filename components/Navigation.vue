@@ -283,7 +283,6 @@
 		border-bottom: 2px solid var(--focus-yellow);
 		z-index: 50;
 		width: 100%;
-		position: fixed;
 	}
 
 	.navigation {

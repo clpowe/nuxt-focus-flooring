@@ -51,7 +51,6 @@
 			v-for="sector in sectores"
 			key="sector.id"
 			:title="sector.title"
-			:description="sector.description"
 		/>
 	</div>
 </template>
@@ -94,34 +93,20 @@
 	}
 
 	.sectores {
-		list-style: none;
-		position: relative;
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		align-items: stretch;
-		overflow: hidden;
+		flex-direction: column;
 	}
 
 	.sectores article {
-		flex: initial;
-		width: 14.28%;
-		height: 100%;
-		text-align: center;
-		color: #fff;
-		text-decoration: none;
-		vertical-align: bottom;
-		box-sizing: border-box;
-		padding: var(--s-1) var(--s-1);
-		position: relative;
+		text-orientation: mixed;
+		flex-grow: 1;
+		width: 100%;
 	}
 
 	.sectores:hover article {
-		flex: initial;
-		width: 10%;
 	}
 
 	.sectores article:hover {
-		width: 60%;
+		flex-grow: 3;
 	}
 </style>

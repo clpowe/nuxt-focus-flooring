@@ -108,7 +108,7 @@
 					<p>Commercial flooring Services</p>
 				</Stack>
 				<Grid>
-					<Box padding="--s-5" v-for="item in whatWeDo">
+					<Box padding="--s-2" v-for="item in whatWeDo">
 						<Card
 							:key="item.id"
 							:image="item.image"
