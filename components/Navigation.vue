@@ -1,4 +1,5 @@
 <script setup>
+	const about = ref(null)
 	const expanded = ref(false)
 
 	const mobileNav = ref(null)
@@ -55,6 +56,8 @@
 						<li role="none" ref="menulink">
 							<NuxtLink
 								prefetch
+								@mouseover="handleClick"
+								ref="about"
 								class="has-submenu"
 								:class="{ open: expanded }"
 								to="/about-us"
@@ -88,6 +91,7 @@
 								role="menu"
 								aria-label="About"
 								ref="submenu"
+								@mouseleave="handleClick"
 								@mouseover="expanded = true"
 							>
 								<li role="none">

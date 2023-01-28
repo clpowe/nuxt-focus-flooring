@@ -26,7 +26,8 @@
 				pin: true,
 				scrub: 1,
 				start: 'top top',
-				end: '+=1500'
+				end: '+=1500',
+				toggleActions: 'play pause resume reset'
 			}
 		})
 	})
