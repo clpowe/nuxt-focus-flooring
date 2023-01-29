@@ -1,8 +1,4 @@
 <script setup>
-	definePageMeta({
-		layout: 'homepage'
-	})
-
 	const whatWeDo = [
 		{
 			id: 1,

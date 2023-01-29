@@ -1,5 +1,5 @@
 <script setup>
-	const about = ref(null)
+	const about = ref(false)
 	const expanded = ref(false)
 
 	const mobileNav = ref(null)
