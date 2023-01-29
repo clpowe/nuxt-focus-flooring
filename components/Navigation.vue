@@ -164,7 +164,7 @@
 						</li>
 					</Cluster>
 				</ul>
-				<div class="icon" v-show="mobile">
+				<div class="menu-icon" v-show="mobile">
 					<Icon
 						v-if="mobileNav"
 						name="line-md:menu-to-close-alt-transition"
@@ -185,6 +185,13 @@
 						role="menubar"
 						aria-label="Focus Flooring"
 					>
+						<div class="drawer-icon" v-show="mobile">
+							<Icon
+								name="line-md:menu-to-close-alt-transition"
+								size="1.25em"
+								@click="toggleMobileNav"
+							/>
+						</div>
 						<li role="none">
 							<NuxtLink
 								prefetch
@@ -272,6 +279,13 @@
 							>
 						</li>
 					</ul>
+				</transition>
+				<transition name="backdrop">
+					<div
+						class="backdrop"
+						v-show="mobileNav"
+						@click="toggleMobileNav"
+					></div>
 				</transition>
 			</nav>
 		</div>
@@ -361,13 +375,20 @@
 		text-decoration: none;
 	}
 
-	.icon {
-		display: flex;
-		align-items: center;
+	.menu-icon {
 		position: absolute;
 		height: 100%;
 		top: 0;
 		right: 1rem;
+		display: flex;
+		align-items: center;
+	}
+	.drawer-icon {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		display: flex;
+		align-items: center;
 	}
 	.dropDownNav {
 		display: flex;
@@ -382,6 +403,18 @@
 		padding-block: var(--s5);
 		padding-inline: var(--s1);
 		gap: var(--s-1);
+		z-index: 15;
+	}
+
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: var(--midnight);
+		height: 100vh;
+		width: 100%;
+		opacity: 0.6;
+		z-index: 10;
 	}
 
 	.mobile-nav-enter-active,
@@ -393,6 +426,18 @@
 	}
 	.mobile-nav-leave-to {
 		transform: translateX(-100%);
+	}
+
+	.backdrop-enter-active,
+	.backdrop-leave-active {
+		transition: 1s ease all;
+	}
+
+	.backdrop-enter-from {
+		opacity: 0;
+	}
+	.backdrop-leave-to {
+		opacity: 0;
 	}
 
 	.nuxt-link-active {

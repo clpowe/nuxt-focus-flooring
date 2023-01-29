@@ -82,24 +82,31 @@
 	<main id="main" class="">
 		<Stack size="--s9">
 			<section class="container">
-				<Stack size="--s-1">
+				<SidebySide>
 					<Framer :width="16" :height="9">
-						<img src="/placeholder.webp" alt="" />
+						<nuxt-img
+							src="/placeholder.webp"
+							alt=""
+							sizes="sm:100vw md:700px lg:700px"
+							fit="cover"
+						/>
 					</Framer>
-					<h2>Who we are</h2>
-					<p>
-						At Focus Flooring, our advanced solutions in commercial flooring
-						coupled with our 55+ years of combined flooring expertise, allows us
-						to be a leader in the flooring industry.
-					</p>
-					<p>
-						Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
-						<strong
-							>guarantee to eliminate your risk through our internal
-							processes.</strong
-						>
-					</p>
-				</Stack>
+					<Stack size="--s-1">
+						<h2>Who we are</h2>
+						<p>
+							At Focus Flooring, our advanced solutions in commercial flooring
+							coupled with our 55+ years of combined flooring expertise, allows
+							us to be a leader in the flooring industry.
+						</p>
+						<p>
+							Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
+							<strong
+								>guarantee to eliminate your risk through our internal
+								processes.</strong
+							>
+						</p>
+					</Stack>
+				</SidebySide>
 			</section>
 
 			<section class="container">
@@ -132,27 +139,32 @@
 			<section class="container">
 				<h2>Testimonials</h2>
 				<Grid>
-					<Framer :width="16" :height="9">
-						<video controls>
-							<source src="" type="video/mp4" />
+					<video controls>
+						<source
+							src="https://ik.imagekit.io/demo/sample-video.mp4"
+							type="video/mp4"
+						/>
 
-							Your browser does not support the video tag.
-						</video>
-					</Framer>
-					<Framer :width="16" :height="9">
-						<video controls>
-							<source src="" type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
 
-							Your browser does not support the video tag.
-						</video>
-					</Framer>
-					<Framer :width="16" :height="9">
-						<video controls>
-							<source src="" type="video/mp4" />
+					<video controls>
+						<source
+							src="https://ik.imagekit.io/demo/sample-video.mp4"
+							type="video/mp4"
+						/>
 
-							Your browser does not support the video tag.
-						</video>
-					</Framer>
+						Your browser does not support the video tag.
+					</video>
+
+					<video controls>
+						<source
+							src="https://ik.imagekit.io/demo/sample-video.mp4"
+							type="video/mp4"
+						/>
+
+						Your browser does not support the video tag.
+					</video>
 				</Grid>
 			</section>
 		</Stack>
@@ -164,5 +176,9 @@
 		display: flex;
 		flex-direction: row;
 		gap: 1rem;
+	}
+
+	video {
+		width: 100%;
 	}
 </style>

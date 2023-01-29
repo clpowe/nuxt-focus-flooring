@@ -21,9 +21,6 @@
 </template>
 
 <style scoped>
-	.holder {
-	}
-
 	.red {
 		background-color: red;
 	}

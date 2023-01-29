@@ -27,7 +27,7 @@
 				scrub: 1,
 				start: 'top top',
 				end: '+=1500',
-				toggleActions: 'play pause resume reset'
+				toggleActions: 'restart none none reverse'
 			}
 		})
 	})
@@ -651,8 +651,7 @@
 		gap: var(--s2);
 		margin-inline: auto;
 		margin-bottom: 50px;
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-			rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 		z-index: 1;
 		top: var(--s2);
 	}

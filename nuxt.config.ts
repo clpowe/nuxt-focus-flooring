@@ -39,7 +39,9 @@ export default defineNuxtConfig({
 		'@vueuse/nuxt',
 		'@formkit/nuxt',
 		'@nuxtjs/google-fonts',
-		'nuxt-icon'
+		'nuxt-icon',
+		'@nuxtjs/robots',
+		'@nuxt/image-edge'
 	],
 	googleFonts: {
 		families: {

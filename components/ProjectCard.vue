@@ -31,14 +31,16 @@
 </script>
 
 <template>
-	<div>
-		<Stack size="--s-1">
-			<img :src="image" :alt="alt" />
+	<SidebySide>
+		<Framer>
+			<nuxt-img :src="image" :alt="alt" />
+		</Framer>
+		<Stack size="--s-3">
 			<h3>{{ name }}</h3>
 			<p>Size: {{ size }}</p>
 			<p>Total Project Cost: {{ useMakeCurrency(cost) }}</p>
 			<p>Client: {{ client }}</p>
 			<p>Scope: {{ scope }}</p>
 		</Stack>
-	</div>
+	</SidebySide>
 </template>

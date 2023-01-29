@@ -505,12 +505,8 @@
 
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-					<Stack size="2">
-						<ProjectCard
-							v-for="item in filteredProjects"
-							:key="item.id"
-							v-bind="item"
-						/>
+					<Stack size="--s5">
+						<ProjectCard v-for="item in filteredProjects" v-bind="item" />
 					</Stack>
 				</main>
 			</Sidebar>
