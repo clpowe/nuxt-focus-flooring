@@ -252,11 +252,23 @@
 
 								<section id="system-generated-tools">
 									<Stack size="--s-1">
-										<h2>System Generated Tools</h2>
-										<p>
-											Our tools are system generated to equip you with what you
-											need, when you need it.
-										</p>
+										<SidebySide>
+											<Framer :width="16" :height="9">
+												<nuxt-img
+													src="../public/systemGeneratedTools.jpg"
+													alt=""
+													sizes="sm:100vw md:700px lg:700px"
+													fit="cover"
+												/>
+											</Framer>
+											<Stack size="--s-1">
+												<h2>System Generated Tools</h2>
+												<p>
+													Our tools are system generated to equip you with what
+													you need, when you need it.
+												</p>
+											</Stack>
+										</SidebySide>
 
 										<Box v-for="item in systemTools">
 											<Card

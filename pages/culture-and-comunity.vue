@@ -66,14 +66,15 @@
 								or final phase of estimating.
 							</p>
 						</Card>
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
+						<Grid>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/collaboratingWithColors_01.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+						</Grid>
 						<Card title="Team Building" component="h3">
 							<p>
 								Our comprehensive pre-construction process will ensure you can
@@ -82,36 +83,70 @@
 								or final phase of estimating.
 							</p>
 						</Card>
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
+						<Grid>
+							<Framer :width="12" :height="9">
+								<nuxt-img src="/teamBuilding_01.jpg" alt="" fit="cover" />
+							</Framer>
+						</Grid>
 					</Stack>
 				</article>
 
 				<article class="container">
 					<Stack size="2">
 						<h2>Our commitment to our community</h2>
-						<ul>
-							<li v-for="item in communityList">
-								<p>{{ item }}</p>
-							</li>
+						<ul class="partnerlist">
+							<Grid>
+								<li v-for="item in communityList">
+									<p>{{ item }}</p>
+								</li>
+							</Grid>
 						</ul>
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
-						<img src="/placeholder.webp" alt="" />
+						<Grid>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/commitmentToComunity_01.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/commitmentToComunity_02.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/commitmentToComunity_03.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/commitmentToComunity_04.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+							<Framer :width="12" :height="9">
+								<nuxt-img
+									src="/commitmentToComunity_05.jpg"
+									alt=""
+									fit="cover"
+								/>
+							</Framer>
+						</Grid>
 					</Stack>
 				</article>
 			</main>
 		</Stack>
 	</div>
 </template>
+
+<style scoped>
+	.partnerlist {
+		max-inline-size: none;
+	}
+</style>
