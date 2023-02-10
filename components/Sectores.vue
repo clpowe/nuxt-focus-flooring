@@ -1,4 +1,5 @@
 <script setup>
+	import gsap from 'gsap'
 	const sectores = ref([
 		{
 			id: 1,
@@ -43,70 +44,67 @@
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
 		}
 	])
+
+	function grow(event) {
+		console.log(event.target.children[1])
+		gsap.fromTo(event.target, { flexGrow: 1 }, { flexGrow: 10, duration: 0.35 })
+		gsap.fromTo(
+			event.target.children[0],
+			{ color: '#eceded' },
+			{ color: '#171d1a', duration: 0.35 }
+		)
+		gsap.fromTo(
+			event.target.children[3],
+			{ opacity: 0.2, mixBlendMode: 'luminosity' },
+			{ opacity: 0.8, mixBlendMode: 'normal', duration: 0.35 }
+		)
+	}
+	function shrink(event) {
+		gsap.fromTo(event.target, { flexGrow: 10 }, { flexGrow: 1, duration: 0.35 })
+		gsap.fromTo(
+			event.target.children[0],
+			{ color: '#171d1a' },
+			{ color: '#eceded', duration: 0.35 }
+		)
+		gsap.fromTo(
+			event.target.children[3],
+			{ opacity: 0.8 },
+			{ opacity: 0.2, duration: 0.35 }
+		)
+	}
 </script>
 <template>
 	<div class="sectores">
-		<!-- <h2>Sectores we serve</h2> -->
 		<SectorsSections
 			v-for="sector in sectores"
 			key="sector.id"
 			:title="sector.title"
+			@mouseenter="grow"
+			@mouseleave="shrink"
 		/>
 	</div>
 </template>
 
 <style scoped>
-	* {
-		transition: all 0.3s ease 0s;
-	}
-	div + div article:nth-child(1) {
-		background: #c22326;
-	}
-
-	div + div article:nth-child(2) {
-		background: #f37338;
-	}
-
-	div + div article:nth-child(3) {
-		background: #fdb632;
-	}
-
-	div + div article:nth-child(4) {
-		background: #027878;
-	}
-
-	div + div article:nth-child(5) {
-		background: #801638;
-	}
-	div + div article:nth-child(6) {
-		background: #168070;
-	}
-
-	div + div article:nth-child(7),
-	div + div {
-		background: #261362;
-	}
-
 	.sectores {
 		width: 100%;
 		height: 100vh;
-	}
-
-	.sectores {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
 
-	.sectores article {
-		text-orientation: mixed;
-		flex-grow: 1;
-		width: 100%;
-	}
-
-	.sectores:hover article {
-	}
-
-	.sectores article:hover {
-		flex-grow: 3;
+	@media (min-width: 670px) {
+		.sectores {
+			width: 100%;
+			height: 80vh;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+		.sectores article {
+			flex: 1;
+			overflow: hidden;
+		}
 	}
 </style>

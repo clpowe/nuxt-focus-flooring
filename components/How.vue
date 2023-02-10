@@ -642,16 +642,16 @@
 		box-sizing: border-box;
 		position: relative;
 		align-content: center;
-		background-color: #fff;
+		height: 100%;
 		align-items: center;
-		max-inline-size: 60ch;
+		width: 100%;
 		padding: var(--s3);
 		height: calc(100vh - var(--s5) * 8);
 		border-radius: var(--s2);
 		gap: var(--s2);
 		margin-inline: auto;
 		margin-bottom: 50px;
-		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 		z-index: 1;
 		top: var(--s2);
 	}

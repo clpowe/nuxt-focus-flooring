@@ -2,7 +2,7 @@
 	const about = ref(false)
 	const expanded = ref(false)
 
-	const mobileNav = ref(null)
+	const mobileNav = ref(true)
 
 	const { width } = useWindowSize()
 
@@ -86,6 +86,7 @@
 								</svg>
 							</button>
 							<ul
+								v-show="expanded"
 								:class="{ grid: expanded }"
 								class="sub-menu"
 								role="menu"
