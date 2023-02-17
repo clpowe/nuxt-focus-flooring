@@ -1,3 +1,5 @@
+import svgLoader from 'vite-svg-loader'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	app: {
@@ -25,12 +27,15 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	css: ['@/assets/styles/main.scss'],
+	css: ['@/assets/css/tailwind.scss'],
 	vite: {
+		plugins: [
+			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme
+		],
 		css: {
 			preprocessorOptions: {
 				sass: {
-					additionalData: '@import "@/assets/styles/_variables.scss"'
+					additionalData: '@import "@/assets/css/_variables.scss"'
 				}
 			}
 		}
@@ -41,7 +46,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/google-fonts',
 		'nuxt-icon',
 		'@nuxtjs/robots',
-		'@nuxt/image-edge'
+		'@nuxt/image-edge',
+		'@nuxtjs/tailwindcss'
 	],
 	googleFonts: {
 		families: {

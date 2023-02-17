@@ -137,10 +137,10 @@
 <template>
 	<div>
 		<Hero>Our <span>Process</span> </Hero>
-		<div class="container">
+		<div class="container relative">
 			<Sidebar>
-				<nav>
-					<ul>
+				<nav class="sticky top-0">
+					<ul class="sticky top-0">
 						<li>
 							<a href="#preconstruction">preconstruction</a>
 						</li>

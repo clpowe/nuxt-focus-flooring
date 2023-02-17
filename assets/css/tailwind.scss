@@ -1,14 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './tokens';
 @import './reset';
 
 // Global CSS starts
 html {
-	overflow-x: hidden;
 }
 
 body {
 	line-height: 1.5;
-	overflow-x: hidden;
 	padding-bottom: get-size('600');
 	font-family: 'Inter', sans-serif;
 	background-color: #fff;
@@ -48,8 +50,8 @@ th {
 }
 
 :focus {
-	outline: 2px dotted;
-	outline-offset: 0.25rem;
+	outline: 2px solid var(--focus-yellow);
+	outline-offset: 0.25em;
 }
 
 * {

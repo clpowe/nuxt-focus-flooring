@@ -10,9 +10,11 @@
 	"devDependencies": {
 		"@nuxt/image-edge": "1.0.0-27913696.5d122a3",
 		"@nuxtjs/google-fonts": "3.0.0-1",
+		"@nuxtjs/tailwindcss": "^6.4.0",
 		"nuxt": "^3.1.0",
 		"nuxt-icon": "^0.2.6",
-		"sass": "^1.57.1"
+		"sass": "^1.57.1",
+		"vite-svg-loader": "^4.0.0"
 	},
 	"dependencies": {
 		"@formkit/nuxt": "1.0.0-beta.12",
