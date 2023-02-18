@@ -24,7 +24,7 @@
 				<li class="how-con how" ref="how">
 					<Sidebar>
 						<div>
-							<svg-icon name="how_one" class="w-6 h-6" />
+							<svg-icon name="how_one" />
 						</div>
 						<div class="content">
 							<div class="number-container">
@@ -45,7 +45,7 @@
 				<li class="how-con how2" ref="how2">
 					<Sidebar>
 						<div>
-							<svg-icon name="how_two" class="w-6 h-6" />
+							<svg-icon name="how_two" />
 						</div>
 						<div class="content">
 							<div class="number-container">
@@ -64,7 +64,7 @@
 				<li class="how-con how3" ref="how3">
 					<Sidebar>
 						<div>
-							<svg-icon name="how_three" class="w-6 h-6" />
+							<svg-icon name="how_three" />
 						</div>
 						<div class="content">
 							<div class="number-container">
@@ -83,7 +83,7 @@
 				<li class="how-con how4" ref="how4">
 					<Sidebar>
 						<div>
-							<svg-icon name="how_four" class="w-6 h-6" />
+							<svg-icon name="how_four" />
 						</div>
 
 						<div class="content">
@@ -162,7 +162,9 @@
 		max-inline-size: none;
 		height: 100vh;
 		display: grid;
-		place-content: center;
+		align-items: center;
+
+		width: 100%;
 	}
 
 	svg {
