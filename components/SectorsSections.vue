@@ -6,7 +6,8 @@
 		},
 		image: {
 			type: String,
-			required: true
+			required: true,
+			default: '/Heron_Tampa.jpg'
 		},
 		description: {
 			type: String,
@@ -22,7 +23,7 @@
 			{{ description }}
 		</p>
 		<div class="cover"></div>
-		<nuxt-img src="/aviation.jpeg" alt="" fit="cover" />
+		<nuxt-img :src="image" alt="" fit="cover" />
 	</article>
 </template>
 
@@ -65,6 +66,7 @@
 		text-orientation: mixed;
 		rotate: 0deg;
 		z-index: 2;
+		position: relative;
 	}
 
 	@media (min-width: 670px) {
