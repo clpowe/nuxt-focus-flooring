@@ -48,7 +48,7 @@
 		<button @click="handleReset">Reset</button>
 	</div>
 	<div v-else>
-		<h3>Lets talk</h3>
+		<h3 class="">Lets talk</h3>
 		<p>
 			To reach us, simply fill out the form below, and we’ll be in contact as
 			soon as possible. Or, you can call us at any of our locations.
@@ -59,41 +59,44 @@
 				method="post"
 				action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
 				@submit="handleSubmit"
+				class="form"
 			>
-				<FormKit
-					type="text"
-					name="firstName"
-					label="First Name"
-					help="Enter your first name"
-					placeholder="First Name"
-				/>
-				<FormKit
-					type="text"
-					name="lastName"
-					label="Last Name"
-					help="Enter your last name"
-					placeholder="Last Name"
-				/>
-				<FormKit
-					type="email"
-					name="email"
-					validation="required"
-					label="Email Address"
-					help="Please enter your email address"
-					placeholder="Email address"
-				/>
-				<FormKit
-					type="tel"
-					name="telephoneNumber"
-					validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-					:validation-messages="{
-						matches: 'Phone number must be in the format xxx-xxx-xxxx'
-					}"
-					validation-visibility="dirty"
-					label="Phone Number"
-					help="Please enter your phone Number"
-					placeholder="xxx-xxx-xxxx"
-				/>
+				<Grid>
+					<FormKit
+						type="text"
+						name="firstName"
+						label="First Name"
+						help="Enter your first name"
+						placeholder="First Name"
+					/>
+					<FormKit
+						type="text"
+						name="lastName"
+						label="Last Name"
+						help="Enter your last name"
+						placeholder="Last Name"
+					/>
+					<FormKit
+						type="email"
+						name="email"
+						validation="required"
+						label="Email Address"
+						help="Please enter your email address"
+						placeholder="Email address"
+					/>
+					<FormKit
+						type="tel"
+						name="telephoneNumber"
+						validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+						:validation-messages="{
+							matches: 'Phone number must be in the format xxx-xxx-xxxx'
+						}"
+						validation-visibility="dirty"
+						label="Phone Number"
+						help="Please enter your phone Number"
+						placeholder="xxx-xxx-xxxx"
+					/>
+				</Grid>
 				<FormKit
 					type="text"
 					name="jobTitle"
@@ -140,3 +143,9 @@
 		</ClientOnly>
 	</div>
 </template>
+
+<style>
+	form {
+		max-inline-size: none;
+	}
+</style>

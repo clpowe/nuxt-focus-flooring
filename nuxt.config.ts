@@ -63,5 +63,8 @@ export default defineNuxtConfig({
 				}
 			}
 		}
+	},
+	formkit: {
+		configFile: './formkit.config.ts'
 	}
 })

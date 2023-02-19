@@ -17,7 +17,11 @@
 		"vite-svg-loader": "^4.0.0"
 	},
 	"dependencies": {
+		"@formkit/addons": "1.0.0-beta.15",
+		"@formkit/icons": "1.0.0-beta.15",
 		"@formkit/nuxt": "1.0.0-beta.12",
+		"@formkit/themes": "1.0.0-beta.16-18186fe",
+		"@formkit/vue": "1.0.0-beta.15",
 		"@nuxtjs/robots": "^3.0.0",
 		"@vueuse/gesture": "2.0.0-beta.1",
 		"@vueuse/nuxt": "^9.9.0",

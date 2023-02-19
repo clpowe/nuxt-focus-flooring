@@ -10,7 +10,7 @@
 
 		<div class="container">
 			<Sidebar>
-				<div>
+				<div class="flex flex-col">
 					<NuxtLink to="/contact/general-contact">General Contact</NuxtLink>
 					<NuxtLink to="/contact/project-consultation"
 						>Project Consultation</NuxtLink

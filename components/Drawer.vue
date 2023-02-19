@@ -27,7 +27,7 @@
 	.v-enter-active,
 	.v-leave-active {
 		transform: translateX(0);
-		transition: all 0.3s ease;
+		transition: all 0.2s ease;
 	}
 
 	.v-enter-from,

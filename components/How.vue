@@ -2,6 +2,7 @@
 	import gsap from 'gsap'
 	import ScrollTrigger from 'gsap/ScrollTrigger'
 
+	const howcontainer = ref()
 	const cardRefs = ref()
 
 	const steps = ref([
@@ -56,6 +57,7 @@
 					toggleActions: 'restart none none reverse'
 				}
 			})
+
 			tl.from(icon, {
 				opacity: 0,
 				duration: 1,
@@ -67,7 +69,7 @@
 				{
 					opacity: 0,
 					duration: 1,
-					xPercent: -100,
+					xPercent: 100,
 					ease: 'expo.out'
 				},
 				'<'
@@ -90,7 +92,7 @@
 					yPercent: 100,
 					ease: 'expo.out'
 				},
-				'-=1'
+				'<'
 			)
 			tl.from(
 				description,
@@ -101,7 +103,7 @@
 					yPercent: 100,
 					ease: 'expo.out'
 				},
-				'-=1'
+				'<'
 			)
 		})
 	})
@@ -115,7 +117,7 @@
 					v-for="step in steps"
 					:key="step.step"
 					ref="cardRefs"
-					class="how-con how h-screen grid items-center w-full"
+					class="how-con how py-16 grid items-center w-full"
 					style="max-width: 800px"
 				>
 					<Sidebar>
@@ -128,7 +130,7 @@
 							</div>
 							<Stack size="--s-1">
 								<h3 class="font-bold">{{ step.title }}</h3>
-								<p>
+								<p class="">
 									{{ step.description }}
 								</p>
 							</Stack>
