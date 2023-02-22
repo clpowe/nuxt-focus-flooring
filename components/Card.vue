@@ -1,9 +1,12 @@
 <template>
-	<Framer :width="1" :height="1" v-if="image">
-		<img :src="image" role="presentation" />
-	</Framer>
-	<component :is="component" class="title">{{ title }}</component>
-	<slot />
+	<Box padding="" :class="{ 'border-2': border }">
+		<Framer :width="1" :height="1">
+			<svg-icon :name="svg" v-if="svg" class="h-28 mb-4" />
+			<img :src="image" v-if="img" role="presentation" />
+		</Framer>
+		<component :is="component" class="title">{{ title }}</component>
+		<slot />
+	</Box>
 </template>
 
 <script setup>
@@ -11,11 +14,18 @@
 		image: {
 			type: String
 		},
+		svg: {
+			type: String
+		},
 		title: {
 			type: String
 		},
 		component: {
 			type: String
+		},
+		border: {
+			type: Boolean,
+			default: false
 		}
 	})
 </script>
@@ -26,7 +36,5 @@
 	}
 
 	.title {
-		margin-top: var(--s-1);
-		margin-bottom: var(--s-5);
 	}
 </style>

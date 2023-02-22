@@ -90,45 +90,46 @@
 <template>
 	<div>
 		<Hero> About Us </Hero>
-
-		<main id="main">
-			<article id="our-purpose" class="container">
-				<Stack size="--s-1">
-					<h2>Our Purpose</h2>
+		<main id="main" class="container">
+			<Stack size="--s9">
+				<article id="our-purpose" class="container">
+					<h2 class="margin-bottom">Our Purpose</h2>
 					<p>
 						At Focus Flooring, we believe our purpose is to illuminate the
 						industry with partnership, positivity and precision.
 					</p>
-				</Stack>
-			</article>
+				</article>
 
-			<article id="core-values" class="container">
-				<Stack size="--s-1">
+				<article id="core-values" class="container">
 					<h2>Core Values</h2>
-					<p>
-						Our core values are the framework in which we evaluate our choices
-						and make all decisions. When our core values are in harmony with our
-						daily actions and behaviors - that is where true success lies.
-					</p>
-					<Card
-						v-for="item in coreValues"
-						:key="item.id"
-						:title="item.title"
-						:component="item.component"
-					>
-						<p>{{ item.content }}</p>
-						<ul v-if="item.list">
-							<li v-for="item in item.list">
-								{{ item }}
-							</li>
-						</ul>
-					</Card>
-				</Stack>
-			</article>
+					<Stack size="--s-1">
+						<p>
+							Our core values are the framework in which we evaluate our choices
+							and make all decisions. When our core values are in harmony with
+							our daily actions and behaviors - that is where true success lies.
+						</p>
+						<Grid>
+							<Card
+								v-for="item in coreValues"
+								:key="item.id"
+								:title="item.title"
+								:component="item.component"
+								border="true"
+							>
+								<p class="mt-2">{{ item.content }}</p>
+								<ol v-if="item.list" class="list-decimal">
+									<li v-for="item in item.list">
+										{{ item }}
+									</li>
+								</ol>
+							</Card>
+						</Grid>
+					</Stack>
+				</article>
 
-			<article id="three-uniques" class="container">
-				<Stack size="--s-1">
+				<article id="three-uniques" class="container">
 					<h2>Three Uniqes</h2>
+
 					<Box v-for="item in threeUniqes" padding="--s-1">
 						<Card
 							:key="item.id"
@@ -138,8 +139,20 @@
 							<p>{{ item.content }}</p>
 						</Card>
 					</Box>
-				</Stack>
-			</article>
+				</article>
+			</Stack>
 		</main>
 	</div>
 </template>
+
+<style scoped>
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+		margin-block: var(--s-1);
+	}
+
+	ol li {
+		margin-block: var(--s-5);
+	}
+</style>

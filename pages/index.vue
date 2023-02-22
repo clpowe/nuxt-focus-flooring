@@ -87,29 +87,33 @@
 							fit="cover"
 						/>
 					</Framer>
-					<Stack size="--s-1">
-						<h2>Who we are</h2>
-						<p>
-							At Focus Flooring, our advanced solutions in commercial flooring
-							coupled with our 55+ years of combined flooring expertise, allows
-							us to be a leader in the flooring industry.
-						</p>
-						<p>
-							Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
-							<strong
-								>guarantee to eliminate your risk through our internal
-								processes.</strong
-							>
-						</p>
-					</Stack>
+					<div>
+						<h2 class="margin-bottom">Who we are</h2>
+						<Stack size="--s-1">
+							<p>
+								At Focus Flooring, our advanced solutions in commercial flooring
+								coupled with our 55+ years of combined flooring expertise,
+								allows us to be a leader in the flooring industry.
+							</p>
+							<p>
+								Focus Flooring is a MBE-owned firm based out of Tampa, FL. with
+								a
+								<strong
+									>guarantee to eliminate your risk through our internal
+									processes.</strong
+								>
+							</p>
+						</Stack>
+					</div>
 				</SidebySide>
 			</section>
 
 			<section class="container">
-				<Stack size="--s-3">
+				<Stack size="--s-3" class="margin-bottom">
 					<h2>What we do</h2>
 					<p>Commercial flooring Services</p>
 				</Stack>
+
 				<Grid>
 					<Box padding="--s-2" v-for="item in whatWeDo">
 						<Card

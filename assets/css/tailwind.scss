@@ -29,6 +29,7 @@ h1 {
 
 h2 {
 	font-size: var(--s4);
+	margin-bottom: var(--s2);
 }
 
 h3 {
@@ -140,6 +141,10 @@ h2::after {
 
 h3 {
 	text-transform: uppercase;
+}
+
+.margin-bottom {
+	margin-bottom: var(--s2);
 }
 
 .btn {

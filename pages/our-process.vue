@@ -7,7 +7,7 @@
 		{
 			id: 1,
 			component: 'h3',
-			image: '/detailed.svg',
+			svg: 'detailed',
 			title: 'Detailed Proposal',
 			content:
 				'We go above and beyond as it relates to the level of detail provided in our proposals. This approach ensures our clients have all of the essential information they need at their fingertips and allows for quick reference as project changes come about.'
@@ -15,7 +15,7 @@
 		{
 			id: 2,
 			component: 'h3',
-			image: '/spec.svg',
+			svg: '/spec.svg',
 			title: 'Specification and Design',
 			content:
 				'Whether you require expert assistance specifying the best flooring materials or already have complete specifications, we can meet any design vision. We’ll show you samples of different materials and ensure you start your project with the right solution.'
@@ -139,8 +139,10 @@
 		<Hero>Our <span>Process</span> </Hero>
 		<div class="container relative">
 			<Sidebar>
-				<nav class="sticky top-0">
-					<ul class="sticky top-0">
+				<nav>
+					<ol
+						class="static min-[742px]:sticky top-4 uppercase font-bold list-decimal menu-list list-outside"
+					>
 						<li>
 							<a href="#preconstruction">preconstruction</a>
 						</li>
@@ -153,7 +155,7 @@
 						<li>
 							<a href="#system-generated-tools">System genetated tools</a>
 						</li>
-					</ul>
+					</ol>
 				</nav>
 				<div id="main">
 					<Stack size="--s5">
@@ -165,7 +167,7 @@
 										<Box v-for="item in preconstrunction">
 											<Card
 												:key="item.id"
-												:image="item.image"
+												:svg="item.svg"
 												:title="item.title"
 												:component="item.component"
 											>
@@ -289,3 +291,9 @@
 		</div>
 	</div>
 </template>
+
+<style>
+	.menu-list {
+		margin-left: var(--s-1);
+	}
+</style>

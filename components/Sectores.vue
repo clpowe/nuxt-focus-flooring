@@ -92,6 +92,7 @@
 				:title="sector.title"
 				@mouseenter="grow"
 				@mouseleave="shrink"
+				@click="shrink"
 			/>
 		</div>
 	</div>
@@ -104,6 +105,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	h2 {
 	}
 
 	@media (min-width: 670px) {

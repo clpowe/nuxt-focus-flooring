@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<div class="hero">
+	<div class="hero margin-bottom">
 		<div class="container content">
 			<h1>
 				<slot />
