@@ -90,7 +90,7 @@
 <template>
 	<div>
 		<Hero> About Us </Hero>
-		<main id="main" class="container">
+		<main id="main" class="max-w-2xl mx-auto">
 			<Stack size="--s9">
 				<article id="our-purpose" class="container">
 					<h2 class="margin-bottom">Our Purpose</h2>
@@ -114,14 +114,16 @@
 								:key="item.id"
 								:title="item.title"
 								:component="item.component"
-								border="true"
 							>
 								<p class="mt-2">{{ item.content }}</p>
-								<ol v-if="item.list" class="list-decimal">
+								<ul
+									v-if="item.list"
+									class="list-disc leading-tight mt-[var(--s-1)]"
+								>
 									<li v-for="item in item.list">
 										{{ item }}
 									</li>
-								</ol>
+								</ul>
 							</Card>
 						</Grid>
 					</Stack>
@@ -146,13 +148,23 @@
 </template>
 
 <style scoped>
-	ol {
-		list-style-type: decimal;
+	ul {
 		list-style-position: inside;
-		margin-block: var(--s-1);
+		counter-reset: li;
 	}
 
-	ol li {
-		margin-block: var(--s-5);
+	li {
+		display: grid;
+		grid-template-columns: auto 1fr;
+
+		gap: var(--s-5);
+		align-items: baseline;
+
+		counter-increment: li;
+	}
+
+	li::before {
+		content: '•';
+		font-size: var(--s2);
 	}
 </style>

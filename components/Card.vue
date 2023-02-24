@@ -34,7 +34,4 @@
 	img {
 		height: 4rem;
 	}
-
-	.title {
-	}
 </style>

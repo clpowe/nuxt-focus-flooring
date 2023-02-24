@@ -7,7 +7,7 @@
 <style scoped>
 	.grid {
 		display: grid;
-		grid-gap: var(--s1);
+		grid-gap: var(--s2);
 	}
 
 	@supports (width: min(30ch, 100%)) {
