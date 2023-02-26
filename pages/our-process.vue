@@ -15,7 +15,7 @@
 		{
 			id: 2,
 			component: 'h3',
-			svg: '/spec.svg',
+			svg: 'spec',
 			title: 'Specification and Design',
 			content:
 				'Whether you require expert assistance specifying the best flooring materials or already have complete specifications, we can meet any design vision. We’ll show you samples of different materials and ensure you start your project with the right solution.'
@@ -23,7 +23,7 @@
 		{
 			id: 3,
 			component: 'h3',
-			image: '/Leed.svg',
+			svg: 'Leed',
 			title: 'LEED Certification',
 			content:
 				'We have extensive experience delivering the biggest LEED-certified flooring installations and can identify energy-efficient flooring materials that support your sustainability efforts.'
@@ -31,7 +31,7 @@
 		{
 			id: 4,
 			component: 'h3',
-			image: '/LifeCycle.svg',
+			svg: 'detailed',
 			title: 'Life Cycle Costing',
 			content:
 				'Flooring maintenance costs often outweigh the initial costs of flooring installation and materials. That’s why we provide a Life Cycle Costing report—an objective, unbiased analysis of the long-term value you’ll receive from various flooring options.Flooring maintenance costs often outweigh the initial costs of flooring installation and materials. That’s why we provide a Life Cycle Costing report—an objective, unbiased analysis of the long-term value you’ll receive from various flooring options.'
@@ -41,25 +41,25 @@
 	const projectExecutionSteps = [
 		{
 			id: 1,
-			image: '/01.svg',
+			svg: '01',
 			content:
 				'Before installation, we have a dedicated superintendent survey the job site to determine how materials will be staged.'
 		},
 		{
 			id: 2,
-			image: '/02.svg',
+			svg: '02',
 			content:
 				'Then, our highly trained crews follow a clear plan to rapidly install your flooring. Depending on the complexity of your materials and installation, our crews may train specifically for your project.'
 		},
 		{
 			id: 3,
-			image: '/03.svg',
+			svg: '03',
 			content:
 				'Our team has a “zero-punch” philosophy. As we progress through the project, our teams are creating our own internal punch list and correcting items as we go. The goal of this approach is to ensure that once we receive the client and owner’s punch list, our items to correct are minimum.'
 		},
 		{
 			id: 4,
-			image: '/04.svg',
+			svg: '04',
 			content:
 				'Because of our execution system, our team can efficiently complete any commercial flooring installation project. Our experienced team will coordinate material procurement so that you’re never waiting on a specialty floor. We will also find time-sensitive material alternatives to help stay in line with your project schedule'
 		}
@@ -158,27 +158,45 @@
 					</ol>
 				</nav>
 				<div id="main">
-					<Stack size="--s5">
+					<div class="space-y-20">
 						<article>
-							<Stack size="--s5">
+							<div class="space-y-20">
 								<section id="preconstruction">
-									<h2>Preconstrunction</h2>
-									<Grid>
-										<Box v-for="item in preconstrunction">
-											<Card
-												:key="item.id"
-												:svg="item.svg"
-												:title="item.title"
-												:component="item.component"
-											>
-												<p>{{ item.content }}</p>
-											</Card>
-										</Box>
-									</Grid>
+									<SidebySide>
+										<div>
+											<h2>Preconstrunction</h2>
+											<p>
+												Our core values are the framework in which we evaluate
+												our choices and make all decisions. When our core values
+												are in harmony with our daily actions and behaviors -
+												that is where true success lies.
+											</p>
+										</div>
+										<Framer :width="16" :height="9">
+											<nuxt-img
+												src="/placeholder.webp"
+												alt=""
+												sizes="sm:100vw md:700px lg:700px"
+												fit="cover"
+											/>
+										</Framer>
+									</SidebySide>
+
+									<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+										<Card
+											v-for="item in preconstrunction"
+											:key="item.id"
+											:svg="item.svg"
+											:title="item.title"
+											:component="item.component"
+										>
+											<p>{{ item.content }}</p>
+										</Card>
+									</div>
 								</section>
 
 								<section id="project-planning">
-									<Stack size="--s-1">
+									<div class="space-y-4">
 										<h2>Project Planning</h2>
 										<p>
 											Our goal is to take all of our insight and understanding
@@ -209,11 +227,11 @@
 												<p>Pre- Execution Analysis</p>
 											</li>
 										</ul>
-									</Stack>
+									</div>
 								</section>
 
 								<section id="project-execution">
-									<Stack size="--s-1">
+									<div size="class-y-4">
 										<h2>Project Execution</h2>
 										<p>
 											Our specialty field supervisors and project managers keep
@@ -227,29 +245,32 @@
 													v-for="item in projectExecutionSteps"
 													:key="item.id"
 												>
-													<Card component="h4" :image="item.image">
+													<Card
+														component="h4"
+														:svg="item.svg"
+														:image="item.image"
+													>
 														<p>{{ item.content }}</p>
 													</Card>
 												</li>
 											</Grid>
 										</ol>
-										<Grid>
-											<Box v-for="item in projectExecution">
-												<Card
-													:key="item.id"
-													:title="item.title"
-													:component="item.component"
-												>
-													<p>{{ item.content }}</p>
-													<ul v-if="item.list">
-														<li v-for="item in item.list">
-															{{ item }}
-														</li>
-													</ul>
-												</Card>
-											</Box>
-										</Grid>
-									</Stack>
+										<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+											<Card
+												v-for="item in projectExecution"
+												:key="item.id"
+												:title="item.title"
+												:component="item.component"
+											>
+												<p>{{ item.content }}</p>
+												<ul v-if="item.list">
+													<li v-for="item in item.list">
+														{{ item }}
+													</li>
+												</ul>
+											</Card>
+										</div>
+									</div>
 								</section>
 
 								<section id="system-generated-tools">
@@ -283,16 +304,19 @@
 										</Box>
 									</Stack>
 								</section>
-							</Stack>
+							</div>
 						</article>
-					</Stack>
+					</div>
 				</div>
 			</Sidebar>
 		</div>
 	</div>
 </template>
 
-<style>
+<style scoped>
+	ol {
+		max-inline-size: none;
+	}
 	.menu-list {
 		margin-left: var(--s-1);
 	}

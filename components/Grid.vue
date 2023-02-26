@@ -1,18 +1,9 @@
 <template>
-	<div class="grid">
+	<div
+		class="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:grid-cols-3 xl:grid-cols-4"
+	>
 		<slot />
 	</div>
 </template>
 
-<style scoped>
-	.grid {
-		display: grid;
-		grid-gap: var(--s2);
-	}
-
-	@supports (width: min(30ch, 100%)) {
-		.grid {
-			grid-template-columns: repeat(auto-fit, minmax(min(30ch, 100%), 1fr));
-		}
-	}
-</style>
+<style scoped></style>

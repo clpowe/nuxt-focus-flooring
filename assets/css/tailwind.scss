@@ -54,21 +54,22 @@ th {
 	outline-offset: 0.25em;
 }
 
-* {
-	box-sizing: border-box;
-	max-inline-size: 60ch;
-}
+// * {
+// 	box-sizing: border-box;
+// 	max-inline-size: 60ch;
+// }
 
-html,
-body,
-div,
-header,
-section,
-nav,
-main,
-footer {
-	max-inline-size: none;
-}
+// html,
+// body,
+// div,
+// header,
+// section,
+// nav,
+// main,
+// article,
+// footer {
+// 	max-inline-size: none;
+// }
 
 ol {
 	list-style-type: none;

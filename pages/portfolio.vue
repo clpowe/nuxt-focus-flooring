@@ -25,7 +25,7 @@
 			cost: 1367,
 			client: 'Wehr Constructors',
 			scope: 'Resilient flooring, vinyl base',
-			image: '/placeholder.webp',
+			image: '/Veolia-TampaWaterTreatment.jpeg',
 			catagory: 'Industrial'
 		},
 		{
@@ -36,7 +36,7 @@
 			client: 'Ryan Companies',
 			scope:
 				'Floor tile, wall tile, interlocking floor mats, carpet tile, tile base, vinyl base, epoxy floor coating, sealed concrete, epoxy integral base, final cleaning, kerdi shower system, schluter, vinyl transition, marble thresholds',
-			image: '/placeholder.webp',
+			image: '/DTP3_Amazon.jpeg',
 			catagory: 'Industrial'
 		},
 		{
@@ -47,7 +47,7 @@
 			client: 'Revealing Truth Ministries',
 			scope:
 				'Extensive floor prep, carpet tile, large format tile, porcelain tile, LVT, broadloom carpet, millwork base',
-			image: '/placeholder.webp',
+			image: '/RevealingTruthMinistries.jpg',
 			catagory: 'Workshop Centers'
 		},
 		{
@@ -57,7 +57,7 @@
 			cost: 62000,
 			client: 'Mount Olive Baptist Church',
 			scope: 'Extensive floor prep, carpet tile, porcelain tile, LVT',
-			image: '/placeholder.webp',
+			image: '/MountOliveBaptist.jpg',
 			catagory: 'Workshop Centers'
 		},
 		{
@@ -67,7 +67,7 @@
 			cost: 20000,
 			client: 'The Rock Church of God by Faith',
 			scope: 'Carpet tile, rubber cove base',
-			image: '/placeholder.webp',
+			image: '/TheRockChurchofGodbyFaith.jpg',
 			catagory: 'Workshop Centers'
 		},
 		{
@@ -78,7 +78,7 @@
 			client: 'Suffolk',
 			scope:
 				'Three towers; floor tile, wall tile, LVT, vinyl base, sealed concrete, marble thresholds, tile base, schluter, vinyl transitions',
-			image: '/placeholder.webp',
+			image: '/WestRiver.jpg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -89,7 +89,7 @@
 			client: 'Coastal',
 			scope:
 				'Floor tile, wall tile, large format tile, resilient flooring, carpet tile, tile base, resilient base, mud bed, ditra underlayment, geniemat underlayment, schluter, rubber transitions, extensive floor prep',
-			image: '/placeholder.webp',
+			image: '/Heron_Tampa.jpg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -99,7 +99,7 @@
 			cost: 253008,
 			client: 'Moss',
 			scope: 'Resilient base throughout all units and corridors',
-			image: '/placeholder.webp',
+			image: '/TheCora.png',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -109,7 +109,7 @@
 			cost: 1960617,
 			client: 'Suffolk',
 			scope: 'LVT,carpet tile, resilient base, schluter, Aquaflex',
-			image: '/placeholder.webp',
+			image: '/TheAsher.jpg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -120,7 +120,7 @@
 			client: 'Kast',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/placeholder.webp',
+			image: '/tempo_encore.jpeg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -131,7 +131,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, wall tile, tile base, carpet, rubber flooring, LVT, rubber base, schluter, vinyl transitions',
-			image: '/placeholder.webp',
+			image: '/Cortona_Apartments.jpg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -142,7 +142,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions',
-			image: '/placeholder.webp',
+			image: '/TampaOaksSeniorLiving.jpeg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -152,7 +152,7 @@
 			cost: 200000,
 			client: 'LMG',
 			scope: 'Broadloom carpet, base',
-			image: '/placeholder.webp',
+			image: '/WestShoreGrand.jpeg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -163,7 +163,7 @@
 			client: 'LMG',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/placeholder.webp',
+			image: '/EVEN_Hotels.jpeg',
 			catagory: 'Residential & Hospitality'
 		},
 		{
@@ -174,7 +174,7 @@
 			client: 'JE Dunn',
 			scope:
 				'LVT, Static Dissipative tile, rubber flooring, broadloam carpet, carpet tile, wood flooring, rubber base, heat weld, skudoboard, rubber transitions',
-			image: '/placeholder.webp',
+			image: '/SkyCenterOne.jpeg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -184,7 +184,7 @@
 			cost: 250000,
 			client: 'Rubicon Construction',
 			scope: 'Rubber Flooring, Floor tile, Wall tile',
-			image: '/placeholder.webp',
+			image: '/RivergateTower.jpeg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -194,7 +194,7 @@
 			cost: 150000,
 			client: 'Onicx Construction',
 			scope: 'Floor tile, wall tile, resilient flooring, broadloom carpet',
-			image: '/placeholder.webp',
+			image: '/Anand_Vihar_Clubhouse.jpeg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -205,7 +205,7 @@
 			client: 'Beck Group',
 			scope:
 				'Carpet tile, resilient flooring, rubber base, wall tile, transition strips',
-			image: '/placeholder.webp',
+			image: '/ChamberOfCommerce.jpg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -227,7 +227,7 @@
 			client: 'DPR',
 			scope:
 				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
-			image: '/placeholder.webp',
+			image: '/Citi_Tampa_Amenities.jpg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -238,7 +238,7 @@
 			client: 'DPR',
 			scope:
 				'Floor tile, wall tile, static control VCT, sheet flooring, LVT, interlocking mats, carpet tile, tile base, rubber base, rubber flooring, heat weld, crack isolation, schluter, rubber transition',
-			image: '/placeholder.webp',
+			image: '/Citi_Tampa_Amenities.jpg',
 			catagory: 'Commecial Office Retail'
 		},
 		{
@@ -249,7 +249,7 @@
 			client: 'Hensel Phelps',
 			scope:
 				'Floor tile, wall tile, static dissipative tile/resilient flooring, caret tile, broadloam carpet, rubber base, waterproofing, epoxy grout, schluter',
-			image: '/placeholder.webp',
+			image: '/TAMPAINTERNATIONALAIRPORT MAIN_BLUE.jpeg',
 			catagory: 'Aviation'
 		},
 		{
@@ -259,7 +259,7 @@
 			cost: 2600000,
 			client: 'Skanksa',
 			scope: 'Extensive floor prep',
-			image: '/placeholder.webp',
+			image: '/TAMPAINTERNATIONALAIRPORT.jpeg',
 			catagory: 'Aviation'
 		},
 		{
@@ -417,7 +417,7 @@
 			client: 'Allstate',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/placeholder.webp',
+			image: '/ElementarySchool_D.jpeg',
 			catagory: 'Education'
 		},
 		{
@@ -428,7 +428,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, resilient flooring, carpet tile, tile base, rubber base, marble thresholds, schluter',
-			image: '/placeholder.webp',
+			image: '/BellamyES.jpeg',
 			catagory: 'Education'
 		},
 		{
@@ -449,7 +449,7 @@
 			client: 'Beck',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/placeholder.webp',
+			image: '/Sligh_Middle_School.jpg',
 			catagory: 'Education'
 		},
 		{
@@ -471,7 +471,7 @@
 			client: 'Beck Group',
 			scope:
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
-			image: '/placeholder.webp',
+			image: '/EH_USFSPDavisHall_Int_10.jpg',
 			catagory: 'Education'
 		}
 	])

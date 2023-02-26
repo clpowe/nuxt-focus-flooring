@@ -53,13 +53,13 @@
 				<article class="container">
 					<Stack size="2">
 						<h2>Culture</h2>
-						<p>
+						<p class="max-w-lg">
 							“Illuminate our industry with positivity, partnership and
 							precision”… it starts within. We look to be the light to our team
 							so that together we can light up the industry.
 						</p>
 						<Card title="Collaborating with Colors" component="h3">
-							<p>
+							<p class="max-w-lg">
 								Our comprehensive pre-construction process will ensure you can
 								count on our team to produce a quality proposal and
 								pre-construction experience, whether it be at the budget phase
@@ -76,7 +76,7 @@
 							</Framer>
 						</Grid>
 						<Card title="Team Building" component="h3">
-							<p>
+							<p class="max-w-lg">
 								Our comprehensive pre-construction process will ensure you can
 								count on our team to produce a quality proposal and
 								pre-construction experience, whether it be at the budget phase
@@ -92,14 +92,12 @@
 				</article>
 
 				<article class="container">
-					<Stack size="2">
+					<div class="space-y-6">
 						<h2>Our commitment to our community</h2>
-						<ul class="partnerlist">
-							<Grid>
-								<li v-for="item in communityList">
-									<p>{{ item }}</p>
-								</li>
-							</Grid>
+						<ul class="partnerlist columns-2 md:columns-4 space-y-2">
+							<li v-for="item in communityList" class="">
+								{{ item }}
+							</li>
 						</ul>
 						<Grid>
 							<Framer :width="12" :height="9">
@@ -138,15 +136,11 @@
 								/>
 							</Framer>
 						</Grid>
-					</Stack>
+					</div>
 				</article>
 			</main>
 		</Stack>
 	</div>
 </template>
 
-<style scoped>
-	.partnerlist {
-		max-inline-size: none;
-	}
-</style>
+<style scoped></style>

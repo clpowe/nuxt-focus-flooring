@@ -1,7 +1,7 @@
 <template>
 	<Box padding="" :class="{ 'border-2': border }">
 		<Framer :width="1" :height="1">
-			<svg-icon :name="svg" v-if="svg" class="h-28 mb-4" />
+			<svg-icon :name="svg" v-if="svg" :class="style" />
 			<img :src="image" v-if="img" role="presentation" />
 		</Framer>
 		<component :is="component" class="title">{{ title }}</component>
@@ -26,6 +26,10 @@
 		border: {
 			type: Boolean,
 			default: false
+		},
+		style: {
+			type: String,
+			default: 'h-28 mb-2'
 		}
 	})
 </script>

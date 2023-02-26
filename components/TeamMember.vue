@@ -11,7 +11,7 @@
 </script>
 
 <template>
-	<div class="team-member">
+	<div class="">
 		<img :src="image" alt="" />
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>
@@ -19,8 +19,4 @@
 	</div>
 </template>
 
-<style>
-	.team-member {
-		max-inline-size: 25ch;
-	}
-</style>
+<style></style>

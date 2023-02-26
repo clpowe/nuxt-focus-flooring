@@ -3,6 +3,7 @@
 		{
 			id: 1,
 			component: 'h3',
+			svg: 'IconOne',
 			image: '/IconSeven.svg',
 			title: 'Carpet Flooring',
 			content:
@@ -11,6 +12,7 @@
 		{
 			id: 2,
 			component: 'h3',
+			svg: 'IconTwo',
 			image: '/IconThirteen.svg',
 			title: 'Wood Flooring',
 			content:
@@ -19,6 +21,7 @@
 		{
 			id: 3,
 			component: 'h3',
+			svg: 'IconThree',
 			image: '/IconOne.svg',
 			title: 'Ceramic and Stone tile',
 			content:
@@ -27,6 +30,7 @@
 		{
 			id: 4,
 			component: 'h3',
+			svg: 'IconFour',
 			image: '/IconThree.svg',
 			title: 'Concrete Surfacing',
 			content:
@@ -35,6 +39,7 @@
 		{
 			id: 5,
 			component: 'h3',
+			svg: 'IconFive',
 			image: '/IconTen.svg',
 			title: 'LVT Flooring',
 			content:
@@ -43,6 +48,7 @@
 		{
 			id: 6,
 			component: 'h3',
+			svg: 'IconSix',
 			image: '/IconFour.svg',
 			title: 'Resilient Flooring',
 			content:
@@ -51,6 +57,7 @@
 		{
 			id: 7,
 			component: 'h3',
+			svg: 'IconSeven',
 			image: '/IconSix.svg',
 			title: 'Flooring Accessories',
 			content:
@@ -115,16 +122,16 @@
 				</Stack>
 
 				<Grid>
-					<Box padding="--s-2" v-for="item in whatWeDo">
-						<Card
-							:key="item.id"
-							:image="item.image"
-							:title="item.title"
-							:component="item.component"
-						>
-							<p>{{ item.content }}</p>
-						</Card>
-					</Box>
+					<Card
+						v-for="item in whatWeDo"
+						:key="item.id"
+						:svg="item.svg"
+						:title="item.title"
+						:style="'h-16 mb-4'"
+						:component="item.component"
+					>
+						<p>{{ item.content }}</p>
+					</Card>
 				</Grid>
 			</section>
 
