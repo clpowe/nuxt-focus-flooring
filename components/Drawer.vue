@@ -1,14 +1,32 @@
 <script setup>
 	const drawerVisible = useDrawer()
+	const previousOverflow = ref('auto')
+
+	onMounted(() => {
+		// Lock the scrollbar by removing overflow if we have any
+		previousOverflow.value = document.body.style.overflow
+		document.body.style.overflow = 'hidden'
+	})
+	onBeforeUnmount(() => {
+		// Restore the overflow and position
+		document.body.style.overflow = previousOverflow.value
+	})
 </script>
 
 <template>
-	<Transition>
-		<div class="drawer" v-if="drawerVisible">
-			<slot />
+	<Teleport to="body">
+		<div v-show="drawerVisible">
+			<div class="drawer">
+				<slot />
+			</div>
+
+			<!-- <div
+			class="backdrop"
+			v-show="drawerVisible"
+			@click="drawerVisible = false"
+		></div> -->
 		</div>
-	</Transition>
-	<div class="drawer-mask" @click="drawerVisible = false"></div>
+	</Teleport>
 </template>
 
 <style scoped>
@@ -24,14 +42,14 @@
 		z-index: 500;
 	}
 
-	.v-enter-active,
-	.v-leave-active {
-		transform: translateX(0);
-		transition: all 0.2s ease;
-	}
-
-	.v-enter-from,
-	.v-leave-to {
-		transform: translateX(-100%);
+	.backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: var(--midnight);
+		height: 100vh;
+		width: 100%;
+		opacity: 0.6;
+		z-index: 10;
 	}
 </style>

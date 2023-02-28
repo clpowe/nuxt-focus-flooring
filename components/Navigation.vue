@@ -1,6 +1,7 @@
 <script setup>
 	const about = ref(false)
 	const expanded = ref(false)
+	const previousOverflow = ref('')
 
 	const mobileNav = ref(true)
 
@@ -21,6 +22,12 @@
 
 	function toggleMobileNav() {
 		mobileNav.value = !mobileNav.value
+		if (mobileNav.value) {
+			previousOverflow.value = document.body.style.overflow
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = previousOverflow.value
+		}
 	}
 </script>
 

@@ -33,7 +33,15 @@
 <template>
 	<SidebySide>
 		<Framer>
-			<nuxt-img :src="image" :alt="alt" />
+			<nuxt-img
+				:src="image"
+				:alt="alt"
+				format="webp"
+				height="500"
+				fit="cover"
+				:placeholder="100"
+				sizes="sm:100vw md:60vw lg:80vw"
+			/>
 		</Framer>
 		<Stack size="--s-3">
 			<h3>{{ name }}</h3>
