@@ -146,10 +146,6 @@
 		curruntMember.value = team.value[index - 1]
 		drawerVisible.value = true
 	}
-
-	const handleClose = () => {
-		drawerVisible.value = false
-	}
 </script>
 
 <template>
@@ -191,18 +187,22 @@
 				</div>
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-					<Grid>
+					<div class="teamGrid flex flex-wrap gap-5">
 						<TeamMember
 							v-for="member in filtered"
 							:key="member.id"
 							v-bind="member"
 							@click="handleClick(member.id)"
 						/>
-					</Grid>
+					</div>
 				</main>
 			</Sidebar>
 		</div>
 	</div>
 </template>
 
-<style></style>
+<style>
+	.teamGrid {
+		container-type: inline-size;
+	}
+</style>

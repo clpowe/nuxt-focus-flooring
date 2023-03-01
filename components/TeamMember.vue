@@ -11,7 +11,7 @@
 </script>
 
 <template>
-	<div class="">
+	<div class="teamMember">
 		<img :src="image" alt="" />
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>
@@ -19,4 +19,14 @@
 	</div>
 </template>
 
-<style></style>
+<style>
+	.teamMember {
+		width: auto;
+	}
+
+	@container (min-width: 600px) {
+		.teamMember {
+			width: 400px;
+		}
+	}
+</style>
