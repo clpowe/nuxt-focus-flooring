@@ -155,21 +155,22 @@
 <template>
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
-		<Transition name="drawer">
-			<Drawer :drawerVisible="drawerVisible">
-				<div v-if="curruntMember">
-					<button @click="handleClose">X</button>
-					<div>
-						<img :src="curruntMember.image" alt="" />
+		<Drawer>
+			<div v-if="curruntMember" class="">
+				<div class="space-y-[var(--s1)]">
+					<img :src="curruntMember.image" alt="" />
+					<div class="font-bold uppercase">
 						<p>{{ curruntMember.firstName }}</p>
 						<p>{{ curruntMember.lastName }}</p>
-						<p>{{ curruntMember.title }}</p>
-						<p>Bio</p>
+					</div>
+					<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
+					<div>
+						<p class="font-bold uppercase">Bio</p>
 						<p>{{ curruntMember.bio }}</p>
 					</div>
 				</div>
-			</Drawer>
-		</Transition>
+			</div>
+		</Drawer>
 
 		<div class="container">
 			<Sidebar>
@@ -204,16 +205,4 @@
 	</div>
 </template>
 
-<style>
-	.drawer-enter-active,
-	.drawer-leave-active {
-		transition: 1s ease all;
-	}
-
-	.drawer-enter-from {
-		transform: translateX(-100%);
-	}
-	.drawer-leave-to {
-		transform: translateX(-100%);
-	}
-</style>
+<style></style>
