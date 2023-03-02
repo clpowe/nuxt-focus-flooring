@@ -1,7 +1,8 @@
 <script setup>
 	const about = ref(false)
 	const expanded = ref(false)
-	const previousOverflow = ref('')
+	// const previousOverflow = ref('')
+	const navDrawerVisible = useNavDrawer()
 
 	const mobileNav = ref(true)
 
@@ -20,14 +21,12 @@
 		expanded.value = !expanded.value
 	}
 
-	function toggleMobileNav() {
-		mobileNav.value = !mobileNav.value
-		if (mobileNav.value) {
-			previousOverflow.value = document.body.style.overflow
-			document.body.style.overflow = 'hidden'
-		} else {
-			document.body.style.overflow = previousOverflow.value
-		}
+	function openMobileNav() {
+		navDrawerVisible.value = !navDrawerVisible.value
+	}
+
+	function closeDrawer() {
+		navDrawerVisible.value = false
 	}
 </script>
 
@@ -173,33 +172,10 @@
 					</Cluster>
 				</ul>
 				<div class="menu-icon" v-show="mobile">
-					<Icon
-						v-if="mobileNav"
-						name="line-md:menu-to-close-alt-transition"
-						size="1.25em"
-						@click="toggleMobileNav"
-					/>
-					<Icon
-						v-else
-						name="line-md:menu"
-						size="1.25em"
-						@click="toggleMobileNav"
-					/>
+					<Icon name="line-md:menu" size="1.25em" @click="openMobileNav" />
 				</div>
-				<transition name="mobile-nav">
-					<ul
-						v-show="mobileNav"
-						class="dropDownNav"
-						role="menubar"
-						aria-label="Focus Flooring"
-					>
-						<div class="drawer-icon" v-show="mobile">
-							<Icon
-								name="line-md:menu-to-close-alt-transition"
-								size="1.25em"
-								@click="toggleMobileNav"
-							/>
-						</div>
+				<Drawer :drawerVisible="navDrawerVisible" @close="closeDrawer">
+					<ul class="" role="menubar" aria-label="Focus Flooring">
 						<li role="none">
 							<NuxtLink
 								prefetch
@@ -287,14 +263,7 @@
 							>
 						</li>
 					</ul>
-				</transition>
-				<transition name="backdrop">
-					<div
-						class="backdrop"
-						v-show="mobileNav"
-						@click="toggleMobileNav"
-					></div>
-				</transition>
+				</Drawer>
 			</nav>
 		</div>
 	</header>
@@ -412,40 +381,6 @@
 		padding-inline: var(--s1);
 		gap: var(--s-1);
 		z-index: 15;
-	}
-
-	.backdrop {
-		position: fixed;
-		top: 0;
-		left: 0;
-		background-color: var(--midnight);
-		height: 100vh;
-		width: 100%;
-		opacity: 0.6;
-		z-index: 10;
-	}
-
-	.mobile-nav-enter-active,
-	.mobile-nav-leave-active {
-		transition: 1s ease all;
-	}
-	.mobile-nav-enter-from {
-		transform: translateX(-100%);
-	}
-	.mobile-nav-leave-to {
-		transform: translateX(-100%);
-	}
-
-	.backdrop-enter-active,
-	.backdrop-leave-active {
-		transition: 1s ease all;
-	}
-
-	.backdrop-enter-from {
-		opacity: 0;
-	}
-	.backdrop-leave-to {
-		opacity: 0;
 	}
 
 	.nuxt-link-active {

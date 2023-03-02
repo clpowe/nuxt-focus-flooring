@@ -107,9 +107,6 @@
 		align-items: center;
 	}
 
-	h2 {
-	}
-
 	@media (min-width: 670px) {
 		.sectores {
 			width: 100%;

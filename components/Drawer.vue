@@ -1,16 +1,21 @@
 <script setup>
-	const drawerVisible = useDrawer()
-	const previousOverflow = ref('scroll')
+	defineProps({
+		drawerVisible: {
+			type: Boolean,
+			required: true
+		}
+	})
 
 	function closeDrawer() {
 		document.body.style.overflow = 'scroll'
-		drawerVisible.value = false
+		drawerVisible = false
 	}
-	watch(drawerVisible, () => {
-		drawerVisible.value
-			? (document.body.style.overflow = 'hidden')
-			: (document.body.style.overflow = 'scroll')
-	})
+
+	// watch(drawerVisible, () => {
+	// 	drawerVisible.value
+	// 		? (document.body.style.overflow = 'hidden')
+	// 		: (document.body.style.overflow = 'scroll')
+	// })
 
 	// onMounted(() => {
 	// 	// Lock the scrollbar by removing overflow if we have any
@@ -29,17 +34,17 @@
 		<transition name="drawer">
 			<div v-if="drawerVisible" class="drawer flex flex-col p-4">
 				<Icon
-					class="ml-auto mb-4"
-					name="line-md:menu-to-close-alt-transition"
+					class="ml-auto mb-4 cursor-pointer"
+					name="line-md:close"
 					size="1.25em"
-					@click="closeDrawer"
+					@click="$emit('close')"
 				/>
 				<slot />
 			</div>
 		</transition>
 	</Teleport>
 	<transition name="backdrop">
-		<div v-if="drawerVisible" class="backdrop" @click="closeDrawer"></div>
+		<div v-if="drawerVisible" class="backdrop" @click="$emit('close')"></div>
 	</transition>
 </template>
 

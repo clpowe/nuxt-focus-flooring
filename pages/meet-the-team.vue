@@ -146,12 +146,16 @@
 		curruntMember.value = team.value[index - 1]
 		drawerVisible.value = true
 	}
+
+	function closeDrawer() {
+		drawerVisible.value = false
+	}
 </script>
 
 <template>
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
-		<Drawer>
+		<Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
 			<div v-if="curruntMember" class="">
 				<div class="space-y-[var(--s1)]">
 					<img :src="curruntMember.image" alt="" />
