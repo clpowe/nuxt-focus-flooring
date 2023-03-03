@@ -176,6 +176,7 @@
 			<Sidebar>
 				<div>
 					<FormKit
+						wrapper-class="$reset flex bg-gray-500"
 						v-model="catagory"
 						type="radio"
 						:options="[
