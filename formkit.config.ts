@@ -1,10 +1,9 @@
 import { DefaultConfigOptions } from '@formkit/vue'
-import { generateClasses } from '@formkit/themes'
+import { createAutoAnimatePlugin } from '@formkit/addons'
 
 const config: DefaultConfigOptions = {
-	config: {
-		classes: generateClasses({})
-	}
+	theme: 'genesis',
+	plugins: [createAutoAnimatePlugin()]
 }
 
 export default config

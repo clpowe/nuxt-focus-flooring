@@ -8,6 +8,8 @@
 	--grey-6: #808080;
 
 	--ratio: 1.25;
+	--s-8: calc(var(--s-7) / var(--ratio));
+	--s-7: calc(var(--s-6) / var(--ratio));
 	--s-6: calc(var(--s-5) / var(--ratio));
 	--s-5: calc(var(--s-4) / var(--ratio));
 	--s-4: calc(var(--s-3) / var(--ratio));

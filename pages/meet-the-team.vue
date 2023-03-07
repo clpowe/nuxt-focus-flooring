@@ -138,6 +138,16 @@
 		}
 	])
 
+	const catagories = ref([
+		'All',
+		'Leadership',
+		'Preconstruction',
+		'Marketing/BD',
+		'Project Planning',
+		'Field Management',
+		'Admin'
+	])
+
 	const filtered = computed(() => {
 		return useFilter(team.value, catagory.value)
 	})
@@ -149,6 +159,13 @@
 
 	function closeDrawer() {
 		drawerVisible.value = false
+	}
+
+	function radioClick(event) {
+		if (event) {
+			console.log(event.target)
+			event.target.checked = false
+		}
 	}
 </script>
 
@@ -175,20 +192,11 @@
 		<div class="container">
 			<Sidebar>
 				<div>
-					<FormKit
-						wrapper-class="$reset flex bg-gray-500"
-						v-model="catagory"
-						type="radio"
-						:options="[
-							'All',
-							'Leadership',
-							'Preconstruction',
-							'Marketing/BD',
-							'Project Planning',
-							'Field Management',
-							'Admin'
-						]"
-					/>
+					<label class="sq-radio" v-for="cat in catagories">
+						{{ cat }}
+						<input type="radio" name="radio" v-model="catagory" :value="cat" />
+						<span class="checkmark"></span>
+					</label>
 				</div>
 				<main id="main">
 					<h2>{{ catagory }}</h2>
@@ -206,8 +214,75 @@
 	</div>
 </template>
 
-<style>
+<style scoped>
 	.teamGrid {
 		container-type: inline-size;
+	}
+	.sq-radio {
+		display: flex;
+		position: relative;
+		padding-left: 35px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		font-size: 22px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	/* Hide the browser's default radio button */
+	.sq-radio input {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	/* Create a custom radio button */
+	.checkmark {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: var(--s1);
+		height: var(--s1);
+		border-radius: 1px;
+		outline: 1px solid var(--grey-6);
+	}
+
+	/* On mouse-over, add a grey background color */
+	.sq-radio:hover input ~ .checkmark {
+		background-color: #var(--focus-white);
+	}
+
+	/* When the radio button is checked, add a blue background
+	.sq-radio input:checked ~ .checkmark {
+	  background-color: #241d25;
+	}
+	*/
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	.checkmark:after {
+		content: '';
+		position: absolute;
+		display: none;
+	}
+
+	/* Show the indicator (dot/circle) when checked */
+	.sq-radio input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+	/* Style the indicator (dot/circle) */
+	.sq-radio .checkmark:after {
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: var(--s-1);
+		height: var(--s-1);
+		border-radius: 0.2px;
+
+		background-color: var(--focus-yellow);
 	}
 </style>
