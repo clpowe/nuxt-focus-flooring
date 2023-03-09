@@ -61,7 +61,7 @@
 				@submit="handleSubmit"
 				class="form"
 			>
-				<Grid>
+				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
 					<FormKit
 						type="text"
 						name="firstName"
@@ -96,23 +96,25 @@
 						help="Please enter your phone Number"
 						placeholder="xxx-xxx-xxxx"
 					/>
-				</Grid>
-				<FormKit
-					type="text"
-					name="jobTitle"
-					validation="required"
-					label="Job Title"
-					help="Please enter your current job title"
-					placeholder="Job Title"
-				/>
-				<FormKit
-					type="text"
-					name="industry"
-					validation="required"
-					label="Industry"
-					help="What industry do you currently work in"
-					placeholder="Currnent Industry"
-				/>
+				</div>
+				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
+					<FormKit
+						type="text"
+						name="jobTitle"
+						validation="required"
+						label="Job Title"
+						help="Please enter your current job title"
+						placeholder="Job Title"
+					/>
+					<FormKit
+						type="text"
+						name="industry"
+						validation="required"
+						label="Industry"
+						help="What industry do you currently work in"
+						placeholder="Currnent Industry"
+					/>
+				</div>
 				<FormKit
 					type="textarea"
 					name="hearAboutUs"

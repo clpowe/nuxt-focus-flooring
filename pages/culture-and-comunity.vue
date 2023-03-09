@@ -50,94 +50,106 @@
 			<Hero>Culture and <span>Comunity</span></Hero>
 
 			<main id="main">
-				<article class="container">
-					<Stack size="2">
-						<h2>Culture</h2>
-						<p class="max-w-lg">
-							“Illuminate our industry with positivity, partnership and
-							precision”… it starts within. We look to be the light to our team
-							so that together we can light up the industry.
-						</p>
-						<Card title="Collaborating with Colors" component="h3">
-							<p class="max-w-lg">
-								Our comprehensive pre-construction process will ensure you can
-								count on our team to produce a quality proposal and
-								pre-construction experience, whether it be at the budget phase
-								or final phase of estimating.
-							</p>
-						</Card>
-						<Grid>
-							<Framer :width="12" :height="9">
+				<div class="space-y-[var(--s9)]">
+					<article class="container">
+						<div class="space-y-[var(--s6)]">
+							<div>
+								<h2>Culture</h2>
+								<p class="max-w-lg">
+									“Illuminate our industry with positivity, partnership and
+									precision”… it starts within. We look to be the light to our
+									team so that together we can light up the industry.
+								</p>
+							</div>
+							<SidebySide>
+								<Card title="Collaborating with Colors" component="h3">
+									<p class="max-w-lg">
+										Our comprehensive pre-construction process will ensure you
+										can count on our team to produce a quality proposal and
+										pre-construction experience, whether it be at the budget
+										phase or final phase of estimating.
+									</p>
+								</Card>
+
 								<nuxt-img
+									format="webp"
 									src="/collaboratingWithColors_01.jpg"
 									alt=""
 									fit="cover"
+									placeholder="[100,100,100]"
+									sizes="sm:100vw lg:600px"
 								/>
-							</Framer>
-						</Grid>
-						<Card title="Team Building" component="h3">
-							<p class="max-w-lg">
-								Our comprehensive pre-construction process will ensure you can
-								count on our team to produce a quality proposal and
-								pre-construction experience, whether it be at the budget phase
-								or final phase of estimating.
-							</p>
-						</Card>
-						<Grid>
-							<Framer :width="12" :height="9">
-								<nuxt-img src="/teamBuilding_01.jpg" alt="" fit="cover" />
-							</Framer>
-						</Grid>
-					</Stack>
-				</article>
+							</SidebySide>
 
-				<article class="container">
-					<div class="space-y-6">
-						<h2>Our commitment to our community</h2>
-						<ul class="partnerlist columns-2 md:columns-4 space-y-2">
-							<li v-for="item in communityList" class="">
-								{{ item }}
-							</li>
-						</ul>
-						<Grid>
-							<Framer :width="12" :height="9">
+							<SidebySide>
+								<Card title="Team Building" component="h3">
+									<p class="max-w-lg">
+										Our comprehensive pre-construction process will ensure you
+										can count on our team to produce a quality proposal and
+										pre-construction experience, whether it be at the budget
+										phase or final phase of estimating.
+									</p>
+								</Card>
+
 								<nuxt-img
-									src="/commitmentToComunity_01.jpg"
+									src="/teamBuilding_01.jpg"
 									alt=""
 									fit="cover"
+									placeholder="[100,100,100]"
+									sizes="sm:100vw lg:600px"
 								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_02.jpg"
-									alt=""
-									fit="cover"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_03.jpg"
-									alt=""
-									fit="cover"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_04.jpg"
-									alt=""
-									fit="cover"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_05.jpg"
-									alt=""
-									fit="cover"
-								/>
-							</Framer>
-						</Grid>
-					</div>
-				</article>
+							</SidebySide>
+						</div>
+					</article>
+
+					<article class="container">
+						<div class="space-y-6">
+							<h2>Our commitment to our community</h2>
+							<ul class="partnerlist columns-2 md:columns-4 space-y-2">
+								<li v-for="item in communityList" class="">
+									{{ item }}
+								</li>
+							</ul>
+							<Grid>
+								<Framer :width="12" :height="9">
+									<nuxt-img
+										src="/commitmentToComunity_01.jpg"
+										alt=""
+										fit="cover"
+									/>
+								</Framer>
+								<Framer :width="12" :height="9">
+									<nuxt-img
+										src="/commitmentToComunity_02.jpg"
+										alt=""
+										fit="cover"
+									/>
+								</Framer>
+								<Framer :width="12" :height="9">
+									<nuxt-img
+										src="/commitmentToComunity_03.jpg"
+										alt=""
+										fit="cover"
+									/>
+								</Framer>
+								<Framer :width="12" :height="9">
+									<nuxt-img
+										src="/commitmentToComunity_04.jpg"
+										alt=""
+										fit="cover"
+									/>
+								</Framer>
+								<Framer :width="12" :height="9">
+									<nuxt-img
+										src="/commitmentToComunity_05.jpg"
+										alt=""
+										fit="cover"
+									/>
+								</Framer>
+							</Grid>
+						</div>
+					</article>
+				</div>
 			</main>
 		</Stack>
 	</div>

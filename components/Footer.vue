@@ -6,7 +6,7 @@
 </script>
 
 <template>
-	<footer>
+	<footer class="mt-[var(--s2)]">
 		<div class="container">
 			<Grid>
 				<div class="quick-links">

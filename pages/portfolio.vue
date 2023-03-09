@@ -479,6 +479,12 @@
 	const filteredProjects = computed(() => {
 		return useFilter(projects.value, catagory.value)
 	})
+
+	const catagories = computed(() => {
+		const set = new Set()
+		projects.value.forEach((project) => set.add(project.catagory))
+		return set
+	})
 </script>
 
 <template>
@@ -487,6 +493,13 @@
 		<div class="container">
 			<Sidebar>
 				<div>
+					<label class="sq-radio" v-for="cat in catagories">
+						{{ cat }}
+						<input type="radio" name="radio" v-model="catagory" :value="cat" />
+						<span class="checkmark"></span>
+					</label>
+				</div>
+				<!-- <div>
 					<FormKit
 						v-model="catagory"
 						type="radio"
@@ -501,7 +514,7 @@
 							'Healthcare'
 						]"
 					/>
-				</div>
+				</div> -->
 
 				<main id="main">
 					<h2>{{ catagory }}</h2>
