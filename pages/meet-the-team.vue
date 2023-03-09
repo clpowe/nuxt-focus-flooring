@@ -160,13 +160,6 @@
 	function closeDrawer() {
 		drawerVisible.value = false
 	}
-
-	function radioClick(event) {
-		if (event) {
-			console.log(event.target)
-			event.target.checked = false
-		}
-	}
 </script>
 
 <template>

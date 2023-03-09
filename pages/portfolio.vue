@@ -216,20 +216,20 @@
 			client: 'Onicx Construction',
 			scope:
 				'Floor tile, resilient flooring, MDF base, tile base, schluter, rubber transition',
-			image: '/placeholder.webp',
+			image: '/SARASOTA_HOUSING_AUTHORIY.jpeg',
 			catagory: 'Commecial Office Retail'
 		},
-		{
-			id: 20,
-			name: 'Citi Tampa A1G1 Lobby & Restrooms renovation',
-			size: '8K SF',
-			cost: 206780,
-			client: 'DPR',
-			scope:
-				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
-			image: '/Citi_Tampa_Amenities.jpg',
-			catagory: 'Commecial Office Retail'
-		},
+		// {
+		// 	id: 20,
+		// 	name: 'Citi Tampa A1G1 Lobby & Restrooms renovation',
+		// 	size: '8K SF',
+		// 	cost: 206780,
+		// 	client: 'DPR',
+		// 	scope:
+		// 		'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
+		// 	image: '/Citi_Tampa_Amenities.jpg',
+		// 	catagory: 'Commecial Office Retail'
+		// },
 		{
 			id: 21,
 			name: 'Citi Tampa Aminites',
@@ -269,7 +269,7 @@
 			cost: 140000,
 			client: 'Beck Group',
 			scope: 'Wall tile, schulter, tile polishing',
-			image: '/placeholder.webp',
+			image: 'TIA_Security.jpeg',
 			catagory: 'Aviation'
 		},
 		{
@@ -280,7 +280,7 @@
 			client: 'Haskell Company',
 			scope:
 				'Floor tile, wall tile, carpet tile, rubber flooring, rubber base, schluter, floor prep',
-			image: '/placeholder.webp',
+			image: '/unitedtpahangar-2southwestaerial-150482.jpg',
 			catagory: 'Aviation'
 		},
 		{
@@ -290,7 +290,7 @@
 			cost: 82380,
 			client: 'DPR',
 			scope: 'Carpet demo, tile demo, floor tile, schluter, crack isolation',
-			image: '/placeholder.webp',
+			image: 'TPATicketLevelInteriorRefurbishment.png',
 			catagory: 'Aviation'
 		},
 		{
@@ -301,7 +301,7 @@
 			client: 'Reno Building',
 			scope:
 				'Tile demo, carpet demo, base demo, floor tile, wall tile, carpet tile, broadloam carpet, tile base, rubber base, schluter',
-			image: '/placeholder.webp',
+			image: '/Terminal_Building-3900-Rehabilitation-Aviation.jpeg',
 			catagory: 'Aviation'
 		},
 		{
@@ -311,7 +311,7 @@
 			cost: 33458,
 			client: 'Reno Building',
 			scope: 'VCT and rubber base installation, moisture mitigation',
-			image: '/placeholder.webp',
+			image: '/Peter_O_Knight_Airport.jpeg',
 			catagory: 'Aviation'
 		},
 		{
