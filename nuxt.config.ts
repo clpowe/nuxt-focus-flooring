@@ -5,6 +5,9 @@ export default defineNuxtConfig({
 	ssr: true,
 	app: {
 		head: {
+			htmlAttrs: {
+				lang: 'en-US'
+			},
 			charset: 'utf-16',
 			viewport: 'width=500, initial-scale=1',
 			title: 'Focus Floring',
