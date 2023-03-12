@@ -35,10 +35,9 @@
 		<div class="container navigation">
 			<NuxtLink prefetch to="/">
 				<img
-					src="/FocusLogo.svg"
+					src="/Focus_Flooring_logo_white_main_.png"
 					alt="Focus Flooring Logo"
-					height="50"
-					width="176"
+					width="200"
 				/>
 			</NuxtLink>
 

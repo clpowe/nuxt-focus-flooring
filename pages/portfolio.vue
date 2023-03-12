@@ -322,7 +322,7 @@
 			client: 'Beck Group',
 			scope:
 				'Vinyl flooring demo, floor tile, wall tile, tile base, schluter, moisture mitigation, wood flooring, rubber base, extensive floor prep, sheet vinyl, heat weld, floor prep',
-			image: '/placeholder.webp',
+			image: 'TGH_New_Physicians_Lounge.jpeg',
 			catagory: 'Healthcare'
 		},
 		{
@@ -333,7 +333,7 @@
 			client: 'Beck-Envision',
 			scope:
 				'Carpet demo, base demo, sheet vinyl, heat weld, carpet tile, carpet patch/repair, vinyl base',
-			image: '/placeholder.webp',
+			image: 'Moffitt_Cancer_Center-CTScanRoom-Three_StretcherLogoCleared.jpeg',
 			catagory: 'Healthcare'
 		},
 		{
@@ -343,7 +343,7 @@
 			cost: 77989,
 			client: 'DPR',
 			scope: 'Resilient flooring, vinyl base, floor paint',
-			image: '/placeholder.webp',
+			image: 'Moffitt_CEP_upgrade.jpeg',
 			catagory: 'Healthcare'
 		},
 		{
@@ -353,18 +353,8 @@
 			cost: 8390,
 			client: 'Wehr Constructors',
 			scope: 'Sheet vinyl, heat weld',
-			image: '/placeholder.webp',
+			image: 'Memorial_Hospital_Tampa.jpeg',
 			catagory: 'Healthcare'
-		},
-		{
-			id: 34,
-			name: 'Memorial Hospital of Tampa',
-			size: '4.7K SF',
-			cost: 17400,
-			client: 'AD Morgan',
-			scope: 'Resilient demo, VCT, rubber base, rubber transition',
-			image: '/placeholder.webp',
-			catagory: 'Education'
 		},
 		{
 			id: 35,
@@ -373,7 +363,7 @@
 			cost: 1060000,
 			client: 'Hillsborough County Public Schools',
 			scope: 'Carpet demo, installation & maintenance',
-			image: '/placeholder.webp',
+			image: '/hillsborough-ps-logo.png',
 			catagory: 'Education'
 		},
 		{
@@ -384,7 +374,7 @@
 			client: 'ACY Contractors',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/placeholder.webp',
+			image: '/JonesHighSchool.png',
 			catagory: 'Education'
 		},
 		{
@@ -395,7 +385,7 @@
 			client: 'Ajax',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/placeholder.webp',
+			image: '/AlonsoHighSchool.jpeg',
 			catagory: 'Education'
 		},
 		{
@@ -406,7 +396,7 @@
 			client: 'CORE Construction',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter, quartz flooring',
-			image: '/placeholder.webp',
+			image: '/High_School_TTT.jpg',
 			catagory: 'Education'
 		},
 		{
@@ -438,7 +428,7 @@
 			cost: 64478,
 			client: 'Reno Building',
 			scope: 'Extensive floor prep, quartz flooring, vinyl base',
-			image: '/placeholder.webp',
+			image: '/EastBay.png',
 			catagory: 'Education'
 		},
 		{
@@ -460,7 +450,7 @@
 			client: 'JE Dunn',
 			scope:
 				'Floor tile, wall tile, restoration and installation of salvaged tile from the original building, tile base, waterproofing, crack isolation, schluter',
-			image: '/placeholder.webp',
+			image: '/Tampa_HeightsRestoration.jpeg',
 			catagory: 'Education'
 		},
 		{

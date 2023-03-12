@@ -186,7 +186,9 @@ h3 {
 .drawer-leave-to {
 	transform: translateX(-100%);
 }
-
+p {
+	max-width: 75ch;
+}
 // .drawer-enter-active .backprop,
 // .drawer-leave-active .backprop {
 // 	transition: 1s ease all;

@@ -174,7 +174,7 @@
 										</div>
 										<Framer :width="16" :height="9">
 											<nuxt-img
-												src="/placeholder.webp"
+												src="threeUniquesSupporting.jpg"
 												alt=""
 												sizes="sm:100vw md:700px lg:700px"
 												fit="cover"
@@ -197,15 +197,28 @@
 
 								<section id="project-planning">
 									<div class="space-y-4">
-										<h2>Project Planning</h2>
-										<p>
-											Our goal is to take all of our insight and understanding
-											from the preconstruction phase and take it to the next
-											level of understanding during our project planning phase
-											to ensure a smooth transition occurs from preconstruction
-											to project execution. Our project planning phase consists
-											of:
-										</p>
+										<SidebySide>
+											<div>
+												<h2>Project Planning</h2>
+												<p>
+													Our goal is to take all of our insight and
+													understanding from the preconstruction phase and take
+													it to the next level of understanding during our
+													project planning phase to ensure a smooth transition
+													occurs from preconstruction to project execution. Our
+													project planning phase consists of:
+												</p>
+											</div>
+											<Framer :width="16" :height="9">
+												<nuxt-img
+													src="ourProcess.jpg"
+													alt=""
+													sizes="sm:100vw md:700px lg:700px"
+													fit="cover"
+												/>
+											</Framer>
+										</SidebySide>
+
 										<ul>
 											<li><p>Submittals</p></li>
 											<li>
@@ -234,9 +247,8 @@
 									<div size="class-y-4">
 										<h2>Project Execution</h2>
 										<p>
-											Our specialty field supervisors and project managers keep
-											your job site highly organized and clean, so you enjoy the
-											fastest installation.
+											Why we’re your easy button: Our step by step execution
+											process
 										</p>
 
 										<ol>
