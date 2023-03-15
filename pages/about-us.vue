@@ -129,7 +129,7 @@
 				</article>
 
 				<article id="three-uniques" class="container">
-					<h2>Three Uniqes</h2>
+					<h2>Thre Uniqes</h2>
 					<div class="max-w-md mx-auto space-y-10 mt-6">
 						<Box v-for="item in threeUniqes" padding="--s-0">
 							<Card
