@@ -83,7 +83,7 @@
 		</HomeHero>
 	</header>
 	<main id="main" class="">
-		<Stack size="--s9">
+		<div class="space-y-[var(--s9)]">
 			<section class="container">
 				<SidebySide>
 					<Framer :width="16" :height="9">
@@ -174,7 +174,7 @@
 					</video>
 				</Grid>
 			</section>
-		</Stack>
+		</div>
 	</main>
 </template>
 

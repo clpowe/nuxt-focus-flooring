@@ -1,12 +1,16 @@
 <template>
-	<Box padding="" :class="{ 'border-2': border }">
-		<Framer :width="1" :height="1">
-			<svg-icon :name="svg" v-if="svg" :class="style" />
+	<div class="card">
+		<div>
+			<svg-icon :name="svg" v-if="svg" class="h-14" />
 			<img :src="image" v-if="img" role="presentation" />
-		</Framer>
-		<component :is="component" class="title">{{ title }}</component>
-		<slot />
-	</Box>
+		</div>
+		<div>
+			<component :is="component" class="mb-[var(--s-1)]" v-if="title">{{
+				title
+			}}</component>
+			<slot />
+		</div>
+	</div>
 </template>
 
 <script setup>
@@ -37,5 +41,19 @@
 <style scoped>
 	img {
 		height: 4rem;
+	}
+	.card {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: var(--s1);
+	}
+
+	@container (min-width: 700px) {
+		.card {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			width: 45%;
+		}
 	}
 </style>

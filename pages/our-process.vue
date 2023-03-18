@@ -157,169 +157,147 @@
 						</li>
 					</ol>
 				</nav>
-				<div id="main">
-					<div class="space-y-20">
-						<article>
-							<div class="space-y-20">
-								<section id="preconstruction">
-									<SidebySide>
-										<div>
-											<h2>Preconstrunction</h2>
-											<p>
-												Our core values are the framework in which we evaluate
-												our choices and make all decisions. When our core values
-												are in harmony with our daily actions and behaviors -
-												that is where true success lies.
-											</p>
-										</div>
-										<Framer :width="16" :height="9">
-											<nuxt-img
-												src="threeUniquesSupporting.jpg"
-												alt=""
-												sizes="sm:100vw md:700px lg:700px"
-												fit="cover"
-											/>
-										</Framer>
-									</SidebySide>
+				<main id="main" class="space-y-20">
+					<section id="preconstruction">
+						<div class="pre-con mb-14">
+							<div class="flex-1">
+								<h2 class="mb-2">Preconstrunction</h2>
+								<p class="text-[var(--grey-6)]">
+									Our core values are the framework in which we evaluate our
+									choices and make all decisions. When our core values are in
+									harmony with our daily actions and behaviors - that is where
+									true success lies.
+								</p>
+							</div>
 
-									<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-										<Card
-											v-for="item in preconstrunction"
-											:key="item.id"
-											:svg="item.svg"
-											:title="item.title"
-											:component="item.component"
-										>
-											<p>{{ item.content }}</p>
-										</Card>
+							<nuxt-img
+								src="threeUniquesSupporting.jpg"
+								alt="Woman working in a warehouse"
+								fit="cover"
+								class="flex-1"
+							/>
+						</div>
+
+						<Content>
+							<template v-for="item in preconstrunction" :key="item.id">
+								<article class="card">
+									<div>
+										<svg-icon :name="item.svg" class="h-14" />
 									</div>
-								</section>
+									<div>
+										<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
+										<p class="text-[var(--grey-6)]">{{ item.content }}</p>
+									</div>
+								</article>
+							</template>
+						</Content>
+					</section>
 
-								<section id="project-planning">
-									<div class="space-y-4">
-										<SidebySide>
-											<div>
-												<h2>Project Planning</h2>
-												<p>
-													Our goal is to take all of our insight and
-													understanding from the preconstruction phase and take
-													it to the next level of understanding during our
-													project planning phase to ensure a smooth transition
-													occurs from preconstruction to project execution. Our
-													project planning phase consists of:
-												</p>
-											</div>
-											<Framer :width="16" :height="9">
-												<nuxt-img
-													src="ourProcess.jpg"
-													alt=""
-													sizes="sm:100vw md:700px lg:700px"
-													fit="cover"
-												/>
-											</Framer>
-										</SidebySide>
+					<section id="project-planning">
+						<div class="pre-con mb-14">
+							<div class="flex-1">
+								<h2>Project Planning</h2>
+								<p class="text-[var(--grey-6)]">
+									Our goal is to take all of our insight and understanding from
+									the preconstruction phase and take it to the next level of
+									understanding during our project planning phase to ensure a
+									smooth transition occurs from preconstruction to project
+									execution. Our project planning phase consists of:
+								</p>
+							</div>
 
-										<ul>
-											<li><p>Submittals</p></li>
-											<li>
-												<p>Material Lead Time Report</p>
-											</li>
-											<li>
-												<p>Project Staffing Plan</p>
-											</li>
-											<li>
-												<p>Sequence/Scheduling</p>
-											</li>
-											<li>
-												<p>
-													Material Handling - Staging, Dispatch, Inventory &
-													Warehouse
-												</p>
-											</li>
-											<li>
-												<p>Pre- Execution Analysis</p>
+							<nuxt-img
+								src="ourProcess.jpg"
+								alt=""
+								fit="cover"
+								class="flex-1"
+							/>
+						</div>
+
+						<ul>
+							<li><p>Submittals</p></li>
+							<li>
+								<p>Material Lead Time Report</p>
+							</li>
+							<li>
+								<p>Project Staffing Plan</p>
+							</li>
+							<li>
+								<p>Sequence/Scheduling</p>
+							</li>
+							<li>
+								<p>
+									Material Handling - Staging, Dispatch, Inventory & Warehouse
+								</p>
+							</li>
+							<li>
+								<p>Pre- Execution Analysis</p>
+							</li>
+						</ul>
+					</section>
+
+					<section id="project-execution">
+						<div size="class-y-4">
+							<h2>Project Execution</h2>
+							<p>
+								Why we’re your easy button: Our step by step execution process
+							</p>
+
+							<Content>
+								<template v-for="item in projectExecutionSteps" :key="item.id">
+									<Card component="h4" :svg="item.svg" :image="item.image">
+										<p>{{ item.content }}</p>
+									</Card>
+								</template>
+							</Content>
+
+							<Content>
+								<template v-for="item in projectExecution" :key="item.id">
+									<Card :title="item.title" :component="item.component">
+										<p>{{ item.content }}</p>
+										<ul v-if="item.list">
+											<li v-for="item in item.list">
+												{{ item }}
 											</li>
 										</ul>
-									</div>
-								</section>
+									</Card>
+								</template>
+							</Content>
+						</div>
+					</section>
 
-								<section id="project-execution">
-									<div size="class-y-4">
-										<h2>Project Execution</h2>
-										<p>
-											Why we’re your easy button: Our step by step execution
-											process
-										</p>
+					<section id="system-generated-tools">
+						<Stack size="--s-1">
+							<SidebySide>
+								<Framer :width="16" :height="9">
+									<nuxt-img
+										src="../public/systemGeneratedTools.jpg"
+										alt=""
+										sizes="sm:100vw md:700px lg:700px"
+										fit="cover"
+									/>
+								</Framer>
+								<Stack size="--s-1">
+									<h2>System Generated Tools</h2>
+									<p>
+										Our tools are system generated to equip you with what you
+										need, when you need it.
+									</p>
+								</Stack>
+							</SidebySide>
 
-										<ol>
-											<Grid>
-												<li
-													v-for="item in projectExecutionSteps"
-													:key="item.id"
-												>
-													<Card
-														component="h4"
-														:svg="item.svg"
-														:image="item.image"
-													>
-														<p>{{ item.content }}</p>
-													</Card>
-												</li>
-											</Grid>
-										</ol>
-										<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-											<Card
-												v-for="item in projectExecution"
-												:key="item.id"
-												:title="item.title"
-												:component="item.component"
-											>
-												<p>{{ item.content }}</p>
-												<ul v-if="item.list">
-													<li v-for="item in item.list">
-														{{ item }}
-													</li>
-												</ul>
-											</Card>
-										</div>
-									</div>
-								</section>
-
-								<section id="system-generated-tools">
-									<Stack size="--s-1">
-										<SidebySide>
-											<Framer :width="16" :height="9">
-												<nuxt-img
-													src="../public/systemGeneratedTools.jpg"
-													alt=""
-													sizes="sm:100vw md:700px lg:700px"
-													fit="cover"
-												/>
-											</Framer>
-											<Stack size="--s-1">
-												<h2>System Generated Tools</h2>
-												<p>
-													Our tools are system generated to equip you with what
-													you need, when you need it.
-												</p>
-											</Stack>
-										</SidebySide>
-
-										<Box v-for="item in systemTools">
-											<Card
-												:key="item.id"
-												:title="item.title"
-												:component="item.component"
-											>
-												<p>{{ item.content }}</p>
-											</Card>
-										</Box>
-									</Stack>
-								</section>
-							</div>
-						</article>
-					</div>
-				</div>
+							<Box v-for="item in systemTools">
+								<Card
+									:key="item.id"
+									:title="item.title"
+									:component="item.component"
+								>
+									<p>{{ item.content }}</p>
+								</Card>
+							</Box>
+						</Stack>
+					</section>
+				</main>
 			</Sidebar>
 		</div>
 	</div>
@@ -331,5 +309,43 @@
 	}
 	.menu-list {
 		margin-left: var(--s-1);
+	}
+
+	.preconstuction {
+		container-type: inline-size;
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--s5);
+	}
+
+	.card {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		gap: var(--s1);
+	}
+
+	.pre-con > img {
+		display: none;
+		width: 50cqi;
+	}
+
+	@container (min-width: 700px) {
+		.card {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			width: 45%;
+		}
+		.pre-con > img {
+			display: block;
+			flex-grow: 1;
+			width: 45cqi;
+		}
+	}
+
+	.pre-con {
+		display: flex;
+		container-type: inline-size;
+		gap: var(--s5);
 	}
 </style>

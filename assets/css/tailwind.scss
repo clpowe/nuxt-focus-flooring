@@ -28,12 +28,11 @@ h1 {
 }
 
 h2 {
-	font-size: var(--s4);
-	margin-bottom: var(--s2);
+	font-size: var(--s3);
 }
 
 h3 {
-	font-size: var(--s2);
+	font-size: var(--s1);
 	font-weight: 700;
 }
 
@@ -128,16 +127,17 @@ h2 {
 	padding-bottom: 0.5rem;
 	text-transform: uppercase;
 	font-weight: 700;
+	container-type: inline-size;
 }
 
 h2::after {
 	content: '';
 	position: absolute;
 	left: 0;
-	bottom: 0;
-	height: 8px;
+	bottom: 5%;
+	height: 4px;
 	background-color: var(--focus-yellow);
-	width: 15%;
+	width: 30cqi;
 }
 
 h3 {
