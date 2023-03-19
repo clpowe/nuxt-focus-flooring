@@ -1,6 +1,6 @@
 <template>
 	<div class="card">
-		<div>
+		<div v-if="svg || img">
 			<svg-icon :name="svg" v-if="svg" class="h-14" />
 			<img :src="image" v-if="img" role="presentation" />
 		</div>

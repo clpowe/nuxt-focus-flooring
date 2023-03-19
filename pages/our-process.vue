@@ -159,24 +159,27 @@
 				</nav>
 				<main id="main" class="space-y-20">
 					<section id="preconstruction">
-						<div class="pre-con mb-14">
-							<div class="flex-1">
-								<h2 class="mb-2">Preconstrunction</h2>
-								<p class="text-[var(--grey-6)]">
-									Our core values are the framework in which we evaluate our
-									choices and make all decisions. When our core values are in
-									harmony with our daily actions and behaviors - that is where
-									true success lies.
-								</p>
-							</div>
-
-							<nuxt-img
-								src="threeUniquesSupporting.jpg"
-								alt="Woman working in a warehouse"
-								fit="cover"
-								class="flex-1"
-							/>
-						</div>
+						<SideBy>
+							<template v-slot:text>
+								<div class="flex-1">
+									<h2 class="mb-2">Pre&shyconstrunction</h2>
+									<p class="text-[var(--grey-6)]">
+										Our core values are the framework in which we evaluate our
+										choices and make all decisions. When our core values are in
+										harmony with our daily actions and behaviors - that is where
+										true success lies.
+									</p>
+								</div>
+							</template>
+							<template v-slot:image>
+								<nuxt-img
+									src="threeUniquesSupporting.jpg"
+									alt="Woman working in a warehouse"
+									fit="cover"
+									class="flex-1 w-[45%]"
+								/>
+							</template>
+						</SideBy>
 
 						<Content>
 							<template v-for="item in preconstrunction" :key="item.id">
@@ -237,11 +240,13 @@
 					</section>
 
 					<section id="project-execution">
-						<div size="class-y-4">
-							<h2>Project Execution</h2>
-							<p>
-								Why we’re your easy button: Our step by step execution process
-							</p>
+						<div class="space-y-16">
+							<div>
+								<h2>Project Execution</h2>
+								<p>
+									Why we’re your easy button: Our step by step execution process
+								</p>
+							</div>
 
 							<Content>
 								<template v-for="item in projectExecutionSteps" :key="item.id">
@@ -251,18 +256,20 @@
 								</template>
 							</Content>
 
-							<Content>
-								<template v-for="item in projectExecution" :key="item.id">
-									<Card :title="item.title" :component="item.component">
-										<p>{{ item.content }}</p>
-										<ul v-if="item.list">
-											<li v-for="item in item.list">
-												{{ item }}
-											</li>
-										</ul>
-									</Card>
-								</template>
-							</Content>
+							<div class="p-8 bg-[var(--grey-2)]">
+								<Content>
+									<template v-for="item in projectExecution" :key="item.id">
+										<Card :title="item.title" :component="item.component">
+											<p>{{ item.content }}</p>
+											<ul v-if="item.list">
+												<li v-for="item in item.list">
+													{{ item }}
+												</li>
+											</ul>
+										</Card>
+									</template>
+								</Content>
+							</div>
 						</div>
 					</section>
 
