@@ -82,13 +82,13 @@
 			</template>
 		</HomeHero>
 	</header>
-	<main id="main" class="">
+	<main id="main" class="mt-8">
 		<div class="space-y-[var(--s9)]">
 			<section class="container">
 				<SidebySide>
 					<Framer :width="16" :height="9">
 						<nuxt-img
-							src="/placeholder.webp"
+							src="/WhoWeAre.png"
 							alt=""
 							sizes="sm:100vw md:700px lg:700px"
 							fit="cover"
