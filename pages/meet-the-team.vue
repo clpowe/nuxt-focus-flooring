@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { NuxtImg } from '~~/.nuxt/components'
+	import gsap from 'gsap'
 
 	useHead({
 		title: 'Focus Flooring - Meet the team'
@@ -162,6 +162,32 @@
 	function closeDrawer() {
 		drawerVisible.value = false
 	}
+
+	function onBeforeEnter(el) {
+		el.style.opacity = 0
+		el.style.height = '400px'
+	}
+
+	function onEnter(el, done) {
+		console.log(el)
+		gsap.to(el, {
+			opacity: 1,
+			height: '400px',
+			onComplete: done,
+			ease: 'power1.inOut'
+		})
+	}
+
+	function onLeave(el, done) {
+		gsap.to(el, {
+			position: 'static',
+			opacity: 0,
+			height: 0,
+			y: '400px',
+			ease: 'power1.inOut',
+			onComplete: done
+		})
+	}
 </script>
 
 <template>
@@ -186,22 +212,31 @@
 
 		<div class="container">
 			<Sidebar>
-				<div>
+				<aside>
 					<label class="sq-radio" v-for="cat in catagories">
 						{{ cat }}
 						<input type="radio" name="radio" v-model="catagory" :value="cat" />
 						<span class="checkmark"></span>
 					</label>
-				</div>
+				</aside>
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-					<div class="teamGrid flex flex-wrap gap-5">
-						<TeamMember
-							v-for="member in filtered"
-							:key="member.id"
-							v-bind="member"
-							@click="handleClick(member.id)"
-						/>
+					<div class="flex flex-wrap gap-5 relative">
+						<TransitionGroup
+							name="list"
+							:css="false"
+							@before-enter="onBeforeEnter"
+							@enter="onEnter"
+							@leave="onLeave"
+						>
+							<TeamMember
+								v-for="(member, index) in filtered"
+								:key="member.id"
+								:data-index="index"
+								v-bind="member"
+								@click="handleClick(member.id)"
+							/>
+						</TransitionGroup>
 					</div>
 				</main>
 			</Sidebar>
@@ -209,4 +244,18 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+	.list-move,
+	.list-enter-active,
+	.list-leave-active {
+		transition: all 0.5s ease;
+	}
+	.list-enter-from,
+	.list-leave-to {
+		opacity: 0;
+		transform: translateX(30px);
+	}
+	.list-leave-active {
+		position: absolute;
+	}
+</style>
