@@ -93,7 +93,7 @@
 		<main id="main" class="max-w-2xl mx-auto">
 			<div class="space-y-20">
 				<article id="our-purpose" class="container">
-					<h2 class="margin-bottom">Our Purpose</h2>
+					<h2 class="mb-4">Our Purpose</h2>
 					<p>
 						At Focus Flooring, we believe our purpose is to illuminate the
 						industry with partnership, positivity and precision.
@@ -101,7 +101,7 @@
 				</article>
 
 				<article id="core-values" class="container">
-					<h2>Core Values</h2>
+					<h2 class="mb-4">Core Values</h2>
 
 					<p>
 						Our core values are the framework in which we evaluate our choices
@@ -129,7 +129,7 @@
 				</article>
 
 				<article id="three-uniques" class="container">
-					<h2>Thre Uniqes</h2>
+					<h2 class="mb-4">Thre Uniqes</h2>
 					<div class="max-w-md mx-auto space-y-10 mt-6">
 						<Box v-for="item in threeUniqes" padding="--s-0">
 							<Card
