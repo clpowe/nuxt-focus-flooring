@@ -68,14 +68,14 @@
 			component: 'h3',
 			title: 'Minority Owend',
 			content:
-				'Our internal reporting that allows you to know the procurement status of all materials, as well as when you can expect to receive your materials based on the updated lead times and scheduled installation dates.'
+				'Focus Flooring is 100% MBE-owned with the capability of taking on large sized flooring scopes of work.'
 		},
 		{
 			id: 2,
 			component: 'h3',
 			title: 'CM Approach',
 			content:
-				'Our internal reporting that allows you to know the procurement status of all materials, as well as when you can expect to receive your materials based on the updated lead times and scheduled installation dates.'
+				'We look at each of our team members and clients as partners and strive to truly understand their needs and goals.'
 		},
 		{
 			id: 3,
