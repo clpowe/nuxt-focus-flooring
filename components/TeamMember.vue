@@ -18,7 +18,6 @@
 			fit="cover"
 			height="300"
 			width="300"
-			sizes="sm:100vw md:50vw lg:400px"
 			loading="lazy"
 		/>
 		<p>{{ firstName }}</p>
