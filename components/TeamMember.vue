@@ -16,7 +16,8 @@
 			:src="image"
 			alt=""
 			fit="cover"
-			height="400"
+			height="300"
+			width="300"
 			sizes="sm:100vw md:50vw lg:400px"
 			loading="lazy"
 		/>
@@ -33,7 +34,7 @@
 
 	@container (min-width: 600px) {
 		.teamMember {
-			width: 300px;
+			max-width: 300px;
 		}
 	}
 </style>
