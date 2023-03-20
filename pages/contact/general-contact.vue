@@ -121,6 +121,7 @@
 					label="How did you hear about us?"
 					rows="5"
 					placeholder="How did you hear about us?"
+					class=""
 				/>
 				<FormKit
 					type="textarea"

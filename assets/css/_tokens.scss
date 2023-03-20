@@ -28,6 +28,8 @@
 	--s7: calc(var(--s6) * var(--ratio));
 	--s8: calc(var(--s7) * var(--ratio));
 	--s9: calc(var(--s8) * var(--ratio));
+
+	--fk-max-width-input: 80rem;
 }
 
 html {

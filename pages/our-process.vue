@@ -3,6 +3,15 @@
 		title: 'Focus Flooring - Our Process'
 	})
 
+	const main = ref()
+
+	const sections = [
+		{ text: 'Preconstrunction', id: 'preconstruction' },
+		{ text: 'Project Planning', id: 'project-planning' },
+		{ text: 'Project Execution', id: 'project-execution' },
+		{ text: 'System genetated tools', id: 'system-genetated-tools' }
+	]
+
 	const preconstrunction = [
 		{
 			id: 1,
@@ -132,6 +141,29 @@
 				'This internal planning tool allows us to take the project schedule and break out all of the materials needed based on their install date. This will help our team both manage and sequence all deliveries, as well as stage materials at the job site.'
 		}
 	]
+
+	// const currentsection = ref('preconstruction')
+
+	onMounted(() => {
+		// const contain = document.getElementById('main')
+		// const observer = new IntersectionObserver(
+		// 	(entries) => {
+		// 		entries.forEach((entry) => {
+		// 			if (entry.intersectionRatio > 0) {
+		// 				currentsection.value = entry.target.getAttribute('data-section')
+		// 			}
+		// 		})
+		// 	},
+		// 	{
+		// 		threshold: 1,
+		// 		rootMargin: '0px 0px 0px 0px'
+		// 	}
+		// )
+		// const h2 = document.querySelectorAll('h2')
+		// h2.forEach((section) => {
+		// 	observer.observe(section)
+		// })
+	})
 </script>
 
 <template>
@@ -139,30 +171,31 @@
 		<Hero>Our <span>Process</span> </Hero>
 		<div class="container relative">
 			<Sidebar>
-				<nav>
-					<ol
-						class="static min-[742px]:sticky top-4 uppercase font-bold list-decimal menu-list list-outside"
-					>
-						<li>
-							<a href="#preconstruction">preconstruction</a>
-						</li>
-						<li>
-							<a href="#project-planning">Project planning</a>
-						</li>
-						<li>
-							<a href="#project-execution">Project execution</a>
-						</li>
-						<li>
-							<a href="#system-generated-tools">System genetated tools</a>
-						</li>
-					</ol>
-				</nav>
-				<main id="main" class="space-y-20">
-					<section id="preconstruction">
-						<SideBy>
+				<aside class="relative menu">
+					<nav class="sticky top-12">
+						<ol
+							class="static min-[742px]:sticky top-4 uppercase font-bold list-none menu-list list-outside"
+						>
+							<template v-for="link in sections">
+								<li>
+									<a
+										:href="`#${link.id}`"
+										:class="{ active: link.id == currentsection }"
+										>{{ link.text }}</a
+									>
+								</li>
+							</template>
+						</ol>
+					</nav>
+				</aside>
+				<main id="main" class="space-y-40" ref="main">
+					<article id="preconstruction">
+						<SideBy class="mb-8">
 							<template v-slot:text>
 								<div class="flex-1">
-									<h2 class="mb-2">Pre&shyconstrunction</h2>
+									<h2 class="mb-2" data-section="preconstruction">
+										Pre&shyconstrunction
+									</h2>
 									<p class="text-[var(--grey-6)]">
 										Our core values are the framework in which we evaluate our
 										choices and make all decisions. When our core values are in
@@ -194,30 +227,33 @@
 								</article>
 							</template>
 						</Content>
-					</section>
+					</article>
 
-					<section id="project-planning">
-						<div class="pre-con mb-14">
-							<div class="flex-1">
-								<h2>Project Planning</h2>
-								<p class="text-[var(--grey-6)]">
-									Our goal is to take all of our insight and understanding from
-									the preconstruction phase and take it to the next level of
-									understanding during our project planning phase to ensure a
-									smooth transition occurs from preconstruction to project
-									execution. Our project planning phase consists of:
-								</p>
-							</div>
+					<article id="project-planning">
+						<SideBy class="mb-8">
+							<template v-slot:text>
+								<div class="flex-1">
+									<h2 data-section="project-planning">Project Planning</h2>
+									<p class="text-[var(--grey-6)]">
+										Our goal is to take all of our insight and understanding
+										from the preconstruction phase and take it to the next level
+										of understanding during our project planning phase to ensure
+										a smooth transition occurs from preconstruction to project
+										execution. Our project planning phase consists of:
+									</p>
+								</div>
+							</template>
+							<template v-slot:image>
+								<nuxt-img
+									src="ourProcess.jpg"
+									alt=""
+									fit="cover"
+									class="flex-1 w-[45%]"
+								/>
+							</template>
+						</SideBy>
 
-							<nuxt-img
-								src="ourProcess.jpg"
-								alt=""
-								fit="cover"
-								class="flex-1"
-							/>
-						</div>
-
-						<ul>
+						<ul class="columns-1 sm:columns-2 lg:columns-3">
 							<li><p>Submittals</p></li>
 							<li>
 								<p>Material Lead Time Report</p>
@@ -229,24 +265,27 @@
 								<p>Sequence/Scheduling</p>
 							</li>
 							<li>
-								<p>
-									Material Handling - Staging, Dispatch, Inventory & Warehouse
-								</p>
+								<p>Material Handling</p>
 							</li>
 							<li>
-								<p>Pre- Execution Analysis</p>
+								<p>Pre-Execution Analysis</p>
 							</li>
 						</ul>
-					</section>
+					</article>
 
-					<section id="project-execution">
+					<article id="project-execution">
 						<div class="space-y-16">
-							<div>
-								<h2>Project Execution</h2>
-								<p>
-									Why we’re your easy button: Our step by step execution process
-								</p>
-							</div>
+							<SideBy class="mb-8">
+								<template v-slot:text>
+									<div class="flex-1">
+										<h2 data-section="project-execution">Project Execution</h2>
+										<p class="text-[var(--grey-6)]">
+											Why we’re your easy button: Our step by step execution
+											process
+										</p>
+									</div>
+								</template>
+							</SideBy>
 
 							<Content>
 								<template v-for="item in projectExecutionSteps" :key="item.id">
@@ -271,27 +310,31 @@
 								</Content>
 							</div>
 						</div>
-					</section>
+					</article>
 
-					<section id="system-generated-tools">
+					<article id="system-genetated-tools">
 						<Stack size="--s-1">
-							<SidebySide>
-								<Framer :width="16" :height="9">
+							<SideBy>
+								<template v-slot:text>
+									<div class="flex-1">
+										<h2 data-section="system-genetated-tools">
+											System Generated Tools
+										</h2>
+										<p class="text-[var(--grey-6)]">
+											Our tools are system generated to equip you with what you
+											need, when you need it.
+										</p>
+									</div>
+								</template>
+								<template v-slot:image>
 									<nuxt-img
 										src="../public/systemGeneratedTools.jpg"
 										alt=""
 										sizes="sm:100vw md:700px lg:700px"
-										fit="cover"
+										class="flex-1 w-[45%]"
 									/>
-								</Framer>
-								<Stack size="--s-1">
-									<h2>System Generated Tools</h2>
-									<p>
-										Our tools are system generated to equip you with what you
-										need, when you need it.
-									</p>
-								</Stack>
-							</SidebySide>
+								</template>
+							</SideBy>
 
 							<Box v-for="item in systemTools">
 								<Card
@@ -303,7 +346,7 @@
 								</Card>
 							</Box>
 						</Stack>
-					</section>
+					</article>
 				</main>
 			</Sidebar>
 		</div>
@@ -311,29 +354,28 @@
 </template>
 
 <style scoped>
+	.menu {
+		display: none;
+	}
+
+	@media (min-width: 740px) {
+		.menu {
+			display: block;
+		}
+	}
+
 	ol {
 		max-inline-size: none;
+		position: sticky;
 	}
 	.menu-list {
 		margin-left: var(--s-1);
-	}
-
-	.preconstuction {
-		container-type: inline-size;
-		display: flex;
-		flex-wrap: wrap;
-		gap: var(--s5);
 	}
 
 	.card {
 		display: grid;
 		grid-template-columns: 1fr auto;
 		gap: var(--s1);
-	}
-
-	.pre-con > img {
-		display: none;
-		width: 50cqi;
 	}
 
 	@container (min-width: 700px) {
@@ -343,16 +385,28 @@
 			flex-direction: column;
 			width: 45%;
 		}
-		.pre-con > img {
-			display: block;
-			flex-grow: 1;
-			width: 45cqi;
-		}
 	}
 
-	.pre-con {
+	aside a.active::before {
+		content: '';
+		height: 1rem;
+		width: 1rem;
+		background-color: var(--focus-yellow);
+		position: absolute;
+	}
+
+	:where(#project-planning) li {
 		display: flex;
-		container-type: inline-size;
-		gap: var(--s5);
+		gap: 0.5em;
+		align-items: center;
+		margin-bottom: 0.5em;
+		color: var(--grey-6);
+	}
+	:where(#project-planning) li::before {
+		content: '';
+		height: 1em;
+		width: 1em;
+		border-radius: 2px;
+		background-color: var(--focus-yellow);
 	}
 </style>

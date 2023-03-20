@@ -9,6 +9,7 @@
 // Global CSS starts
 
 body {
+	--fk-max-width-input: 80rem;
 	line-height: 1.5;
 	padding-bottom: get-size('600');
 	font-family: 'Inter', sans-serif;
@@ -52,23 +53,6 @@ th {
 	outline: 2px solid var(--focus-yellow);
 	outline-offset: 0.25em;
 }
-
-// * {
-// 	box-sizing: border-box;
-// 	max-inline-size: 60ch;
-// }
-
-// html,
-// body,
-// div,
-// header,
-// section,
-// nav,
-// main,
-// article,
-// footer {
-// 	max-inline-size: none;
-// }
 
 ol {
 	list-style-type: none;
@@ -188,4 +172,8 @@ h3 {
 }
 p {
 	max-width: 65ch;
+}
+
+.formkit-wrapper .formkit-fieldset {
+	max-width: 80rem;
 }
