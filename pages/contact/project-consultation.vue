@@ -48,8 +48,8 @@
 		<button @click="handleReset">Reset</button>
 	</div>
 	<div>
-		<h3>Let’s talk about your next project</h3>
-		<p>
+		<h3 class="mb-4">Let’s talk about your next project</h3>
+		<p class="mb-8">
 			Request a consultation to discuss contract flooring services for your next
 			project. We’ll help you select the best materials for your design vision,
 			meet your project timelines and get a great new floor within your project
@@ -63,40 +63,44 @@
 				action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
 				@submit="handleSubmit"
 			>
-				<FormKit
-					type="text"
-					name="firstName"
-					label="First Name"
-					help="Enter your first name"
-					placeholder="First Name"
-				/>
-				<FormKit
-					type="text"
-					name="lastName"
-					label="Last Name"
-					help="Enter your last name"
-					placeholder="Last Name"
-				/>
-				<FormKit
-					type="email"
-					name="email"
-					validation="required"
-					label="Email Address"
-					help="Please enter your email address"
-					placeholder="Email address"
-				/>
-				<FormKit
-					type="tel"
-					name="telephoneNumber"
-					validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-					:validation-messages="{
-						matches: 'Phone number must be in the format xxx-xxx-xxxx'
-					}"
-					validation-visibility="dirty"
-					label="Phone Number"
-					help="Please enter your phone Number"
-					placeholder="xxx-xxx-xxxx"
-				/>
+				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
+					<FormKit
+						type="text"
+						name="firstName"
+						label="First Name"
+						help="Enter your first name"
+						placeholder="First Name"
+					/>
+					<FormKit
+						type="text"
+						name="lastName"
+						label="Last Name"
+						help="Enter your last name"
+						placeholder="Last Name"
+					/>
+				</div>
+				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
+					<FormKit
+						type="email"
+						name="email"
+						validation="required"
+						label="Email Address"
+						help="Please enter your email address"
+						placeholder="Email address"
+					/>
+					<FormKit
+						type="tel"
+						name="telephoneNumber"
+						validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+						:validation-messages="{
+							matches: 'Phone number must be in the format xxx-xxx-xxxx'
+						}"
+						validation-visibility="dirty"
+						label="Phone Number"
+						help="Please enter your phone Number"
+						placeholder="xxx-xxx-xxxx"
+					/>
+				</div>
 				<FormKit
 					type="text"
 					name="jobTitle"
@@ -158,3 +162,9 @@
 		</ClientOnly>
 	</div>
 </template>
+
+<style scoped>
+	p {
+		color: var(--grey-6);
+	}
+</style>
