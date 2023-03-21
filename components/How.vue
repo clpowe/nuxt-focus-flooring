@@ -1,9 +1,6 @@
 <script setup>
 	import { spring, scroll, timeline } from 'motion'
-	import gsap from 'gsap'
-	import ScrollTrigger from 'gsap/ScrollTrigger'
 
-	const howcontainer = ref()
 	const cardRefs = ref()
 
 	const steps = [
@@ -55,6 +52,12 @@
 				easing: spring()
 			})
 		})
+	})
+
+	const draw = (progress) => ({
+		strokeDashoffset: 1 - progress,
+
+		visibility: 'visible'
 	})
 </script>
 <template>
@@ -123,7 +126,7 @@
 
 	.number {
 		color: var(--midnight);
-		font-size: 64px;
+		font-size: 40cqh;
 		font-weight: 700;
 	}
 
