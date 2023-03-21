@@ -1,11 +1,12 @@
 <script setup>
+	import { spring, scroll, timeline } from 'motion'
 	import gsap from 'gsap'
 	import ScrollTrigger from 'gsap/ScrollTrigger'
 
 	const howcontainer = ref()
 	const cardRefs = ref()
 
-	const steps = ref([
+	const steps = [
 		{
 			icon: 'how_one',
 			step: 1,
@@ -34,77 +35,25 @@
 			description:
 				'Our process and approach to execution comes from many years of experience, staying up to date with the latest installation methods, products, trainings in the market and our overall desire to please our clients'
 		}
-	])
-
-	// get other plugins:
+	]
 
 	onMounted(() => {
-		gsap.registerPlugin(ScrollTrigger)
+		cardRefs.value.forEach((item) => {
+			const svg = item.children[0].children[0]
+			const number = item.children[0].children[1]
+			const text = item.children[0].children[2]
 
-		console.log(cardRefs.value)
-		cardRefs.value.forEach((el) => {
-			const icon = el.getElementsByClassName('icon')
-			const number = el.getElementsByClassName('number')
-			const title = el.getElementsByTagName('h3')
-			const description = el.getElementsByTagName('p')
-			const numbers_Container = el.getElementsByClassName('number-container')
+			const sequence = [
+				[svg, { opacity: [0, 1], x: [-100, 0] }],
+				[number, { opacity: [0, 1], x: [100, 0] }, { at: '<' }],
+				[text, { opacity: [0, 1], y: [100, 0] }, { easing: spring(), at: '<' }]
+			]
 
-			let tl = gsap.timeline({
-				scrollTrigger: {
-					trigger: el,
-					start: 'top 80%',
-					scrub: true,
-					toggleActions: 'restart none none reverse'
-				}
+			scroll(timeline(sequence), {
+				target: item,
+				offset: ['start end', 'end end', 'start start', 'end start'],
+				easing: spring()
 			})
-
-			tl.from(icon, {
-				opacity: 0,
-				duration: 1,
-				xPercent: -100,
-				ease: 'expo.out'
-			})
-			tl.from(
-				numbers_Container,
-				{
-					opacity: 0,
-					duration: 1,
-					xPercent: 100,
-					ease: 'expo.out'
-				},
-				'<'
-			)
-			tl.from(
-				number,
-				{
-					opacity: 0,
-					duration: 0.5,
-					yPercent: 100
-				},
-				'-=1'
-			)
-			tl.from(
-				title,
-				{
-					opacity: 0,
-					stagger: 0.1,
-					duration: 0.5,
-					yPercent: 100,
-					ease: 'expo.out'
-				},
-				'<'
-			)
-			tl.from(
-				description,
-				{
-					opacity: 0,
-					stagger: 0.1,
-					duration: 0.5,
-					yPercent: 100,
-					ease: 'expo.out'
-				},
-				'<'
-			)
 		})
 	})
 </script>
@@ -120,22 +69,19 @@
 					class="how-con how py-16 grid items-center w-full"
 					style="max-width: 800px"
 				>
-					<Sidebar>
-						<div class="icon">
-							<svg-icon :name="step.icon" />
+					<div class="grid grid-cols-2 gap-4">
+						<svg-icon :name="step.icon" />
+
+						<div class="number-container h-full overflow-hidden">
+							<div class="number">{{ step.step }}</div>
 						</div>
-						<div class="flex flex-col justify-center">
-							<div class="number-container overflow-hidden">
-								<div class="number">{{ step.step }}</div>
-							</div>
-							<Stack size="--s-1">
-								<h3 class="font-bold">{{ step.title }}</h3>
-								<p class="">
-									{{ step.description }}
-								</p>
-							</Stack>
+						<div class="col-span-2">
+							<h3 class="font-bold">{{ step.title }}</h3>
+							<p class="">
+								{{ step.description }}
+							</p>
 						</div>
-					</Sidebar>
+					</div>
 				</li>
 			</ol>
 		</div>
@@ -159,6 +105,7 @@
 	.how-con {
 		color: var(--focus-white);
 		z-index: 1;
+		container-type: inline-size;
 	}
 
 	.image {
@@ -169,8 +116,7 @@
 		background: var(--focus-yellow);
 		display: grid;
 		place-content: center;
-		height: 80px;
-		width: 80px;
+		height: 50cqw;
 		border-radius: 8px;
 		margin-bottom: var(--s3);
 	}

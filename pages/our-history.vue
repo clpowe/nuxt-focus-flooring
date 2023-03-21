@@ -1,12 +1,5 @@
 <script setup>
-	import {
-		inView,
-		animate,
-		scroll,
-		ScrollOffset,
-		timeline,
-		stagger
-	} from 'motion'
+	import { animate, scroll, timeline } from 'motion'
 	import { Motion } from 'motion/vue'
 
 	useHead({
@@ -97,21 +90,6 @@
 			}),
 				{ margin: '0px 50% 0px 0px' }
 		})
-
-		// scroll(
-		// 	itemRefs.value,
-		// 	(item) => {
-		// 		animate(
-		// 			item.target,
-		// 			{ opacity: [0, 1], y: [100, 0] },
-		// 			{
-		// 				target: item.target,
-		// 				duration: 1
-		// 			}
-		// 		)
-		// 	},
-		// 	{ margin: '0px -250px 0px 0px' }
-		// )
 
 		scroll(animate('.progress-bar', { scaleY: [0, 1] }))
 	})

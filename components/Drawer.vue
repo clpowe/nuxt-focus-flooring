@@ -10,23 +10,6 @@
 		document.body.style.overflow = 'scroll'
 		drawerVisible = false
 	}
-
-	// watch(drawerVisible, () => {
-	// 	drawerVisible.value
-	// 		? (document.body.style.overflow = 'hidden')
-	// 		: (document.body.style.overflow = 'scroll')
-	// })
-
-	// onMounted(() => {
-	// 	// Lock the scrollbar by removing overflow if we have any
-
-	// 	previousOverflow.value = document.body.style.overflow
-	// 	document.body.style.overflow = 'hidden'
-	// })
-	// onBeforeUnmount(() => {
-	// 	// Restore the overflow and position
-	// 	document.body.style.overflow = previousOverflow.value
-	// })
 </script>
 
 <template>
