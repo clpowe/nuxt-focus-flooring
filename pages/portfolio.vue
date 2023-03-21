@@ -508,11 +508,17 @@
 
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-					<Stack size="--s5">
+					<div class="projects space-y-20">
 						<ProjectCard v-for="item in filteredProjects" v-bind="item" />
-					</Stack>
+					</div>
 				</main>
 			</Sidebar>
 		</div>
 	</div>
 </template>
+
+<style scoped>
+	.projects {
+		container-type: inline-size;
+	}
+</style>
