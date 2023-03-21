@@ -175,7 +175,7 @@
 			scope:
 				'LVT, Static Dissipative tile, rubber flooring, broadloam carpet, carpet tile, wood flooring, rubber base, heat weld, skudoboard, rubber transitions',
 			image: '/SkyCenterOne.jpeg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail '
 		},
 		{
 			id: 16,
@@ -185,7 +185,7 @@
 			client: 'Rubicon Construction',
 			scope: 'Rubber Flooring, Floor tile, Wall tile',
 			image: '/RivergateTower.jpeg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail '
 		},
 		{
 			id: 17,
@@ -195,7 +195,7 @@
 			client: 'Onicx Construction',
 			scope: 'Floor tile, wall tile, resilient flooring, broadloom carpet',
 			image: '/Anand_Vihar_Clubhouse.jpeg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail '
 		},
 		{
 			id: 18,
@@ -206,7 +206,7 @@
 			scope:
 				'Carpet tile, resilient flooring, rubber base, wall tile, transition strips',
 			image: '/ChamberOfCommerce.jpg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 19,
@@ -217,7 +217,7 @@
 			scope:
 				'Floor tile, resilient flooring, MDF base, tile base, schluter, rubber transition',
 			image: '/SARASOTA_HOUSING_AUTHORIY.jpeg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail '
 		},
 		// {
 		// 	id: 20,
@@ -228,7 +228,7 @@
 		// 	scope:
 		// 		'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
 		// 	image: '/Citi_Tampa_Amenities.jpg',
-		// 	catagory: 'Commecial Office Retail'
+		// 	catagory: 'Commercial Office & Retail '
 		// },
 		{
 			id: 21,
@@ -239,7 +239,7 @@
 			scope:
 				'Floor tile, wall tile, static control VCT, sheet flooring, LVT, interlocking mats, carpet tile, tile base, rubber base, rubber flooring, heat weld, crack isolation, schluter, rubber transition',
 			image: '/Citi_Tampa_Amenities.jpg',
-			catagory: 'Commecial Office Retail'
+			catagory: 'Commercial Office & Retail '
 		},
 		{
 			id: 22,
@@ -472,6 +472,7 @@
 
 	const catagories = computed(() => {
 		const set = new Set()
+		set.add('All')
 		projects.value.forEach((project) => set.add(project.catagory))
 		return set
 	})
@@ -498,7 +499,7 @@
 							'Industrial',
 							'Worship Centers',
 							'Residential & Hospitality',
-							'Commecial Office Retail',
+							'Commercial Office & Retail ',
 							'Aviation',
 							'Education',
 							'Healthcare'
@@ -507,7 +508,7 @@
 				</div> -->
 
 				<main id="main">
-					<h2>{{ catagory }}</h2>
+					<h2>{{ catagory === 'All' ? 'Flooring Projects' : catagory }}</h2>
 					<div class="projects space-y-20">
 						<ProjectCard v-for="item in filteredProjects" v-bind="item" />
 					</div>

@@ -60,7 +60,7 @@ export default defineNuxtConfig({
 		}
 	},
 	build: {
-		transpile: ['motion/vue', '@motionone/vue']
+		transpile: ['motion/vue', '@motionone/vue', '@nuxt/image']
 	},
 	postcss: {
 		plugins: {
