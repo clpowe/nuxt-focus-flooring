@@ -1,4 +1,14 @@
 <script setup>
+	import {
+		inView,
+		animate,
+		scroll,
+		ScrollOffset,
+		timeline,
+		stagger
+	} from 'motion'
+	import { Motion } from 'motion/vue'
+
 	useHead({
 		title: 'Focus Flooring - Our History'
 	})
@@ -70,20 +80,75 @@
 				'The flooring division begins to outgrow being a “division” and begins to require a space of its own. The Envision team discovered that though both the construction management division and flooring division of the business are both client, systems, and process driven, the flooring business at this scale required very different systems, processes and team members than the construction management business.'
 		}
 	]
+
+	const itemRefs = ref()
+
+	onMounted(() => {
+		itemRefs.value.forEach((item) => {
+			const sequence = [
+				[item.children[0], { opacity: [0, 1], x: [100, 0] }],
+				[(item.children[1], { opacity: [0, 1], x: [100, 0] })],
+				[item.children[0], { opacity: [1, 0], y: [0, -100] }, { at: '<' }],
+				[item.children[1], { opacity: [1, 0], y: [0, -100] }, { at: '<' }]
+			]
+			scroll(timeline(sequence), {
+				target: item,
+				offset: ['start end', 'end end', 'start start', 'end start']
+			}),
+				{ margin: '0px 50% 0px 0px' }
+		})
+
+		// scroll(
+		// 	itemRefs.value,
+		// 	(item) => {
+		// 		animate(
+		// 			item.target,
+		// 			{ opacity: [0, 1], y: [100, 0] },
+		// 			{
+		// 				target: item.target,
+		// 				duration: 1
+		// 			}
+		// 		)
+		// 	},
+		// 	{ margin: '0px -250px 0px 0px' }
+		// )
+
+		scroll(animate('.progress-bar', { scaleY: [0, 1] }))
+	})
 </script>
 
 <template>
 	<div>
 		<Hero>Our <span>history</span> </Hero>
-		<main id="main" class="max-w-2xl mx-auto">
+		<main id="main" class="max-w-2xl mx-auto flex">
+			<div class="progress-bar"></div>
 			<div class="space-y-20">
-				<template v-for="(date, index) in dates">
-					<article id="" class="container">
-						<h2 class="mb-4">{{ date.year }}</h2>
-						<p v-html="date.description"></p>
-					</article>
-				</template>
+				<article
+					id=""
+					class="container item"
+					v-for="(date, index) in dates"
+					ref="itemRefs"
+				>
+					<h2 class="mb-4 year">{{ date.year }}</h2>
+					<p v-html="date.description"></p>
+				</article>
 			</div>
 		</main>
 	</div>
 </template>
+
+<style scoped>
+	.progress-bar {
+		width: 1rem;
+		background-color: var(--focus-yellow);
+		transform-origin: 50% 0%;
+	}
+
+	.year {
+		font-size: var(--s5);
+	}
+
+	p {
+		max-width: 65ch;
+	}
+</style>

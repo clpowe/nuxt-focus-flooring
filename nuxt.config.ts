@@ -59,6 +59,9 @@ export default defineNuxtConfig({
 			Inter: [400, 700]
 		}
 	},
+	build: {
+		transpile: ['motion/vue', '@motionone/vue']
+	},
 	postcss: {
 		plugins: {
 			'postcss-preset-env': {
