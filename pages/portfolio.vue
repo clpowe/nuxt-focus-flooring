@@ -48,7 +48,7 @@
 			scope:
 				'Extensive floor prep, carpet tile, large format tile, porcelain tile, LVT, broadloom carpet, millwork base',
 			image: '/RevealingTruthMinistries.jpg',
-			catagory: 'Workshop Centers'
+			catagory: 'Worship Centers'
 		},
 		{
 			id: 4,
@@ -58,7 +58,7 @@
 			client: 'Mount Olive Baptist Church',
 			scope: 'Extensive floor prep, carpet tile, porcelain tile, LVT',
 			image: '/MountOliveBaptist.jpg',
-			catagory: 'Workshop Centers'
+			catagory: 'Worship Centers'
 		},
 		{
 			id: 5,
@@ -68,7 +68,7 @@
 			client: 'The Rock Church of God by Faith',
 			scope: 'Carpet tile, rubber cove base',
 			image: '/TheRockChurchofGodbyFaith.jpg',
-			catagory: 'Workshop Centers'
+			catagory: 'Worship Centers'
 		},
 		{
 			id: 6,
@@ -496,7 +496,7 @@
 						:options="[
 							'All',
 							'Industrial',
-							'Workshop Centers',
+							'Worship Centers',
 							'Residential & Hospitality',
 							'Commecial Office Retail',
 							'Aviation',
