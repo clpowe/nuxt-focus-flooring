@@ -66,7 +66,7 @@
 		{
 			id: 1,
 			component: 'h3',
-			title: 'Minority Owend',
+			title: 'Minority Owned',
 			content:
 				'Focus Flooring is 100% minority-owned with the ability to compete on large scale projects at the prime level.'
 		},
@@ -92,6 +92,21 @@
 		<Hero> About Us </Hero>
 		<main id="main" class="max-w-2xl mx-auto">
 			<div class="space-y-20">
+				<article id="three-uniques" class="container">
+					<h2 class="mb-4">Thre Uniques</h2>
+					<div class="max-w-md mx-auto space-y-10 mt-6">
+						<Box v-for="item in threeUniqes" padding="--s-0">
+							<Card
+								:key="item.id"
+								:title="item.title"
+								:component="item.component"
+							>
+								<p>{{ item.content }}</p>
+							</Card>
+						</Box>
+					</div>
+				</article>
+
 				<article id="our-purpose" class="container">
 					<h2 class="mb-4">Our Purpose</h2>
 					<p>
@@ -125,21 +140,6 @@
 								</li>
 							</ul>
 						</Card>
-					</div>
-				</article>
-
-				<article id="three-uniques" class="container">
-					<h2 class="mb-4">Thre Uniqes</h2>
-					<div class="max-w-md mx-auto space-y-10 mt-6">
-						<Box v-for="item in threeUniqes" padding="--s-0">
-							<Card
-								:key="item.id"
-								:title="item.title"
-								:component="item.component"
-							>
-								<p>{{ item.content }}</p>
-							</Card>
-						</Box>
 					</div>
 				</article>
 			</div>

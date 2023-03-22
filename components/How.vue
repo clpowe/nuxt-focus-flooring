@@ -65,8 +65,8 @@
 	})
 </script>
 <template>
-	<div class="howcontainer" ref="howcontainer">
-		<div class="container">
+	<div class="" ref="howcontainer">
+		<div class="container howcontainer">
 			<h2 ref="title" class="title sticky">How we do it</h2>
 			<ol type="1" class="space-y-40">
 				<li
