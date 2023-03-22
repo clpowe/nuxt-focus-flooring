@@ -302,6 +302,7 @@
 			background-color: var(--midnight);
 			padding: var(--s-1);
 			top: 70%;
+			display: v-bind(`${expanded ? 'grid': 'none'}`);
 		}
 
 		& button {
