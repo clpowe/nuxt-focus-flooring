@@ -1,7 +1,6 @@
 <script setup>
 	import { animate, scroll, timeline } from 'motion'
 
-
 	useHead({
 		title: 'Focus Flooring - Our History'
 	})
@@ -98,7 +97,7 @@
 <template>
 	<div>
 		<Hero>Our <span>history</span> </Hero>
-		<main id="main" class="max-w-2xl mx-auto flex">
+		<main id="main" class="max-w-2xl mx-auto flex overflow-x-hidden">
 			<div class="progress-bar"></div>
 			<div class="space-y-20">
 				<article
