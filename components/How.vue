@@ -9,28 +9,32 @@
 			step: 1,
 			title: 'Preconstrunction',
 			description:
-				'Through our comprehensive preconstruction process, our team will produce a quality and detailed proposal and an overall preconstruction experience that you can count on.'
+				'Through our comprehensive preconstruction process, our team will produce a quality and detailed proposal and an overall preconstruction experience that you can count on.',
+			link: '/our-process#preconstruction'
 		},
 		{
 			icon: 'how_two',
 			step: 2,
 			title: 'System Generated Tools',
 			description:
-				'Project planning ensures a smooth transition occurs from preconstruction to project execution to ensure we get ahead of potential issues and eliminate risk for our clients early on.'
+				'Project planning ensures a smooth transition occurs from preconstruction to project execution to ensure we get ahead of potential issues and eliminate risk for our clients early on.',
+			link: '/our-process#project-planning'
 		},
 		{
 			icon: 'how_three',
 			step: 3,
 			title: 'Project Planning',
 			description:
-				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.'
+				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.',
+			link: '/our-process#project-execution'
 		},
 		{
 			icon: 'how_four',
 			step: 4,
 			title: 'Project Execution',
 			description:
-				'Our process and approach to execution comes from many years of experience, staying up to date with the latest installation methods, products, trainings in the market and our overall desire to please our clients'
+				'Our process and approach to execution comes from many years of experience, staying up to date with the latest installation methods, products, trainings in the market and our overall desire to please our clients',
+			link: '/our-process#system-genetated-tools'
 		}
 	]
 
@@ -84,6 +88,11 @@
 								{{ step.description }}
 							</p>
 						</div>
+						<nuxt-link
+							:to="step.link"
+							class="btn btn-yellow text-[var(--midnight)]"
+							>Learn More</nuxt-link
+						>
 					</div>
 				</li>
 			</ol>

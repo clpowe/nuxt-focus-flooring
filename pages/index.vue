@@ -116,10 +116,9 @@
 			</section>
 
 			<section class="container">
-				<Stack size="--s-3" class="margin-bottom">
+				<div size="--s-3" class="margin-bottom">
 					<h2>What we do</h2>
-					<p>Commercial flooring Services</p>
-				</Stack>
+				</div>
 
 				<Grid>
 					<Card

@@ -68,21 +68,21 @@
 			component: 'h3',
 			title: 'Minority Owend',
 			content:
-				'Focus Flooring is 100% MBE-owned with the capability of taking on large sized flooring scopes of work.'
+				'Focus Flooring is 100% minority-owned with the ability to compete on large scale projects at the prime level.'
 		},
 		{
 			id: 2,
 			component: 'h3',
 			title: 'CM Approach',
 			content:
-				'We look at each of our team members and clients as partners and strive to truly understand their needs and goals.'
+				'Our approach to flooring will be seen from the conception of your project to completion, because we approach it with a CM mindset. This approach ultimately ensures we are focused on the things that matters most to our clients from the very beginning.'
 		},
 		{
 			id: 3,
 			component: 'h3',
 			title: 'Versatile',
 			content:
-				'Our internal reporting that allows you to know the procurement status of all materials, as well as when you can expect to receive your materials based on the updated lead times and scheduled installation dates.'
+				'Our ability to specialize in all aspects of commercial flooring, with the ability to scale up or scale down based on the project need allows our team to be versatile when it comes to meeting your flooring needs on any project.'
 		}
 	]
 </script>
