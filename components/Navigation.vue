@@ -174,7 +174,7 @@
 					<Icon name="line-md:menu" size="1.25em" @click="openMobileNav" />
 				</div>
 				<Drawer :drawerVisible="navDrawerVisible" @close="closeDrawer">
-					<ul class="" role="menubar" aria-label="Focus Flooring">
+					<ul class="mobileNav" role="menubar" aria-label="Focus Flooring">
 						<li role="none">
 							<NuxtLink
 								prefetch
@@ -269,6 +269,12 @@
 </template>
 
 <style scoped>
+	.mobileNav {
+		display: grid;
+		font-size: 1.4rem;
+		gap: 1rem;
+	}
+
 	.header {
 		position: relative;
 		background-color: var(--midnight);

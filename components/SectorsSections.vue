@@ -22,8 +22,9 @@
 		<p>
 			{{ description }}
 		</p>
+		<nuxt-link class="btn">See More</nuxt-link>
 		<div class="cover"></div>
-		<nuxt-img :src="image" alt="" fit="cover" />
+		<nuxt-img :src="image" alt="" fit="fit" />
 	</article>
 </template>
 

@@ -14,8 +14,22 @@
 
 <template>
 	<Teleport to="body">
-		<transition name="drawer">
-			<div v-if="drawerVisible" class="drawer flex flex-col p-4">
+		<Presence>
+			<Motion
+				v-if="drawerVisible"
+				:initial="{
+					transform: 'translateX(-100%)'
+				}"
+				:animate="{
+					transform: 'translateX(0)',
+					transition: { easing: ['ease-in', 'ease-out'], duration: 0.5 }
+				}"
+				:exit="{
+					transform: 'translateX(-100%)',
+					transition: { easing: ['ease-in', 'ease-out'], duration: 0.5 }
+				}"
+				class="drawer flex flex-col p-4"
+			>
 				<Icon
 					class="ml-auto mb-4 cursor-pointer"
 					name="line-md:close"
@@ -23,8 +37,8 @@
 					@click="$emit('close')"
 				/>
 				<slot />
-			</div>
-		</transition>
+			</Motion>
+		</Presence>
 	</Teleport>
 	<transition name="backdrop">
 		<div v-if="drawerVisible" class="backdrop" @click="$emit('close')"></div>

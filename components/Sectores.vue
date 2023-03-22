@@ -1,5 +1,6 @@
 <script setup>
-	import gsap from 'gsap'
+	import { animate } from 'motion'
+
 	const sectores = ref([
 		{
 			id: 1,
@@ -54,31 +55,29 @@
 	])
 
 	function grow(event) {
-		console.log(event.target.children[1])
-		gsap.fromTo(event.target, { flexGrow: 1 }, { flexGrow: 10, duration: 0.35 })
-		gsap.fromTo(
-			event.target.children[0],
-			{ color: '#eceded' },
-			{ color: '#171d1a', duration: 0.35 }
+		animate(event.target, { flexGrow: 10 }, { duration: 0.5 })
+		animate(
+			event.target.children[2],
+			{ y: [200, 0], opacity: [0, 1] },
+			{ easing: 'ease-out' }
 		)
-		gsap.fromTo(
-			event.target.children[3],
-			{ opacity: 0.2, mixBlendMode: 'luminosity' },
-			{ opacity: 0.8, mixBlendMode: 'normal', duration: 0.35 }
-		)
+		animate(event.target.children[4], {
+			opacity: 0.8,
+			mixBlendMode: 'normal',
+			duration: 0.35
+		})
 	}
 	function shrink(event) {
-		gsap.fromTo(event.target, { flexGrow: 10 }, { flexGrow: 1, duration: 0.35 })
-		gsap.fromTo(
-			event.target.children[0],
-			{ color: '#171d1a' },
-			{ color: '#eceded', duration: 0.35 }
-		)
-		gsap.fromTo(
-			event.target.children[3],
-			{ opacity: 0.8, mixBlendMode: 'normal' },
-			{ opacity: 0.2, duration: 0.35, mixBlendMode: 'luminosity' }
-		)
+		animate(event.target, { flexGrow: 1, duration: 0.35 })
+
+		animate(event.target.children[4], {
+			opacity: 0.2,
+			duration: 0.35,
+			mixBlendMode: 'luminosity'
+		})
+	}
+	function goto(event) {
+		console.log(event)
 	}
 </script>
 <template>
@@ -92,7 +91,7 @@
 				:title="sector.title"
 				@mouseenter="grow"
 				@mouseleave="shrink"
-				@click="shrink"
+				@click="goto"
 			/>
 		</div>
 	</div>

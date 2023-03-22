@@ -1,6 +1,6 @@
 <script setup>
 	import { animate, scroll, timeline } from 'motion'
-	import { Motion } from 'motion/vue'
+
 
 	useHead({
 		title: 'Focus Flooring - Our History'
