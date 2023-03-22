@@ -5,7 +5,6 @@
 			required: true
 		}
 	})
-
 	function closeDrawer() {
 		document.body.style.overflow = 'scroll'
 		drawerVisible = false
@@ -14,22 +13,8 @@
 
 <template>
 	<Teleport to="body">
-		<Presence>
-			<Motion
-				v-if="drawerVisible"
-				:initial="{
-					transform: 'translateX(-100%)'
-				}"
-				:animate="{
-					transform: 'translateX(0)',
-					transition: { easing: ['ease-in', 'ease-out'], duration: 0.5 }
-				}"
-				:exit="{
-					transform: 'translateX(-100%)',
-					transition: { easing: ['ease-in', 'ease-out'], duration: 0.5 }
-				}"
-				class="drawer flex flex-col p-4"
-			>
+		<transition name="drawer">
+			<div v-if="drawerVisible" class="drawer flex flex-col p-4">
 				<Icon
 					class="ml-auto mb-4 cursor-pointer"
 					name="line-md:close"
@@ -37,8 +22,8 @@
 					@click="$emit('close')"
 				/>
 				<slot />
-			</Motion>
-		</Presence>
+			</div>
+		</transition>
 	</Teleport>
 	<transition name="backdrop">
 		<div v-if="drawerVisible" class="backdrop" @click="$emit('close')"></div>
@@ -57,7 +42,6 @@
 		will-change: auto;
 		color: var(--focus-white);
 	}
-
 	.backdrop {
 		position: fixed;
 		top: 0;
@@ -68,24 +52,20 @@
 		opacity: 0.6;
 		z-index: 499;
 	}
-
 	.drawer-enter-active,
 	.drawer-leave-active {
 		transition: 0.5s ease all;
 	}
-
 	.drawer-enter-from {
 		transform: translateX(-100%);
 	}
 	.drawer-leave-to {
 		transform: translateX(-100%);
 	}
-
 	.backdrop-enter-active,
 	.backdrop-leave-active {
 		transition: 0.6s ease all;
 	}
-
 	.backdrop-enter-from {
 		opacity: 0;
 	}
