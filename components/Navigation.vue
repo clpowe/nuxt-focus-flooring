@@ -271,7 +271,7 @@
 <style scoped>
 	.mobileNav {
 		display: grid;
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 		gap: 1rem;
 	}
 
