@@ -25,12 +25,22 @@ h3 {
 }
 
 h1 {
-	font-size: var(--s5);
+	font-size: var(--s6);
 }
 
 h2 {
-	font-size: var(--s3);
+	font-size: var(--s2);
 	margin-bottom: 1em;
+}
+@media (min-width: 768px) {
+	h2 {
+		font-size: var(--s4);
+	}
+}
+@media (min-width: 1024px) {
+	h2 {
+		font-size: var(--s6);
+	}
 }
 
 h3 {
@@ -52,7 +62,7 @@ th {
 
 :focus {
 	outline: 2px solid var(--focus-yellow);
-	outline-offset: 0.25em;
+	outline-offset: 0.15em;
 }
 
 ol {
@@ -62,7 +72,6 @@ ol {
 
 .container {
 	max-width: 1440px;
-
 	margin-inline: auto;
 	padding-inline-start: 1rem;
 	padding-inline-end: 1rem;
@@ -120,8 +129,9 @@ h2::after {
 	position: absolute;
 	left: 0;
 	bottom: 5%;
-	height: 4px;
+	height: 0.5em;
 	background-color: var(--focus-yellow);
+	z-index: -1;
 	width: 30cqi;
 }
 
@@ -177,4 +187,8 @@ p {
 
 .formkit-wrapper .formkit-fieldset {
 	max-width: 80rem;
+}
+
+.main {
+	@apply mt-8 space-y-40 md:space-y-60 lg:space-y-80;
 }

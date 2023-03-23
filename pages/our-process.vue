@@ -188,7 +188,7 @@
 						</ol>
 					</nav>
 				</aside>
-				<main id="main" class="space-y-40" ref="main">
+				<main id="main" class="main" ref="main">
 					<article id="preconstruction">
 						<SideBy class="mb-8">
 							<template v-slot:text>

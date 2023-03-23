@@ -82,98 +82,95 @@
 			</template>
 		</HomeHero>
 	</header>
-	<main id="main" class="mt-8">
-		<div class="space-y-[var(--s9)]">
-			<section class="container">
-				<SidebySide>
-					<Framer :width="16" :height="9">
-						<nuxt-img
-							src="/WhoWeAre.png"
-							alt=""
-							sizes="sm:100vw md:700px lg:700px"
-							fit="cover"
-						/>
-					</Framer>
-					<div>
-						<h2 class="margin-bottom">Who we are</h2>
-						<Stack size="--s-1">
-							<p>
-								At Focus Flooring, our advanced solutions in commercial flooring
-								coupled with our 55+ years of combined flooring expertise,
-								allows us to be a leader in the flooring industry.
-							</p>
-							<p>
-								Focus Flooring is a MBE-owned firm based out of Tampa, FL. with
-								a
-								<strong
-									>guarantee to eliminate your risk through our internal
-									processes.</strong
-								>
-							</p>
-						</Stack>
-					</div>
-				</SidebySide>
-			</section>
-
-			<section class="container">
-				<div size="--s-3" class="margin-bottom">
-					<h2>What we do</h2>
+	<main id="main" class="main">
+		<section class="container">
+			<SidebySide>
+				<Framer :width="16" :height="9">
+					<nuxt-img
+						src="/WhoWeAre.png"
+						alt=""
+						sizes="sm:100vw md:700px lg:700px"
+						fit="cover"
+					/>
+				</Framer>
+				<div>
+					<h2 class="margin-bottom">Who we are</h2>
+					<Stack size="--s-1">
+						<p>
+							At Focus Flooring, our advanced solutions in commercial flooring
+							coupled with our 55+ years of combined flooring expertise, allows
+							us to be a leader in the flooring industry.
+						</p>
+						<p>
+							Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
+							<strong
+								>guarantee to eliminate your risk through our internal
+								processes.</strong
+							>
+						</p>
+					</Stack>
 				</div>
+			</SidebySide>
+		</section>
 
-				<Grid>
-					<Card
-						v-for="item in whatWeDo"
-						:key="item.id"
-						:svg="item.svg"
-						:title="item.title"
-						:style="'h-16 mb-4'"
-						:component="item.component"
-					>
-						<p>{{ item.content }}</p>
-					</Card>
-				</Grid>
-			</section>
+		<section class="container">
+			<div size="--s-3" class="margin-bottom">
+				<h2>What we do</h2>
+			</div>
 
-			<section class="container">
-				<Sectores />
-			</section>
+			<Grid>
+				<Card
+					v-for="item in whatWeDo"
+					:key="item.id"
+					:svg="item.svg"
+					:title="item.title"
+					:style="'h-16 mb-4'"
+					:component="item.component"
+				>
+					<p>{{ item.content }}</p>
+				</Card>
+			</Grid>
+		</section>
 
-			<section>
-				<How />
-			</section>
+		<section class="container">
+			<Sectores />
+		</section>
 
-			<section class="container">
-				<h2>Testimonials</h2>
-				<Grid>
-					<video controls>
-						<source
-							src="https://ik.imagekit.io/demo/sample-video.mp4"
-							type="video/mp4"
-						/>
+		<section>
+			<How />
+		</section>
 
-						Your browser does not support the video tag.
-					</video>
+		<section class="container">
+			<h2>Testimonials</h2>
+			<Grid>
+				<video controls>
+					<source
+						src="https://ik.imagekit.io/demo/sample-video.mp4"
+						type="video/mp4"
+					/>
 
-					<video controls>
-						<source
-							src="https://ik.imagekit.io/demo/sample-video.mp4"
-							type="video/mp4"
-						/>
+					Your browser does not support the video tag.
+				</video>
 
-						Your browser does not support the video tag.
-					</video>
+				<video controls>
+					<source
+						src="https://ik.imagekit.io/demo/sample-video.mp4"
+						type="video/mp4"
+					/>
 
-					<video controls>
-						<source
-							src="https://ik.imagekit.io/demo/sample-video.mp4"
-							type="video/mp4"
-						/>
+					Your browser does not support the video tag.
+				</video>
 
-						Your browser does not support the video tag.
-					</video>
-				</Grid>
-			</section>
-		</div>
+				<video controls>
+					<source
+						src="https://ik.imagekit.io/demo/sample-video.mp4"
+						type="video/mp4"
+					/>
+
+					Your browser does not support the video tag.
+				</video>
+			</Grid>
+		</section>
 	</main>
 </template>
 
