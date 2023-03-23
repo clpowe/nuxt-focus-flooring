@@ -52,7 +52,7 @@
 
 			scroll(timeline(sequence), {
 				target: item,
-				offset: ['start end', 'end end', 'start start', 'end start'],
+				offset: ['start end', 'end end', 'end start', 'start start'],
 				easing: spring()
 			})
 		})
@@ -132,11 +132,12 @@
 		height: 50cqw;
 		border-radius: 8px;
 		margin-bottom: var(--s3);
+		container-type: inline-size;
 	}
 
 	.number {
 		color: var(--midnight);
-		font-size: 40cqh;
+		font-size: 30cqh;
 		font-weight: 700;
 	}
 

@@ -84,33 +84,44 @@
 	</header>
 	<main id="main" class="main">
 		<section class="container">
-			<SidebySide>
-				<Framer :width="16" :height="9">
-					<nuxt-img
-						src="/WhoWeAre.png"
-						alt=""
-						sizes="sm:100vw md:700px lg:700px"
-						fit="cover"
-					/>
-				</Framer>
-				<div>
-					<h2 class="margin-bottom">Who we are</h2>
-					<Stack size="--s-1">
-						<p>
-							At Focus Flooring, our advanced solutions in commercial flooring
-							coupled with our 55+ years of combined flooring expertise, allows
-							us to be a leader in the flooring industry.
-						</p>
-						<p>
-							Focus Flooring is a MBE-owned firm based out of Tampa, FL. with a
-							<strong
-								>guarantee to eliminate your risk through our internal
-								processes.</strong
-							>
-						</p>
-					</Stack>
-				</div>
-			</SidebySide>
+			<SideBy class="mb-8">
+				<template v-slot:text>
+					<div class="flex-1">
+						<h2 class="margin-bottom">Who we are</h2>
+						<Stack size="--s-1">
+							<p>
+								At Focus Flooring, our advanced solutions in commercial flooring
+								coupled with our 55+ years of combined flooring expertise,
+								allows us to be a leader in the flooring industry.
+							</p>
+							<p>
+								Focus Flooring is a MBE-owned firm based out of Tampa, FL. with
+								a
+								<strong
+									>guarantee to eliminate your risk through our internal
+									processes.</strong
+								>
+							</p>
+						</Stack>
+					</div>
+				</template>
+				<template v-slot:image>
+					<div class="flex-1 relative pic">
+						<nuxt-img
+							src="/WhoWeAre.png"
+							alt=""
+							sizes="sm:100vw md:700px lg:700px"
+							fit="cover"
+							class="flex-1"
+						/>
+					</div>
+				</template>
+			</SideBy>
+
+			<Sideby>
+				<template v-slot:text> </template>
+				<template v-slot:image> </template>
+			</Sideby>
 		</section>
 
 		<section class="container">
@@ -183,5 +194,21 @@
 
 	video {
 		width: 100%;
+	}
+
+	.pic {
+		position: relative;
+		container-type: inline-size;
+	}
+
+	.pic::after {
+		content: '';
+		height: 100%;
+		width: 100cqw;
+		position: absolute;
+		background-color: var(--focus-yellow);
+		left: 5%;
+		bottom: -5%;
+		z-index: -1;
 	}
 </style>

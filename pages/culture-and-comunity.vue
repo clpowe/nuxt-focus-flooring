@@ -55,9 +55,12 @@
 						<div>
 							<h2>Culture</h2>
 							<p class="max-w-lg">
-								“Illuminate our industry with positivity, partnership and
-								precision”… it starts within. We look to be the light to our
-								team so that together we can light up the industry.
+								<blockquote class=" lg:text-4xl mb-4 italic font-bold">
+									“Illuminate our industry with positivity, partnership, &
+									precision”…
+								</blockquote>
+								it starts within. We look to be the light to our team so that
+								together we can light up the industry.
 							</p>
 						</div>
 						<SidebySide>

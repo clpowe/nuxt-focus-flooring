@@ -143,27 +143,6 @@
 	]
 
 	// const currentsection = ref('preconstruction')
-
-	onMounted(() => {
-		// const contain = document.getElementById('main')
-		// const observer = new IntersectionObserver(
-		// 	(entries) => {
-		// 		entries.forEach((entry) => {
-		// 			if (entry.intersectionRatio > 0) {
-		// 				currentsection.value = entry.target.getAttribute('data-section')
-		// 			}
-		// 		})
-		// 	},
-		// 	{
-		// 		threshold: 1,
-		// 		rootMargin: '0px 0px 0px 0px'
-		// 	}
-		// )
-		// const h2 = document.querySelectorAll('h2')
-		// h2.forEach((section) => {
-		// 	observer.observe(section)
-		// })
-	})
 </script>
 
 <template>

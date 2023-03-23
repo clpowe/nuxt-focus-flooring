@@ -43,7 +43,7 @@
 			image: '/WorshipCenters.jpeg',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'private' } }
+			route: { path: 'portfolio', query: { catagory: 'Worship Centers' } }
 		},
 		{
 			id: 6,
