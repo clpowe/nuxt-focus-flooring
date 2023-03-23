@@ -46,6 +46,7 @@
 		display: grid;
 		grid-template-columns: 1fr auto;
 		gap: var(--s1);
+		padding: 0cqi;
 	}
 
 	@container (min-width: 700px) {
@@ -53,7 +54,6 @@
 			display: flex;
 			flex-grow: 1;
 			flex-direction: column;
-			width: 45%;
 		}
 	}
 </style>

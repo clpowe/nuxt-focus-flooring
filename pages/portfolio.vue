@@ -3,7 +3,10 @@
 		title: 'Focus Flooring - Portfolio'
 	})
 
-	const catagory = ref<string>('All')
+	const route = useRoute()
+
+	const catagory = ref<any>('')
+	catagory.value = route.query.catagory ? route.query.catagory : 'All'
 
 	type Project = {
 		id: number
@@ -219,17 +222,17 @@
 			image: '/SARASOTA_HOUSING_AUTHORIY.jpeg',
 			catagory: 'Commercial Office & Retail '
 		},
-		// {
-		// 	id: 20,
-		// 	name: 'Citi Tampa A1G1 Lobby & Restrooms renovation',
-		// 	size: '8K SF',
-		// 	cost: 206780,
-		// 	client: 'DPR',
-		// 	scope:
-		// 		'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
-		// 	image: '/Citi_Tampa_Amenities.jpg',
-		// 	catagory: 'Commercial Office & Retail '
-		// },
+		{
+			id: 20,
+			name: 'Citi Tampa A1G1 Lobby & Restrooms renovation',
+			size: '8K SF',
+			cost: 206780,
+			client: 'DPR',
+			scope:
+				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
+			image: '/Citi_Tampa_Amenities.jpg',
+			catagory: 'Commercial Office & Retail '
+		},
 		{
 			id: 21,
 			name: 'Citi Tampa Aminites',

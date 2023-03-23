@@ -32,7 +32,7 @@ h2 {
 	font-size: var(--s2);
 	margin-bottom: 1em;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
 	h2 {
 		font-size: var(--s4);
 	}
@@ -153,6 +153,7 @@ h3 {
 	font-weight: 600;
 	text-decoration: none;
 	z-index: 10;
+	cursor: pointer;
 
 	&-yellow {
 		background-color: var(--focus-yellow);

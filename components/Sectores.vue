@@ -7,60 +7,79 @@
 			title: 'INDUSTRIAL',
 			image: '/Industrial.jpeg',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: { path: 'portfolio', query: { catagory: 'Industrial' } }
 		},
 		{
 			id: 2,
 			title: 'HEALTHCARE',
 			image: 'HealthCare.jpeg',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: { path: 'portfolio', query: { catagory: 'Healthcare' } }
 		},
 		{
 			id: 3,
 			title: 'AVIATION',
 			image: '/aviation.jpeg',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: { path: 'portfolio', query: { catagory: 'Aviation' } }
 		},
 		{
 			id: 4,
 			title: 'RESIDENTIAL & HOSPITALITY',
 			image: '/ResidentialHospitality.jpeg',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: {
+				path: 'portfolio',
+				query: { catagory: 'Residential & Hospitality' }
+			}
 		},
 		{
 			id: 5,
 			title: 'WORSHIP CENTERS',
 			image: '/WorshipCenters.jpeg',
-
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: { path: 'portfolio', query: { catagory: 'private' } }
 		},
 		{
 			id: 6,
 			title: 'EDUCATION',
 			image: '/K-12.png',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: { path: 'portfolio', query: { catagory: 'Education' } }
 		},
 		{
 			id: 7,
 			title: 'OFFICE & RETAIL',
 			image: '/RivergateTower.jpeg',
 			description:
-				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.'
+				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
+			route: {
+				path: 'portfolio',
+				query: { catagory: 'Commercial Office & Retail' }
+			}
 		}
 	])
 
 	function grow(event) {
-		animate(event.target, { flexGrow: 10 }, { duration: 0.5 })
+		animate(event.target, { flexGrow: 8 }, { duration: 0.5 })
+
+		animate(
+			event.target.children[0],
+			{ fontSize: '2.5em' },
+			{ easing: 'ease-out' }
+		)
 		animate(
 			event.target.children[2],
 			{ y: [200, 0], opacity: [0, 1] },
 			{ easing: 'ease-out' }
 		)
+
 		animate(event.target.children[4], {
 			opacity: 0.8,
 			mixBlendMode: 'normal',
@@ -69,6 +88,16 @@
 	}
 	function shrink(event) {
 		animate(event.target, { flexGrow: 1, duration: 0.35 })
+		animate(
+			event.target.children[0],
+			{ fontSize: '1.5em' },
+			{ easing: 'ease-out' }
+		)
+		animate(
+			event.target.children[2],
+			{ y: [0, 200], opacity: [1, 0] },
+			{ easing: 'ease-out' }
+		)
 
 		animate(event.target.children[4], {
 			opacity: 0.2,
@@ -81,7 +110,7 @@
 	}
 </script>
 <template>
-	<div>
+	<div class="">
 		<h2>Sectors we serve</h2>
 		<div class="sectores">
 			<SectorsSections
@@ -89,6 +118,7 @@
 				key="sector.id"
 				:image="sector.image"
 				:title="sector.title"
+				:route="sector.route"
 				@mouseenter="grow"
 				@mouseleave="shrink"
 				@click="goto"
@@ -106,7 +136,7 @@
 		align-items: center;
 	}
 
-	@media (min-width: 670px) {
+	@media (min-width: 800px) {
 		.sectores {
 			width: 100%;
 			height: 90vh;

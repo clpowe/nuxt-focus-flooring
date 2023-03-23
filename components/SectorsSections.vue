@@ -12,6 +12,10 @@
 		description: {
 			type: String,
 			required: true
+		},
+		route: {
+			type: String,
+			required: true
 		}
 	})
 </script>
@@ -22,7 +26,7 @@
 		<p>
 			{{ description }}
 		</p>
-		<nuxt-link class="btn">See More</nuxt-link>
+		<nuxt-link :to="route" class="btn btn-yellow">See More</nuxt-link>
 		<div class="cover"></div>
 		<nuxt-img :src="image" alt="" fit="fit" />
 	</article>
@@ -37,6 +41,8 @@
 		padding: var(--s1);
 		min-height: 100px;
 		flex: 1;
+		overflow: hidden;
+		overflow-wrap: break-word;
 	}
 
 	.cover {
@@ -63,19 +69,34 @@
 
 	h3 {
 		color: var(--focus-white);
-		writing-mode: horizontal-tb;
+		position: absolute;
+		top: 1rem;
+		width: max-content;
+
 		text-orientation: mixed;
 		rotate: 0deg;
+
 		z-index: 2;
-		position: relative;
+		hyphens: auto;
+		transform-origin: top left;
+		overflow-wrap: break-word;
 	}
 
-	@media (min-width: 670px) {
+	@media (min-width: 800px) {
 		h3 {
 			color: var(--focus-white);
-			writing-mode: vertical-rl;
+			top: auto;
+			bottom: 1rem;
 			text-orientation: mixed;
-			rotate: 180deg;
+			rotate: -90deg;
+			transform-origin: 0 0;
 		}
+	}
+
+	.btn {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		opacity: 0;
 	}
 </style>
