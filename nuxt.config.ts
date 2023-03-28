@@ -73,5 +73,10 @@ export default defineNuxtConfig({
 	},
 	formkit: {
 		configFile: './formkit.config.ts'
+	},
+	image: {
+		imagekit: {
+			baseURL: 'https://ik.imagekit.io/focusflooring/Focus_Flooring_Projects/'
+		}
 	}
 })

@@ -28,7 +28,7 @@
 			cost: 1367,
 			client: 'Wehr Constructors',
 			scope: 'Resilient flooring, vinyl base',
-			image: '/Veolia-TampaWaterTreatment.jpeg',
+			image: '/Veolia-TampaWaterTreatment.jpeg?updatedAt=1679969240764',
 			catagory: 'Industrial'
 		},
 		{

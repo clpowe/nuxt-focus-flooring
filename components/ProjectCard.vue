@@ -33,13 +33,14 @@
 <template>
 	<div class="sideby">
 		<nuxt-img
+			provider="imagekit"
 			:src="image"
 			:alt="alt"
 			format="webp"
 			height="500"
-			fit="cover"
-			:placeholder="100"
+			fit="fit"
 			sizes="sm:100vw md:60vw lg:80vw"
+			:modifiers="{ aspectRatio: '16/9' }"
 		/>
 
 		<div class="space-y-4">
