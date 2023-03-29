@@ -76,7 +76,7 @@ export default defineNuxtConfig({
 	},
 	image: {
 		imagekit: {
-			baseURL: 'https://ik.imagekit.io/focusflooring/Focus_Flooring_Projects/'
+			baseURL: 'https://ik.imagekit.io/focusflooring/'
 		}
 	}
 })

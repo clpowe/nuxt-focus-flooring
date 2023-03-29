@@ -13,7 +13,8 @@
 <template>
 	<div class="teamMember">
 		<nuxt-img
-			:src="image"
+			provider="imagekit"
+			:src="`/team_members/${image}`"
 			alt=""
 			fit="cover"
 			height="300"

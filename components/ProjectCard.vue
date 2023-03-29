@@ -46,7 +46,6 @@
 		<div class="space-y-4">
 			<h3>{{ name }}</h3>
 			<p>Size: {{ size }}</p>
-			<!-- <p>Total Project Cost: {{ useMakeCurrency(cost) }}</p> -->
 			<p>Client: {{ client }}</p>
 			<p>Scope: {{ scope }}</p>
 		</div>
