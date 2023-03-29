@@ -139,7 +139,8 @@
 					placeholder="Project Size"
 				/>
 				<FormKit
-					type="radio"
+					type="checkbox"
+					multiple
 					label="What product(s) are you interested in?*"
 					name="projectType"
 					:options="[
@@ -148,8 +149,10 @@
 						'Concrete surfacing or flooring',
 						'Stone tile',
 						'Laminate flooring',
-						'Resilient flooring'
+						'Resilient flooring',
+						'Other'
 					]"
+					decorator-icon="check"
 				/>
 				<FormKit
 					type="textarea"

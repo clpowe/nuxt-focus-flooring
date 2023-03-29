@@ -40,7 +40,8 @@
 		/* position: absolute; */
 		top: 0%;
 		right: 0%;
-		background: url('../HomeHero.jpg'), var(--midnight);
+		background: url('https://ik.imagekit.io/focusflooring/HomeHero.jpg?tr=w-600,updatedAt=1680051697607'),
+			var(--midnight);
 		background-position: 70% center;
 		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
 		height: 100%;
@@ -71,7 +72,8 @@
 		.image {
 			position: absolute;
 			top: 0%;
-			background: url('../HomeHero.jpeg'), var(--midnight);
+			background: url('https://ik.imagekit.io/focusflooring/HomeHero.jpeg?tr=w-375,updatedAt=1680051701955'),
+				var(--midnight);
 			background-position: center center;
 			filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
 			height: 100%;
