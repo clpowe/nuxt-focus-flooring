@@ -39,6 +39,7 @@
 			format="webp"
 			height="500"
 			fit="fit"
+			loading="lazy"
 			sizes="sm:100vw md:60vw lg:80vw"
 			:modifiers="{ aspectRatio: '16/9' }"
 		/>

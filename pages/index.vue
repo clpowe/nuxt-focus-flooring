@@ -77,7 +77,14 @@
 					<NuxtLink to="/contact/general-contact" class="btn btn-yellow"
 						>contact us</NuxtLink
 					>
-					<NuxtLink to="/about-us" class="btn btn-outline">Learn more</NuxtLink>
+					<NuxtLink
+						to="/about-us"
+						quality="80"
+						loading="lazy"
+						format="webp"
+						class="btn btn-outline"
+						>Learn more</NuxtLink
+					>
 				</div>
 			</template>
 		</HomeHero>

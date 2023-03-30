@@ -28,7 +28,14 @@
 		</p>
 		<nuxt-link :to="route" class="btn btn-yellow">See More</nuxt-link>
 		<div class="cover"></div>
-		<nuxt-img :src="image" alt="" fit="fit" format="webp" quality="80" />
+		<nuxt-img
+			:src="image"
+			alt=""
+			fit="fit"
+			format="webp"
+			quality="80"
+			loading="lazy"
+		/>
 	</article>
 </template>
 
