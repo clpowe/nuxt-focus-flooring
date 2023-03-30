@@ -20,6 +20,7 @@
 			height="300"
 			width="300"
 			loading="lazy"
+			format="webp"
 		/>
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>

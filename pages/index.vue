@@ -113,6 +113,8 @@
 							sizes="sm:100vw md:700px lg:700px"
 							fit="cover"
 							class="flex-1"
+							format="webp"
+							quality="80"
 						/>
 					</div>
 				</template>

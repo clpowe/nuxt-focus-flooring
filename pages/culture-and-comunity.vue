@@ -74,11 +74,12 @@
 							</Card>
 
 							<nuxt-img
-								format="webp"
-								src="/collaboratingWithColors_01.jpg"
-								alt=""
-								fit="cover"
-								placeholder="[100,100,100]"
+							src="/collaboratingWithColors_01.jpg"
+							alt=""
+							fit="cover"
+							format="webp"
+								quality="80"
+								
 								sizes="sm:100vw lg:600px"
 							/>
 						</SidebySide>
@@ -97,7 +98,9 @@
 								src="/teamBuilding_01.jpg"
 								alt=""
 								fit="cover"
-								placeholder="[100,100,100]"
+								format="webp"
+								quality="80"
+								
 								sizes="sm:100vw lg:600px"
 							/>
 						</SidebySide>
@@ -118,6 +121,8 @@
 									src="/commitmentToComunity_01.jpg"
 									alt=""
 									fit="cover"
+									format="webp"
+								quality="80"
 								/>
 							</Framer>
 							<Framer :width="12" :height="9">
@@ -125,6 +130,8 @@
 									src="/commitmentToComunity_02.jpg"
 									alt=""
 									fit="cover"
+									format="webp"
+								quality="80"
 								/>
 							</Framer>
 							<Framer :width="12" :height="9">
@@ -132,6 +139,8 @@
 									src="/commitmentToComunity_03.jpg"
 									alt=""
 									fit="cover"
+									format="webp"
+								quality="80"
 								/>
 							</Framer>
 							<Framer :width="12" :height="9">
@@ -139,6 +148,8 @@
 									src="/commitmentToComunity_04.jpg"
 									alt=""
 									fit="cover"
+									format="webp"
+								quality="80"
 								/>
 							</Framer>
 							<Framer :width="12" :height="9">
@@ -146,6 +157,8 @@
 									src="/commitmentToComunity_05.jpg"
 									alt=""
 									fit="cover"
+									format="webp"
+								quality="80"
 								/>
 							</Framer>
 						</Grid>

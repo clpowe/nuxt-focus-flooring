@@ -81,7 +81,6 @@
 
 						<div class="number-container h-full overflow-hidden">
 							<div class="number">{{ step.step }}</div>
-							w
 						</div>
 						<div class="col-span-2">
 							<h3 class="font-bold">{{ step.title }}</h3>
