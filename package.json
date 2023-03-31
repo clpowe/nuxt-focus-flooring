@@ -14,6 +14,7 @@
 		"@nuxtjs/tailwindcss": "^6.4.0",
 		"nuxt": "^3.3.0",
 		"nuxt-icon": "^0.2.6",
+		"nuxt-schema-org": "^2.1.2",
 		"sass": "^1.57.1",
 		"vite-svg-loader": "^4.0.0"
 	},

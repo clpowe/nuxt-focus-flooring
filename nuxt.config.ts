@@ -51,7 +51,8 @@ export default defineNuxtConfig({
 		'nuxt-icon',
 		'@nuxtjs/robots',
 		'@nuxt/image-edge',
-		'@nuxtjs/tailwindcss'
+		'@nuxtjs/tailwindcss',
+		'nuxt-schema-org'
 	],
 	googleFonts: {
 		families: {
@@ -78,5 +79,8 @@ export default defineNuxtConfig({
 		imagekit: {
 			baseURL: 'https://ik.imagekit.io/focusflooring/'
 		}
+	},
+	schemaOrg: {
+		host: 'https://focus-flooring.com'
 	}
 })
