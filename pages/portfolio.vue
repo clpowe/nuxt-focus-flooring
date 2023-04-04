@@ -498,22 +498,6 @@
 						<span class="checkmark"></span>
 					</label>
 				</div>
-				<!-- <div>
-					<FormKit
-						v-model="catagory"
-						type="radio"
-						:options="[
-							'All',
-							'Industrial',
-							'Worship Centers',
-							'Residential & Hospitality',
-							'Commercial Office & Retail ',
-							'Aviation',
-							'Education',
-							'Healthcare'
-						]"
-					/>
-				</div> -->
 
 				<main id="main">
 					<h2>{{ catagory === 'All' ? 'Flooring Projects' : catagory }}</h2>
