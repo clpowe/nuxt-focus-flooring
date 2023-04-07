@@ -12,6 +12,9 @@
 				<h1>
 					<slot name="header" />
 				</h1>
+				<p class="text-[var(--focus-white)] text-xl max-w-md">
+					Zero Punch Philosophy, On-time Schedule, Guaranteed Pricing
+				</p>
 				<slot name="actions" />
 			</Stack>
 			<div class="dot"></div>
@@ -29,7 +32,7 @@
 	}
 	.hero {
 		position: relative;
-		height: 600px;
+		height: 800px;
 		width: 100%;
 		display: grid;
 		align-items: center;

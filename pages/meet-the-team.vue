@@ -26,7 +26,7 @@
 			image: '/JacquesDuval.jpeg',
 			firstName: 'Jacques',
 			lastName: 'Duval',
-			title: 'Some Title',
+			title: 'President',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Leadership'
 		},
@@ -35,7 +35,7 @@
 			image: '/RobertMelanson.jpeg',
 			firstName: 'Robert',
 			lastName: 'Melanson',
-			title: 'Some Title',
+			title: 'General Superintendent',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Leadership'
 		},
@@ -44,7 +44,7 @@
 			image: '/McCarter.jpg',
 			firstName: 'McCarter',
 			lastName: 'Jackson',
-			title: 'Some Title',
+			title: 'Preconstruction Director',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Preconstruction'
 		},
@@ -53,7 +53,7 @@
 			image: '/JudithH.jpeg',
 			firstName: 'Judith',
 			lastName: 'Henriquez',
-			title: 'Some Title',
+			title: 'Preconstruction Tech',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Preconstruction'
 		},
@@ -62,43 +62,17 @@
 			image: '/DeLaniRolle.jpeg',
 			firstName: 'De Lani',
 			lastName: 'Rolle',
-			title: 'Some Title',
+			title: 'Marketing Coordinator',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Marketing/BD'
 		},
-		{
-			id: 6,
-			image: '/GabrielleHoward.jpeg',
-			firstName: 'Gabrielle',
-			lastName: 'Howard',
-			title: 'Some Title',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			catagory: 'Marketing/BD'
-		},
+
 		{
 			id: 7,
 			image: '/PamelaCooke.jpeg',
 			firstName: 'Pamela',
 			lastName: 'Cooke',
-			title: 'Some Title',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			catagory: 'Project Planning'
-		},
-		{
-			id: 8,
-			image: '/ChrisLampkin.jpeg',
-			firstName: 'Chris',
-			lastName: 'Lampkin',
-			title: 'Some Title',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			catagory: 'Project Planning'
-		},
-		{
-			id: 9,
-			image: '/IMG_6800.jpg',
-			firstName: 'Jose',
-			lastName: 'Garcia',
-			title: 'Some Title',
+			title: 'Product Coordinator',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Project Planning'
 		},
@@ -107,36 +81,55 @@
 			image: '/SaritaRamos.jpeg',
 			firstName: 'Sarita',
 			lastName: 'Ramos',
-			title: 'Some Title',
+			title: 'Assistant Superintendent',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Field Management'
 		},
-		{
-			id: 11,
-			image: '/RobertMelanson.jpeg',
-			firstName: 'Robert',
-			lastName: 'Melanson',
-			title: 'Some Title',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			catagory: 'Field Management'
-		},
-		{
-			id: 12,
-			image: '/ArianaGreene.jpeg',
-			firstName: 'Ariana',
-			lastName: 'Greene',
-			title: 'Some Title',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
-			catagory: 'Admin'
-		},
+
 		{
 			id: 13,
 			image: '/CharlayneGoyens.jpeg',
 			firstName: 'Charlayne',
 			lastName: 'Goyens',
-			title: 'Some Title',
+			title: 'Internal Operations Coordinator',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Admin'
+		},
+		{
+			id: 14,
+			image: 'placeholder',
+			firstName: 'Andy',
+			lastName: '',
+			title: 'Field Tech',
+			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			catagory: 'Field'
+		},
+		{
+			id: 15,
+			image: 'placeholder',
+			firstName: 'Santiago',
+			lastName: '',
+			title: 'Field',
+			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			catagory: 'Field'
+		},
+		{
+			id: 16,
+			image: 'placeholder',
+			firstName: 'Fransico',
+			lastName: '',
+			title: 'Field Tech',
+			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			catagory: 'Field'
+		},
+		{
+			id: 17,
+			image: 'placeholder',
+			firstName: 'Diego',
+			lastName: '',
+			title: 'Warehouse Coordinator',
+			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			catagory: 'Field'
 		}
 	])
 
@@ -147,7 +140,8 @@
 		'Marketing/BD',
 		'Project Planning',
 		'Field Management',
-		'Admin'
+		'Admin',
+		'Field'
 	])
 
 	const filtered = computed(() => {
@@ -169,7 +163,6 @@
 	}
 
 	function onEnter(el, done) {
-		console.log(el)
 		gsap.to(el, {
 			opacity: 1,
 			height: '400px',

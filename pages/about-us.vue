@@ -92,7 +92,7 @@
 		<Hero> About Us </Hero>
 		<main id="main" class="main max-w-2xl mx-auto">
 			<article id="three-uniques" class="container">
-				<h2 class="mb-4">Thre Uniques</h2>
+				<h2 class="mb-4">Three Uniques</h2>
 				<div class="max-w-md mx-auto space-y-10 mt-6">
 					<Box v-for="item in threeUniqes" padding="--s-0">
 						<Card

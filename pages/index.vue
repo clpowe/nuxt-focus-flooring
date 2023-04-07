@@ -78,7 +78,7 @@
 						>contact us</NuxtLink
 					>
 					<NuxtLink
-						to="/about-us"
+						to="/our-process"
 						quality="80"
 						loading="lazy"
 						format="webp"
@@ -160,7 +160,7 @@
 			<How />
 		</section>
 
-		<section class="container">
+		<!-- <section class="container">
 			<h2>Testimonials</h2>
 			<Grid>
 				<video controls>
@@ -190,7 +190,7 @@
 					Your browser does not support the video tag.
 				</video>
 			</Grid>
-		</section>
+		</section> -->
 	</main>
 </template>
 

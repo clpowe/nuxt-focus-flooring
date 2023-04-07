@@ -21,6 +21,7 @@
 			width="300"
 			loading="lazy"
 			format="webp"
+			:placeholder="15"
 		/>
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>

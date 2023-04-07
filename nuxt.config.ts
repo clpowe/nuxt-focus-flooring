@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 			},
 			charset: 'utf-16',
 			viewport: 'width=500, initial-scale=1',
-			title: 'Focus Floring',
+			title: 'Focus Flooring',
 			meta: [
 				// <meta name="description" content="My amazing site">
 				{ name: 'description', content: 'My amazing site.' }

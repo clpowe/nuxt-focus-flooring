@@ -45,7 +45,10 @@
 		/>
 
 		<div class="space-y-4">
-			<h3>{{ name }}</h3>
+			<div class="space-y-2">
+				<h3>{{ name }}</h3>
+				<p class="text-sm">As Envision Flooring</p>
+			</div>
 			<p>Size: {{ size }}</p>
 			<p>Client: {{ client }}</p>
 			<p>Scope: {{ scope }}</p>
