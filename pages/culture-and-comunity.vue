@@ -1,6 +1,17 @@
 <script setup>
+
+
 	useHead({
 		title: 'Focus Flooring - Culture and Comunity'
+	})
+
+	onMounted(()=>{
+
+		document.querySelectorAll('.horizontal-media-scroller')
+		.forEach(scroller => rovingIndex({
+			element: scroller,
+			target: 'a',
+		}))
 	})
 
 	const communityList = [
@@ -42,12 +53,35 @@
 		'University of South Florida',
 		'Upper Tampa Bay Chamber of Commerce'
 	]
+
+	const communityPictures = [
+		{
+		img:'/commitmentToComunity_01.jpg',
+		alt:'Working with our community'
+		},
+		{
+		img:'/commitmentToComunity_02.jpg',
+		alt:'Working with our community'
+		},
+		{
+		img:'/commitmentToComunity_03.jpg',
+		alt:'Working with our community'
+		},
+		{
+		img:'/commitmentToComunity_04.jpg',
+		alt:'Working with our community'
+		},
+		{
+		img:'/commitmentToComunity_05.jpg',
+		alt:'Working with our community'
+		},
+	]
 </script>
 
 <template>
 	<div>
 		<Stack size="4">
-			<Hero>Culture and <span>Comunity</span></Hero>
+			<Hero>Culture and <span>Community</span></Hero>
 
 			<main id="main" class="main">
 				<article class="container">
@@ -109,59 +143,87 @@
 
 				<article class="container">
 					<div class="space-y-6">
-						<h2>Our commitment to our community</h2>
+						<h2>Community</h2>
 						<ul class="partnerlist columns-2 md:columns-4 space-y-2">
 							<li v-for="item in communityList" class="">
 								{{ item }}
 							</li>
 						</ul>
-						<Grid>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_01.jpg"
-									alt=""
-									fit="cover"
-									format="webp"
-								quality="80"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_02.jpg"
-									alt=""
-									fit="cover"
-									format="webp"
-								quality="80"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_03.jpg"
-									alt=""
-									fit="cover"
-									format="webp"
-								quality="80"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_04.jpg"
-									alt=""
-									fit="cover"
-									format="webp"
-								quality="80"
-								/>
-							</Framer>
-							<Framer :width="12" :height="9">
-								<nuxt-img
-									src="/commitmentToComunity_05.jpg"
-									alt=""
-									fit="cover"
-									format="webp"
-								quality="80"
-								/>
-							</Framer>
-						</Grid>
+
+
+						<ul class="horizontal-media-scroller">
+							
+							<li class="" v-for="picture in communityPictures" :key="picture.img">
+								<figure>
+									<picture>
+										<nuxt-img
+											:src="picture.img"
+											:alt="picture.alt"
+											fit="cover"
+											format="webp"
+											quality="80"
+										/>
+									</picture>
+								</figure>
+							</li>
+							
+							<!-- <li>
+								<figure>
+									<picture>
+										<nuxt-img
+											src="/commitmentToComunity_02.jpg"
+											alt=""
+											fit="cover"
+											format="webp"
+										quality="80"
+										/>
+									</picture>
+								</figure>
+							</li>
+
+							<li>
+								<figure>
+									<picture>
+										<nuxt-img
+											src="/commitmentToComunity_03.jpg"
+											alt=""
+											fit="cover"
+											format="webp"
+										quality="80"
+										/>
+									</picture>
+								</figure>
+							</li>
+
+							<li>
+								<figure>
+									<picture>
+										<nuxt-img
+											src="/commitmentToComunity_04.jpg"
+											alt=""
+											fit="cover"
+											format="webp"
+										quality="80"
+										/>
+									</picture>
+								</figure>
+							</li> 
+
+						<li>
+							<figure>
+								<picture>
+									<nuxt-img
+										src="/commitmentToComunity_05.jpg"
+										alt=""
+										fit="cover"
+										format="webp"
+										quality="80"
+									/>
+								</picture>
+							</figure>
+						</li>-->
+
+						</ul>
 					</div>
 				</article>
 			</main>
@@ -169,4 +231,70 @@
 	</div>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+
+// .horizontal-media-scroller {
+//   --size: 1500px;
+
+//   display: grid;
+//   grid-auto-flow: column;
+//   gap: calc(var(--gap) / 2);
+//   margin: 0;
+
+//   padding-inline-start: var(--gap);
+//   padding-inline-end: var(--gap);
+//   padding-block-start: calc(var(--gap) / 2);
+//   padding-block-end: calc(var(--gap) / 2);
+
+//   overflow-x: auto;
+//   overscroll-behavior-inline: contain;
+//   scroll-snap-type: inline mandatory;
+//   scroll-padding-left: var(--gap);
+//   scroll-padding-right: var(--gap);
+//   scroll-padding-inline: var(--gap);
+
+//   @media (prefers-reduced-motion: no-preference) {
+//     scroll-behavior: smooth;
+//   }
+
+//   & > li {
+//     display: inline-block;
+
+//     /*  container padding fix  */
+//     &:last-of-type figure {
+//       position: relative;
+
+//       &::after {
+//         content: "";
+//         position: absolute;
+
+//         inline-size: var(--gap);
+//         block-size: 100%;
+
+//         inset-block-start: 0;
+//         inset-inline-end: calc(var(--gap) * -1);
+//       }
+//     }
+//   }
+
+//   & figure {
+//     scroll-snap-align: start;
+//   }
+
+//   & a {
+//     display: inline-block;
+//     text-decoration: none;
+//     color: inherit;
+//     outline-offset: 12px;
+
+//     &:focus {
+//       outline-offset: 7px;
+//     }
+
+//     @media (prefers-reduced-motion: no-preference) {
+//       transition: outline-offset .25s ease;
+//     }
+//   }
+// }
+
+</style>

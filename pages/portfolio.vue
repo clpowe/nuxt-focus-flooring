@@ -179,7 +179,7 @@
 			scope:
 				'LVT, Static Dissipative tile, rubber flooring, broadloam carpet, carpet tile, wood flooring, rubber base, heat weld, skudoboard, rubber transitions',
 			image: '/Focus_Flooring_Projects/SkyCenterOne.jpeg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 16,
@@ -189,7 +189,7 @@
 			client: 'Rubicon Construction',
 			scope: 'Rubber Flooring, Floor tile, Wall tile',
 			image: '/Focus_Flooring_Projects/RivergateTower.jpeg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 17,
@@ -199,7 +199,7 @@
 			client: 'Onicx Construction',
 			scope: 'Floor tile, wall tile, resilient flooring, broadloom carpet',
 			image: '/Focus_Flooring_Projects/Anand_Vihar_Clubhouse.jpeg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 18,
@@ -221,7 +221,7 @@
 			scope:
 				'Floor tile, resilient flooring, MDF base, tile base, schluter, rubber transition',
 			image: '/Focus_Flooring_Projects/SARASOTA_HOUSING_AUTHORIY.jpeg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 20,
@@ -232,7 +232,7 @@
 			scope:
 				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
 			image: '/Focus_Flooring_Projects/Citi_Tampa_Amenities.jpg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 21,
@@ -243,7 +243,7 @@
 			scope:
 				'Floor tile, wall tile, static control VCT, sheet flooring, LVT, interlocking mats, carpet tile, tile base, rubber base, rubber flooring, heat weld, crack isolation, schluter, rubber transition',
 			image: '/Focus_Flooring_Projects/Citi_Tampa_Amenities.jpg',
-			catagory: 'Commercial Office & Retail '
+			catagory: 'Commercial Office & Retail'
 		},
 		{
 			id: 22,

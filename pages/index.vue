@@ -62,6 +62,15 @@
 			title: 'Flooring Accessories',
 			content:
 				'From transitions to stair treads, flooring accessories are specialty products that will tie together your design and product needs.'
+		},
+		{
+			id: 8,
+			component: 'h3',
+			svg: 'IconSeven',
+			image: '/IconSix.svg',
+			title: 'Commercial Grade Laminate Flooring',
+			content:
+				'Versatile, cost-effective materials in a variety of colors and installation patterns to meet nearly any design vision within touch budget constraints.'
 		}
 	]
 </script>
@@ -94,12 +103,12 @@
 			<SideBy class="mb-8">
 				<template v-slot:text>
 					<div class="flex-1">
-						<h2 class="margin-bottom">Who we are</h2>
+						<h2 class="margin-bottom">Our Focus</h2>
 						<Stack size="--s-1">
 							<p>
-								At Focus Flooring, our advanced solutions in commercial flooring
-								coupled with our 55+ years of combined flooring expertise,
-								allows us to be a leader in the flooring industry.
+								At Focus Flooring, we have disciplined our flooring processes to
+								focus on the details that greatly impact our clients and deliver
+								a high quality service they can count on.
 							</p>
 							<p>
 								Focus Flooring is a MBE-owned firm based out of Tampa, FL. with
@@ -127,10 +136,32 @@
 				</template>
 			</SideBy>
 
-			<Sideby>
-				<template v-slot:text> </template>
-				<template v-slot:image> </template>
-			</Sideby>
+			<div class="flex-1">
+				<h2 class="margin-bottom">Our History</h2>
+				<Stack size="--s-1">
+					<p>
+						The flooring division begins to outgrow being a “division” and
+						begins to require a space of its own. The Envision team discovered
+						that though both the construction management division and flooring
+						division of the business are both client, systems, and process
+						driven, the flooring business at this scale required very different
+						systems, processes and team members than the construction management
+						business.
+					</p>
+					<p>
+						Learn more about our journey from Envision Flooring to Focus
+						Flooring
+					</p>
+					<NuxtLink
+						prefetch
+						to="/our-history"
+						role="menuitem"
+						exactActiveClass="nuxt-link-active"
+						class="btn btn-yellow"
+						>Our History</NuxtLink
+					>
+				</Stack>
+			</div>
 		</section>
 
 		<section class="container">
@@ -159,38 +190,6 @@
 		<section>
 			<How />
 		</section>
-
-		<!-- <section class="container">
-			<h2>Testimonials</h2>
-			<Grid>
-				<video controls>
-					<source
-						src="https://ik.imagekit.io/demo/sample-video.mp4"
-						type="video/mp4"
-					/>
-
-					Your browser does not support the video tag.
-				</video>
-
-				<video controls>
-					<source
-						src="https://ik.imagekit.io/demo/sample-video.mp4"
-						type="video/mp4"
-					/>
-
-					Your browser does not support the video tag.
-				</video>
-
-				<video controls>
-					<source
-						src="https://ik.imagekit.io/demo/sample-video.mp4"
-						type="video/mp4"
-					/>
-
-					Your browser does not support the video tag.
-				</video>
-			</Grid>
-		</section> -->
 	</main>
 </template>
 

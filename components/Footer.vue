@@ -35,9 +35,7 @@
 
 				<address>
 					<h2>Address</h2>
-					<p>5000 Acline Drive East Tampa, FL 33619</p>
-					<p>Po Box 89098 Tampa FL 33689</p>
-					<p>(813) 997-0330</p>
+					<p>5000 Acline Drive Suite B East Tampa, FL 33619, United States</p>
 				</address>
 			</Grid>
 		</div>
