@@ -12,22 +12,24 @@
 </script>
 
 <template>
-	<Teleport to="body">
-		<transition name="drawer">
-			<div v-if="drawerVisible" class="drawer flex flex-col p-4">
-				<Icon
-					class="ml-auto mb-4 cursor-pointer"
-					name="line-md:close"
-					size="1.25em"
-					@click="$emit('close')"
-				/>
-				<slot />
-			</div>
+	<div>
+		<Teleport to="body">
+			<transition name="drawer">
+				<div v-if="drawerVisible" class="drawer flex flex-col p-4">
+					<Icon
+						class="ml-auto mb-4 cursor-pointer"
+						name="line-md:close"
+						size="1.25em"
+						@click="$emit('close')"
+					/>
+					<slot />
+				</div>
+			</transition>
+		</Teleport>
+		<transition name="backdrop">
+			<div v-if="drawerVisible" class="backdrop" @click="$emit('close')"></div>
 		</transition>
-	</Teleport>
-	<transition name="backdrop">
-		<div v-if="drawerVisible" class="backdrop" @click="$emit('close')"></div>
-	</transition>
+	</div>
 </template>
 
 <style scoped>

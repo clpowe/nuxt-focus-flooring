@@ -1,6 +1,4 @@
 <script setup lang="ts">
-	import gsap from 'gsap'
-
 	useHead({
 		title: 'Focus Flooring - Meet the team'
 	})
@@ -68,7 +66,7 @@
 		},
 
 		{
-			id: 7,
+			id: 6,
 			image: '/PamelaCooke.jpeg',
 			firstName: 'Pamela',
 			lastName: 'Cooke',
@@ -77,7 +75,7 @@
 			catagory: 'Project Planning'
 		},
 		{
-			id: 10,
+			id: 7,
 			image: '/SaritaRamos.jpeg',
 			firstName: 'Sarita',
 			lastName: 'Ramos',
@@ -87,7 +85,7 @@
 		},
 
 		{
-			id: 13,
+			id: 8,
 			image: '/CharlayneGoyens.jpeg',
 			firstName: 'Charlayne',
 			lastName: 'Goyens',
@@ -96,7 +94,7 @@
 			catagory: 'Admin'
 		},
 		{
-			id: 14,
+			id: 9,
 			image: 'placeholder',
 			firstName: 'Andy',
 			lastName: '',
@@ -105,7 +103,7 @@
 			catagory: 'Field'
 		},
 		{
-			id: 15,
+			id: 10,
 			image: 'placeholder',
 			firstName: 'Santiago',
 			lastName: '',
@@ -114,7 +112,7 @@
 			catagory: 'Field'
 		},
 		{
-			id: 16,
+			id: 11,
 			image: 'placeholder',
 			firstName: 'Fransico',
 			lastName: '',
@@ -123,7 +121,7 @@
 			catagory: 'Field'
 		},
 		{
-			id: 17,
+			id: 12,
 			image: 'placeholder',
 			firstName: 'Diego',
 			lastName: '',
@@ -156,31 +154,6 @@
 	function closeDrawer() {
 		drawerVisible.value = false
 	}
-
-	function onBeforeEnter(el) {
-		el.style.opacity = 0
-		el.style.height = '400px'
-	}
-
-	function onEnter(el, done) {
-		gsap.to(el, {
-			opacity: 1,
-			height: '400px',
-			onComplete: done,
-			ease: 'power1.inOut'
-		})
-	}
-
-	function onLeave(el, done) {
-		gsap.to(el, {
-			position: 'static',
-			opacity: 0,
-			height: 0,
-			y: '400px',
-			ease: 'power1.inOut',
-			onComplete: done
-		})
-	}
 </script>
 
 <template>
@@ -189,7 +162,17 @@
 		<Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
 			<div v-if="curruntMember" class="">
 				<div class="space-y-[var(--s1)]">
-					<img :src="curruntMember.image" alt="" />
+					<nuxt-img
+						provider="imagekit"
+						:src="`/team_members/${curruntMember.image}`"
+						:alt="`A photo of ${curruntMember.firstName} ${curruntMember.lastName}`"
+						fit="cover"
+						height="300"
+						width="358"
+						format="webp"
+						quality="75"
+					/>
+
 					<div class="font-bold uppercase">
 						<p>{{ curruntMember.firstName }}</p>
 						<p>{{ curruntMember.lastName }}</p>
@@ -215,21 +198,13 @@
 				<main id="main">
 					<h2>{{ catagory }}</h2>
 					<div class="flex flex-wrap gap-5 relative">
-						<TransitionGroup
-							name="list"
-							:css="false"
-							@before-enter="onBeforeEnter"
-							@enter="onEnter"
-							@leave="onLeave"
-						>
-							<TeamMember
-								v-for="(member, index) in filtered"
-								:key="member.id"
-								:data-index="index"
-								v-bind="member"
-								@click="handleClick(member.id)"
-							/>
-						</TransitionGroup>
+						<TeamMember
+							v-for="(member, index) in filtered"
+							:key="member.id"
+							:data-index="index"
+							v-bind="member"
+							@click="handleClick(member.id)"
+						/>
 					</div>
 				</main>
 			</Sidebar>
