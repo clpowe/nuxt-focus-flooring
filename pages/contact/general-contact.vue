@@ -17,7 +17,7 @@
 
 		try {
 			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec',
+				'https://script.google.com/macros/s/AKfycbwFXNy3oXTIABlly-PQ5qsA00eDkMXou8nDnKP9UsVT4A2hS6cquHXMKbh8_b91qnky/exec',
 				{
 					method: 'POST',
 					body: fData
@@ -131,7 +131,9 @@
 					placeholder="Comments/Message"
 				/>
 				<FormKit
-					type="radio"
+					type="checkbox"
+					name="request"
+					multiple
 					label="To help us fulfill your request, please select your area(s) of interest:"
 					:options="[
 						'Request A Quote',

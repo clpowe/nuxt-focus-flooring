@@ -17,7 +17,7 @@
 
 		try {
 			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec',
+				'https://script.google.com/macros/s/AKfycbwQLbLBMhdzIxT9_83Ez88WXdjYMAJPYoAHTW-IFesBRBb1RxgqKGKzlAHSi3nnOllG/exec',
 				{
 					method: 'POST',
 					body: fData
@@ -119,7 +119,7 @@
 				/>
 				<FormKit
 					type="textarea"
-					name="hearAboutUs"
+					name="How did you hear about us"
 					label="How did you hear about us?"
 					rows="5"
 					placeholder="How did you hear about us?"
