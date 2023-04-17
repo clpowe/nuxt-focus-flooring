@@ -17,11 +17,11 @@
 			:src="`/team_members/${image}`"
 			alt=""
 			fit="cover"
+			quality="90"
 			height="300"
 			width="300"
 			loading="lazy"
 			format="webp"
-			:placeholder="15"
 		/>
 		<p>{{ firstName }}</p>
 		<p>{{ lastName }}</p>

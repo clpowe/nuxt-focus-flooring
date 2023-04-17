@@ -149,152 +149,57 @@
 								{{ item }}
 							</li>
 						</ul>
-
-
-						<ul class="horizontal-media-scroller">
-							
-							<li class="" v-for="picture in communityPictures" :key="picture.img">
-								<figure>
-									<picture>
-										<nuxt-img
-											:src="picture.img"
-											:alt="picture.alt"
-											fit="cover"
-											format="webp"
-											quality="80"
-										/>
-									</picture>
-								</figure>
-							</li>
-							
-							<!-- <li>
-								<figure>
-									<picture>
-										<nuxt-img
-											src="/commitmentToComunity_02.jpg"
-											alt=""
-											fit="cover"
-											format="webp"
-										quality="80"
-										/>
-									</picture>
-								</figure>
-							</li>
-
-							<li>
-								<figure>
-									<picture>
-										<nuxt-img
-											src="/commitmentToComunity_03.jpg"
-											alt=""
-											fit="cover"
-											format="webp"
-										quality="80"
-										/>
-									</picture>
-								</figure>
-							</li>
-
-							<li>
-								<figure>
-									<picture>
-										<nuxt-img
-											src="/commitmentToComunity_04.jpg"
-											alt=""
-											fit="cover"
-											format="webp"
-										quality="80"
-										/>
-									</picture>
-								</figure>
-							</li> 
-
-						<li>
-							<figure>
-								<picture>
-									<nuxt-img
-										src="/commitmentToComunity_05.jpg"
-										alt=""
-										fit="cover"
-										format="webp"
-										quality="80"
-									/>
-								</picture>
-							</figure>
-						</li>-->
-
-						</ul>
 					</div>
 				</article>
 			</main>
+			<ul class="media-scroller pt-10">
+				
+				<li class="media-element" v-for="picture in communityPictures" :key="picture.img">			
+							<nuxt-img
+								:src="picture.img"
+								:alt="picture.alt"
+								fit="cover"
+								format="webp"
+								quality="80"
+							/>			
+				</li>
+			</ul>
 		</Stack>
 	</div>
 </template>
 
 <style scoped lang="scss">
+.media-scroller {
+	margin-top: 4rem;
+  --_spacer: .5rem;
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
 
-// .horizontal-media-scroller {
-//   --size: 1500px;
+  padding: 0 var(--_spacer) var(--_spacer);
 
-//   display: grid;
-//   grid-auto-flow: column;
-//   gap: calc(var(--gap) / 2);
-//   margin: 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
 
-//   padding-inline-start: var(--gap);
-//   padding-inline-end: var(--gap);
-//   padding-block-start: calc(var(--gap) / 2);
-//   padding-block-end: calc(var(--gap) / 2);
+.media-element {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: var(--_spacer);
+  padding: var(--_spacer);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
 
-//   overflow-x: auto;
-//   overscroll-behavior-inline: contain;
-//   scroll-snap-type: inline mandatory;
-//   scroll-padding-left: var(--gap);
-//   scroll-padding-right: var(--gap);
-//   scroll-padding-inline: var(--gap);
-
-//   @media (prefers-reduced-motion: no-preference) {
-//     scroll-behavior: smooth;
-//   }
-
-//   & > li {
-//     display: inline-block;
-
-//     /*  container padding fix  */
-//     &:last-of-type figure {
-//       position: relative;
-
-//       &::after {
-//         content: "";
-//         position: absolute;
-
-//         inline-size: var(--gap);
-//         block-size: 100%;
-
-//         inset-block-start: 0;
-//         inset-inline-end: calc(var(--gap) * -1);
-//       }
-//     }
-//   }
-
-//   & figure {
-//     scroll-snap-align: start;
-//   }
-
-//   & a {
-//     display: inline-block;
-//     text-decoration: none;
-//     color: inherit;
-//     outline-offset: 12px;
-
-//     &:focus {
-//       outline-offset: 7px;
-//     }
-
-//     @media (prefers-reduced-motion: no-preference) {
-//       transition: outline-offset .25s ease;
-//     }
-//   }
-// }
-
+@media (min-width: 400px) {
+		.media-scroller {
+  grid-auto-columns: 45%;
+}
+	}
 </style>

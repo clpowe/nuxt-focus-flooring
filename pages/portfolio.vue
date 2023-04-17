@@ -220,7 +220,7 @@
 			client: 'Onicx Construction',
 			scope:
 				'Floor tile, resilient flooring, MDF base, tile base, schluter, rubber transition',
-			image: '/Focus_Flooring_Projects/SARASOTA_HOUSING_AUTHORIY.jpeg',
+			image: '/Focus_Flooring_Projects/SHA.jpg',
 			catagory: 'Commercial Office & Retail'
 		},
 		{
@@ -254,7 +254,7 @@
 			scope:
 				'Floor tile, wall tile, static dissipative tile/resilient flooring, caret tile, broadloam carpet, rubber base, waterproofing, epoxy grout, schluter',
 			image:
-				'/Focus_Flooring_Projects/TAMPAINTERNATIONALAIRPORT MAIN_BLUE.jpeg',
+				'/Focus_Flooring_Projects/TAMPAINTERNATIONALAIRPORT_MAIN_BLUE.jpeg',
 			catagory: 'Aviation'
 		},
 		{
@@ -371,7 +371,7 @@
 			cost: 1060000,
 			client: 'Hillsborough County Public Schools',
 			scope: 'Carpet demo, installation & maintenance',
-			image: '/Focus_Flooring_Projects/hillsborough-ps-logo.png',
+			image: '/Focus_Flooring_Projects/HCPS.jpg',
 			catagory: 'Education'
 		},
 		{
@@ -436,7 +436,7 @@
 			cost: 64478,
 			client: 'Reno Building',
 			scope: 'Extensive floor prep, quartz flooring, vinyl base',
-			image: '/Focus_Flooring_Projects/EastBay.png',
+			image: '/Focus_Flooring_Projects/eastbayhs.jpg',
 			catagory: 'Education'
 		},
 		{

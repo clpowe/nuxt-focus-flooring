@@ -7,20 +7,15 @@
 <style scoped>
 	.with-sidebar {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		gap: var(--s1);
 	}
 
-	.with-sidebar > :first-child {
-		flex-grow: 1;
-		flex-basis: 15rem;
-		max-inline-size: 15rem;
-	}
-
-	.with-sidebar > :last-child {
-		flex-basis: 0;
-		flex-grow: 999;
-		min-inline-size: 60%;
-		align-items: flex-start;
+	@media (min-width: 741px) {
+		.with-sidebar {
+			display: grid;
+			grid-template-columns: minmax(100px, 25%) 1fr;
+			gap: var(--s1);
+		}
 	}
 </style>
