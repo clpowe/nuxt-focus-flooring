@@ -23,20 +23,25 @@
 			loading="lazy"
 			format="webp"
 		/>
-		<p>{{ firstName }}</p>
-		<p>{{ lastName }}</p>
+		<p>{{ firstName }} {{ lastName }}</p>
 		<p>{{ title }}</p>
 	</div>
 </template>
 
 <style>
 	.teamMember {
-		width: auto;
+		width: 100;
+	}
+
+	@container (min-width: 400px) {
+		.teamMember {
+			width: 45%;
+		}
 	}
 
 	@container (min-width: 600px) {
 		.teamMember {
-			max-width: 300px;
+			width: 29%;
 		}
 	}
 </style>

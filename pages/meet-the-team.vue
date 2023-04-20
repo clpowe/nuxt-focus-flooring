@@ -128,6 +128,15 @@
 			title: 'Warehouse Coordinator',
 			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
 			catagory: 'Field'
+		},
+		{
+			id: 12,
+			image: 'placeholder',
+			firstName: 'Jose',
+			lastName: '',
+			title: 'Warehouse Coordinator',
+			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			catagory: 'Field'
 		}
 	])
 
@@ -172,12 +181,12 @@
 						format="webp"
 						quality="90"
 					/>
-
-					<div class="font-bold uppercase">
-						<p>{{ curruntMember.firstName }}</p>
-						<p>{{ curruntMember.lastName }}</p>
+					<div>
+						<p class="font-bold uppercase">
+							{{ curruntMember.firstName }} {{ curruntMember.lastName }}
+						</p>
+						<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
 					</div>
-					<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
 					<div>
 						<p class="font-bold uppercase">Bio</p>
 						<p>{{ curruntMember.bio }}</p>
@@ -196,7 +205,7 @@
 				</aside>
 				<main id="main">
 					<h2>{{ catagory }}</h2>
-					<div class="flex flex-wrap gap-5 relative">
+					<div class="flex flex-wrap gap-5 relative team-container">
 						<TeamMember
 							v-for="(member, index) in filtered"
 							:key="member.id"
@@ -260,6 +269,9 @@
 	}
 	.list-leave-active {
 		position: absolute;
+	}
+	.team-container {
+		container-type: inline-size;
 	}
 	.chip {
 		background-color: var(--grey-2);

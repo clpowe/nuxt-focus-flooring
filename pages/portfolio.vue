@@ -471,6 +471,17 @@
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
 			image: '/Focus_Flooring_Projects/EH_USFSPDavisHall_Int_10.jpg',
 			catagory: 'Education'
+		},
+		{
+			id: 44,
+			name: 'Citi Tampa A1G1 Lobbies & Restrooms',
+			size: '23K SF',
+			cost: 500000,
+			client: 'Beck Group',
+			scope:
+				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
+			image: '/Focus_Flooring_Projects/Placeholder.jpg',
+			catagory: 'Commercial'
 		}
 	])
 

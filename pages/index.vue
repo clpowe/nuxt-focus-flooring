@@ -104,7 +104,7 @@
 				<template v-slot:text>
 					<div class="flex-1">
 						<h2 class="margin-bottom">Our Focus</h2>
-						<Stack size="--s-1">
+						<div class="space-y-4">
 							<p>
 								At Focus Flooring, we have disciplined our flooring processes to
 								focus on the details that greatly impact our clients and deliver
@@ -118,7 +118,7 @@
 									processes.</strong
 								>
 							</p>
-						</Stack>
+						</div>
 					</div>
 				</template>
 				<template v-slot:image>
@@ -136,9 +136,9 @@
 				</template>
 			</SideBy>
 
-			<div class="flex-1">
+			<div class="flex-1 m">
 				<h2 class="margin-bottom">Our History</h2>
-				<Stack size="--s-1">
+				<div class="space-y-6">
 					<p>
 						The flooring division begins to outgrow being a “division” and
 						begins to require a space of its own. The Envision team discovered
@@ -148,7 +148,7 @@
 						systems, processes and team members than the construction management
 						business.
 					</p>
-					<p>
+					<p class="pb-4">
 						Learn more about our journey from Envision Flooring to Focus
 						Flooring
 					</p>
@@ -157,10 +157,10 @@
 						to="/our-history"
 						role="menuitem"
 						exactActiveClass="nuxt-link-active"
-						class="btn btn-yellow"
+						class="btn btn-yellow pt-4"
 						>Our History</NuxtLink
 					>
-				</Stack>
+				</div>
 			</div>
 		</section>
 

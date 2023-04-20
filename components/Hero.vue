@@ -5,7 +5,7 @@
 </script>
 
 <template>
-	<div class="hero margin-bottom">
+	<div class="my-hero margin-bottom">
 		<div class="container content">
 			<h1>
 				<slot />
@@ -17,7 +17,7 @@
 </template>
 
 <style scoped>
-	.hero {
+	.my-hero {
 		position: relative;
 		height: 30vh;
 		width: 100%;
