@@ -80,9 +80,9 @@
 		<div class="container navigation">
 			<NuxtLink prefetch to="/">
 				<img
-					src="/Focus_Flooring_logo_white_main_.png"
+					src="/Focus_Flooring_logo_white.svg"
 					alt="Focus Flooring Logo"
-					width="200"
+					width="150"
 				/>
 			</NuxtLink>
 			<button

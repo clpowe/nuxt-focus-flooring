@@ -142,6 +142,14 @@
 		}
 	]
 
+	const projectPlanning = [
+		'Submittals',
+		'Project Staffing Plan',
+		'Material Handling',
+		'Material Lead Time Report',
+		'Sequence/Scheduling',
+		'Pre-Execution Analysis'
+	]
 	// const currentsection = ref('preconstruction')
 </script>
 
@@ -168,89 +176,73 @@
 					</nav>
 				</aside>
 				<main id="main" class="main" ref="main">
-					<article id="preconstruction">
-						<SideBy class="mb-8">
-							<template v-slot:text>
-								<div class="flex-1">
-									<h2 class="mb-2" data-section="preconstruction">
-										Pre&shyconstrunction
-									</h2>
-									<p class="text-[var(--grey-6)]">
-										Our core values are the framework in which we evaluate our
-										choices and make all decisions. When our core values are in
-										harmony with our daily actions and behaviors - that is where
-										true success lies.
-									</p>
-								</div>
-							</template>
-							<template v-slot:image>
-								<nuxt-img
-									src="threeUniquesSupporting.jpg"
-									alt="Woman working in a warehouse"
-									fit="cover"
-									class="flex-1 w-[45%]"
-								/>
-							</template>
-						</SideBy>
+					<Split id="preconstruction">
+						<template v-slot:image>
+							<nuxt-img
+								src="threeUniquesSupporting.jpg"
+								alt="Woman working in a warehouse"
+								fit="cover"
+								sizes="sm:100vw md:700px lg:700px"
+								format="webp"
+								class="absolute inset-0 h-full w-full object-cover"
+							/>
+						</template>
+						<template v-slot:content>
+							<h2 class="mb-2" data-section="preconstruction">
+								Pre&shyconstrunction
+							</h2>
+							<p class="text-[var(--grey-6)]">
+								Our core values are the framework in which we evaluate our
+								choices and make all decisions. When our core values are in
+								harmony with our daily actions and behaviors - that is where
+								true success lies.
+							</p>
+							<Content>
+								<template v-for="item in preconstrunction" :key="item.id">
+									<article class="card">
+										<div>
+											<svg-icon :name="item.svg" class="h-14" />
+										</div>
+										<div>
+											<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
+											<p class="text-[var(--grey-6)]">{{ item.content }}</p>
+										</div>
+									</article>
+								</template>
+							</Content>
+						</template>
+					</Split>
 
-						<Content>
-							<template v-for="item in preconstrunction" :key="item.id">
-								<article class="card">
-									<div>
-										<svg-icon :name="item.svg" class="h-14" />
-									</div>
-									<div>
-										<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
-										<p class="text-[var(--grey-6)]">{{ item.content }}</p>
-									</div>
-								</article>
-							</template>
-						</Content>
-					</article>
-
-					<article id="project-planning">
-						<SideBy class="mb-8">
-							<template v-slot:text>
-								<div class="flex-1">
-									<h2 data-section="project-planning">Project Planning</h2>
-									<p class="text-[var(--grey-6)]">
-										Our goal is to take all of our insight and understanding
-										from the preconstruction phase and take it to the next level
-										of understanding during our project planning phase to ensure
-										a smooth transition occurs from preconstruction to project
-										execution. Our project planning phase consists of:
-									</p>
-								</div>
-							</template>
-							<template v-slot:image>
-								<nuxt-img
-									src="ourProcess.jpg"
-									alt=""
-									fit="cover"
-									class="flex-1 w-[45%]"
-								/>
-							</template>
-						</SideBy>
-
-						<ul class="columns-1 sm:columns-2 lg:columns-3">
-							<li><p>Submittals</p></li>
-							<li>
-								<p>Material Lead Time Report</p>
-							</li>
-							<li>
-								<p>Project Staffing Plan</p>
-							</li>
-							<li>
-								<p>Sequence/Scheduling</p>
-							</li>
-							<li>
-								<p>Material Handling</p>
-							</li>
-							<li>
-								<p>Pre-Execution Analysis</p>
-							</li>
-						</ul>
-					</article>
+					<Split id="project-planning">
+						<template v-slot:image>
+							<nuxt-img
+								src="ourProcess.jpg"
+								alt="A man and a woman looking at blueprints"
+								fit="cover"
+								sizes="sm:100vw md:700px lg:700px"
+								format="webp"
+								class="absolute inset-0 h-full w-full object-cover"
+							/>
+						</template>
+						<template v-slot:content>
+							<h2 data-section="project-planning">Project Planning</h2>
+							<p class="">
+								Our goal is to take all of our insight and understanding from
+								the preconstruction phase and take it to the next level of
+								understanding during our project planning phase to ensure a
+								smooth transition occurs from preconstruction to project
+								execution. Our project planning phase consists of:
+							</p>
+							<ul class="list">
+								<li
+									v-for="item in projectPlanning"
+									class="block border bg-[var(--grey-2)] border-gray-100 p-3"
+								>
+									<p class="font-bold">{{ item }}</p>
+								</li>
+							</ul>
+						</template>
+					</Split>
 
 					<article id="project-execution">
 						<div class="space-y-16">
@@ -291,41 +283,41 @@
 						</div>
 					</article>
 
-					<article id="system-genetated-tools">
-						<Stack size="--s-1">
-							<SideBy>
-								<template v-slot:text>
-									<div class="flex-1">
-										<h2 data-section="system-genetated-tools">
-											System Generated Tools
-										</h2>
-										<p class="text-[var(--grey-6)]">
-											Our tools are system generated to equip you with what you
-											need, when you need it.
-										</p>
-									</div>
-								</template>
-								<template v-slot:image>
-									<nuxt-img
-										src="../public/systemGeneratedTools.jpg"
-										alt=""
-										sizes="sm:100vw md:700px lg:700px"
-										class="flex-1 w-[45%]"
-									/>
-								</template>
-							</SideBy>
+					<Split id="system-genetated-tools">
+						<template v-slot:image>
+							<nuxt-img
+								src="../public/systemGeneratedTools.jpg"
+								alt="A man working on a spread sheet"
+								fit="cover"
+								sizes="sm:100vw md:700px lg:700px"
+								format="webp"
+								class="absolute inset-0 h-full w-full object-cover"
+							/>
+						</template>
+						<template v-slot:content>
+							<div>
+								<h2 data-section="system-genetated-tools mb-1">
+									System Generated Tools
+								</h2>
+								<p class="">
+									Our tools are system generated to equip you with what you
+									need, when you need it.
+								</p>
+							</div>
 
-							<Box v-for="item in systemTools">
-								<Card
-									:key="item.id"
-									:title="item.title"
-									:component="item.component"
-								>
-									<p>{{ item.content }}</p>
-								</Card>
-							</Box>
-						</Stack>
-					</article>
+							<div class="space-y-4">
+								<div class="block" v-for="item in systemTools">
+									<h3 class="text-xl font-bold">
+										{{ item.title }}
+									</h3>
+
+									<p class="mt-1 text-sm">
+										{{ item.content }}
+									</p>
+								</div>
+							</div>
+						</template>
+					</Split>
 				</main>
 			</Sidebar>
 		</div>
@@ -374,18 +366,19 @@
 		position: absolute;
 	}
 
-	:where(#project-planning) li {
-		display: flex;
-		gap: 0.5em;
-		align-items: center;
-		margin-bottom: 0.5em;
-		color: var(--grey-6);
+	.list {
+		@apply mt-8 grid grid-cols-1 gap-8;
 	}
-	:where(#project-planning) li::before {
-		content: '';
-		height: 1em;
-		width: 1em;
-		border-radius: 2px;
-		background-color: var(--focus-yellow);
+
+	@container (min-width: 640px) {
+		.list {
+			@apply grid-cols-2;
+		}
+	}
+
+	@container (min-width: 1024px) {
+		.list {
+			@apply grid-cols-3;
+		}
 	}
 </style>

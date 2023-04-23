@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import './tokens';
 @import './reset';
 @import './forms';
@@ -196,7 +200,7 @@ p {
 }
 
 .main {
-	@apply mt-8 space-y-20 md:space-y-40 lg:space-y-60;
+	@apply space-y-10 md:space-y-20 lg:space-y-40;
 }
 
 .hero > * {
