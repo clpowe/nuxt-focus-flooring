@@ -146,7 +146,60 @@
 					</ul>
 				</article>
 			</main>
-			<ul class="carousel mt-20 gap-4">
+			<div class="container mx-auto py-2 lg:pt-24">
+				<div class="-m-1 flex flex-wrap md:-m-2">
+					<div class="flex w-1/2 flex-wrap">
+						<div class="w-full p-1 md:p-2">
+							<nuxt-img
+								src="/commitmentToComunity_05.jpg"
+								fit="cover"
+								format="webp"
+								class="block h-full w-full object-cover object-center"
+								quality="80"
+							/>
+						</div>
+						<div class="w-full p-1 md:p-2">
+							<nuxt-img
+								src="/commitmentToComunity_04.jpg"
+								fit="cover"
+								format="webp"
+								class="block h-full w-full object-cover object-center"
+								quality="80"
+							/>
+						</div>
+					</div>
+					<div class="flex w-1/2 flex-wrap">
+						<div class="w-full p-1 md:p-2">
+							<nuxt-img
+								src="/commitmentToComunity_03.jpg"
+								fit="cover"
+								format="webp"
+								class="block h-full w-full object-cover object-center"
+								quality="80"
+							/>
+						</div>
+						<div class="w-1/2 p-1 md:p-2">
+							<nuxt-img
+								src="/commitmentToComunity_02.jpg"
+								fit="cover"
+								format="webp"
+								class="block h-full w-full object-cover object-center"
+								quality="80"
+							/>
+						</div>
+						<div class="w-1/2 p-1 md:p-2">
+							<nuxt-img
+								src="/commitmentToComunity_01.jpg"
+								fit="cover"
+								format="webp"
+								class="block h-full w-full object-cover object-center"
+								quality="80"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <ul class="carousel mt-20 gap-4">
 				<li
 					class="carousel-item"
 					v-for="picture in communityPictures"
@@ -161,7 +214,7 @@
 						quality="80"
 					/>
 				</li>
-			</ul>
+			</ul> -->
 		</div>
 	</div>
 </template>
