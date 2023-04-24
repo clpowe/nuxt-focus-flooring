@@ -181,10 +181,9 @@
 							<nuxt-img
 								src="threeUniquesSupporting.jpg"
 								alt="Woman working in a warehouse"
-								fit="cover"
 								sizes="sm:100vw md:700px lg:700px"
 								format="webp"
-								class="absolute inset-0 h-full w-full object-cover"
+								class="absolute inset-0 h-full w-full object-cover object-top"
 							/>
 						</template>
 						<template v-slot:content>

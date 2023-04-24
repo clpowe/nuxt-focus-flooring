@@ -481,7 +481,7 @@
 			scope:
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
 			image: '/Focus_Flooring_Projects/Placeholder.jpg',
-			catagory: 'Commercial'
+			catagory: 'Commercial Office & Retail'
 		}
 	])
 
