@@ -475,11 +475,11 @@
 		{
 			id: 44,
 			name: 'Citi Tampa A1G1 Lobbies & Restrooms',
-			size: '23K SF',
-			cost: 500000,
-			client: 'Beck Group',
+			size: '8K SF',
+			cost: 206780,
+			client: 'DPR',
 			scope:
-				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
+				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
 			image: '/Focus_Flooring_Projects/Placeholder.jpg',
 			catagory: 'Commercial Office & Retail'
 		}

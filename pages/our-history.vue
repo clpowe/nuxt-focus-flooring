@@ -77,12 +77,9 @@
 				'The flooring division at Envision becomes a separate company; Focus Flooring is created with the focus of offering advanced solutions in commercial flooring and wall tile, and a guarantee to our clients “we eliminate your risks through our process”.<br/><br/><strong>A CM Approach to Flooring:</strong> Taking our experience in construction, Focus Flooring builds the internal company systems and processes with the client in mind; making sure to bring real value to each and every project. (learn more button?)<br/><br/>'
 		},
 		{
-			year: '2022',
+			year: '2023',
 			description:
 				'Jacques Duval is appointed as President of Focus Flooring.<br/><br/>Creating Focus Flooring from the flooring division of Envision gave existing team members the opportunity to step up into new roles to take the vision to new heights.'
-		},
-		{
-			year: 'Today'
 		}
 	]
 

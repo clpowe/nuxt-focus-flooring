@@ -17,7 +17,7 @@
 
 		try {
 			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec',
+				'https://script.google.com/macros/s/AKfycbyo7yd3TD4JSHG8y_AHr8jBcxQugF7XGV0RuQ42nljEJ7Z4V-pw-EScUHNIznKGCLeuvg/exec',
 				{
 					method: 'POST',
 					body: fData

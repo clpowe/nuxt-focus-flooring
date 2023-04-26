@@ -3,8 +3,8 @@
 		{
 			id: 1,
 			component: 'h3',
-			svg: 'IconOne',
-			image: '/IconSeven.svg',
+			svg: 'carpet',
+			image: '/carpet.svg',
 			title: 'Carpet Flooring',
 			content:
 				'We will help you specify, procure and install carpet for any commercial application.'
@@ -12,8 +12,8 @@
 		{
 			id: 2,
 			component: 'h3',
-			svg: 'IconTwo',
-			image: '/IconThirteen.svg',
+			svg: 'wood',
+			image: '/wood.svg',
 			title: 'Wood Flooring',
 			content:
 				'With countless solid and engineered wood flooring options available today, we’ll guide you to the best hardwood for your budget, design and facility.'
@@ -21,8 +21,8 @@
 		{
 			id: 3,
 			component: 'h3',
-			svg: 'IconThree',
-			image: '/IconOne.svg',
+			svg: 'ceramic',
+			image: '/ceramic.svg',
 			title: 'Ceramic and Stone tile',
 			content:
 				'We have completed installations of nearly every ceramic and stone  tile including detailed patterns, mosaics and large format tile.'
@@ -30,8 +30,8 @@
 		{
 			id: 4,
 			component: 'h3',
-			svg: 'IconFour',
-			image: '/IconThree.svg',
+			svg: 'concrete',
+			image: '/concrete.svg',
 			title: 'Concrete Surfacing',
 			content:
 				'From concrete polish to resinous flooring or terrazzo, concrete surfacing may be the perfect solution for your facility.'
@@ -39,8 +39,8 @@
 		{
 			id: 5,
 			component: 'h3',
-			svg: 'IconFive',
-			image: '/IconTen.svg',
+			svg: 'lvt',
+			image: '/lvt.svg',
 			title: 'LVT Flooring',
 			content:
 				'Luxury vinyl tile (LVT) is one of the most popular selections for a  range of commercial applications with beautiful design and patterns available to meet the performance demands of your building.'
@@ -48,8 +48,8 @@
 		{
 			id: 6,
 			component: 'h3',
-			svg: 'IconSix',
-			image: '/IconFour.svg',
+			svg: 'resilient',
+			image: '/resilient.svg',
 			title: 'Resilient Flooring',
 			content:
 				'With innovative, new materials and constructions emerging in the market, resilient flooring can help you achieve a one-of-a-kind look  that lasts. Heat weld sheet vinyl, athletic. flooring, and more.'
@@ -57,20 +57,20 @@
 		{
 			id: 7,
 			component: 'h3',
-			svg: 'IconSeven',
-			image: '/IconSix.svg',
-			title: 'Flooring Accessories',
+			svg: 'laminate',
+			image: '/laminate.svg',
+			title: 'Commercial Grade Laminate Flooring',
 			content:
-				'From transitions to stair treads, flooring accessories are specialty products that will tie together your design and product needs.'
+				'Versatile, cost-effective materials in a variety of colors and installation patterns to meet nearly any design vision within touch budget constraints.'
 		},
 		{
 			id: 8,
 			component: 'h3',
-			svg: 'IconSeven',
+			svg: 'accessories',
 			image: '/IconSix.svg',
-			title: 'Commercial Grade Laminate Flooring',
+			title: 'Flooring Accessories',
 			content:
-				'Versatile, cost-effective materials in a variety of colors and installation patterns to meet nearly any design vision within touch budget constraints.'
+				'From transitions to stair treads, flooring accessories are specialty products that will tie together your design and product needs.'
 		}
 	]
 </script>
@@ -181,7 +181,7 @@
 					:key="item.id"
 					:svg="item.svg"
 					:title="item.title"
-					:style="'h-16 mb-4'"
+					:style="'h-20 mb-4'"
 					:component="item.component"
 				>
 					<p>{{ item.content }}</p>
