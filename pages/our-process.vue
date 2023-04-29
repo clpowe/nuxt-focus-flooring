@@ -226,11 +226,11 @@
 						<template v-slot:content>
 							<h2 data-section="project-planning">Project Planning</h2>
 							<p class="">
-								Our goal is to take all of our insight and understanding from
-								the preconstruction phase and take it to the next level of
-								understanding during our project planning phase to ensure a
-								smooth transition occurs from preconstruction to project
-								execution. Our project planning phase consists of:
+								Our internal project planning systems and tools allow us to
+								alleviate the risk of material price escalations through
+								tracking all products “good-through” pricing dates, lead time
+								tracking, establish early procurement, create material storage
+								plans, and achieve on-time scheduling.
 							</p>
 							<ul class="list">
 								<li
