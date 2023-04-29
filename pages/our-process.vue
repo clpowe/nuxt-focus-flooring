@@ -8,8 +8,8 @@
 	const sections = [
 		{ text: 'Preconstrunction', id: 'preconstruction' },
 		{ text: 'Project Planning', id: 'project-planning' },
-		{ text: 'Project Execution', id: 'project-execution' },
-		{ text: 'System genetated tools', id: 'system-genetated-tools' }
+		{ text: 'Project Execution', id: 'project-execution' }
+		// { text: 'System genetated tools', id: 'system-genetated-tools' }
 	]
 
 	const preconstrunction = [
@@ -240,6 +240,15 @@
 									<p class="font-bold">{{ item }}</p>
 								</li>
 							</ul>
+							<div>
+								<h3 class="text-xl font-bold">Materals lead time report</h3>
+								<p class="mt-1 text-sm">
+									Our internal reporting that allows you to know the procurement
+									status of all materials, as well as when you can expect to
+									receive your materials based on the updated lead times and
+									scheduled installation dates.
+								</p>
+							</div>
 						</template>
 					</Split>
 
@@ -249,21 +258,30 @@
 								<template v-slot:text>
 									<div class="flex-1">
 										<h2 data-section="project-execution">Project Execution</h2>
-										<p class="text-[var(--grey-6)]">
-											Why we’re your easy button: Our step by step execution
-											process
+										<p class="">
+											Through our full-time onsite supervision, a dedicated
+											field technician and QAQC protocols, we are able to
+											implement our “Zero Punch” philosophy reducing all quality
+											punch list items to almost “0”.
 										</p>
 									</div>
 								</template>
 							</SideBy>
-
-							<Content>
-								<template v-for="item in projectExecutionSteps" :key="item.id">
-									<Card component="h4" :svg="item.svg" :image="item.image">
-										<p>{{ item.content }}</p>
-									</Card>
-								</template>
-							</Content>
+							<div>
+								<p class="font-bold text-xl mb-6">
+									Why we’re your easy button: Our step by step execution process
+								</p>
+								<Content>
+									<template
+										v-for="item in projectExecutionSteps"
+										:key="item.id"
+									>
+										<Card component="h4" :svg="item.svg" :image="item.image">
+											<p>{{ item.content }}</p>
+										</Card>
+									</template>
+								</Content>
+							</div>
 
 							<div class="p-8 bg-[var(--grey-2)]">
 								<Content>
@@ -279,10 +297,29 @@
 									</template>
 								</Content>
 							</div>
+							<div>
+								<h3 class="text-xl font-bold">
+									Daily reports and weekly production reports
+								</h3>
+								<p class="mt-1 text-sm">
+									his tool gives you the ability to track our performance and
+									pace throughout the project.
+								</p>
+							</div>
+							<div>
+								<h3 class="text-xl font-bold">Mobilization reports</h3>
+								<p class="mt-1 text-sm">
+									This internal planning tool allows us to take the project
+									schedule and break out all of the materials needed based on
+									their install date. This will help our team both manage and
+									sequence all deliveries, as well as stage materials at the job
+									site.
+								</p>
+							</div>
 						</div>
 					</article>
 
-					<Split id="system-genetated-tools">
+					<!-- <Split id="system-genetated-tools">
 						<template v-slot:image>
 							<nuxt-img
 								src="../public/systemGeneratedTools.jpg"
@@ -316,7 +353,7 @@
 								</div>
 							</div>
 						</template>
-					</Split>
+					</Split> -->
 				</main>
 			</Sidebar>
 		</div>

@@ -145,6 +145,7 @@
 						role="menu"
 						aria-label="About"
 						ref="submenu"
+						@click="() => (expanded = !expanded)"
 					>
 						<li role="none">
 							<NuxtLink
