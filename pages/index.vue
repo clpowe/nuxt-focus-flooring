@@ -79,7 +79,7 @@
 	<header>
 		<HomeHero>
 			<template v-slot:header>
-				Eliminating your <span>risk</span> through <span>our process</span>
+				Eliminating your <span>risk</span> through our process
 			</template>
 			<template v-slot:actions>
 				<div class="actions">

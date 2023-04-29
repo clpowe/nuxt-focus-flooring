@@ -90,19 +90,18 @@
 <template>
 	<div>
 		<Hero> About Us </Hero>
-		<main id="main" class="main max-w-2xl mx-auto">
+		<main id="main" class="main max-w-4xl mx-auto py-8">
 			<article id="three-uniques" class="container">
-				<h2 class="mb-4">Three Uniques</h2>
-				<div class="max-w-md mx-auto space-y-10 mt-6">
-					<Box v-for="item in threeUniqes" padding="--s-0">
-						<Card
-							:key="item.id"
-							:title="item.title"
-							:component="item.component"
-						>
-							<p>{{ item.content }}</p>
-						</Card>
-					</Box>
+				<h2 class="mb-12">Three Uniques</h2>
+				<div class="mx-auto parent">
+					<Card
+						v-for="item in threeUniqes"
+						:key="item.id"
+						:title="item.title"
+						:component="item.component"
+					>
+						<p>{{ item.content }}</p>
+					</Card>
 				</div>
 			</article>
 
@@ -117,12 +116,12 @@
 			<article id="core-values" class="container">
 				<h2 class="mb-4">Core Values</h2>
 
-				<p>
+				<p class="mb-8">
 					Our core values are the framework in which we evaluate our choices and
 					make all decisions. When our core values are in harmony with our daily
 					actions and behaviors - that is where true success lies.
 				</p>
-				<div class="max-w-md mx-auto space-y-10 mt-6">
+				<div class="mx-auto parent">
 					<Card
 						v-for="item in coreValues"
 						:key="item.id"
@@ -164,5 +163,11 @@
 	li::before {
 		content: '•';
 		font-size: var(--s2);
+	}
+
+	.parent {
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 	}
 </style>

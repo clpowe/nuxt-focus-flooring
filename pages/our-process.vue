@@ -191,10 +191,10 @@
 								Pre&shyconstrunction
 							</h2>
 							<p class="text-[var(--grey-6)]">
-								Our core values are the framework in which we evaluate our
-								choices and make all decisions. When our core values are in
-								harmony with our daily actions and behaviors - that is where
-								true success lies.
+								Our team will become familiar with the project documents to
+								ensure our scope is fully captured. We will then partner with
+								you to ensure you stay within your budget throughout all pricing
+								efforts and obtain cost certainty for your project.
 							</p>
 							<Content>
 								<template v-for="item in preconstrunction" :key="item.id">

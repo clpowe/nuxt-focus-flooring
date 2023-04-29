@@ -155,15 +155,6 @@
 								>About Us</NuxtLink
 							>
 						</li>
-						<li role="none">
-							<NuxtLink
-								prefetch
-								to="/our-history"
-								role="menuitem"
-								exactActiveClass="nuxt-link-active"
-								>Our History</NuxtLink
-							>
-						</li>
 
 						<li role="none">
 							<NuxtLink
@@ -194,6 +185,15 @@
 							>
 						</li>
 					</ul>
+				</li>
+				<li role="none">
+					<NuxtLink
+						prefetch
+						to="/our-history"
+						role="menuitem"
+						exactActiveClass="nuxt-link-active"
+						>Our History</NuxtLink
+					>
 				</li>
 				<li role="none">
 					<NuxtLink
