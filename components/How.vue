@@ -20,18 +20,18 @@
 				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.',
 			link: '/our-process#project-execution'
 		},
-		{
-			icon: 'how_two',
-			step: 3,
-			title: 'System Generated Tools',
-			description:
-				'Project planning ensures a smooth transition occurs from preconstruction to project execution to ensure we get ahead of potential issues and eliminate risk for our clients early on.',
-			link: '/our-process#project-planning'
-		},
+		// {
+		// 	icon: 'how_two',
+		// 	step: 3,
+		// 	title: 'System Generated Tools',
+		// 	description:
+		// 		'Project planning ensures a smooth transition occurs from preconstruction to project execution to ensure we get ahead of potential issues and eliminate risk for our clients early on.',
+		// 	link: '/our-process#project-planning'
+		// },
 
 		{
 			icon: 'how_four',
-			step: 4,
+			step: 3,
 			title: 'Project Execution',
 			description:
 				'Our process and approach to execution comes from many years of experience, staying up to date with the latest installation methods, products, trainings in the market and our overall desire to please our clients',
