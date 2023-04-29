@@ -25,7 +25,7 @@
 			firstName: 'Jacques',
 			lastName: 'Duval',
 			title: 'President',
-			bio: 'As the visual translator, Jacques is able to produce digital media that speaks to the heart of who we are. Jacques is an active member of Revealing Truth Ministries in Tampa and enjoys spending time with his family.',
+			bio: 'In 2014, Jacques Duval, worked at Revealing Truth Ministries, the location of Allen II and Allen Sr.’s first commercial project. At the time, Jacques Duval committed one of his days off from work to caring for and detailing Revealing Truth Ministries fleet vehicles each week. Jacques saw a lot of Allen Greene II & Allen Greene Sr during this time and believed in what they were building; a business bigger than themselves. Jacques was eager to help the Greene’s however he could, so in-between washes on his days off, Jacques would lend a helping hand on the Revealing Truth Ministries Interior Renovations project. Allen Greene Sr would allow Jacques to support the demo, jobsite cleanup, and help wherever else an extra hand could be used.<br/> <br/>Outside of Jacques’ time spent assisting Allen Greene II & Allen Greene Sr on the jobsite, Jacques acquired and developed an array of skills, such as web design and photography that positioned him to continue to support the company’s vision in a few of the gaps they were experiencing at the time as a small business.<br/> <br/>In 2016, Jacques Duval became a full-time employee at Envision Flooring with a focus on creating marketing materials, photography, business development, and sales.<br/> <br/>Over the next few years, Jacques Duval continued to develop in the profession and played a big role in growing the various departments of the flooring division at Envision, assisting the preconstruction team in establishing consistent processes, the field team with coordination and logistics efforts, assisting the office team with establishing consistent procurement efforts, project management protocols, helping build a proprietary ecosystem that help supports the company’s operations, to now, he has become an effective conduit connecting the field to the office while helping the teams accomplish the goals set forth.<br/> <br/>Outside of Focus Flooring, Jacques is just as committed to achieving great things for his community through his heart to serve people. When not in the office or visiting job sites, Jacques enjoys spending time with his wife, “The Amazing” Claire, and four kids, Grace, Tessa, David, and Faith.',
 			catagory: 'Leadership'
 		},
 		{
@@ -99,7 +99,7 @@
 			firstName: 'Andy',
 			lastName: '',
 			title: 'Field Tech',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			bio: '',
 			catagory: 'Field'
 		},
 		{
@@ -108,7 +108,7 @@
 			firstName: 'Santiago',
 			lastName: '',
 			title: 'Field',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			bio: '',
 			catagory: 'Field'
 		},
 		{
@@ -117,7 +117,7 @@
 			firstName: 'Fransico',
 			lastName: '',
 			title: 'Field Tech',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			bio: '',
 			catagory: 'Field'
 		},
 		{
@@ -126,7 +126,7 @@
 			firstName: 'Diego',
 			lastName: '',
 			title: 'Warehouse Coordinator',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			bio: '',
 			catagory: 'Field'
 		},
 		{
@@ -135,7 +135,7 @@
 			firstName: 'Jose',
 			lastName: '',
 			title: 'Warehouse Coordinator',
-			bio: 'Quisque id est sagittis, porta risus quis, consectetur lacus. Proin consectetur imperdiet dolor, sit amet consectetur sem viverra convallis. Mauris placerat, est at imperdiet tincidunt, sapien tellus congue sem, eget feugiat mauris dolor quis lectus. Curabitur vel placerat nisi, quis cursus eros. Vivamus id neque massa. Aenean semper ',
+			bio: '',
 			catagory: 'Field'
 		}
 	])
@@ -170,7 +170,7 @@
 		<Hero>Meet the <span>team</span></Hero>
 		<Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
 			<div v-if="curruntMember" class="">
-				<div class="space-y-[var(--s1)]">
+				<div class="space-y-[var(--s1)] overflow-auto">
 					<nuxt-img
 						provider="imagekit"
 						:src="`/team_members/${curruntMember.image}`"
@@ -187,9 +187,9 @@
 						</p>
 						<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
 					</div>
-					<div>
+					<div class="overflow-auto">
 						<p class="font-bold uppercase">Bio</p>
-						<p>{{ curruntMember.bio }}</p>
+						<p v-html="curruntMember.bio"></p>
 					</div>
 				</div>
 			</div>

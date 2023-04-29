@@ -122,13 +122,17 @@
 
 							<div class="space-y-4">
 								<p>
-									At Focus Flooring, we have disciplined our flooring processes
-									to focus on the details that greatly impact our clients and
-									deliver a high quality service they can count on.
+									At Focus Flooring, we offer advanced solutions in commercial
+									flooring and wall tile.
 								</p>
 								<p>
-									Focus Flooring is a MBE-owned firm based out of Tampa, FL.
-									with a
+									We have disciplined our flooring processes to focus on the
+									details that greatly impact our clients and deliver a high
+									quality service they can count on.
+								</p>
+								<p>
+									Focus Flooring is a minority-owned firm based out of Tampa,
+									Florida with a
 									<strong
 										>guarantee to eliminate your risk through our internal
 										processes.</strong

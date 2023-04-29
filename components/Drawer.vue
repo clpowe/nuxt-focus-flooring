@@ -15,7 +15,10 @@
 	<div>
 		<Teleport to="body">
 			<transition name="drawer">
-				<div v-if="drawerVisible" class="drawer flex flex-col p-4">
+				<div
+					v-if="drawerVisible"
+					class="drawer flex flex-col p-4 overflow-auto"
+				>
 					<Icon
 						class="ml-auto mb-4 cursor-pointer"
 						name="line-md:close"
