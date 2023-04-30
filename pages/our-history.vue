@@ -78,8 +78,8 @@
 		},
 		{
 			year: '2023',
-			description:
-				'Jacques Duval is appointed as President of Focus Flooring.<br/><br/>Creating Focus Flooring from the flooring division of Envision gave existing team members the opportunity to step up into new roles to take the vision to new heights.'
+			description: `Jacques Duval is appointed as President of Focus Flooring.<br/><br/><a class="btn btn-yellow" href="/meet-the-team"
+								>Meet Jacques Duval</a><br/><br/>Creating Focus Flooring from the flooring division of Envision gave existing team members the opportunity to step up into new roles to take the vision to new heights.`
 		}
 	]
 

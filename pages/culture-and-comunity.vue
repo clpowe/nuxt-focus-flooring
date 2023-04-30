@@ -147,8 +147,8 @@
 				</article>
 			</main>
 			<div class="container mx-auto py-2 lg:pt-24">
-				<div class="-m-1 flex flex-wrap md:-m-2">
-					<div class="flex w-1/2 flex-wrap">
+				<div class="-m-1 flex flex-col flex-wrap sm:flex-row md:-m-2">
+					<div class="grid grid-cols-2 w-full sm:flex sm:w-1/2 sm:flex-wrap">
 						<div class="w-full p-1 md:p-2">
 							<nuxt-img
 								src="/commitmentToComunity_05.jpg"
@@ -168,7 +168,7 @@
 							/>
 						</div>
 					</div>
-					<div class="flex w-1/2 flex-wrap">
+					<div class="flex sm:w-1/2 flex-wrap">
 						<div class="w-full p-1 md:p-2">
 							<nuxt-img
 								src="/commitmentToComunity_03.jpg"

@@ -187,28 +187,33 @@
 							/>
 						</template>
 						<template v-slot:content>
-							<h2 class="mb-2" data-section="preconstruction">
-								Pre&shyconstrunction
-							</h2>
-							<p class="text-[var(--grey-6)]">
-								Our team will become familiar with the project documents to
-								ensure our scope is fully captured. We will then partner with
-								you to ensure you stay within your budget throughout all pricing
-								efforts and obtain cost certainty for your project.
-							</p>
-							<Content>
-								<template v-for="item in preconstrunction" :key="item.id">
-									<article class="card">
-										<div>
-											<svg-icon :name="item.svg" class="h-14" />
-										</div>
-										<div>
-											<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
-											<p class="text-[var(--grey-6)]">{{ item.content }}</p>
-										</div>
-									</article>
-								</template>
-							</Content>
+							<div class="space-y-10">
+								<div>
+									<h2 class="mb-7" data-section="preconstruction">
+										Pre&shyconstrunction
+									</h2>
+									<p class="">
+										Our team will become familiar with the project documents to
+										ensure our scope is fully captured. We will then partner
+										with you to ensure you stay within your budget throughout
+										all pricing efforts and obtain cost certainty for your
+										project.
+									</p>
+								</div>
+								<Content>
+									<template v-for="item in preconstrunction" :key="item.id">
+										<article class="card">
+											<div>
+												<svg-icon :name="item.svg" class="h-14" />
+											</div>
+											<div>
+												<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
+												<p class="">{{ item.content }}</p>
+											</div>
+										</article>
+									</template>
+								</Content>
+							</div>
 						</template>
 					</Split>
 
@@ -235,7 +240,7 @@
 							<ul class="list">
 								<li
 									v-for="item in projectPlanning"
-									class="block border bg-[var(--grey-2)] border-gray-100 p-3"
+									class="block border border-[var(--grey-2)] p-3"
 								>
 									<p class="font-bold">{{ item }}</p>
 								</li>
@@ -388,9 +393,7 @@
 	@container (min-width: 700px) {
 		.card {
 			display: flex;
-			flex-grow: 1;
-			flex-direction: column;
-			width: 45%;
+			width: 46%;
 		}
 	}
 

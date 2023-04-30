@@ -9,6 +9,6 @@
 		container-type: inline-size;
 		display: flex;
 		flex-wrap: wrap;
-		gap: var(--s5);
+		gap: var(--s3);
 	}
 </style>
