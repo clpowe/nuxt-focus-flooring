@@ -187,7 +187,7 @@
 		},
 		{
 			id: 15,
-			name: 'Skycenter One Hotel',
+			name: 'Skycenter One',
 			size: '14K SF; 13K LF of base',
 			cost: 225428,
 			client: 'JE Dunn',
@@ -216,7 +216,7 @@
 			client: 'Onicx Construction',
 			scope: 'Floor tile, wall tile, resilient flooring, broadloom carpet',
 			image: '/Focus_Flooring_Projects/Anand_Vihar_Clubhouse.jpeg',
-			category: 'Commercial Office & Retail',
+			category: 'Residential & Hospitality',
 			date: new Date('12/14/2020')
 		},
 		{
@@ -406,7 +406,7 @@
 			scope: 'Carpet demo, installation & maintenance',
 			image: '/Focus_Flooring_Projects/HCPS.jpg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('12/21/2022')
 		},
 		{
 			id: 35,
@@ -418,7 +418,7 @@
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
 			image: '/Focus_Flooring_Projects/JonesHighSchool.png',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('2018')
 		},
 		{
 			id: 36,
@@ -430,7 +430,7 @@
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
 			image: '/Focus_Flooring_Projects/AlonsoHighSchool.jpeg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('2018')
 		},
 		{
 			id: 37,
@@ -442,7 +442,7 @@
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter, quartz flooring',
 			image: '/Focus_Flooring_Projects/High_School_TTT.jpg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('11/08/2019')
 		},
 		{
 			id: 38,
@@ -454,7 +454,7 @@
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
 			image: '/Focus_Flooring_Projects/ElementarySchool_D.jpeg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('05/04/2020')
 		},
 		{
 			id: 39,
@@ -466,7 +466,7 @@
 				'Floor tile, resilient flooring, carpet tile, tile base, rubber base, marble thresholds, schluter',
 			image: '/Focus_Flooring_Projects/BellamyES.jpeg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('05/04/2020')
 		},
 		{
 			id: 40,
@@ -477,7 +477,7 @@
 			scope: 'Extensive floor prep, quartz flooring, vinyl base',
 			image: '/Focus_Flooring_Projects/eastbayhs.jpg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('06/14/2020')
 		},
 		{
 			id: 41,
@@ -489,7 +489,7 @@
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
 			image: '/Focus_Flooring_Projects/Sligh_Middle_School.jpg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('10/30/2020')
 		},
 		{
 			id: 42,
@@ -501,7 +501,7 @@
 				'Floor tile, wall tile, restoration and installation of salvaged tile from the original building, tile base, waterproofing, crack isolation, schluter',
 			image: '/Focus_Flooring_Projects/Tampa_HeightsRestoration.jpeg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('06/22/2020')
 		},
 		{
 			id: 43,
@@ -513,7 +513,7 @@
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
 			image: '/Focus_Flooring_Projects/EH_USFSPDavisHall_Int_10.jpg',
 			category: 'Education',
-			date: new Date('12/14/2020')
+			date: new Date('02/28/2020')
 		},
 		{
 			id: 44,
@@ -525,13 +525,13 @@
 				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
 			image: '/Focus_Flooring_Projects/Placeholder.jpg',
 			category: 'Commercial Office & Retail',
-			date: new Date('12/14/2020')
+			date: new Date('11/30/2022')
 		}
 	])
 
 	const filteredProjects = computed(() => {
 		return useFilter(projects.value, category.value).sort(
-			(a, b) => a.date - b.date
+			(a, b) => b.date - a.date
 		)
 	})
 

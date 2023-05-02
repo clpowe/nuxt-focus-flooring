@@ -64,8 +64,6 @@
 							</li>
 
 							<li>
-								<NuxtLink prefetch to="/join-our-team">Join our team</NuxtLink>
-
 								<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
 							</li>
 							<li>
@@ -207,27 +205,6 @@
 				&copy; {{ year }} Focus Flooring. All rights reserved
 			</p>
 		</div>
-
-		<!-- <Grid>
-			<div class="quick-links">
-				<h2>Quick Links</h2>
-				<div class="links-container">
-					<div>
-						<NuxtLink prefetch to="/">Home</NuxtLink>
-						<NuxtLink prefetch to="/about-us">About us</NuxtLink>
-					</div>
-					<div>
-						<NuxtLink prefetch to="/meet-the-team">Meet the team</NuxtLink>
-						<NuxtLink prefetch to="/culture-and-comunity"
-							>Culture and comunity</NuxtLink
-						>
-						<NuxtLink prefetch to="/join-our-team">Join our team</NuxtLink>
-
-						<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
-					</div>
-				</div>
-			</div>
-		</Grid> -->
 	</footer>
 </template>
 
