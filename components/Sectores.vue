@@ -8,7 +8,7 @@
 			image: '/Industrial.jpeg',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'Industrial' } }
+			route: { path: 'portfolio', query: { category: 'Industrial' } }
 		},
 		{
 			id: 2,
@@ -16,7 +16,7 @@
 			image: 'HealthCare.jpeg',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'Healthcare' } }
+			route: { path: 'portfolio', query: { category: 'Healthcare' } }
 		},
 		{
 			id: 3,
@@ -24,7 +24,7 @@
 			image: '/aviation.jpeg',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'Aviation' } }
+			route: { path: 'portfolio', query: { category: 'Aviation' } }
 		},
 		{
 			id: 4,
@@ -34,7 +34,7 @@
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
 			route: {
 				path: 'portfolio',
-				query: { catagory: 'Residential & Hospitality' }
+				query: { category: 'Residential & Hospitality' }
 			}
 		},
 		{
@@ -43,7 +43,7 @@
 			image: '/WorshipCenters.jpeg',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'Worship Centers' } }
+			route: { path: 'portfolio', query: { category: 'Worship Centers' } }
 		},
 		{
 			id: 6,
@@ -51,7 +51,7 @@
 			image: '/K-12.png',
 			description:
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
-			route: { path: 'portfolio', query: { catagory: 'Education' } }
+			route: { path: 'portfolio', query: { category: 'Education' } }
 		},
 		{
 			id: 7,
@@ -61,7 +61,7 @@
 				'Sed pellentesque consequat elit, efficitur cursus urna faucibus at. Vestibulum velit sapien, gravida vitae quam nec, euismod sollicitudin elit. Phasellus tempus augue at sem pellentesque, ac molestie dui eleifend. Duis vestibulum placerat malesuada.',
 			route: {
 				path: 'portfolio',
-				query: { catagory: 'Commercial Office & Retail' }
+				query: { category: 'Commercial Office & Retail' }
 			}
 		}
 	])

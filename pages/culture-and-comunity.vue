@@ -96,42 +96,40 @@
 							together we can light up the industry.
 						</p>
 					</div>
-					<SidebySide>
-						<Card title="Collaborating with Colors" component="h3">
-							<p class="max-w-lg">
-								Our comprehensive pre-construction process will ensure you can
-								count on our team to produce a quality proposal and
-								pre-construction experience, whether it be at the budget phase
-								or final phase of estimating.
-							</p>
-						</Card>
 
+					<Card title="Collaborating with Colors" component="h3">
+						<p class="max-w-lg">
+							Our comprehensive pre-construction process will ensure you can
+							count on our team to produce a quality proposal and
+							pre-construction experience, whether it be at the budget phase or
+							final phase of estimating.
+						</p>
+					</Card>
+					<Card title="Team Building" component="h3">
+						<p class="max-w-lg">
+							Our comprehensive pre-construction process will ensure you can
+							count on our team to produce a quality proposal and
+							pre-construction experience, whether it be at the budget phase or
+							final phase of estimating.
+						</p>
+					</Card>
+					<SidebySide>
 						<nuxt-img
 							src="/collaboratingWithColors_01.jpg"
 							alt=""
 							fit="cover"
 							format="webp"
 							quality="80"
+							height="400"
 							sizes="sm:100vw lg:600px"
 						/>
-					</SidebySide>
-
-					<SidebySide>
-						<Card title="Team Building" component="h3">
-							<p class="max-w-lg">
-								Our comprehensive pre-construction process will ensure you can
-								count on our team to produce a quality proposal and
-								pre-construction experience, whether it be at the budget phase
-								or final phase of estimating.
-							</p>
-						</Card>
-
 						<nuxt-img
 							src="/teamBuilding_01.jpg"
 							alt=""
 							fit="cover"
 							format="webp"
 							quality="80"
+							height="400"
 							sizes="sm:100vw lg:600px"
 						/>
 					</SidebySide>

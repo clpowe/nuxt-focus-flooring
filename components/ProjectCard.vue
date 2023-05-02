@@ -24,7 +24,7 @@
 		alt: {
 			type: String
 		},
-		catagory: {
+		category: {
 			type: String
 		}
 	})

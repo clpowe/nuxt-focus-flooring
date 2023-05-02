@@ -3,7 +3,7 @@
 		title: 'Focus Flooring - Meet the team'
 	})
 
-	const catagory = ref<string>('All')
+	const category = ref<string>('All')
 	const drawerVisible = useDrawer()
 
 	type TeamMember = {
@@ -13,7 +13,7 @@
 		lastName: string
 		title: string
 		bio: string
-		catagory: string
+		category: string
 	}
 
 	const curruntMember = ref<TeamMember | null>(null)
@@ -26,7 +26,7 @@
 			lastName: 'Duval',
 			title: 'President',
 			bio: 'In 2014, Jacques Duval, worked at Revealing Truth Ministries, the location of Allen II and Allen Sr.’s first commercial project. At the time, Jacques Duval committed one of his days off from work to caring for and detailing Revealing Truth Ministries fleet vehicles each week. Jacques saw a lot of Allen Greene II & Allen Greene Sr during this time and believed in what they were building; a business bigger than themselves. Jacques was eager to help the Greene’s however he could, so in-between washes on his days off, Jacques would lend a helping hand on the Revealing Truth Ministries Interior Renovations project. Allen Greene Sr would allow Jacques to support the demo, jobsite cleanup, and help wherever else an extra hand could be used.<br/> <br/>Outside of Jacques’ time spent assisting Allen Greene II & Allen Greene Sr on the jobsite, Jacques acquired and developed an array of skills, such as web design and photography that positioned him to continue to support the company’s vision in a few of the gaps they were experiencing at the time as a small business.<br/> <br/>In 2016, Jacques Duval became a full-time employee at Envision Flooring with a focus on creating marketing materials, photography, business development, and sales.<br/> <br/>Over the next few years, Jacques Duval continued to develop in the profession and played a big role in growing the various departments of the flooring division at Envision, assisting the preconstruction team in establishing consistent processes, the field team with coordination and logistics efforts, assisting the office team with establishing consistent procurement efforts, project management protocols, helping build a proprietary ecosystem that help supports the company’s operations, to now, he has become an effective conduit connecting the field to the office while helping the teams accomplish the goals set forth.<br/> <br/>Outside of Focus Flooring, Jacques is just as committed to achieving great things for his community through his heart to serve people. When not in the office or visiting job sites, Jacques enjoys spending time with his wife, “The Amazing” Claire, and four kids, Grace, Tessa, David, and Faith.',
-			catagory: 'Leadership'
+			category: 'Leadership'
 		},
 		{
 			id: 2,
@@ -35,7 +35,7 @@
 			lastName: 'Melanson',
 			title: 'General Superintendent',
 			bio: 'Rob is a third generation flooring installer specializing in ceramic tile. Having 24 years experience in the flooring industry, Rob serves as Envision’s in-house quality control/quality assurance flooring specialist. Spending time with family, fishing and coaching his sons football team are a few of his hobbies.',
-			catagory: 'Leadership'
+			category: 'Leadership'
 		},
 		{
 			id: 3,
@@ -44,7 +44,7 @@
 			lastName: 'Jackson',
 			title: 'Preconstruction Director',
 			bio: 'As Project Engineer, McCarter handles pre-planning and technical activities related to Envision projects. McCarter is a North Carolina native who is passionate about martial arts, enjoys spending time with his family, playing golf and officiating youth sports.',
-			catagory: 'Preconstruction'
+			category: 'Preconstruction'
 		},
 		{
 			id: 4,
@@ -53,7 +53,7 @@
 			lastName: 'Henriquez',
 			title: 'Preconstruction Tech',
 			bio: 'As a Pre-Construction Tech, Judith utilizes her years of experience in construction to analyze plans and prepare bid proposals for Envision Flooring projects. In her spare time, Judith enjoys going to the beach, kayaking and spending time with my family. ',
-			catagory: 'Preconstruction'
+			category: 'Preconstruction'
 		},
 		{
 			id: 5,
@@ -62,7 +62,7 @@
 			lastName: 'Rolle',
 			title: 'Marketing Coordinator',
 			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani is part of Envision’s C.O.L Team as Marketing Coordinator, and will assist with all marketing needs for Envision. While not working, De Lani enjoys spending time with her family and videography. ',
-			catagory: 'Marketing/BD'
+			category: 'Marketing/BD'
 		},
 
 		{
@@ -72,7 +72,7 @@
 			lastName: 'Cooke',
 			title: 'Product Coordinator',
 			bio: ' Pamela coordinates within the varies teams to implement office procedures, record keeping and billing.  Pamela is a member of Revealing Truth Ministries in Tampa and enjoys going to the movies and watching the Bucs play.  She has two daughters and two grandchildren.',
-			catagory: 'Project Planning'
+			category: 'Project Planning'
 		},
 		{
 			id: 7,
@@ -81,7 +81,7 @@
 			lastName: 'Ramos',
 			title: 'Assistant Superintendent',
 			bio: 'Sarita coordinates with the field and office personnel to effectively communicate the progress of the project’s production, change events, constraints, quality and all necessary reporting. Sarita is originally from St. Croix, U.S Virgin Islands, and in her spare time, enjoys spending time with her family at the beach, fishing, horseback riding, car racing and completing DIY projects.',
-			catagory: 'Field Management'
+			category: 'Field Management'
 		},
 
 		{
@@ -91,7 +91,7 @@
 			lastName: 'Goyens',
 			title: 'Internal Operations Coordinator',
 			bio: 'Residing in the Tampa Bay Area with 2 children, 3 stepchildren and 2 grandchildren, Charlayne enjoys spending time with her family, reading and the beach.',
-			catagory: 'Admin'
+			category: 'Admin'
 		},
 		{
 			id: 9,
@@ -100,7 +100,7 @@
 			lastName: '',
 			title: 'Field Tech',
 			bio: '',
-			catagory: 'Field'
+			category: 'Field'
 		},
 		{
 			id: 10,
@@ -109,7 +109,7 @@
 			lastName: '',
 			title: 'Field',
 			bio: '',
-			catagory: 'Field'
+			category: 'Field'
 		},
 		{
 			id: 11,
@@ -118,7 +118,7 @@
 			lastName: '',
 			title: 'Field Tech',
 			bio: '',
-			catagory: 'Field'
+			category: 'Field'
 		},
 		{
 			id: 12,
@@ -127,7 +127,7 @@
 			lastName: '',
 			title: 'Warehouse Coordinator',
 			bio: '',
-			catagory: 'Field'
+			category: 'Field'
 		},
 		{
 			id: 12,
@@ -136,7 +136,7 @@
 			lastName: '',
 			title: 'Warehouse Coordinator',
 			bio: '',
-			catagory: 'Field'
+			category: 'Field'
 		}
 	])
 
@@ -152,7 +152,7 @@
 	])
 
 	const filtered = computed(() => {
-		return useFilter(team.value, catagory.value)
+		return useFilter(team.value, category.value)
 	})
 
 	const handleClick = (index: number) => {
@@ -199,12 +199,12 @@
 			<div class="parent">
 				<aside>
 					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
-						<input type="radio" name="radio" v-model="catagory" :value="cat" />
+						<input type="radio" name="radio" v-model="category" :value="cat" />
 						<span class="chip">{{ cat }}</span>
 					</label>
 				</aside>
 				<main id="main">
-					<h2>{{ catagory }}</h2>
+					<h2>{{ category }}</h2>
 					<div class="flex flex-wrap gap-5 relative team-container">
 						<TeamMember
 							v-for="(member, index) in filtered"

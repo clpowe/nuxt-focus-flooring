@@ -1,6 +1,6 @@
-export function useFilter(arr: any[], catagory: string): any[] {
-	if (catagory === 'All' || catagory === '') {
+export function useFilter(arr: any[], category: string): any[] {
+	if (category === 'All' || category === '') {
 		return arr
 	}
-	return arr.filter((item) => catagory === item.catagory)
+	return arr.filter((item) => category === item.category)
 }
