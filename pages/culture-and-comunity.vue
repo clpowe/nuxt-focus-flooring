@@ -133,6 +133,9 @@
 							sizes="sm:100vw lg:600px"
 						/>
 					</SidebySide>
+					<NuxtLink to="/join-our-team" class="btn btn-yellow"
+						>Join our team</NuxtLink
+					>
 				</article>
 
 				<article class="container space-y-6">
