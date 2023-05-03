@@ -111,7 +111,7 @@
 </script>
 <template>
 	<div class="">
-		<h2>Sectors we serve</h2>
+		<h2 class="margin-bottom">Sectors we serve</h2>
 		<div class="sectores">
 			<SectorsSections
 				v-for="sector in sectores"

@@ -9,7 +9,7 @@
 			step: 1,
 			title: 'Preconstrunction',
 			description:
-				'Through our comprehensive preconstruction process, our team will produce a quality and detailed proposal and an overall preconstruction experience that you can count on.',
+				'We will partner with you to ensure you stay within your budget throughout all pricing efforts and obtain cost certainty for your project.',
 			link: '/our-process#preconstruction'
 		},
 		{
@@ -34,7 +34,7 @@
 			step: 3,
 			title: 'Project Execution',
 			description:
-				'Our process and approach to execution comes from many years of experience, staying up to date with the latest installation methods, products, trainings in the market and our overall desire to please our clients',
+				'Through our full-time onsite supervision, a dedicated field technician and QAQC protocols, we are able to implement our “Zero Punch” philosophy reducing all quality punch list items to almost “0”.',
 			link: '/our-process#system-genetated-tools'
 		}
 	]

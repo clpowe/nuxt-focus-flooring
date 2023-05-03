@@ -189,7 +189,7 @@
 						<template v-slot:content>
 							<div class="space-y-10">
 								<div>
-									<h2 class="mb-7" data-section="preconstruction">
+									<h2 class="mb-4" data-section="preconstruction">
 										Pre&shyconstrunction
 									</h2>
 									<p class="">
@@ -229,7 +229,9 @@
 							/>
 						</template>
 						<template v-slot:content>
-							<h2 data-section="project-planning">Project Planning</h2>
+							<h2 data-section="project-planning" class="mb-4">
+								Project Planning
+							</h2>
 							<p class="">
 								Our internal project planning systems and tools allow us to
 								alleviate the risk of material price escalations through
@@ -262,7 +264,9 @@
 							<SideBy class="mb-8">
 								<template v-slot:text>
 									<div class="flex-1">
-										<h2 data-section="project-execution">Project Execution</h2>
+										<h2 data-section="project-execution" class="mb-4">
+											Project Execution
+										</h2>
 										<p class="">
 											Through our full-time onsite supervision, a dedicated
 											field technician and QAQC protocols, we are able to

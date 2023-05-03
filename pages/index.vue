@@ -79,7 +79,7 @@
 	<header>
 		<HomeHero>
 			<template v-slot:header>
-				Eliminating your <span>risk</span> through our process
+				<span>Eliminating your risk</span> through our process
 			</template>
 			<template v-slot:actions>
 				<div class="actions">
@@ -118,7 +118,7 @@
 						</div>
 
 						<div class="lg:py-24">
-							<h2>Our Focus</h2>
+							<h2 class="margin-bottom">Our Focus</h2>
 
 							<div class="space-y-4">
 								<p>
@@ -176,7 +176,7 @@
 
 		<section class="container">
 			<div size="--s-3" class="margin-bottom">
-				<h2>What we do</h2>
+				<h2 class="margin-bottom">What we do</h2>
 			</div>
 
 			<Grid>

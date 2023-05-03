@@ -204,7 +204,7 @@
 					</label>
 				</aside>
 				<main id="main">
-					<h2>{{ category }}</h2>
+					<h2 class="margin-bottom">{{ category }}</h2>
 					<div class="flex flex-wrap gap-5 relative team-container">
 						<TeamMember
 							v-for="(member, index) in filtered"

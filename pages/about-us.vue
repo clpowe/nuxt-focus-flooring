@@ -92,7 +92,7 @@
 		<Hero> About Us </Hero>
 		<main id="main" class="main max-w-4xl mx-auto py-8">
 			<article id="three-uniques" class="container">
-				<h2 class="mb-12">Three Uniques</h2>
+				<h2 class="margin-bottom">Three Uniques</h2>
 				<div class="mx-auto parent">
 					<Card
 						v-for="item in threeUniqes"
@@ -114,7 +114,7 @@
 			</article>
 
 			<article id="core-values" class="container">
-				<h2 class="mb-4">Core Values</h2>
+				<h2 class="margin-bottom">Core Values</h2>
 
 				<p class="mb-8">
 					Our core values are the framework in which we evaluate our choices and

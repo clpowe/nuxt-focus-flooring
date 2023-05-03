@@ -116,7 +116,7 @@
 					v-for="(date, index) in dates"
 					ref="itemRefs"
 				>
-					<h2 class="mb-4 year">{{ date.year }}</h2>
+					<h2 class="margin-bottom year">{{ date.year }}</h2>
 					<p v-html="date.description"></p>
 				</article>
 			</div>

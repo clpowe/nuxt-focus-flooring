@@ -86,7 +86,7 @@
 			<main id="main" class="main pt-16">
 				<article class="container space-y-6">
 					<div>
-						<h2>Culture</h2>
+						<h2 class="margin-bottom">Culture</h2>
 						<p class="max-w-lg">
 							<strong
 								>Illuminate our industry with positivity, partnership, &
@@ -136,7 +136,7 @@
 				</article>
 
 				<article class="container space-y-6">
-					<h2>Community</h2>
+					<h2 class="margin-bottom">Community</h2>
 					<ul class="partnerlist columns-2 md:columns-4 space-y-2">
 						<li v-for="item in communityList" class="">
 							{{ item }}
