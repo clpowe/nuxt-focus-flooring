@@ -18,7 +18,7 @@
 			title: 'Project Planning',
 			description:
 				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.',
-			link: '/our-process#project-execution'
+			link: '/our-process#project-planning'
 		},
 		// {
 		// 	icon: 'how_two',
@@ -35,7 +35,7 @@
 			title: 'Project Execution',
 			description:
 				'Through our full-time onsite supervision, a dedicated field technician and QAQC protocols, we are able to implement our “Zero Punch” philosophy reducing all quality punch list items to almost “0”.',
-			link: '/our-process#system-genetated-tools'
+			link: '/our-process#project-execution'
 		}
 	]
 

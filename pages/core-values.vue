@@ -20,11 +20,16 @@
 		{
 			id: 2,
 			component: 'h3',
-			title: 'Be the light',
-			content:
-				'Being positive should never be based on circumstances but based on an internal belief.',
-			list: ['Optimism', 'Always assume positive intent']
+			title: 'Find a better way',
+			content: 'Impossible is for the unwilling.',
+			list: [
+				'Adapt to change',
+				'Impossible is never a fact, it’s a belief',
+				'“I get to” vs. “I have to” attitude',
+				'Don’t make excuses, make adjustments'
+			]
 		},
+
 		{
 			id: 3,
 			component: 'h3',
@@ -52,14 +57,10 @@
 		{
 			id: 5,
 			component: 'h3',
-			title: 'Find a better way',
-			content: 'Impossible is for the unwilling.',
-			list: [
-				'Adapt to change',
-				'Impossible is never a fact, it’s a belief',
-				'“I get to” vs. “I have to” attitude',
-				'Don’t make excuses, make adjustments'
-			]
+			title: 'Be the light',
+			content:
+				'Being positive should never be based on circumstances but based on an internal belief.',
+			list: ['Optimism', 'Always assume positive intent']
 		}
 	]
 	const threeUniqes = [
@@ -129,12 +130,11 @@
 						:component="item.component"
 					>
 						<p class="mt-2">{{ item.content }}</p>
-						<ul
-							v-if="item.list"
-							class="list-disc leading-tight mt-[var(--s-1)]"
-						>
-							<li v-for="item in item.list">
-								{{ item }}
+						<ul v-if="item.list" class="leading-tight mt-[var(--s-1)]">
+							<li v-for="item in item.list" class="stat">
+								<p class="stat-title">
+									{{ item }}
+								</p>
 							</li>
 						</ul>
 					</Card>
@@ -161,7 +161,6 @@
 	}
 
 	li::before {
-		content: '•';
 		font-size: var(--s2);
 	}
 
