@@ -558,7 +558,7 @@
 
 				<main id="main">
 					<h2 class="margin-bottom">
-						{{ category === 'All' ? 'Flooring Projects' : category }}
+						{{ category === 'All' ? 'All Projects' : category }}
 					</h2>
 					<div class="projects space-y-20">
 						<ProjectCard v-for="item in filteredProjects" v-bind="item" />
