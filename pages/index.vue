@@ -100,78 +100,74 @@
 	</header>
 	<main id="main" class="main">
 		<section class="container">
-			<section>
-				<div
-					class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8"
-				>
-					<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-						<div class="pic relative h-64 sm:h-80 lg:order-last lg:h-full">
-							<nuxt-img
-								src="/WhoWeAre.png"
-								alt=""
-								sizes="sm:100vw md:700px lg:700px"
-								fit="cover"
-								class="absolute inset-0 h-full w-full object-cover"
-								format="webp"
-								quality="80"
-							/>
-						</div>
+			<div class="mx-auto max-w-screen-xl py-8 sm:py-12 lg:py-16">
+				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+					<div class="pic relative h-64 sm:h-80 lg:order-last lg:h-full">
+						<nuxt-img
+							src="/WhoWeAre.png"
+							alt=""
+							sizes="sm:100vw md:700px lg:700px"
+							fit="cover"
+							class="absolute inset-0 h-full w-full object-cover"
+							format="webp"
+							quality="80"
+						/>
+					</div>
 
-						<div class="lg:py-24">
-							<h2 class="margin-bottom">Our Focus</h2>
+					<div class="lg:py-24">
+						<h2 class="margin-bottom">Our Focus</h2>
 
-							<div class="space-y-4">
-								<p>
-									At Focus Flooring, we offer advanced solutions in commercial
-									flooring and wall tile.
-								</p>
-								<p>
-									We have disciplined our flooring processes to focus on the
-									details that greatly impact our clients and deliver a high
-									quality service they can count on.
-								</p>
-								<p>
-									Focus Flooring is a minority-owned firm based out of Tampa,
-									Florida with a
-									<strong
-										>guarantee to eliminate your risk through our internal
-										processes.</strong
-									>
-								</p>
-							</div>
+						<div class="space-y-4">
+							<p>
+								At Focus Flooring, we offer advanced solutions in commercial
+								flooring and wall tile.
+							</p>
+							<p>
+								We have disciplined our flooring processes to focus on the
+								details that greatly impact our clients and deliver a high
+								quality service they can count on.
+							</p>
+							<p>
+								Focus Flooring is a minority-owned firm based out of Tampa,
+								Florida with a
+								<strong
+									>guarantee to eliminate your risk through our internal
+									processes.</strong
+								>
+							</p>
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+		</section>
 
-			<section>
-				<div class="flex-1 mx-auto max-w-xl">
-					<h2 class="margin-bottom">Our History</h2>
-					<div class="space-y-6">
-						<p>
-							The flooring division begins to outgrow being a “division” and
-							begins to require a space of its own. The Envision team discovered
-							that though both the construction management division and flooring
-							division of the business are both client, systems, and process
-							driven, the flooring business at this scale required very
-							different systems, processes and team members than the
-							construction management business.
-						</p>
-						<p class="pb-4">
-							Learn more about our journey from Envision Flooring to Focus
-							Flooring
-						</p>
-						<NuxtLink
-							prefetch
-							to="/our-history"
-							role="menuitem"
-							exactActiveClass="nuxt-link-active"
-							class="btn btn-yellow pt-4"
-							>Our History</NuxtLink
-						>
-					</div>
+		<section class="container">
+			<div class="flex-1 max-w-xl mx-0 lg:mx-auto">
+				<h2 class="margin-bottom">Our History</h2>
+				<div class="space-y-6">
+					<p>
+						The flooring division begins to outgrow being a “division” and
+						begins to require a space of its own. The Envision team discovered
+						that though both the construction management division and flooring
+						division of the business are both client, systems, and process
+						driven, the flooring business at this scale required very different
+						systems, processes and team members than the construction management
+						business.
+					</p>
+					<p class="pb-4">
+						Learn more about our journey from Envision Flooring to Focus
+						Flooring
+					</p>
+					<NuxtLink
+						prefetch
+						to="/our-history"
+						role="menuitem"
+						exactActiveClass="nuxt-link-active"
+						class="btn btn-yellow pt-4"
+						>Our History</NuxtLink
+					>
 				</div>
-			</section>
+			</div>
 		</section>
 
 		<section class="container">

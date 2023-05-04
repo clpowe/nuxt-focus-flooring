@@ -6,7 +6,7 @@
 </script>
 
 <template>
-	<footer aria-label="Site Footer">
+	<footer aria-label="Site Footer ">
 		<div
 			class="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-12 lg:px-8"
 		>
@@ -24,7 +24,7 @@
 			>
 				<div>
 					<nav aria-label="Footer Navigation" class="mt-6">
-						<ul class="space-y-4 text-sm">
+						<ul class="space-y-4 text-lg">
 							<li>
 								<NuxtLink prefetch to="/">Home</NuxtLink>
 							</li>
@@ -58,7 +58,7 @@
 
 				<div>
 					<nav aria-label="Footer Navigation" class="mt-6">
-						<ul class="space-y-4 text-sm">
+						<ul class="space-y-4 text-lg">
 							<li>
 								<NuxtLink prefetch to="/meet-the-team">Meet the team</NuxtLink>
 							</li>
@@ -218,6 +218,7 @@
 	footer {
 		background-color: var(--midnight);
 		color: var(--focus-white);
+		font-size: 1rem;
 		/* padding-block: var(--s4); */
 
 		& h2 {
