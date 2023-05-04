@@ -11,7 +11,7 @@
 		<div class="container">
 			<Sidebar>
 				<div class="flex flex-col">
-					<NuxtLink to="/contact/general-contact">General Contact</NuxtLink>
+					<NuxtLink to="/contact/general-contact">Let's Talk</NuxtLink>
 					<NuxtLink to="/contact/project-consultation"
 						>Project Consultation</NuxtLink
 					>

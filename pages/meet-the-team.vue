@@ -62,7 +62,7 @@
 			lastName: 'Rolle',
 			title: 'Marketing Coordinator',
 			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani is part of Envision’s C.O.L Team as Marketing Coordinator, and will assist with all marketing needs for Envision. While not working, De Lani enjoys spending time with her family and videography. ',
-			category: 'Marketing/BD'
+			category: 'Marketing & Sales'
 		},
 
 		{
@@ -96,8 +96,8 @@
 		{
 			id: 9,
 			image: 'placeholder',
-			firstName: 'Andy',
-			lastName: '',
+			firstName: 'Andres',
+			lastName: 'Ramos III',
 			title: 'Field Tech',
 			bio: '',
 			category: 'Field'
@@ -105,9 +105,9 @@
 		{
 			id: 10,
 			image: 'placeholder',
-			firstName: 'Santiago',
-			lastName: '',
-			title: 'Field',
+			firstName: 'Jose',
+			lastName: 'Santiago',
+			title: 'Field Tech',
 			bio: '',
 			category: 'Field'
 		},
@@ -115,7 +115,7 @@
 			id: 11,
 			image: 'placeholder',
 			firstName: 'Fransico',
-			lastName: '',
+			lastName: 'Gonzalez',
 			title: 'Field Tech',
 			bio: '',
 			category: 'Field'
@@ -124,8 +124,8 @@
 			id: 12,
 			image: 'placeholder',
 			firstName: 'Diego',
-			lastName: '',
-			title: 'Warehouse Coordinator',
+			lastName: 'Urcia',
+			title: 'Field Tech',
 			bio: '',
 			category: 'Field'
 		},
@@ -133,7 +133,7 @@
 			id: 12,
 			image: 'placeholder',
 			firstName: 'Jose',
-			lastName: '',
+			lastName: 'Garcia',
 			title: 'Warehouse Coordinator',
 			bio: '',
 			category: 'Field'
