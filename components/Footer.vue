@@ -11,13 +11,13 @@
 			class="container px-4 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-12 lg:px-8"
 		>
 			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-				<div>
+				<NuxtLink prefetch to="/">
 					<img
 						src="/Focus_Flooring_logo_white.svg"
 						alt="Focus Flooring Logo"
 						width="200"
 					/>
-				</div>
+				</NuxtLink>
 			</div>
 			<div
 				class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4"
