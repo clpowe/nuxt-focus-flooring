@@ -150,10 +150,10 @@
 						<li role="none">
 							<NuxtLink
 								prefetch
-								to="/about-us"
+								to="/core-values"
 								role="menuitem"
 								exactActiveClass="nuxt-link-active"
-								>About Us</NuxtLink
+								>Core Values</NuxtLink
 							>
 						</li>
 

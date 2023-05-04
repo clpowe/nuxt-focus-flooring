@@ -30,7 +30,13 @@
 							</li>
 
 							<li>
-								<NuxtLink prefetch to="/about-us">About us</NuxtLink>
+								<NuxtLink
+									prefetch
+									to="/core-values"
+									role="menuitem"
+									exactActiveClass="nuxt-link-active"
+									>Core Values</NuxtLink
+								>
 							</li>
 
 							<li>

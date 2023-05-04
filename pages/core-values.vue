@@ -89,7 +89,7 @@
 
 <template>
 	<div>
-		<Hero> About Us </Hero>
+		<Hero>Core Values</Hero>
 		<main id="main" class="main max-w-4xl mx-auto py-8">
 			<article id="three-uniques" class="container">
 				<h2 class="margin-bottom">Three Uniques</h2>
