@@ -7,7 +7,7 @@
 		{
 			icon: 'how_one',
 			step: 1,
-			title: 'Preconstrunction',
+			title: 'Preconstruction',
 			description:
 				'We will partner with you to ensure you stay within your budget throughout all pricing efforts and obtain cost certainty for your project.',
 			link: '/our-process#preconstruction'

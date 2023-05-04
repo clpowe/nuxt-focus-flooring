@@ -59,7 +59,7 @@
 
 							<li>
 								<NuxtLink prefetch to="/culture-and-comunity"
-									>Culture and comunity</NuxtLink
+									>Culture and Community</NuxtLink
 								>
 							</li>
 
