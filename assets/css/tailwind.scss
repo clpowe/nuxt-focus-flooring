@@ -152,35 +152,6 @@ h3 {
 	margin-bottom: var(--s2);
 }
 
-.btn {
-	position: relative;
-	padding-inline: var(--s-1);
-	padding-block: var(--s-4);
-	border-radius: 4px;
-	text-transform: uppercase;
-	font-size: var(--s-1);
-	font-weight: 600;
-	text-decoration: none;
-	z-index: 10;
-	cursor: pointer;
-
-	&-yellow {
-		background-color: var(--focus-yellow);
-	}
-	&-yellow:hover {
-		background-color: var(--focus-yellow-light);
-	}
-
-	&-outline {
-		color: var(--focus-white);
-		outline: var(--focus-white) solid 2px;
-		outline-offset: -2px;
-	}
-	&-outline:hover {
-		background-color: var(--focus-white-light);
-	}
-}
-
 .drawer-enter-active,
 .drawer-leave-active {
 	transition: 1s ease all;

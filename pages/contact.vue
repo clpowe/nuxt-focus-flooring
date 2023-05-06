@@ -10,12 +10,15 @@
 
 		<div class="container">
 			<Sidebar>
-				<div class="flex flex-col">
-					<NuxtLink to="/contact/general-contact">Let's Talk</NuxtLink>
-					<NuxtLink to="/contact/project-consultation"
-						>Project Consultation</NuxtLink
-					>
-				</div>
+				<ul class="menu menu-horizontal lg:menu-vertical bg-base-100">
+					<li><NuxtLink to="/contact/general-contact">Let's Talk</NuxtLink></li>
+					<li>
+						<NuxtLink to="/contact/project-consultation"
+							>Project Consultation</NuxtLink
+						>
+					</li>
+				</ul>
+
 				<main id="main">
 					<NuxtPage />
 				</main>

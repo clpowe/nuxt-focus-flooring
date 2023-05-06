@@ -144,7 +144,7 @@
 		'All',
 		'Leadership',
 		'Preconstruction',
-		'Marketing/BD',
+		'Marketing & Sales',
 		'Project Planning',
 		'Field Management',
 		'Admin',
@@ -233,7 +233,6 @@
 		gap: 1rem;
 		padding: 0.5rem;
 		position: sticky;
-		background-color: #fff;
 		top: 0;
 		z-index: 1;
 	}

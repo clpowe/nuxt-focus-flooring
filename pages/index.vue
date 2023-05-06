@@ -83,7 +83,7 @@
 			</template>
 			<template v-slot:actions>
 				<div class="actions">
-					<NuxtLink to="/contact/general-contact" class="btn btn-yellow"
+					<NuxtLink to="/contact/general-contact" class="btn btn-accent"
 						>contact us</NuxtLink
 					>
 					<NuxtLink
@@ -91,7 +91,7 @@
 						quality="80"
 						loading="lazy"
 						format="webp"
-						class="btn btn-outline"
+						class="btn btn-outline btn-secondary"
 						>Learn more</NuxtLink
 					>
 				</div>
@@ -163,7 +163,7 @@
 						to="/our-history"
 						role="menuitem"
 						exactActiveClass="nuxt-link-active"
-						class="btn btn-yellow pt-4"
+						class="btn btn-accent"
 						>Our History</NuxtLink
 					>
 				</div>

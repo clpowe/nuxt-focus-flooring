@@ -141,7 +141,8 @@
 					</button>
 					<ul
 						v-show="expanded"
-						class="sub-menu"
+						tabindex="0"
+						class="dropdown-content menu p-2 shadow bg-primary rounded-box w-52"
 						role="menu"
 						aria-label="About"
 						ref="submenu"
@@ -173,7 +174,7 @@
 								to="/culture-and-comunity"
 								role="menuitem"
 								exactActiveClass="nuxt-link-active"
-								>Culture and comunity</NuxtLink
+								>Culture and community</NuxtLink
 							>
 						</li>
 						<li role="none">
@@ -307,7 +308,6 @@
 		.dropdown {
 			position: relative;
 		}
-
 		.sub-menu {
 			position: absolute;
 			display: flex;

@@ -51,7 +51,7 @@
 		<h3 class="mb-4">Lets talk</h3>
 		<p class="mb-8 text-[var(--grey-6)]">
 			To reach us, simply fill out the form below, and we’ll be in contact as
-			soon as possible. Or, you can call us at any of our locations.
+			soon as possible. Or, you may call us at our Tampa office location.
 		</p>
 		<ClientOnly>
 			<FormKit
