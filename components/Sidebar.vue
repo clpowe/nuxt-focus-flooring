@@ -11,7 +11,7 @@
 		gap: var(--s1);
 	}
 
-	@media (min-width: 741px) {
+	@media (min-width: 768px) {
 		.with-sidebar {
 			display: grid;
 			grid-template-columns: minmax(100px, 25%) 1fr;

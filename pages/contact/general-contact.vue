@@ -115,35 +115,37 @@
 						placeholder="Currnent Industry"
 					/>
 				</div>
-				<FormKit
-					type="textarea"
-					name="hearAboutUs"
-					label="How did you hear about us?"
-					rows="5"
-					placeholder="How did you hear about us?"
-					class=""
-				/>
-				<FormKit
-					type="textarea"
-					name="commentMessage"
-					label="Comment / Message"
-					rows="10"
-					placeholder="Comments/Message"
-				/>
-				<FormKit
-					type="checkbox"
-					name="request"
-					multiple
-					label="To help us fulfill your request, please select your area(s) of interest:"
-					:options="[
-						'Request A Quote',
-						'Product samples',
-						'General Product Literature',
-						'Product Care Information',
-						'Sales Representative Contact',
-						'Request A Presentation'
-					]"
-				/>
+				<div class="grid grid-col-1 gap-4">
+					<FormKit
+						type="textarea"
+						name="hearAboutUs"
+						label="How did you hear about us?"
+						rows="5"
+						placeholder="How did you hear about us?"
+						class="max-w-none"
+					/>
+					<FormKit
+						type="textarea"
+						name="commentMessage"
+						label="Comment / Message"
+						rows="10"
+						placeholder="Comments/Message"
+					/>
+					<FormKit
+						type="checkbox"
+						name="request"
+						multiple
+						label="To help us fulfill your request, please select your area(s) of interest:"
+						:options="[
+							'Request A Quote',
+							'Product samples',
+							'General Product Literature',
+							'Product Care Information',
+							'Sales Representative Contact',
+							'Request A Presentation'
+						]"
+					/>
+				</div>
 			</FormKit>
 		</ClientOnly>
 	</div>
