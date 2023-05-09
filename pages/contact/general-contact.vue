@@ -93,7 +93,7 @@
 						}"
 						validation-visibility="dirty"
 						label="Phone Number"
-						help="Please enter your phone Number"
+						help="Please enter your phone number"
 						placeholder="xxx-xxx-xxxx"
 					/>
 				</div>
@@ -112,7 +112,7 @@
 						validation="required"
 						label="Industry"
 						help="What industry do you currently work in"
-						placeholder="Currnent Industry"
+						placeholder="Current Industry"
 					/>
 				</div>
 				<div class="grid grid-col-1 gap-4">

@@ -82,7 +82,7 @@
 				<img
 					src="/Focus_Flooring_logo_white.svg"
 					alt="Focus Flooring Logo"
-					width="150"
+					width="120"
 				/>
 			</NuxtLink>
 			<button
@@ -141,8 +141,7 @@
 					</button>
 					<ul
 						v-show="expanded"
-						tabindex="0"
-						class="dropdown-content menu p-2 shadow bg-primary rounded-box w-52"
+						class="sub-menu"
 						role="menu"
 						aria-label="About"
 						ref="submenu"
@@ -262,6 +261,7 @@
 		max-width: 20rem;
 		width: 100%;
 		transform: translateX(-100%);
+		font-size: 1.25rem;
 	}
 
 	.backdrop {
@@ -300,6 +300,7 @@
 			transform: translateX(0%);
 			text-transform: uppercase;
 			gap: var(--s1);
+			font-size: var(--s-1);
 		}
 
 		.backdrop {
@@ -308,6 +309,7 @@
 		.dropdown {
 			position: relative;
 		}
+
 		.sub-menu {
 			position: absolute;
 			display: flex;

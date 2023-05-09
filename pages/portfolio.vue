@@ -231,18 +231,7 @@
 			category: 'Commercial Office & Retail',
 			date: new Date('03/20/2020')
 		},
-		{
-			id: 19,
-			name: 'Sarasota housing authoriy - OCB office renovation',
-			size: '850K SF',
-			cost: 7804,
-			client: 'Onicx Construction',
-			scope:
-				'Floor tile, resilient flooring, MDF base, tile base, schluter, rubber transition',
-			image: '/Focus_Flooring_Projects/SHA.jpg',
-			category: 'Commercial Office & Retail',
-			date: new Date('08/19/2020')
-		},
+
 		{
 			id: 20,
 			name: 'Citi Tampa A1G1 Lobby & Restrooms renovation',
@@ -257,7 +246,7 @@
 		},
 		{
 			id: 21,
-			name: 'Citi Tampa Aminites',
+			name: 'Citibank Tampa Amenities Building',
 			size: '102K SF',
 			cost: 1021114,
 			client: 'DPR',
@@ -409,18 +398,6 @@
 			date: new Date('12/21/2022')
 		},
 		{
-			id: 35,
-			name: 'Jones High School',
-			size: '6K SF',
-			cost: 200000,
-			client: 'ACY Contractors',
-			scope:
-				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/Focus_Flooring_Projects/JonesHighSchool.png',
-			category: 'Education',
-			date: new Date('2018')
-		},
-		{
 			id: 36,
 			name: 'Alonso High School',
 			size: '10K SF',
@@ -514,18 +491,6 @@
 			image: '/Focus_Flooring_Projects/EH_USFSPDavisHall_Int_10.jpg',
 			category: 'Education',
 			date: new Date('02/28/2020')
-		},
-		{
-			id: 44,
-			name: 'Citi Tampa A1G1 Lobbies & Restrooms',
-			size: '8K SF',
-			cost: 206780,
-			client: 'DPR',
-			scope:
-				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
-			image: '/Focus_Flooring_Projects/Placeholder.jpg',
-			category: 'Commercial Office & Retail',
-			date: new Date('11/30/2022')
 		}
 	])
 
