@@ -122,7 +122,7 @@
 			cost: 1960617,
 			client: 'Suffolk',
 			scope: 'LVT,carpet tile, resilient base, schluter, Aquaflex',
-			image: '/Focus_Flooring_Projects/TheAsher.jpg',
+			image: '/Focus_Flooring_Projects/asher_f2.png',
 			category: 'Residential & Hospitality',
 			date: new Date('04/11/2022')
 		},
@@ -411,13 +411,13 @@
 		},
 		{
 			id: 37,
-			name: 'High school TTT',
+			name: 'High School TTT (Sumner High School)',
 			size: '225K SF',
 			cost: 2000000,
 			client: 'CORE Construction',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter, quartz flooring',
-			image: '/Focus_Flooring_Projects/High_School_TTT.jpg',
+			image: '/Focus_Flooring_Projects/High_School.jpg',
 			category: 'Education',
 			date: new Date('11/08/2019')
 		},
@@ -452,7 +452,7 @@
 			cost: 64478,
 			client: 'Reno Building',
 			scope: 'Extensive floor prep, quartz flooring, vinyl base',
-			image: '/Focus_Flooring_Projects/eastbayhs.jpg',
+			image: '/Focus_Flooring_Projects/east_bay.jpeg',
 			category: 'Education',
 			date: new Date('06/14/2020')
 		},
@@ -488,7 +488,7 @@
 			client: 'Beck Group',
 			scope:
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
-			image: '/Focus_Flooring_Projects/EH_USFSPDavisHall_Int_10.jpg',
+			image: '/Focus_Flooring_Projects/USFSP_Residence.jpg',
 			category: 'Education',
 			date: new Date('02/28/2020')
 		}
