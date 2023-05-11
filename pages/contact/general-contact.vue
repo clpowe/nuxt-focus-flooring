@@ -131,20 +131,6 @@
 						rows="10"
 						placeholder="Comments/Message"
 					/>
-					<FormKit
-						type="checkbox"
-						name="request"
-						multiple
-						label="To help us fulfill your request, please select your area(s) of interest:"
-						:options="[
-							'Request A Quote',
-							'Product samples',
-							'General Product Literature',
-							'Product Care Information',
-							'Sales Representative Contact',
-							'Request A Presentation'
-						]"
-					/>
 				</div>
 			</FormKit>
 		</ClientOnly>

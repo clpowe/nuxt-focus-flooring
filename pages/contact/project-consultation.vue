@@ -48,13 +48,14 @@
 		<button @click="handleReset">Reset</button>
 	</div>
 	<div>
-		<h3 class="mb-4">Let’s talk about your next project</h3>
+		<h3 class="mb-4">HELP US LEARN MORE ABOUT YOUR NEXT PROJECT</h3>
 		<p class="mb-8">
-			Request a consultation to discuss contract flooring services for your next
-			project. We’ll help you select the best materials for your design vision,
-			meet your project timelines and get a great new floor within your project
-			budget. Just fill out the form below, and we’ll be in contact within 48
-			hours to set up a time to talk.
+			We’re looking forward to transforming your next project with our
+			commercial flooring or wall tile services. We’ll help select the best
+			materials for your vision, meet the project timeline, and install a
+			quality product within the project’s budget. Please fill out the form
+			below and our team will be in contact within 48 hours to set up a time to
+			discuss further.
 		</p>
 		<ClientOnly>
 			<FormKit

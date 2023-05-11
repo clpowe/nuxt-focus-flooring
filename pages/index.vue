@@ -142,7 +142,7 @@
 		</section>
 
 		<section class="container">
-			<div class="flex-1 max-w-xl mx-0 lg:mx-auto">
+			<div class="flex-1 max-w-xl mx-0">
 				<h2 class="margin-bottom">Our History</h2>
 				<div class="space-y-6">
 					<p>

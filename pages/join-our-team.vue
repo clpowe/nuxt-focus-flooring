@@ -9,6 +9,8 @@
 	async function handleSubmit(data) {
 		const fData = new FormData()
 
+		console.log(data)
+
 		if (data) {
 			for (let [key, value] of Object.entries(data)) {
 				fData.append(key, value)
@@ -17,14 +19,19 @@
 
 		try {
 			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbyo7yd3TD4JSHG8y_AHr8jBcxQugF7XGV0RuQ42nljEJ7Z4V-pw-EScUHNIznKGCLeuvg/exec',
+				'https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec',
 				{
 					method: 'POST',
 					body: fData
 				}
 			)
+			console.log(res)
 			if (res.result === 'success') {
 				success.value = true
+			}
+			if (res.result === 'error') {
+				fail.value = true
+				throw new Error(res.error)
 			}
 		} catch (e) {
 			fail.value = true
@@ -75,7 +82,7 @@
 					<FormKit
 						type="form"
 						method="post"
-						action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
+						action="https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec"
 						@submit="handleSubmit"
 					>
 						<div class="grid grid-col-1 md:grid-cols-2 gap-4">
@@ -105,7 +112,7 @@
 							/>
 							<FormKit
 								type="tel"
-								name="telephoneNumber"
+								name="phone"
 								validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
 								:validation-messages="{
 									matches: 'Phone number must be in the format xxx-xxx-xxxx'
@@ -116,52 +123,38 @@
 								placeholder="xxx-xxx-xxxx"
 							/>
 						</div>
-						<div class="grid grid-col-1 md:grid-cols-2 gap-4">
-							<FormKit
-								type="text"
-								name="jobTitle"
-								validation="required"
-								label="Job Title"
-								help="Please enter your current job title"
-								placeholder="Job Title"
-							/>
-							<FormKit
-								type="text"
-								name="industry"
-								validation="required"
-								label="Industry"
-								help="What industry do you currently work in"
-								placeholder="Currnent Industry"
-							/>
-						</div>
+						<div class="grid grid-col-1 md:grid-cols-2 gap-4"></div>
 						<FormKit
 							type="textarea"
-							name="hearAboutUs"
+							name="howDidYouHear"
 							label="How did you hear about us?"
 							rows="5"
 							placeholder="How did you hear about us?"
 						/>
 						<FormKit
-							type="textarea"
-							name="commentMessage"
-							label="Comment / Message"
-							rows="10"
-							placeholder="Comments/Message"
-						/>
-						<FormKit
 							type="radio"
-							name="request"
+							name="deptOfInterest"
 							label="To help us fulfill your request, please select your area(s) of interest:"
 							decorator-icon="check"
 							multiple=""
 							:options="[
-								'Request A Quote',
-								'Product samples',
-								'General Product Literature',
-								'Product Care Information',
-								'Sales Representative Contact',
-								'Request A Presentation'
+								'Skilled Labor',
+								'Field Management/Site Supervision',
+								'Estimating/Preconstruction',
+								'Project Planning/Management',
+								'Procurement',
+								'Accounting',
+								'Internal Operations',
+								'Marketing',
+								'Sales'
 							]"
+						/>
+						<FormKit
+							type="textarea"
+							name="comments"
+							label="Comment / Message"
+							rows="10"
+							placeholder="Comments/Message"
 						/>
 					</FormKit>
 				</ClientOnly>
