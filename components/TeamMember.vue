@@ -23,8 +23,8 @@
 			loading="lazy"
 			format="webp"
 		/>
-		<p>{{ firstName }} {{ lastName }}</p>
-		<p>{{ title }}</p>
+		<p class="font-bold text-lg mt-2">{{ firstName }} {{ lastName }}</p>
+		<p class="text-sm">{{ title }}</p>
 	</div>
 </template>
 
