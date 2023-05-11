@@ -9,7 +9,6 @@
 		{ text: 'Preconstruction', id: 'preconstruction' },
 		{ text: 'Project Planning', id: 'project-planning' },
 		{ text: 'Project Execution', id: 'project-execution' }
-		// { text: 'System genetated tools', id: 'system-genetated-tools' }
 	]
 
 	const preconstruction = [
@@ -94,7 +93,7 @@
 			component: 'h3',
 			title: 'Closeout',
 			content:
-				'“Beginning with the end in mind” is a saying we live by. We begin our closeout documents before we are mobilized on the jobsite to ensure our clients have all of the product, maintenance and product care information they need readily available. Proper maintenance is crucial to how your floors will perform over time. Poorly maintained floors can result in surface damage, faded fibers and surfaces, premature wear and costly repairs or replacements.'
+				'“Beginning with the end in mind” is a saying we live by. We begin our closeout documents before we are mobilized on the job site to ensure our clients have all of the product, maintenance and product care information they need readily available. Proper maintenance is crucial to how your floors will perform over time. Poorly maintained floors can result in surface damage, faded fibers and surfaces, premature wear and costly repairs or replacements.'
 		},
 		{
 			id: 5,
@@ -122,7 +121,7 @@
 		{
 			id: 1,
 			component: 'h3',
-			title: 'Materals lead time report',
+			title: 'Materials lead time report',
 			content:
 				'Our internal reporting that allows you to know the procurement status of all materials, as well as when you can expect to receive your materials based on the updated lead times and scheduled installation dates.'
 		},
@@ -248,7 +247,7 @@
 								</li>
 							</ul>
 							<div>
-								<h3 class="text-xl font-bold">Materals lead time report</h3>
+								<h3 class="text-xl font-bold">Materials lead time report</h3>
 								<p class="mt-1 text-sm">
 									Our internal reporting that allows you to know the procurement
 									status of all materials, as well as when you can expect to
@@ -327,42 +326,6 @@
 							</div>
 						</div>
 					</article>
-
-					<!-- <Split id="system-genetated-tools">
-						<template v-slot:image>
-							<nuxt-img
-								src="../public/systemGeneratedTools.jpg"
-								alt="A man working on a spread sheet"
-								fit="cover"
-								sizes="sm:100vw md:700px lg:700px"
-								format="webp"
-								class="absolute inset-0 h-full w-full object-cover"
-							/>
-						</template>
-						<template v-slot:content>
-							<div>
-								<h2 data-section="system-genetated-tools mb-1">
-									System Generated Tools
-								</h2>
-								<p class="">
-									Our tools are system generated to equip you with what you
-									need, when you need it.
-								</p>
-							</div>
-
-							<div class="space-y-4">
-								<div class="block" v-for="item in systemTools">
-									<h3 class="text-xl font-bold">
-										{{ item.title }}
-									</h3>
-
-									<p class="mt-1 text-sm">
-										{{ item.content }}
-									</p>
-								</div>
-							</div>
-						</template>
-					</Split> -->
 				</main>
 			</Sidebar>
 		</div>

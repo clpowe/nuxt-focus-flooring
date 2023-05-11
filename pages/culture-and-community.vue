@@ -1,6 +1,6 @@
 <script setup>
 	useHead({
-		title: 'Focus Flooring - Culture and Comunity'
+		title: 'Focus Flooring - Culture and Community'
 	})
 
 	onMounted(() => {
@@ -36,7 +36,7 @@
 		'Leadership Tampa Bay',
 		'Lutz Preparatory School',
 		'Manatee Education Foundation',
-		'Metropolitian Ministries',
+		'Metropolitan Ministries',
 		'Moffitt Cancer Center',
 		'National Association of Black Women in Construction',
 		'Pasco Education Foundation',
@@ -200,22 +200,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <ul class="carousel mt-20 gap-4">
-				<li
-					class="carousel-item"
-					v-for="picture in communityPictures"
-					:key="picture.img"
-				>
-					<nuxt-img
-						:src="picture.img"
-						:alt="picture.alt"
-						fit="cover"
-						width="450"
-						format="webp"
-						quality="80"
-					/>
-				</li>
-			</ul> -->
 		</div>
 	</div>
 </template>

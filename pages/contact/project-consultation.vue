@@ -115,8 +115,8 @@
 					name="industry"
 					validation="required"
 					label="Industry"
-					help="What industry do you currently work in"
-					placeholder="Currnent Industry"
+					help="What sector do you currently work in"
+					placeholder="Current Sector"
 				/>
 				<FormKit
 					type="textarea"

@@ -64,7 +64,7 @@
 							</li>
 
 							<li>
-								<NuxtLink prefetch to="/culture-and-comunity"
+								<NuxtLink prefetch to="/culture-and-community"
 									>Culture and Community</NuxtLink
 								>
 							</li>

@@ -111,8 +111,8 @@
 						name="industry"
 						validation="required"
 						label="Industry"
-						help="What industry do you currently work in"
-						placeholder="Current Industry"
+						help="What sector do you currently work in"
+						placeholder="Current Sector"
 					/>
 				</div>
 				<div class="grid grid-col-1 gap-4">

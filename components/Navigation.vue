@@ -170,7 +170,7 @@
 						<li role="none">
 							<NuxtLink
 								prefetch
-								to="/culture-and-comunity"
+								to="/culture-and-community"
 								role="menuitem"
 								exactActiveClass="nuxt-link-active"
 								>Culture and community</NuxtLink
