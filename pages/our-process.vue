@@ -179,11 +179,11 @@
 					<Split id="preconstruction">
 						<template v-slot:image>
 							<nuxt-img
-								src="threeUniquesSupporting.jpg"
-								alt="Woman working in a warehouse"
+								src="ourProcess.jpg"
+								alt="A man and a woman looking at blueprints"
 								sizes="sm:100vw md:700px lg:700px"
 								format="webp"
-								class="absolute inset-0 h-full w-full object-cover object-top"
+								class="absolute inset-0 h-full w-full object-cover"
 							/>
 						</template>
 						<template v-slot:content>
@@ -220,12 +220,12 @@
 					<Split id="project-planning">
 						<template v-slot:image>
 							<nuxt-img
-								src="ourProcess.jpg"
-								alt="A man and a woman looking at blueprints"
+								src="threeUniquesSupporting.jpg"
+								alt="Woman working in a warehouse"
 								fit="cover"
 								sizes="sm:100vw md:700px lg:700px"
 								format="webp"
-								class="absolute inset-0 h-full w-full object-cover"
+								class="absolute inset-0 h-full w-full object-cover object-top"
 							/>
 						</template>
 						<template v-slot:content>

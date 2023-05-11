@@ -26,7 +26,7 @@
 		<p>
 			{{ description }}
 		</p>
-		<nuxt-link :to="route" class="btn btn-yellow">View Projects</nuxt-link>
+		<nuxt-link :to="route" class="btn btn-accent z-10">View Projects</nuxt-link>
 		<div class="cover"></div>
 		<nuxt-img
 			:src="image"

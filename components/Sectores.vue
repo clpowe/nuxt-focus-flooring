@@ -72,13 +72,9 @@
 		animate(
 			event.target.children[0],
 			{ fontSize: '2.5em' },
-			{ easing: 'ease-out' }
+			{ easing: 'linear' }
 		)
-		animate(
-			event.target.children[2],
-			{ y: [200, 0], opacity: [0, 1] },
-			{ easing: 'ease-out' }
-		)
+		animate(event.target.children[2], { opacity: 1 }, { easing: 'linear' })
 
 		animate(event.target.children[4], {
 			opacity: 0.8,
@@ -93,11 +89,7 @@
 			{ fontSize: '1.5em' },
 			{ easing: 'ease-out' }
 		)
-		animate(
-			event.target.children[2],
-			{ y: [0, 200], opacity: [1, 0] },
-			{ easing: 'ease-out' }
-		)
+		animate(event.target.children[2], { opacity: 0 }, { easing: 'linear' })
 
 		animate(event.target.children[4], {
 			opacity: 0.2,

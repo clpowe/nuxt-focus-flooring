@@ -48,7 +48,7 @@
 		<button @click="handleReset">Reset</button>
 	</div>
 	<div v-else>
-		<h3 class="mb-4">Lets talk</h3>
+		<h3 class="mb-4">General Contact</h3>
 		<p class="mb-8 text-[var(--grey-6)]">
 			To reach us, simply fill out the form below, and we’ll be in contact as
 			soon as possible. Or, you may call us at our Tampa office location.
@@ -122,7 +122,7 @@
 						label="How did you hear about us?"
 						rows="5"
 						placeholder="How did you hear about us?"
-						class="max-w-none"
+						class="max-w-none w-full"
 					/>
 					<FormKit
 						type="textarea"

@@ -10,10 +10,10 @@
 
 		<div class="container">
 			<Sidebar>
-				<div>
-					<ul class="menu menu-horizontal md:menu-vertical">
-						<li>
-							<NuxtLink to="/contact/general-contact">Let's Talk</NuxtLink>
+				<div class="space-y-4">
+					<ul class="flex gap-4 text-lg uppercase font-bold md:flex-col">
+						<li class="text-lg">
+							<NuxtLink to="/contact/general-contact">General Contact</NuxtLink>
 						</li>
 						<li>
 							<NuxtLink to="/contact/project-consultation"
@@ -21,8 +21,10 @@
 							>
 						</li>
 					</ul>
+
+					<div class="w-full h-[2px] bg-slate-200"></div>
 					<div>
-						<h3>Location</h3>
+						<h3 class="mb-2">Location</h3>
 						<address>
 							<p>
 								5000 Acline Drive East, Suite B<br />Tampa, FL 33619, United
