@@ -21,7 +21,7 @@
 	const team = ref<TeamMember[]>([
 		{
 			id: 1,
-			image: '/JacquesDuval.jpeg',
+			image: '/Jacques_Duval.png',
 			firstName: 'Jacques',
 			lastName: 'Duval',
 			title: 'President',
@@ -30,7 +30,7 @@
 		},
 		{
 			id: 2,
-			image: '/RobertMelanson.jpeg',
+			image: '/Robert_Melanson.png',
 			firstName: 'Robert',
 			lastName: 'Melanson',
 			title: 'General Superintendent',
@@ -39,7 +39,7 @@
 		},
 		{
 			id: 3,
-			image: '/McCarter.jpg',
+			image: '/McCarter_Jackson.png',
 			firstName: 'McCarter',
 			lastName: 'Jackson',
 			title: 'Preconstruction Director',
@@ -48,7 +48,7 @@
 		},
 		{
 			id: 4,
-			image: '/JudithH.jpeg',
+			image: '/Judith_Henriquez.png',
 			firstName: 'Judith',
 			lastName: 'Henriquez',
 			title: 'Preconstruction Tech',
@@ -57,7 +57,7 @@
 		},
 		{
 			id: 5,
-			image: '/DeLaniRolle.jpeg',
+			image: '/De_Lani_Rolle.png',
 			firstName: 'De Lani',
 			lastName: 'Rolle',
 			title: 'Marketing Coordinator',
@@ -67,7 +67,7 @@
 
 		{
 			id: 6,
-			image: '/PamelaCooke.jpeg',
+			image: '/Pamela_Cooke.png',
 			firstName: 'Pamela',
 			lastName: 'Cooke',
 			title: 'Product Coordinator',
@@ -76,7 +76,7 @@
 		},
 		{
 			id: 7,
-			image: '/SaritaRamos.jpeg',
+			image: '/Sarita_Ramos.png',
 			firstName: 'Sarita',
 			lastName: 'Ramos',
 			title: 'Assistant Superintendent',
@@ -86,7 +86,7 @@
 
 		{
 			id: 8,
-			image: '/CharlayneGoyens.jpeg',
+			image: '/Char_Goyens.png',
 			firstName: 'Charlayne',
 			lastName: 'Goyens',
 			title: 'Internal Operations Coordinator',
@@ -95,7 +95,7 @@
 		},
 		{
 			id: 9,
-			image: 'placeholder',
+			image: '/Andres_Ramos_III.png',
 			firstName: 'Andres',
 			lastName: 'Ramos III',
 			title: 'Foreman',
@@ -104,7 +104,7 @@
 		},
 		{
 			id: 10,
-			image: 'placeholder',
+			image: '/Jose_Santiago.png',
 			firstName: 'Jose',
 			lastName: 'Santiago',
 			title: 'Skilled Tradesman',
@@ -113,8 +113,8 @@
 		},
 		{
 			id: 11,
-			image: 'placeholder',
-			firstName: 'Fransico',
+			image: '/Javier_Gonzalez.png',
+			firstName: 'Javier',
 			lastName: 'Gonzalez',
 			title: 'Skilled Tradesman',
 			bio: '',
@@ -122,7 +122,7 @@
 		},
 		{
 			id: 12,
-			image: 'placeholder',
+			image: '/Diego_Urcia.png',
 			firstName: 'Diego',
 			lastName: 'Urcia',
 			title: 'Skilled Tradesman',
@@ -130,8 +130,8 @@
 			category: 'Field'
 		},
 		{
-			id: 12,
-			image: 'placeholder',
+			id: 13,
+			image: '/Jose_Garcia.png',
 			firstName: 'Jose',
 			lastName: 'Garcia',
 			title: 'Warehouse Coordinator',
@@ -139,7 +139,7 @@
 			category: 'Field'
 		},
 		{
-			id: 13,
+			id: 14,
 			image: 'placeholder',
 			firstName: 'Ardail',
 			lastName: 'Allen',
@@ -148,8 +148,8 @@
 			category: 'Field'
 		},
 		{
-			id: 14,
-			image: 'placeholder',
+			id: 15,
+			image: '/Elias_Rivera.png',
 			firstName: 'Elias',
 			lastName: 'Rivera',
 			title: 'Tradesman',
@@ -157,8 +157,8 @@
 			category: 'Field'
 		},
 		{
-			id: 15,
-			image: 'placeholder',
+			id: 16,
+			image: '/Javier_Arteaga.png',
 			firstName: 'Javier',
 			lastName: 'Arteaga',
 			title: 'Skilled Tradesman',
