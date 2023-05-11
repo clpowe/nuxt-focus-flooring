@@ -43,16 +43,17 @@
 		<Hero>Join our <span>team</span></Hero>
 
 		<main id="main">
-			<div class="container margin-bottom">
+			<div class="container margin-bottom space-y-2">
 				<p>
 					At Focus Flooring, we see each one of our projects as an opportunity
-					to eliminate our clients’ risks through our processes. When you join
-					our team you are becoming a part of something bigger than us.
+					to eliminate our clients’ risks through our processes.
 				</p>
 				<p>
-					Our team, community, and impact becoming greater starts with you!
-					Interested in joining us? We want to hear from you.
+					When you join ur team you are becoming a part of something bigger than
+					us.
 				</p>
+				<p>Our team, community, and impact becoming greater starts with you!</p>
+				<p>Interested in joining us? We want to hear from you.</p>
 			</div>
 			<div v-if="success">
 				Thank you we will contact you soon
@@ -64,7 +65,7 @@
 			</div>
 			<div v-else class="container">
 				<div>
-					<h2 class="margin-bottom">Join or team</h2>
+					<h2 class="margin-bottom">Join our team</h2>
 				</div>
 				<p>
 					To reach us, simply fill out the form below, and we’ll be in contact

@@ -6,13 +6,13 @@
 	const main = ref()
 
 	const sections = [
-		{ text: 'Preconstrunction', id: 'preconstruction' },
+		{ text: 'Preconstruction', id: 'preconstruction' },
 		{ text: 'Project Planning', id: 'project-planning' },
 		{ text: 'Project Execution', id: 'project-execution' }
 		// { text: 'System genetated tools', id: 'system-genetated-tools' }
 	]
 
-	const preconstrunction = [
+	const preconstruction = [
 		{
 			id: 1,
 			component: 'h3',
@@ -190,7 +190,7 @@
 							<div class="space-y-10">
 								<div>
 									<h2 class="mb-4" data-section="preconstruction">
-										Pre&shyconstrunction
+										Pre&shyconstruction
 									</h2>
 									<p class="">
 										Our team will become familiar with the project documents to
@@ -201,7 +201,7 @@
 									</p>
 								</div>
 								<Content>
-									<template v-for="item in preconstrunction" :key="item.id">
+									<template v-for="item in preconstruction" :key="item.id">
 										<article class="card">
 											<div>
 												<svg-icon :name="item.svg" class="h-14" />

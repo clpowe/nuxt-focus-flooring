@@ -98,7 +98,7 @@
 			image: 'placeholder',
 			firstName: 'Andres',
 			lastName: 'Ramos III',
-			title: 'Field Tech',
+			title: 'Foreman',
 			bio: '',
 			category: 'Field'
 		},
@@ -107,7 +107,7 @@
 			image: 'placeholder',
 			firstName: 'Jose',
 			lastName: 'Santiago',
-			title: 'Field Tech',
+			title: 'Skilled Tradesman',
 			bio: '',
 			category: 'Field'
 		},
@@ -116,7 +116,7 @@
 			image: 'placeholder',
 			firstName: 'Fransico',
 			lastName: 'Gonzalez',
-			title: 'Field Tech',
+			title: 'Skilled Tradesman',
 			bio: '',
 			category: 'Field'
 		},
@@ -125,7 +125,7 @@
 			image: 'placeholder',
 			firstName: 'Diego',
 			lastName: 'Urcia',
-			title: 'Field Tech',
+			title: 'Skilled Tradesman',
 			bio: '',
 			category: 'Field'
 		},
@@ -135,6 +135,33 @@
 			firstName: 'Jose',
 			lastName: 'Garcia',
 			title: 'Warehouse Coordinator',
+			bio: '',
+			category: 'Field'
+		},
+		{
+			id: 13,
+			image: 'placeholder',
+			firstName: 'Ardail',
+			lastName: 'Allen',
+			title: 'Preconstruction Tech',
+			bio: '',
+			category: 'Field'
+		},
+		{
+			id: 14,
+			image: 'placeholder',
+			firstName: 'Elias',
+			lastName: 'Rivera',
+			title: 'Tradesman',
+			bio: '',
+			category: 'Field'
+		},
+		{
+			id: 15,
+			image: 'placeholder',
+			firstName: 'Javier',
+			lastName: 'Arteaga',
+			title: 'Skilled Tradesman',
 			bio: '',
 			category: 'Field'
 		}
