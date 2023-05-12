@@ -72,9 +72,9 @@
 							<li>
 								<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
 							</li>
-							<li>
+							<!-- <li>
 								<NuxtLink prefetch to="/join-our-team">Join our team</NuxtLink>
-							</li>
+							</li> -->
 						</ul>
 					</nav>
 				</div>

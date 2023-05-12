@@ -122,22 +122,20 @@
 					make all decisions. When our core values are in harmony with our daily
 					actions and behaviors - that is where true success lies.
 				</p>
-				<div class="mx-auto parent">
-					<Card
-						v-for="item in coreValues"
-						:key="item.id"
-						:title="item.title"
-						:component="item.component"
-					>
-						<p class="mt-2">{{ item.content }}</p>
-						<ul v-if="item.list" class="leading-tight mt-[var(--s-1)]">
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-16 lg:grid-cols-3">
+					<div v-for="item in coreValues" :key="item.id" class="carousel-item">
+						<div>
+							<h3>{{ item.title }}</h3>
+							<p class="mt-2">{{ item.content }}</p>
+						</div>
+						<!-- <ul v-if="item.list" class="leading-tight mt-[var(--s-1)]">
 							<li v-for="item in item.list" class="stat">
 								<p class="stat-title">
 									{{ item }}
 								</p>
 							</li>
-						</ul>
-					</Card>
+						</ul> -->
+					</div>
 				</div>
 			</article>
 		</main>

@@ -52,7 +52,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/robots',
 		'@nuxt/image-edge',
 		'@nuxtjs/tailwindcss',
-		'nuxt-schema-org'
+		'nuxt-schema-org',
+		'nuxt-swiper'
 	],
 	googleFonts: {
 		families: {

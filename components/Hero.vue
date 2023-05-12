@@ -5,14 +5,21 @@
 </script>
 
 <template>
-	<div class="my-hero margin-bottom">
+	<div class="my-hero margin-bottom relative overflow-hidden">
 		<div class="container content">
 			<h1>
 				<slot />
 			</h1>
 			<div class="dot"></div>
 		</div>
-		<div class="image"></div>
+
+		<nuxt-img
+			fit="exact"
+			provider="imagekit"
+			quality="90"
+			src="aviation.jpeg"
+			class="w-full absolute h-full object-cover image"
+		/>
 	</div>
 </template>
 
@@ -26,18 +33,10 @@
 		background-color: var(--midnight);
 	}
 	.image {
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		background-image: url('../aviation.jpeg');
-		background-position: center center;
-		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
+		filter: opacity(0.8) brightness(0.2) grayscale(1) saturate(0) contrast(0.8);
 		mix-blend-mode: luminosity;
-		height: 30vh;
 		width: 100%;
 		margin: auto;
-		max-width: 2000px;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

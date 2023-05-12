@@ -13,7 +13,8 @@
 					<slot name="header" />
 				</h1>
 				<p class="text-[var(--focus-white)] text-xl max-w-md">
-					Zero Punch Philosophy, On-time Schedule, Guaranteed Pricing
+					Cost Certainty | Real Time Schedule Management | “Zero Punch”
+					Philosophy
 				</p>
 				<slot name="actions" />
 			</div>

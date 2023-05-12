@@ -176,7 +176,7 @@
 								>Culture and community</NuxtLink
 							>
 						</li>
-						<li role="none">
+						<!-- <li role="none">
 							<NuxtLink
 								prefetch
 								to="/join-our-team"
@@ -184,7 +184,7 @@
 								exactActiveClass="nuxt-link-active"
 								>Join our team</NuxtLink
 							>
-						</li>
+						</li> -->
 					</ul>
 				</li>
 				<li role="none">
