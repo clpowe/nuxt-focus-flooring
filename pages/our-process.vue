@@ -238,23 +238,35 @@
 								tracking, establish early procurement, create material storage
 								plans, and achieve on-time scheduling.
 							</p>
-							<ul class="list">
-								<li
-									v-for="item in projectPlanning"
-									class="block border border-[var(--grey-2)] p-3"
-								>
-									<p class="font-bold">{{ item }}</p>
+							<ul class="space-y-6 mt-8 list-disc">
+								<li>
+									<p class="mt-1 text-sm">
+										Materials lead time report: Our internal reporting that
+										allows you to know the procurement status of all materials,
+										as well as when you can expect to receive your materials
+										based on the updated lead times and scheduled installation
+										dates.
+									</p>
+								</li>
+								<li>
+									<p class="mt-1 text-sm">
+										Mobilization Reporting - Material Handling & Sequencing: Our
+										team will take the project schedule and break out all of the
+										materials needed based on their installation date. This will
+										help our team both manage and sequence all deliveries, as
+										well as stage materials at the job site.
+									</p>
+								</li>
+								<li>
+									<p class="mt-1 text-sm">Submittals</p>
+								</li>
+								<li>
+									<p class="mt-1 text-sm">Project Staffing Planning</p>
+								</li>
+								<li>
+									<p class="mt-1 text-sm">Pre-Execution Analysis</p>
 								</li>
 							</ul>
-							<div>
-								<h3 class="text-xl font-bold">Materials lead time report</h3>
-								<p class="mt-1 text-sm">
-									Our internal reporting that allows you to know the procurement
-									status of all materials, as well as when you can expect to
-									receive your materials based on the updated lead times and
-									scheduled installation dates.
-								</p>
-							</div>
 						</template>
 					</Split>
 
@@ -305,25 +317,6 @@
 									</template>
 								</Content>
 							</div>
-							<div>
-								<h3 class="text-xl font-bold">
-									Daily reports and weekly production reports
-								</h3>
-								<p class="mt-1 text-sm">
-									his tool gives you the ability to track our performance and
-									pace throughout the project.
-								</p>
-							</div>
-							<div>
-								<h3 class="text-xl font-bold">Mobilization reports</h3>
-								<p class="mt-1 text-sm">
-									This internal planning tool allows us to take the project
-									schedule and break out all of the materials needed based on
-									their install date. This will help our team both manage and
-									sequence all deliveries, as well as stage materials at the job
-									site.
-								</p>
-							</div>
 						</div>
 					</article>
 				</main>
@@ -370,21 +363,5 @@
 		width: 1rem;
 		background-color: var(--focus-yellow);
 		position: absolute;
-	}
-
-	.list {
-		@apply mt-8 grid grid-cols-1 gap-8;
-	}
-
-	@container (min-width: 640px) {
-		.list {
-			@apply grid-cols-2;
-		}
-	}
-
-	@container (min-width: 1024px) {
-		.list {
-			@apply grid-cols-3;
-		}
 	}
 </style>

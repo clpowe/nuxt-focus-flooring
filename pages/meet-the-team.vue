@@ -203,7 +203,7 @@
 						:src="`/team_members/${curruntMember.image}`"
 						:alt="`A photo of ${curruntMember.firstName} ${curruntMember.lastName}`"
 						fit="cover"
-						height="300"
+						height="400"
 						width="358"
 						format="webp"
 						quality="90"
@@ -224,7 +224,7 @@
 
 		<div class="container">
 			<div class="parent">
-				<aside>
+				<aside class="bg-[#f3f4f6]">
 					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
 						<input type="radio" name="radio" v-model="category" :value="cat" />
 						<span class="chip">{{ cat }}</span>
