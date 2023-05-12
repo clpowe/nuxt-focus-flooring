@@ -188,20 +188,6 @@
 					</div>
 				</article>
 				<article>
-					<div class="container margin-bottom space-y-2">
-						<p>
-							At Focus Flooring, we see each one of our projects as an
-							opportunity to eliminate our clients’ risks through our processes.
-						</p>
-						<p>
-							When you join ur team you are becoming a part of something bigger
-							than us.
-						</p>
-						<p>
-							Our team, community, and impact becoming greater starts with you!
-						</p>
-						<p>Interested in joining us? We want to hear from you.</p>
-					</div>
 					<div v-if="success">
 						Thank you we will contact you soon
 						<button @click="handleReset">Reset</button>
@@ -214,7 +200,23 @@
 						<div>
 							<h2 class="margin-bottom">Join our team</h2>
 						</div>
-						<p>
+						<div class="margin-bottom space-y-2">
+							<p>
+								At Focus Flooring, we see each one of our projects as an
+								opportunity to eliminate our clients’ risks through our
+								processes.
+							</p>
+							<p>
+								When you join ur team you are becoming a part of something
+								bigger than us.
+							</p>
+							<p>
+								Our team, community, and impact becoming greater starts with
+								you!
+							</p>
+							<p>Interested in joining us? We want to hear from you.</p>
+						</div>
+						<p class="mb-8">
 							To reach us, simply fill out the form below, and we’ll be in
 							contact as soon as possible. Or, you can call us at any of our
 							locations.
@@ -223,49 +225,49 @@
 							<FormKit
 								type="form"
 								method="post"
+								:actions="false"
 								action="https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec"
 								@submit="handleSubmit"
 							>
-								<div class="grid grid-col-1 md:grid-cols-2 gap-4">
-									<FormKit
-										type="text"
-										name="firstName"
-										label="First Name"
-										help="Enter your first name"
-										placeholder="First Name"
-									/>
-									<FormKit
-										type="text"
-										name="lastName"
-										label="Last Name"
-										help="Enter your last name"
-										placeholder="Last Name"
-									/>
-								</div>
-								<div class="grid grid-col-1 md:grid-cols-2 gap-4">
-									<FormKit
-										type="email"
-										name="email"
-										validation="required"
-										label="Email Address"
-										help="Please enter your email address"
-										placeholder="Email address"
-									/>
-									<FormKit
-										type="tel"
-										name="phone"
-										validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-										:validation-messages="{
-											matches: 'Phone number must be in the format xxx-xxx-xxxx'
-										}"
-										validation-visibility="dirty"
-										label="Phone Number"
-										help="Please enter your phone Number"
-										placeholder="xxx-xxx-xxxx"
-									/>
-								</div>
+								<FormKit
+									type="text"
+									name="firstName"
+									label="First Name"
+									help="Enter your first name"
+									placeholder="First Name"
+								/>
+								<FormKit
+									type="text"
+									name="lastName"
+									label="Last Name"
+									help="Enter your last name"
+									placeholder="Last Name"
+								/>
+
+								<FormKit
+									type="email"
+									name="email"
+									validation="required"
+									label="Email Address"
+									help="Please enter your email address"
+									placeholder="Email address"
+								/>
+								<FormKit
+									type="tel"
+									name="phone"
+									validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+									:validation-messages="{
+										matches: 'Phone number must be in the format xxx-xxx-xxxx'
+									}"
+									validation-visibility="dirty"
+									label="Phone Number"
+									help="Please enter your phone Number"
+									placeholder="xxx-xxx-xxxx"
+								/>
+
 								<div class="grid grid-col-1 md:grid-cols-2 gap-4"></div>
 								<FormKit
+									class="w-full"
 									type="textarea"
 									name="howDidYouHear"
 									label="How did you hear about us?"
@@ -297,6 +299,7 @@
 									rows="10"
 									placeholder="Comments/Message"
 								/>
+								<button class="btn btn-accent">Submit</button>
 							</FormKit>
 						</ClientOnly>
 					</div>

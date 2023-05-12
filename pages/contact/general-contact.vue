@@ -57,6 +57,7 @@
 			<FormKit
 				type="form"
 				method="post"
+				:actions="false"
 				action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
 				@submit="handleSubmit"
 				class="form"
@@ -132,6 +133,7 @@
 						placeholder="Comments/Message"
 					/>
 				</div>
+				<button class="btn btn-accent">Submit</button>
 			</FormKit>
 		</ClientOnly>
 	</div>
