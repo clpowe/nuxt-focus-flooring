@@ -95,7 +95,7 @@
 				<Icon name="line-md:menu" size="1.25em" />
 			</button>
 			<nav
-				role="navigation"
+				role="menubar"
 				class="menubar-navigation list-none"
 				aria-label="primary"
 				ref="navigation"
@@ -108,17 +108,13 @@
 				>
 					<Icon name="line-md:close" size="1.25em" />
 				</button>
-				<li role="none">
-					<NuxtLink
-						prefetch
-						to="/"
-						role="menuitem"
-						exactActiveClass="nuxt-link-active"
+				<li role="menuitem">
+					<NuxtLink prefetch to="/" exactActiveClass="nuxt-link-active"
 						>Home</NuxtLink
 					>
 				</li>
 
-				<li role="none" class="dropdown" ref="menulink">
+				<li role="menuitem" class="dropdown" ref="menulink">
 					<button
 						ref="button"
 						type="button"
@@ -147,36 +143,33 @@
 						ref="submenu"
 						@click="() => (expanded = !expanded)"
 					>
-						<li role="none">
+						<li role="menuitem">
 							<NuxtLink
 								prefetch
 								to="/about-us"
-								role="menuitem"
 								exactActiveClass="nuxt-link-active"
 								>About Us</NuxtLink
 							>
 						</li>
 
-						<li role="none">
+						<li role="menuitem">
 							<NuxtLink
 								prefetch
 								to="/meet-the-team"
-								role="menuitem"
 								exactActiveClass="nuxt-link-active"
 								>Meet the team</NuxtLink
 							>
 						</li>
 
-						<li role="none">
+						<li role="menuitem">
 							<NuxtLink
 								prefetch
 								to="/culture-and-community"
-								role="menuitem"
 								exactActiveClass="nuxt-link-active"
 								>Culture and community</NuxtLink
 							>
 						</li>
-						<!-- <li role="none">
+						<!-- <li role="menuitem">
 							<NuxtLink
 								prefetch
 								to="/join-our-team"
@@ -187,39 +180,32 @@
 						</li> -->
 					</ul>
 				</li>
-				<li role="none">
+				<li role="menuitem">
 					<NuxtLink
 						prefetch
 						to="/our-history"
-						role="menuitem"
 						exactActiveClass="nuxt-link-active"
 						>Our History</NuxtLink
 					>
 				</li>
-				<li role="none">
+				<li role="menuitem">
 					<NuxtLink
 						prefetch
 						to="/our-process"
-						role="menuitem"
 						exactActiveClass="nuxt-link-active"
 						>Our Process</NuxtLink
 					>
 				</li>
 
-				<li role="none">
-					<NuxtLink
-						prefetch
-						to="/portfolio"
-						role="menuitem"
-						exactActiveClass="nuxt-link-active"
+				<li role="menuitem">
+					<NuxtLink prefetch to="/portfolio" exactActiveClass="nuxt-link-active"
 						>Portfolio</NuxtLink
 					>
 				</li>
-				<li role="none">
+				<li role="menuitem">
 					<NuxtLink
 						prefetch
 						to="/contact/general-contact"
-						role="menuitem"
 						exactActiveClass="nuxt-link-active"
 						ref="lastFocusableElement"
 						>Contact</NuxtLink

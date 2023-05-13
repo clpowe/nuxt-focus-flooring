@@ -63,7 +63,7 @@
 			list: ['Optimism', 'Always assume positive intent']
 		}
 	]
-	const threeUniqes = [
+	const threeUniques = [
 		{
 			id: 1,
 			component: 'h3',
@@ -96,7 +96,7 @@
 				<h2 class="margin-bottom">Three Uniques</h2>
 				<div class="mx-auto parent">
 					<Card
-						v-for="item in threeUniqes"
+						v-for="item in threeUniques"
 						:key="item.id"
 						:title="item.title"
 						:component="item.component"
@@ -128,13 +128,6 @@
 							<h3>{{ item.title }}</h3>
 							<p class="mt-2">{{ item.content }}</p>
 						</div>
-						<!-- <ul v-if="item.list" class="leading-tight mt-[var(--s-1)]">
-							<li v-for="item in item.list" class="stat">
-								<p class="stat-title">
-									{{ item }}
-								</p>
-							</li>
-						</ul> -->
 					</div>
 				</div>
 			</article>

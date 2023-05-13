@@ -161,7 +161,7 @@
 					<NuxtLink
 						prefetch
 						to="/our-history"
-						role="menuitem"
+						role="link"
 						exactActiveClass="nuxt-link-active"
 						class="btn btn-accent"
 						>Our History</NuxtLink
