@@ -162,10 +162,10 @@
 						<h2 class="margin-bottom">Culture</h2>
 						<p class="max-w-lg">
 							<strong
-								>Illuminate our industry with positivity, partnership, &
+								>Illuminating our industry with positivity, partnership, &
 								precision</strong
 							>
-							it starts within. We look to be the light to our team so that
+							starts within. We look to be the light to our team so that
 							together we can light up the industry.
 						</p>
 					</div>
