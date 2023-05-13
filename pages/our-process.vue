@@ -240,31 +240,32 @@
 							</p>
 							<ul class="space-y-6 mt-8 list-disc">
 								<li>
-									<p class="mt-1 text-sm">
-										Materials lead time report: Our internal reporting that
-										allows you to know the procurement status of all materials,
-										as well as when you can expect to receive your materials
-										based on the updated lead times and scheduled installation
-										dates.
+									<p class="mt-1">
+										<strong>Materials lead time report</strong> &mdash; Our
+										internal reporting that allows you to know the procurement
+										status of all materials, as well as when you can expect to
+										receive your materials based on the updated lead times and
+										scheduled installation dates.
 									</p>
 								</li>
 								<li>
-									<p class="mt-1 text-sm">
-										Mobilization Reporting - Material Handling & Sequencing: Our
-										team will take the project schedule and break out all of the
-										materials needed based on their installation date. This will
-										help our team both manage and sequence all deliveries, as
-										well as stage materials at the job site.
+									<p class="mt-1">
+										<strong>Mobilization Reporting</strong> &mdash; Material
+										Handling & Sequencing: Our team will take the project
+										schedule and break out all of the materials needed based on
+										their installation date. This will help our team both manage
+										and sequence all deliveries, as well as stage materials at
+										the job site.
 									</p>
 								</li>
 								<li>
-									<p class="mt-1 text-sm">Submittals</p>
+									<p class="mt-1">Submittals</p>
 								</li>
 								<li>
-									<p class="mt-1 text-sm">Project Staffing Planning</p>
+									<p class="mt-1">Project Staffing Planning</p>
 								</li>
 								<li>
-									<p class="mt-1 text-sm">Pre-Execution Analysis</p>
+									<p class="mt-1">Pre-Execution Analysis</p>
 								</li>
 							</ul>
 						</template>
