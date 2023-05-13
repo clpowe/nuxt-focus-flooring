@@ -34,7 +34,7 @@
 			firstName: 'Robert',
 			lastName: 'Melanson',
 			title: 'General Superintendent',
-			bio: 'Rob is a third generation flooring installer specializing in ceramic tile. Having 24 years experience in the flooring industry, Rob serves as Envision’s in-house quality control/quality assurance flooring specialist. Spending time with family, fishing and coaching his sons football team are a few of his hobbies.',
+			bio: 'Robert, a third generation flooring installer, serves as Focus Flooring’s General Superintendent with over 25 years of experience in the flooring industry. Robert has led various flooring teams, and has worked across numerous building types, such as educational facilities, healthcare, hospitality, worship centers and more. Spending time with family, fishing and coaching his sons football team are a few of Robert’s hobbies when he is not at work.',
 			category: 'Leadership'
 		},
 		{
@@ -43,7 +43,7 @@
 			firstName: 'McCarter',
 			lastName: 'Jackson',
 			title: 'Preconstruction Director',
-			bio: 'As Project Engineer, McCarter handles pre-planning and technical activities related to Envision projects. McCarter is a North Carolina native who is passionate about martial arts, enjoys spending time with his family, playing golf and officiating youth sports.',
+			bio: 'As Preconstruction Director, McCarter supports Focus Flooring’s preconstruction team to ensure all proposals are accurate and complete for delivery to the client. McCarter is a North Carolina native who is passionate about martial arts, enjoys spending time with his family, playing golf and officiating youth sports.',
 			category: 'Preconstruction'
 		},
 		{
@@ -52,7 +52,7 @@
 			firstName: 'Judith',
 			lastName: 'Henriquez',
 			title: 'Preconstruction Tech',
-			bio: 'As a Pre-Construction Tech, Judith utilizes her years of experience in construction to analyze plans and prepare bid proposals for Envision Flooring projects. In her spare time, Judith enjoys going to the beach, kayaking and spending time with my family. ',
+			bio: 'As a Preconstruction Tech, Judith utilizes her years of experience in construction to analyze plans and prepare bid proposals for Focus Flooring projects. In her spare time, Judith enjoys going to the beach, kayaking and spending time with her family.',
 			category: 'Preconstruction'
 		},
 		{
@@ -61,7 +61,7 @@
 			firstName: 'De Lani',
 			lastName: 'Rolle',
 			title: 'Marketing Coordinator',
-			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani is part of Envision’s C.O.L Team as Marketing Coordinator, and will assist with all marketing needs for Envision. While not working, De Lani enjoys spending time with her family and videography. ',
+			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani is serves as Marketing Coordinator on the Focus Flooring team, and assists with all marketing needs. While not working, De Lani enjoys spending time with her family and videography.',
 			category: 'Marketing & Sales'
 		},
 
@@ -71,7 +71,7 @@
 			firstName: 'Pamela',
 			lastName: 'Cooke',
 			title: 'Product Coordinator',
-			bio: ' Pamela coordinates within the varies teams to implement office procedures, record keeping and billing.  Pamela is a member of Revealing Truth Ministries in Tampa and enjoys going to the movies and watching the Bucs play.  She has two daughters and two grandchildren.',
+			bio: 'As Product Coordinator, Pamela is responsible for product procurement and submittals for our clients. Pamela is a member of Revealing Truth Ministries in Tampa and enjoys going to the movies and watching the Bucs. She has two daughters and two grandchildren.',
 			category: 'Project Planning'
 		},
 		{
@@ -108,7 +108,7 @@
 			firstName: 'Jose',
 			lastName: 'Santiago',
 			title: 'Skilled Tradesman',
-			bio: '',
+			bio: 'Santiago is a Skilled Tradesman with experience installing various flooring types and is passionate about what he does.<br/><br/>“Doing what I love never feels like I’m working. It is a great satisfaction to be a part of this elite team that has become like family.” - Santiago',
 			category: 'Field'
 		},
 		{
@@ -126,7 +126,7 @@
 			firstName: 'Diego',
 			lastName: 'Urcia',
 			title: 'Skilled Tradesman',
-			bio: '',
+			bio: 'As a Skilled Tradesman, Diego has 6 years of experience working with multiple flooring types. Diego is thankful to work with the team at Focus Flooring because for him, he has found a good working family-oriented environment.<br/><br/>“We are all team players. Working with this team has helped me to develop myself in both my professional and personal life.” - Diego',
 			category: 'Field'
 		},
 		{
@@ -135,7 +135,7 @@
 			firstName: 'Jose',
 			lastName: 'Garcia',
 			title: 'Warehouse Coordinator',
-			bio: '',
+			bio: 'With 6 years of experience in construction, Jose serves as the Focus Flooring Warehouse Coordinator and maintains the Focus Flooring warehouse and inventory. In his spare time, Jose enjoys traveling, discovering new places, food, and cultures, and spending time with his family.',
 			category: 'Field'
 		},
 		{
@@ -153,7 +153,7 @@
 			firstName: 'Elias',
 			lastName: 'Rivera',
 			title: 'Tradesman',
-			bio: '',
+			bio: 'As a Tradesman, Elias Rivera works with the Focus Flooring team to assist with tasks as needed on the field. While not at work, Elias enjoys jiu jitsu.',
 			category: 'Field'
 		},
 		{
@@ -162,7 +162,7 @@
 			firstName: 'Javier',
 			lastName: 'Arteaga',
 			title: 'Skilled Tradesman',
-			bio: '',
+			bio: 'As a Skilled Tradesman, Javier Arteaga has over 7 years of experience working with multiple flooring installation types. Javier enjoys working at Focus Flooring, where he plans to achieve goals and excel in his work. Javier loves the family culture at Focus Flooring as, to him, that is something very important in any job.',
 			category: 'Field'
 		}
 	])
