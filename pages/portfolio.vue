@@ -252,7 +252,7 @@
 			client: 'DPR',
 			scope:
 				'Floor tile, wall tile, static control VCT, sheet flooring, LVT, interlocking mats, carpet tile, tile base, rubber base, rubber flooring, heat weld, crack isolation, schluter, rubber transition',
-			image: '/Focus_Flooring_Projects/Citi_Tampa_Amenities.jpg',
+			image: '/Focus_Flooring_Projects/citi_amminities.jpg',
 			category: 'Commercial Office & Retail',
 			date: new Date('09/26/2022')
 		},

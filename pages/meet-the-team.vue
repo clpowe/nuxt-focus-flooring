@@ -61,7 +61,7 @@
 			firstName: 'De Lani',
 			lastName: 'Rolle',
 			title: 'Marketing Coordinator',
-			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani is serves as Marketing Coordinator on the Focus Flooring team, and assists with all marketing needs. While not working, De Lani enjoys spending time with her family and videography.',
+			bio: 'A graduate of the University of South Florida with a Bachelor of Arts in Communication, De Lani serves as Marketing Coordinator on the Focus Flooring team, and assists with all marketing needs. While not working, De Lani enjoys spending time with her family and videography.',
 			category: 'Marketing & Sales'
 		},
 

@@ -92,6 +92,7 @@
 				@keydown.enter="openDrawerTab"
 				@click="openDrawer"
 			>
+				Menu
 				<Icon name="line-md:menu" size="1.25em" />
 			</button>
 			<nav
