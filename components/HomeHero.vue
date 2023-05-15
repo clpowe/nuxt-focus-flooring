@@ -12,15 +12,16 @@
 				<h1>
 					<slot name="header" />
 				</h1>
-				<p class="text-[var(--focus-white)] text-xl max-w-md">
-					Cost Certainty | Real Time Schedule Management | “Zero Punch”
-					Philosophy
+				<p class="text-[var(--focus-white)] text-2xl max-w-md">
+					Advanced Solutions in Commercial Flooring & Wall Tile
 				</p>
 				<slot name="actions" />
 			</div>
 			<div class="dot"></div>
 		</div>
-		<div class="h-image"></div>
+		<div class="h-image">
+			<p></p>
+		</div>
 	</div>
 </template>
 

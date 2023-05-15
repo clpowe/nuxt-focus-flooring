@@ -62,77 +62,74 @@
 				@submit="handleSubmit"
 				class="form"
 			>
-				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
-					<FormKit
-						type="text"
-						name="firstName"
-						label="First Name"
-						help="Enter your first name"
-						placeholder="First Name"
-					/>
-					<FormKit
-						type="text"
-						name="lastName"
-						label="Last Name"
-						help="Enter your last name"
-						placeholder="Last Name"
-					/>
-					<FormKit
-						type="email"
-						name="email"
-						validation="required"
-						label="Email Address"
-						help="Please enter your email address"
-						placeholder="Email address"
-					/>
-					<FormKit
-						type="tel"
-						name="telephoneNumber"
-						validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-						:validation-messages="{
-							matches: 'Phone number must be in the format xxx-xxx-xxxx'
-						}"
-						validation-visibility="dirty"
-						label="Phone Number"
-						help="Please enter your phone number"
-						placeholder="xxx-xxx-xxxx"
-					/>
-				</div>
-				<div class="grid grid-col-1 md:grid-cols-2 gap-4">
-					<FormKit
-						type="text"
-						name="jobTitle"
-						validation="required"
-						label="Job Title"
-						help="Please enter your current job title"
-						placeholder="Job Title"
-					/>
-					<FormKit
-						type="text"
-						name="industry"
-						validation="required"
-						label="Industry"
-						help="What sector do you currently work in"
-						placeholder="Current Sector"
-					/>
-				</div>
-				<div class="grid grid-col-1 gap-4">
-					<FormKit
-						type="textarea"
-						name="hearAboutUs"
-						label="How did you hear about us?"
-						rows="5"
-						placeholder="How did you hear about us?"
-						class="max-w-none w-full"
-					/>
-					<FormKit
-						type="textarea"
-						name="commentMessage"
-						label="Comment / Message"
-						rows="10"
-						placeholder="Comments/Message"
-					/>
-				</div>
+				<FormKit
+					type="text"
+					name="firstName"
+					label="First Name"
+					help="Enter your first name"
+					placeholder="First Name"
+				/>
+				<FormKit
+					type="text"
+					name="lastName"
+					label="Last Name"
+					help="Enter your last name"
+					placeholder="Last Name"
+				/>
+				<FormKit
+					type="email"
+					name="email"
+					validation="required"
+					label="Email Address"
+					help="Please enter your email address"
+					placeholder="Email address"
+				/>
+				<FormKit
+					type="tel"
+					name="telephoneNumber"
+					validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
+					:validation-messages="{
+						matches: 'Phone number must be in the format xxx-xxx-xxxx'
+					}"
+					validation-visibility="dirty"
+					label="Phone Number"
+					help="Please enter your phone number"
+					placeholder="xxx-xxx-xxxx"
+				/>
+
+				<FormKit
+					type="text"
+					name="jobTitle"
+					validation="required"
+					label="Job Title"
+					help="Please enter your current job title"
+					placeholder="Job Title"
+				/>
+				<FormKit
+					type="text"
+					name="industry"
+					validation="required"
+					label="Industry"
+					help="What sector do you currently work in"
+					placeholder="Current Sector"
+				/>
+
+				<FormKit
+					type="textarea"
+					name="hearAboutUs"
+					label="How did you hear about us?"
+					rows="5"
+					placeholder="How did you hear about us?"
+					class="max-w-none w-full"
+				/>
+				<FormKit
+					type="textarea"
+					name="commentMessage"
+					label="Comment / Message"
+					rows="10"
+					placeholder="Comments/Message"
+				/>
+
 				<button class="btn btn-accent">Submit</button>
 			</FormKit>
 		</ClientOnly>
