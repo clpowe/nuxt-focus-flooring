@@ -28,7 +28,7 @@
 			}
 		} catch (e) {
 			fail.value = true
-			console.error(e)
+			//console.error(e)
 		}
 	}
 

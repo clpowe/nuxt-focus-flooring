@@ -123,7 +123,7 @@
 						aria-controls="id_about_menu"
 						aria-label="More About pages"
 						@click="handleClick"
-						class="flex items-center uppercase gap-1"
+						class="flex items-center normal-case md:uppercase gap-1"
 					>
 						About
 						<svg
@@ -165,9 +165,9 @@
 						<li role="menuitem">
 							<NuxtLink
 								prefetch
-								to="/culture-and-community"
+								to="/join-our-team"
 								exactActiveClass="nuxt-link-active"
-								>Culture and community</NuxtLink
+								>Join our team</NuxtLink
 							>
 						</li>
 						<!-- <li role="menuitem">
@@ -264,14 +264,16 @@
 	}
 
 	.sub-menu {
+		display: grid;
 		position: static;
 		background: var(--midnight);
-		width: 10rem;
+		width: 12rem;
 		padding: 1rem;
 		gap: 0.5rem;
 	}
 	.sub-menu > li {
 		flex: content;
+		gap: 1rem;
 	}
 
 	@media (min-width: 801px) {

@@ -98,7 +98,7 @@
 		})
 	}
 	function goto(event) {
-		console.log(event)
+		//console.log(event)
 	}
 </script>
 <template>
