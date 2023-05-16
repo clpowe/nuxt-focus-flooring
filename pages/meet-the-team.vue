@@ -140,11 +140,11 @@
 		},
 		{
 			id: 14,
-			image: 'placeholder',
+			image: '/Ardail.png',
 			firstName: 'Ardail',
 			lastName: 'Allen',
 			title: 'Preconstruction Tech',
-			bio: '',
+			bio: 'As a Preconstruction Tech on Focus Flooring’s Orange Team, Ardail will analyze plans and prepare bid proposals to ensure bidding success. While not working, Ardail enjoys making clothes, creating music, and creating new memories with his wife and son.',
 			category: 'Field'
 		},
 		{

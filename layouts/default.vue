@@ -26,13 +26,13 @@
 		defineLocalBusiness({
 			name: 'Focus Flooring',
 			address: {
-				streetAddress: '123 Main St',
-				addressLocality: 'Harlan',
-				addressRegion: 'MA',
-				postalCode: '01234',
+				streetAddress: '5000 Acline Drive East, Suite B',
+				addressLocality: 'Tampa',
+				addressRegion: 'FL',
+				postalCode: '33619',
 				addressCountry: 'US'
 			},
-			image: 'https://emojiguide.org/images/emoji/n/3ep4zx1jztp0n.png'
+			image: ''
 		}),
 		defineWebSite({
 			name: 'Focus Flooring'
