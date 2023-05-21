@@ -136,7 +136,7 @@
 			lastName: 'Garcia',
 			title: 'Warehouse Coordinator',
 			bio: 'With 6 years of experience in construction, Jose serves as the Focus Flooring Warehouse Coordinator and maintains the Focus Flooring warehouse and inventory. In his spare time, Jose enjoys traveling, discovering new places, food, and cultures, and spending time with his family.',
-			category: 'Field'
+			category: 'Project Planning'
 		},
 		{
 			id: 14,
@@ -145,7 +145,7 @@
 			lastName: 'Allen',
 			title: 'Preconstruction Tech',
 			bio: 'As a Preconstruction Tech on Focus Flooring’s Orange Team, Ardail will analyze plans and prepare bid proposals to ensure bidding success. While not working, Ardail enjoys making clothes, creating music, and creating new memories with his wife and son.',
-			category: 'Field'
+			category: 'Preconstruction'
 		},
 		{
 			id: 15,

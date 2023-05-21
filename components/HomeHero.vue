@@ -6,15 +6,18 @@
 
 <template>
 	<div class="bg-[var(--midnight)]">
-		<div class="hero container grid grid-cols-1 md:grid-cols-2 -row-start-1">
-			<div class="content col-start-1">
-				<div class="space-y-4">
+		<div class="hero container grid grid-cols-1 md:grid-cols-3 -row-start-1">
+			<div class="content col-start-1 col-span-1 md:col-span-2">
+				<div class="space-y-4 w-full">
 					<h1>
 						<slot name="header" />
 					</h1>
-					<p class="text-[var(--focus-white)] text-xl max-w-md">
+					<p class="text-[var(--focus-white)] text-xl">
 						Cost Certainty | Real Time Schedule Management | “Zero Punch”
 						Philosophy
+					</p>
+					<p class="text-white z-10 max-w-md">
+						Advanced Solutions in Commercial Flooring & Wall Tile
 					</p>
 					<slot name="actions" />
 				</div>
@@ -23,16 +26,13 @@
 			<div
 				class="w-full h-full relative hidden md:grid place-content-center col-start-1 -row-start-1 p-4 text-xl"
 			>
-				<p class="text-white z-10 max-w-sm text-center">
-					Advanced Solutions in Commercial Flooring & Wall Tile
-				</p>
-				<nuxt-img
+				<!-- <nuxt-img
 					provider="imagekit"
 					src="HomeHero.jpg"
 					fit="cover"
 					format="webp"
 					class="absolute object-cover h-full w-full top-0 h-image"
-				/>
+				/> -->
 			</div>
 		</div>
 	</div>

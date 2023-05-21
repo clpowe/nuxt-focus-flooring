@@ -40,6 +40,18 @@
 								>Get Directions</a
 							>
 						</div>
+						<div>
+							<h3 class="text-base mb-4">Tour Our New Office Space</h3>
+							<nuxt-img
+								provider="imagekit"
+								src="Focus_Flooring.png"
+								alt=""
+								fit="contain"
+								quality="90"
+								height="200"
+								format="webp"
+							/>
+						</div>
 					</div>
 				</div>
 
