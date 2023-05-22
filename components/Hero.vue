@@ -1,6 +1,10 @@
 <script setup>
 	defineProps({
-		title: String
+		title: String,
+		img: {
+			type: String,
+			default: 'aviation.jpeg'
+		}
 	})
 </script>
 
@@ -17,7 +21,7 @@
 			fit="exact"
 			provider="imagekit"
 			quality="90"
-			src="aviation.jpeg"
+			:src="img"
 			class="w-full absolute h-full object-cover image"
 		/>
 	</div>

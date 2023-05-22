@@ -6,7 +6,7 @@
 
 <template>
 	<div>
-		<Hero>Contact</Hero>
+		<Hero img="IMG_4743.jpg">Contact</Hero>
 
 		<div class="container">
 			<Sidebar>

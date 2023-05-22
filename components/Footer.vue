@@ -63,11 +63,11 @@
 								<NuxtLink prefetch to="/meet-the-team">Meet the team</NuxtLink>
 							</li>
 
-							<li>
+							<!-- <li>
 								<NuxtLink prefetch to="/culture-and-community"
 									>Culture and Community</NuxtLink
 								>
-							</li>
+							</li> -->
 
 							<li>
 								<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
