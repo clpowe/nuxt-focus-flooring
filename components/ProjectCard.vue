@@ -49,7 +49,9 @@
 				<h3>{{ name }}</h3>
 				<p class="text-sm">As Envision Flooring</p>
 			</div>
-			<p>Size: {{ size }}</p>
+			<p>
+				Size: <span class="uppercase">{{ size }}</span>
+			</p>
 			<p>Client: {{ client }}</p>
 			<p>Scope: {{ scope }}</p>
 		</div>

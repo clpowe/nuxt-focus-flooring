@@ -1,7 +1,7 @@
 <script setup>
 	import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper'
 	useHead({
-		title: 'Focus Flooring - Culture and Community'
+		title: 'Focus Flooring - Join our team'
 	})
 
 	import 'swiper/css/navigation'

@@ -79,7 +79,7 @@
 			image: '/Sarita_Ramos.png',
 			firstName: 'Sarita',
 			lastName: 'Ramos',
-			title: 'Assistant Superintendent',
+			title: 'Superintendent',
 			bio: 'Sarita coordinates with the field and office personnel to effectively communicate the progress of the project’s production, change events, constraints, quality and all necessary reporting. Sarita is originally from St. Croix, U.S Virgin Islands, and in her spare time, enjoys spending time with her family at the beach, fishing, horseback riding, car racing and completing DIY projects.',
 			category: 'Field Management'
 		},
