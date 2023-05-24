@@ -108,7 +108,9 @@
 <template>
 	<div>
 		<Hero>Our <span>history</span> </Hero>
-		<div></div>
+		<div class="container mb-8">
+			<YouTube />
+		</div>
 		<main id="main" class="max-w-2xl mx-auto flex overflow-x-hidden">
 			<div class="progress-bar"></div>
 			<div class="space-y-20">
