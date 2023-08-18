@@ -46,17 +46,9 @@
 			bio: 'As Preconstruction Director, McCarter supports Focus Flooring’s preconstruction team to ensure all proposals are accurate and complete for delivery to the client. McCarter is a North Carolina native who is passionate about martial arts, enjoys spending time with his family, playing golf and officiating youth sports.',
 			category: 'Preconstruction'
 		},
+
 		{
 			id: 4,
-			image: '/Judith_Henriquez.png',
-			firstName: 'Judith',
-			lastName: 'Henriquez',
-			title: 'Preconstruction Tech',
-			bio: 'As a Preconstruction Tech, Judith utilizes her years of experience in construction to analyze plans and prepare bid proposals for Focus Flooring projects. In her spare time, Judith enjoys going to the beach, kayaking and spending time with her family.',
-			category: 'Preconstruction'
-		},
-		{
-			id: 5,
 			image: '/De_Lani_Rolle.png',
 			firstName: 'De Lani',
 			lastName: 'Rolle',
@@ -66,7 +58,7 @@
 		},
 
 		{
-			id: 6,
+			id: 5,
 			image: '/Pamela_Cooke.png',
 			firstName: 'Pamela',
 			lastName: 'Cooke',
@@ -75,7 +67,7 @@
 			category: 'Project Planning'
 		},
 		{
-			id: 7,
+			id: 6,
 			image: '/Sarita_Ramos.png',
 			firstName: 'Sarita',
 			lastName: 'Ramos',
@@ -85,7 +77,7 @@
 		},
 
 		{
-			id: 8,
+			id: 7,
 			image: '/Char_Goyens.png',
 			firstName: 'Charlayne',
 			lastName: 'Goyens',
@@ -94,7 +86,7 @@
 			category: 'Admin'
 		},
 		{
-			id: 9,
+			id: 8,
 			image: '/Andres_Ramos_III.png',
 			firstName: 'Andres',
 			lastName: 'Ramos III',
@@ -103,7 +95,7 @@
 			category: 'Field'
 		},
 		{
-			id: 10,
+			id: 9,
 			image: '/Jose_Santiago.png',
 			firstName: 'Jose',
 			lastName: 'Santiago',
@@ -112,7 +104,7 @@
 			category: 'Field'
 		},
 		{
-			id: 11,
+			id: 10,
 			image: '/Javier_Gonzalez.png',
 			firstName: 'Javier',
 			lastName: 'Gonzalez',
@@ -121,7 +113,7 @@
 			category: 'Field'
 		},
 		{
-			id: 12,
+			id: 11,
 			image: '/Diego_Urcia.png',
 			firstName: 'Diego',
 			lastName: 'Urcia',
@@ -130,7 +122,7 @@
 			category: 'Field'
 		},
 		{
-			id: 13,
+			id: 12,
 			image: '/Jose_Garcia.png',
 			firstName: 'Jose',
 			lastName: 'Garcia',
@@ -138,17 +130,9 @@
 			bio: 'With 6 years of experience in construction, Jose serves as the Focus Flooring Warehouse Coordinator and maintains the Focus Flooring warehouse and inventory. In his spare time, Jose enjoys traveling, discovering new places, food, and cultures, and spending time with his family.',
 			category: 'Project Planning'
 		},
+
 		{
-			id: 14,
-			image: '/Ardail.png',
-			firstName: 'Ardail',
-			lastName: 'Allen',
-			title: 'Preconstruction Tech',
-			bio: 'As a Preconstruction Tech on Focus Flooring’s Orange Team, Ardail will analyze plans and prepare bid proposals to ensure bidding success. While not working, Ardail enjoys making clothes, creating music, and creating new memories with his wife and son.',
-			category: 'Preconstruction'
-		},
-		{
-			id: 15,
+			id: 13,
 			image: '/Elias_Rivera.png',
 			firstName: 'Elias',
 			lastName: 'Rivera',
@@ -157,7 +141,7 @@
 			category: 'Field'
 		},
 		{
-			id: 16,
+			id: 14,
 			image: '/Javier_Arteaga.png',
 			firstName: 'Javier',
 			lastName: 'Arteaga',
@@ -214,7 +198,7 @@
 						</p>
 						<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
 					</div>
-					<div class="overflow-auto">
+					<div class="overflow-auto" v-if="curruntMember.bio">
 						<p class="font-bold uppercase">Bio</p>
 						<p v-html="curruntMember.bio"></p>
 					</div>
