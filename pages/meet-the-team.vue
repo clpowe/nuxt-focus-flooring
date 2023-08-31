@@ -148,6 +148,33 @@
 			title: 'Skilled Tradesman',
 			bio: 'As a Skilled Tradesman, Javier Arteaga has over 7 years of experience working with multiple flooring installation types. Javier enjoys working at Focus Flooring, where he plans to achieve goals and excel in his work. Javier loves the family culture at Focus Flooring as, to him, that is something very important in any job.',
 			category: 'Field'
+		},
+		{
+			id: 15,
+			image: '/Rosalind_Jones.png',
+			firstName: 'Rosalind',
+			lastName: 'Jones',
+			title: 'Field Tech',
+			bio: 'Rosalind Jones will utilize her years of experience and expert attention to detail to serve as a Field Tech on the Focus Flooring field team. She will be responsible for reviewing and capturing all completed flooring work via photos, going over the pre-task plan of the day with the team, attending meetings, preparing daily reports, and checking inventory. In her spare time, Rosalind enjoys spending time with family and friends, serving the homeless, and bowling.',
+			category: 'Field'
+		},
+		{
+			id: 16,
+			image: '/ChileneHenri.png',
+			firstName: 'Chilene',
+			lastName: 'Henri',
+			title: 'Field Tech',
+			bio: 'With over 18 years of experience in management, Chilene Henri is a Field Tech on the Focus Flooring field team. She will be responsible for reviewing and capturing all completed flooring work via photos, going over the pre-task plan of the day with the team, attending meetings, preparing daily reports, and checking inventory. While not at work, Chilene enjoys listening to music, spending time with her family, watching movies, and learning new languages.',
+			category: 'Field'
+		},
+		{
+			id: 17,
+			image: '/JohnnieCollins.png',
+			firstName: 'Johnnie',
+			lastName: 'Collins',
+			title: 'Project Manager',
+			bio: 'With his years of experience in Estimating and Project Management, Johnnie Collins serves as Project Manager for the Focus Flooring team. Johnnie will be responsible for validating scopes of work, tracking project changes, maintaining customer communications and project schedules, conducting site visits, maintaining and updating project management tools, and providing estimates and budgets. In his free time, Johnnie enjoys teaching robotics, fishing, and gardening.',
+			category: 'Project Planning'
 		}
 	])
 

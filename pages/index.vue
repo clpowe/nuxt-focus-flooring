@@ -194,11 +194,11 @@
 		</section>
 
 		<section class="container">
-			<Sectores />
+			<LazySectores />
 		</section>
 
 		<section>
-			<How />
+			<LazyHow />
 		</section>
 	</main>
 </template>
