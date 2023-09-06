@@ -6,7 +6,8 @@
 		lastName: String,
 		title: String,
 		bio: String,
-		group: String
+		group: String,
+		spaner: Boolean
 	})
 </script>
 
@@ -30,7 +31,10 @@
 </template>
 
 <style>
-	.teamMember {
+	.full {
+		grid-column: 1/-1;
+	}
+	/* .teamMember {
 		width: 100;
 	}
 
@@ -44,5 +48,5 @@
 		.teamMember {
 			width: 29%;
 		}
-	}
+	} */
 </style>

@@ -35,7 +35,8 @@
 		"motion": "^10.15.5",
 		"nuxt-swiper": "^1.1.0",
 		"postcss-preset-env": "^7.8.3",
-		"vue-lite-youtube-embed": "^1.2.0"
+		"vue-lite-youtube-embed": "^1.2.0",
+		"vue-multiselect": "3.0.0-beta.2"
 	},
 	"browserslist": [
 		">0.3%",

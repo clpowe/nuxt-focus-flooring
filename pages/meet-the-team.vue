@@ -1,4 +1,5 @@
 <script setup lang="ts">
+	import VueMultiselect from 'vue-multiselect'
 	useHead({
 		title: 'Focus Flooring - Meet the team'
 	})
@@ -234,6 +235,16 @@
 		</Drawer>
 
 		<div class="container">
+			<div class="form-control w-full max-w-xs mb-8">
+				<select
+					class="select w-full select-bordered max-w-xs"
+					v-model="category"
+				>
+					<option v-for="cat in catagories" :value="cat">
+						{{ cat }}
+					</option>
+				</select>
+			</div>
 			<div class="">
 				<!-- <aside class="bg-[#f3f4f6]">
 					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
@@ -243,7 +254,7 @@
 				</aside> -->
 				<main id="main">
 					<h2 class="margin-bottom">{{ category }}</h2>
-					<div class="flex flex-wrap gap-5 relative team-container">
+					<div class="team-container">
 						<TeamMember
 							v-for="(member, index) in filtered"
 							:key="member.id"
@@ -307,9 +318,22 @@
 	.list-leave-active {
 		position: absolute;
 	}
+
 	.team-container {
-		container-type: inline-size;
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
 	}
+
+	@media (min-width: 741px) {
+		.team-container {
+			display: grid;
+			gap: 1rem;
+			grid-auto-flow: dense;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		}
+	}
+
 	.chip {
 		background-color: var(--grey-2);
 		color: var(--midnight);
