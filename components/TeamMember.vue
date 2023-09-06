@@ -16,12 +16,13 @@
 			provider="imagekit"
 			:src="`/team_members/${image}`"
 			alt=""
-			fit="contain"
+			fit="cover"
 			quality="90"
-			height="400"
+			height="350"
 			width="300"
 			loading="lazy"
 			format="webp"
+			class="object-cover"
 		/>
 		<p class="font-bold text-lg mt-2">{{ firstName }} {{ lastName }}</p>
 		<p class="text-sm">{{ title }}</p>
