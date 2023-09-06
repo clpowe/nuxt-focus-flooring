@@ -234,13 +234,13 @@
 		</Drawer>
 
 		<div class="container">
-			<div class="parent">
-				<aside class="bg-[#f3f4f6]">
+			<div class="">
+				<!-- <aside class="bg-[#f3f4f6]">
 					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
 						<input type="radio" name="radio" v-model="category" :value="cat" />
 						<span class="chip">{{ cat }}</span>
 					</label>
-				</aside>
+				</aside> -->
 				<main id="main">
 					<h2 class="margin-bottom">{{ category }}</h2>
 					<div class="flex flex-wrap gap-5 relative team-container">
