@@ -17,7 +17,7 @@
 		category: string
 	}
 
-	const curruntMember = ref<TeamMember | null>(null)
+	const curruntMember = ref<Number | null>(null)
 
 	const team = ref<TeamMember[]>([
 		{
@@ -195,19 +195,23 @@
 	})
 
 	const handleClick = (index: number) => {
-		curruntMember.value = team.value[index - 1]
-		drawerVisible.value = true
+		if (curruntMember.value == index) {
+			curruntMember.value = null
+		} else {
+			curruntMember.value = index
+		}
+		// drawerVisible.value = true
 	}
 
-	function closeDrawer() {
-		drawerVisible.value = false
+	function handleClose() {
+		curruntMember.value = null
 	}
 </script>
 
 <template>
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
-		<Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
+		<!-- <Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
 			<div v-if="curruntMember" class="">
 				<div class="space-y-[var(--s1)] overflow-auto">
 					<nuxt-img
@@ -232,7 +236,7 @@
 					</div>
 				</div>
 			</div>
-		</Drawer>
+		</Drawer> -->
 
 		<div class="container">
 			<div class="form-control w-full max-w-xs mb-8">
@@ -245,6 +249,7 @@
 					</option>
 				</select>
 			</div>
+
 			<div class="">
 				<!-- <aside class="bg-[#f3f4f6]">
 					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
@@ -259,8 +264,10 @@
 							v-for="(member, index) in filtered"
 							:key="member.id"
 							:data-index="index"
+							:selected="curruntMember"
 							v-bind="member"
 							@click="handleClick(member.id)"
+							@close="handleClose"
 						/>
 					</div>
 				</main>
@@ -323,6 +330,7 @@
 		display: grid;
 		gap: 1rem;
 		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: dense;
 	}
 
 	@media (min-width: 741px) {

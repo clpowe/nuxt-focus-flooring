@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	defineProps({
+	const props = defineProps({
 		id: Number,
 		image: String,
 		firstName: String,
@@ -7,46 +7,80 @@
 		title: String,
 		bio: String,
 		group: String,
-		spaner: Boolean
+		spaner: Boolean,
+		selected: Number
 	})
+
+	let show = computed(() => props.selected === props.id)
 </script>
 
 <template>
-	<div class="teamMember">
-		<nuxt-img
-			provider="imagekit"
-			:src="`/team_members/${image}`"
-			alt=""
-			fit="cover"
-			quality="90"
-			height="350"
-			width="300"
-			loading="lazy"
-			format="webp"
-			class="object-cover"
-		/>
-		<p class="font-bold text-lg mt-2">{{ firstName }} {{ lastName }}</p>
-		<p class="text-sm">{{ title }}</p>
+	<div v-bind="$attrs" class="card shadow-xl text-left">
+		<figure>
+			<nuxt-img
+				provider="imagekit"
+				:src="`/team_members/${image}`"
+				loading="lazy"
+				format="webp"
+				:alt="`${firstName} ${lastName}`"
+			/>
+		</figure>
+		<div class="card-body">
+			<div>
+				<h3 class="">{{ firstName }} {{ lastName }}</h3>
+				<p class="text-sm">{{ title }}</p>
+			</div>
+			<div v-if="bio" class="card-actions justify-center mt-2">
+				<button
+					@click="$emit('open')"
+					class="btn btn-primary text-[var(--focus-white)] btn-xs w-full"
+				>
+					Learn More
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div
+		v-if="show && bio"
+		class="card sm:card-side bg-neutral-100 shadow-xl text-[var(-midnight)] col-span-full"
+	>
+		<div class="card-body">
+			<div class="card-actions justify-end">
+				<button
+					tabindex="0"
+					class="btn btn-xs self-end btn-primary text-[var(--focus-white)]"
+					@click="$emit('close')"
+				>
+					close
+				</button>
+			</div>
+			<div class="max-w-[65ch] mx-auto">
+				<h4 class="mb-4">Bio</h4>
+				<div class="bio-section">
+					<p class="bio text-sm prose" v-html="bio"></p>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 
 <style>
-	.full {
-		grid-column: 1/-1;
+	.bio {
+		column-fill: auto;
 	}
-	/* .teamMember {
-		width: 100;
-	}
-
-	@container (min-width: 400px) {
-		.teamMember {
-			width: 45%;
-		}
+	.slide-up-enter-active,
+	.slide-up-leave-active {
+		transition: all 0.25s ease-out;
 	}
 
-	@container (min-width: 600px) {
-		.teamMember {
-			width: 29%;
-		}
-	} */
+	.slide-up-enter-from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+
+	.slide-up-leave-to {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
 </style>
