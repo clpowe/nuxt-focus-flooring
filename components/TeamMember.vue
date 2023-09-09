@@ -25,12 +25,12 @@
 				:alt="`${firstName} ${lastName}`"
 			/>
 		</figure>
-		<div class="card-body">
+		<div class="card-body justify-between">
 			<div>
 				<h3 class="">{{ firstName }} {{ lastName }}</h3>
 				<p class="text-sm">{{ title }}</p>
 			</div>
-			<div v-if="bio" class="card-actions justify-center mt-2">
+			<div v-if="bio" class="card-actions mt-2 justify-between">
 				<button
 					@click="$emit('open')"
 					class="btn btn-primary text-[var(--focus-white)] btn-xs w-full"
