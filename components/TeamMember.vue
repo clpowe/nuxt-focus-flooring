@@ -43,7 +43,7 @@
 
 	<div
 		v-if="show && bio"
-		class="card sm:card-side bg-neutral-100 shadow-xl text-[var(-midnight)] col-span-full"
+		class="card sm:card-side shadow-xl text-[var(-midnight)] col-span-full relative overflow-hidden"
 	>
 		<div class="card-body">
 			<div class="card-actions justify-end">
@@ -56,9 +56,18 @@
 				</button>
 			</div>
 			<div class="max-w-[65ch] mx-auto">
-				<h4 class="mb-4">Bio</h4>
-				<div class="bio-section">
-					<p class="bio text-sm prose" v-html="bio"></p>
+				<div
+					class="mb-4 text-[clamp(3rem,9vw,5rem)] font-black uppercase leading-[.9em]"
+				>
+					{{ firstName }}<br />
+					{{ lastName }}
+				</div>
+
+				<div class="">
+					<h4 class="mb-4 font-bold text-xl">Bio</h4>
+					<div class="bio-section">
+						<p class="bio text-sm prose" v-html="bio"></p>
+					</div>
 				</div>
 			</div>
 		</div>
