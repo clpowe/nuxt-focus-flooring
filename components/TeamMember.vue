@@ -22,6 +22,7 @@
 				:src="`/team_members/${image}`"
 				loading="lazy"
 				format="webp"
+				width="479"
 				:alt="`${firstName} ${lastName}`"
 			/>
 		</figure>
