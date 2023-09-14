@@ -511,25 +511,41 @@
 <template>
 	<div>
 		<Hero>Portfolio</Hero>
+		<div
+			class="sticky top-0 form-control w-full bg-[#f3f4f6] mb-8 py-4 z-10 shadow-xl"
+		>
+			<div class="container mx-auto">
+				<select
+					class="select w-full select-bordered max-w-xs"
+					v-model="category"
+				>
+					<option v-for="cat in catagories" :value="cat">
+						{{ cat }}
+					</option>
+				</select>
+			</div>
+		</div>
 		<div class="container">
-			<Sidebar>
-				<div>
+			<!-- <Sidebar> -->
+			<!-- <div>
 					<label class="sq-radio" v-for="cat in catagories">
 						{{ cat }}
 						<input type="radio" name="radio" v-model="category" :value="cat" />
 						<span class="checkmark"></span>
 					</label>
-				</div>
+				</div> -->
 
-				<main id="main">
-					<h2 class="margin-bottom">
-						{{ category === 'All' ? 'All Projects' : category }}
-					</h2>
-					<div class="projects space-y-20">
-						<ProjectCard v-for="item in filteredProjects" v-bind="item" />
-					</div>
-				</main>
-			</Sidebar>
+			<main id="main">
+				<h2 class="margin-bottom">
+					{{ category === 'All' ? 'All Projects' : category }}
+				</h2>
+				<div
+					class="projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+				>
+					<ProjectCard v-for="item in filteredProjects" v-bind="item" />
+				</div>
+			</main>
+			<!-- </Sidebar> -->
 		</div>
 	</div>
 </template>
