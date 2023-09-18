@@ -23,6 +23,7 @@
 				loading="lazy"
 				format="webp"
 				width="479"
+				sizes="50vw md:400px"
 				:alt="`${firstName} ${lastName}`"
 			/>
 		</figure>

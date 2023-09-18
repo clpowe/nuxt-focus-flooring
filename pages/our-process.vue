@@ -2,14 +2,34 @@
 	useHead({
 		title: 'Focus Flooring - Our Process'
 	})
+	const route = useRoute()
+	const router = useRouter()
+	import { useElementVisibility } from '@vueuse/core'
+
+	const sec1 = ref()
+	const sec2 = ref()
+	const sec3 = ref()
+
+	const sec1visable = useElementVisibility(sec1)
+	const sec2visable = useElementVisibility(sec2)
+	const sec3visable = useElementVisibility(sec3)
+
+	const { stop } = useIntersectionObserver(
+		sec1,
+		([{ isIntersecting }], observerElement) => {}
+	)
+
+	// watch(sec1visable, () => router.replace('/our-process#preconstruction'))
+
+	const hash = computed(() => route.hash)
 
 	const main = ref()
 
-	const sections = [
-		{ text: 'Preconstruction', id: 'preconstruction' },
-		{ text: 'Project Planning', id: 'project-planning' },
-		{ text: 'Project Execution', id: 'project-execution' }
-	]
+	const sections = ref([
+		{ text: 'Preconstruction', id: 'preconstruction', visable: sec1visable },
+		{ text: 'Project Planning', id: 'project-planning', visable: sec2visable },
+		{ text: 'Project Execution', id: 'project-execution', visable: sec3visable }
+	])
 
 	const preconstruction = [
 		{
@@ -155,9 +175,27 @@
 <template>
 	<div>
 		<Hero>Our <span>Process</span> </Hero>
+		<div
+			class="sticky top-0 form-control w-full bg-[#f3f4f6] mb-8 py-4 z-10 shadow-xl"
+		>
+			<div class="container mx-auto">
+				<nav>
+					<ul class="flex justify-center flex-col sm:flex-row gap-2 md:gap-4">
+						<li v-for="link in sections">
+							<a
+								:href="`#${link.id}`"
+								class="uppercase font-bold"
+								:class="{ active: link.visable }"
+								>{{ link.text }}</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 		<div class="container relative">
-			<Sidebar>
-				<aside class="relative menu">
+			<!-- <Sidebar> -->
+			<!-- <aside class="relative menu">
 					<nav class="sticky top-12">
 						<ol
 							class="static min-[742px]:sticky top-4 uppercase font-bold list-none menu-list list-outside"
@@ -173,160 +211,156 @@
 							</template>
 						</ol>
 					</nav>
-				</aside>
-				<main id="main" class="main" ref="main">
-					<Split id="preconstruction">
-						<template v-slot:image>
-							<nuxt-img
-								src="ourProcess.jpg"
-								alt="A man and a woman looking at blueprints"
-								sizes="sm:100vw md:700px lg:700px"
-								format="webp"
-								class="absolute inset-0 h-full w-full object-cover"
-							/>
-						</template>
-						<template v-slot:content>
-							<div class="space-y-10">
-								<div>
-									<h2 class="mb-4" data-section="preconstruction">
-										Pre&shyconstruction
-									</h2>
-									<p class="">
-										Our team will become familiar with the project documents to
-										ensure our scope is fully captured. We will then partner
-										with you to ensure you stay within your budget throughout
-										all pricing efforts and obtain cost certainty for your
-										project.
-									</p>
-								</div>
-								<Content>
-									<template v-for="item in preconstruction" :key="item.id">
-										<article class="card">
-											<div>
-												<svg-icon :name="item.svg" class="h-14" />
-											</div>
-											<div>
-												<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
-												<p class="">{{ item.content }}</p>
-											</div>
-										</article>
-									</template>
-								</Content>
-							</div>
-						</template>
-					</Split>
+				</aside> -->
 
-					<Split id="project-planning">
-						<template v-slot:image>
-							<nuxt-img
-								src="threeUniquesSupporting.jpg"
-								alt="Woman working in a warehouse"
-								fit="cover"
-								sizes="sm:100vw md:700px lg:700px"
-								format="webp"
-								class="absolute inset-0 h-full w-full object-cover object-top"
-							/>
-						</template>
-						<template v-slot:content>
-							<h2 data-section="project-planning" class="mb-4">
-								Project Planning
+			<main id="main" class="main max-w-[75ch] mx-auto" ref="main">
+				<article id="preconstruction" ref="sec1">
+					<nuxt-img
+						src="ourProcess.jpg"
+						alt="A man and a woman looking at blueprints"
+						sizes="sm:100vw md:700px lg:700px"
+						format="webp"
+						class="inset-0 h-full w-full object-cover"
+					/>
+
+					<div class="space-y-10 mt-6">
+						<div>
+							<h2 class="mb-4" data-section="preconstruction">
+								Pre&shyconstruction
 							</h2>
 							<p class="">
-								Our internal project planning systems and tools allow us to
-								alleviate the risk of material price escalations through
-								tracking all products “good-through” pricing dates, lead time
-								tracking, establish early procurement, create material storage
-								plans, and achieve on-time scheduling.
+								Our team will become familiar with the project documents to
+								ensure our scope is fully captured. We will then partner with
+								you to ensure you stay within your budget throughout all pricing
+								efforts and obtain cost certainty for your project.
 							</p>
-							<ul class="space-y-6 mt-8 list-disc">
-								<li>
-									<p class="mt-1">
-										<strong>Materials lead time report</strong> &mdash; Our
-										internal reporting that allows you to know the procurement
-										status of all materials, as well as when you can expect to
-										receive your materials based on the updated lead times and
-										scheduled installation dates.
-									</p>
-								</li>
-								<li>
-									<p class="mt-1">
-										<strong>Mobilization Reporting</strong> &mdash; Material
-										Handling & Sequencing: Our team will take the project
-										schedule and break out all of the materials needed based on
-										their installation date. This will help our team both manage
-										and sequence all deliveries, as well as stage materials at
-										the job site.
-									</p>
-								</li>
-								<li>
-									<p class="mt-1">Submittals</p>
-								</li>
-								<li>
-									<p class="mt-1">Project Staffing Planning</p>
-								</li>
-								<li>
-									<p class="mt-1">Pre-Execution Analysis</p>
-								</li>
-							</ul>
-						</template>
-					</Split>
-
-					<article id="project-execution">
-						<div class="space-y-16">
-							<SideBy class="mb-8">
-								<template v-slot:text>
-									<div class="flex-1">
-										<h2 data-section="project-execution" class="mb-4">
-											Project Execution
-										</h2>
-										<p class="">
-											Through our full-time onsite supervision, a dedicated
-											field technician and QAQC protocols, we are able to
-											implement our “Zero Punch” philosophy reducing all quality
-											punch list items to almost “0”.
-										</p>
-									</div>
-								</template>
-							</SideBy>
-							<div>
-								<p class="font-bold text-xl mb-6">
-									Why we’re your easy button: Our step by step execution process
-								</p>
-								<Content>
-									<template
-										v-for="item in projectExecutionSteps"
-										:key="item.id"
-									>
-										<Card component="h4" :svg="item.svg" :image="item.image">
-											<p>{{ item.content }}</p>
-										</Card>
-									</template>
-								</Content>
-							</div>
-
-							<div class="p-8 bg-[var(--grey-2)]">
-								<Content>
-									<template v-for="item in projectExecution" :key="item.id">
-										<Card :title="item.title" :component="item.component">
-											<p>{{ item.content }}</p>
-											<ul v-if="item.list">
-												<li v-for="item in item.list">
-													{{ item }}
-												</li>
-											</ul>
-										</Card>
-									</template>
-								</Content>
-							</div>
 						</div>
-					</article>
-				</main>
-			</Sidebar>
+						<Content>
+							<template v-for="item in preconstruction" :key="item.id">
+								<article class="card">
+									<div>
+										<svg-icon :name="item.svg" class="h-14" />
+									</div>
+									<div>
+										<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
+										<p class="">{{ item.content }}</p>
+									</div>
+								</article>
+							</template>
+						</Content>
+					</div>
+				</article>
+
+				<article id="project-planning" ref="sec2">
+					<nuxt-img
+						src="threeUniquesSupporting.jpg"
+						alt="Woman working in a warehouse"
+						fit="cover"
+						sizes="sm:100vw md:700px lg:700px"
+						format="webp"
+						class="inset-0 h-full w-full object-cover object-top"
+					/>
+
+					<h2 data-section="project-planning" class="mb-4 mt-6">
+						Project Planning
+					</h2>
+					<p class="">
+						Our internal project planning systems and tools allow us to
+						alleviate the risk of material price escalations through tracking
+						all products “good-through” pricing dates, lead time tracking,
+						establish early procurement, create material storage plans, and
+						achieve on-time scheduling.
+					</p>
+					<ul class="space-y-4 mt-8 list-disc">
+						<li>
+							<p class="mt-1">
+								<strong>Materials lead time report</strong> &mdash; Our internal
+								reporting that allows you to know the procurement status of all
+								materials, as well as when you can expect to receive your
+								materials based on the updated lead times and scheduled
+								installation dates.
+							</p>
+						</li>
+						<li>
+							<p class="mt-1">
+								<strong>Mobilization Reporting</strong> &mdash; Material
+								Handling & Sequencing: Our team will take the project schedule
+								and break out all of the materials needed based on their
+								installation date. This will help our team both manage and
+								sequence all deliveries, as well as stage materials at the job
+								site.
+							</p>
+						</li>
+						<li>
+							<p class="mt-1">Submittals</p>
+						</li>
+						<li>
+							<p class="mt-1">Project Staffing Planning</p>
+						</li>
+						<li>
+							<p class="mt-1">Pre-Execution Analysis</p>
+						</li>
+					</ul>
+				</article>
+
+				<div id="project-execution" ref="sec3">
+					<div class="space-y-16">
+						<SideBy class="mb-8">
+							<template v-slot:text>
+								<div class="flex-1">
+									<h2 data-section="project-execution" class="mb-4">
+										Project Execution
+									</h2>
+									<p class="">
+										Through our full-time onsite supervision, a dedicated field
+										technician and QAQC protocols, we are able to implement our
+										“Zero Punch” philosophy reducing all quality punch list
+										items to almost “0”.
+									</p>
+								</div>
+							</template>
+						</SideBy>
+						<div>
+							<p class="font-bold text-xl mb-6">
+								Why we’re your easy button: Our step by step execution process
+							</p>
+							<Content>
+								<template v-for="item in projectExecutionSteps" :key="item.id">
+									<Card component="h4" :svg="item.svg" :image="item.image">
+										<p>{{ item.content }}</p>
+									</Card>
+								</template>
+							</Content>
+						</div>
+
+						<div class="p-8 bg-[var(--grey-2)]">
+							<Content>
+								<template v-for="item in projectExecution" :key="item.id">
+									<Card :title="item.title" :component="item.component">
+										<p>{{ item.content }}</p>
+										<ul v-if="item.list">
+											<li v-for="item in item.list">
+												{{ item }}
+											</li>
+										</ul>
+									</Card>
+								</template>
+							</Content>
+						</div>
+					</div>
+				</div>
+			</main>
+			<!-- </Sidebar> -->
 		</div>
 	</div>
 </template>
 
 <style scoped>
+	.active {
+		font-weight: 900;
+		border-bottom: 2px solid var(--focus-yellow);
+		border-spacing: 0.25rem;
+	}
 	.menu {
 		display: none;
 	}
@@ -358,11 +392,11 @@
 		}
 	}
 
-	aside a.active::before {
+	/* aside a.active::before {
 		content: '';
 		height: 1rem;
 		width: 1rem;
 		background-color: var(--focus-yellow);
 		position: absolute;
-	}
+	} */
 </style>
