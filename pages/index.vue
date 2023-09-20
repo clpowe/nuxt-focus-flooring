@@ -82,7 +82,7 @@
 				<span>Eliminating your risk</span> through our process
 			</template>
 			<template v-slot:actions>
-				<div class="actions">
+				<div class="actions justify-center flex flex-col sm:flex-row">
 					<NuxtLink to="/contact/general-contact" class="btn btn-accent"
 						>contact us</NuxtLink
 					>
@@ -205,8 +205,6 @@
 
 <style scoped>
 	.actions {
-		display: flex;
-		flex-direction: row;
 		gap: 1rem;
 	}
 
@@ -228,5 +226,22 @@
 		left: 5%;
 		bottom: -5%;
 		z-index: -1;
+	}
+
+	p {
+		animation: fade linear both;
+		animation-timeline: view();
+		animation-range: entry 50% cover 50%;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0;
+			transform: translateY(150%);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0%);
+		}
 	}
 </style>
