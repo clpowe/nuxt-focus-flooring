@@ -2,11 +2,28 @@
 	defineProps({
 		title: String
 	})
+
+	const blob = ref()
+	const { x, y, sourceType } = useMouse()
+
+	watchEffect(() => {
+		if (blob.value) {
+			blob.value.animate(
+				{
+					top: `${y.value}px`,
+					left: `${x.value}px`
+				},
+				{ duration: 3000, fill: 'forwards' }
+			)
+		}
+	})
 </script>
 
 <template>
-	<div class="hero min-h-screenbg-[var(--midnight)]">
-		<div class="hero-content text-center">
+	<div class="hero bg-[var(--midnight)] relative overflow-hidden">
+		<div class="blur"></div>
+		<div class="blob" ref="blob"></div>
+		<div class="hero-content text-center z-10">
 			<div class="max-w-[60ch] grid content-center text-center items-center">
 				<h1 class="text-5xl font-bold max-w-[60ch] mb-4">
 					<slot name="header" />
@@ -22,34 +39,44 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <div class="">
-		<div class="hero container grid grid-cols-1 md:grid-cols-3 -row-start-1">
-			<div class="content col-start-1 col-span-1 md:col-span-2">
-				<div class="space-y-4 w-full">
-					<h1>
-						
-					</h1>
-					
-				</div>
-				<div class="dot"></div>
-			</div>
-			<div
-				class="w-full h-full relative hidden md:grid place-content-center col-start-1 -row-start-1 p-4 text-xl"
-			> -->
-	<!-- <nuxt-img
-					provider="imagekit"
-					src="HomeHero.jpg"
-					fit="cover"
-					format="webp"
-					class="absolute object-cover h-full w-full top-0 h-image"
-				/> -->
-	<!-- </div>
-		</div>
-	</div> -->
 </template>
 
 <style scoped>
+	.blob {
+		background: linear-gradient(
+			to right,
+			rgba(23, 29, 26, 1) 0%,
+			rgba(204, 231, 11, 1) 100%
+		);
+		aspect-ratio: 1;
+		height: 300px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		border-radius: 50%;
+		animation: rotate 20s infinite;
+	}
+
+	@keyframes rotate {
+		from {
+			rotate: 0deg;
+		}
+		50% {
+			scale: 1 1.5;
+		}
+		to {
+			rotate: 360deg;
+		}
+	}
+
+	.blur {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		z-index: 2;
+		backdrop-filter: blur(200px);
+	}
 	.hero {
 		position: relative;
 		height: 700px;
