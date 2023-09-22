@@ -21,8 +21,8 @@
 
 <template>
 	<div class="hero bg-[var(--midnight)] relative overflow-hidden">
-		<div class="blur"></div>
-		<div class="blob" ref="blob"></div>
+		<div class="blur hidden sm:block"></div>
+		<div class="blob hidden sm:block" ref="blob"></div>
 		<div class="hero-content text-center z-10">
 			<div class="max-w-[60ch] grid content-center text-center items-center">
 				<h1 class="text-5xl font-bold max-w-[60ch] mb-4">
