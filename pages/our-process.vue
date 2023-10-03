@@ -132,7 +132,7 @@
 				'Dedicated personnel who track every shipment',
 				'The appropriate support staff and equipment to efficiently install your flooring',
 				'Specialty contractors who work at the same time to maintain a well managed and clean job site',
-				'Our goal is to produce the outcome our client desires, without compromising standards or'
+				'Our goal is to produce the outcome our client desires, without compromising standards or deadlines.'
 			]
 		}
 	]
@@ -271,7 +271,7 @@
 						establish early procurement, create material storage plans, and
 						achieve on-time scheduling.
 					</p>
-					<ul class="space-y-4 mt-8 list-disc">
+					<ul class="space-y-4 mt-8 list-disc list-outside ml-4">
 						<li>
 							<p class="mt-1">
 								<strong>Materials lead time report</strong> &mdash; Our internal
@@ -292,13 +292,13 @@
 							</p>
 						</li>
 						<li>
-							<p class="mt-1">Submittals</p>
+							<p class="mt-1"><strong>Submittals</strong></p>
 						</li>
 						<li>
-							<p class="mt-1">Project Staffing Planning</p>
+							<p class="mt-1"><strong>Project Staffing Planning</strong></p>
 						</li>
 						<li>
-							<p class="mt-1">Pre-Execution Analysis</p>
+							<p class="mt-1"><strong>Pre-Execution Analysis</strong></p>
 						</li>
 					</ul>
 				</article>
@@ -337,8 +337,13 @@
 							<Content>
 								<template v-for="item in projectExecution" :key="item.id">
 									<Card :title="item.title" :component="item.component">
-										<p>{{ item.content }}</p>
-										<ul v-if="item.list">
+										<p class="mb-4">{{ item.content }}</p>
+
+										<ul
+											v-if="item.list"
+											role="list"
+											class="list-disc list-outside ml-4"
+										>
 											<li v-for="item in item.list">
 												{{ item }}
 											</li>
