@@ -1,5 +1,4 @@
 <script setup>
-	import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper'
 	useHead({
 		title: 'Focus Flooring - Join our team'
 	})

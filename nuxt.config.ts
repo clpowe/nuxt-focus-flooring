@@ -44,24 +44,25 @@ export default defineNuxtConfig({
 		}
 	},
 	modules: [
-		'@nuxt/devtools',
-		'@vueuse/nuxt',
-		'@formkit/nuxt',
-		'@nuxtjs/google-fonts',
-		'nuxt-icon',
-		'@nuxtjs/robots',
-		'@nuxt/image-edge',
-		'@nuxtjs/tailwindcss',
-		'nuxt-schema-org',
-		'nuxt-swiper'
-	],
+        '@nuxt/devtools',
+        '@vueuse/nuxt',
+        '@formkit/nuxt',
+        '@nuxtjs/google-fonts',
+        'nuxt-icon',
+        '@nuxtjs/robots',
+        '@nuxt/image-edge',
+        '@nuxtjs/tailwindcss',
+        'nuxt-schema-org',
+        'nuxt-swiper',
+        "@nuxt/image"
+    ],
 	googleFonts: {
 		families: {
 			Inter: [400, 700]
 		}
 	},
 	build: {
-		transpile: ['@motionone/vue', '@nuxt/image']
+		transpile: ['@nuxt/image']
 	},
 	postcss: {
 		plugins: {

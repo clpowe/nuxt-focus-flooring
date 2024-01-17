@@ -9,10 +9,12 @@
 	},
 	"devDependencies": {
 		"@nuxt/devtools": "^0.2.5",
+		"@nuxt/image": "^1.2.0",
 		"@nuxt/image-edge": "1.0.0-27913696.5d122a3",
 		"@nuxtjs/google-fonts": "3.0.0-1",
 		"@nuxtjs/tailwindcss": "^6.4.0",
-		"nuxt": "^3.3.0",
+		"daisyui": "^4.6.0",
+		"nuxt": "^3.9.2",
 		"nuxt-icon": "^0.2.6",
 		"nuxt-schema-org": "^2.1.2",
 		"sass": "^1.57.1",
@@ -28,7 +30,6 @@
 		"@vueuse/gesture": "2.0.0-beta.1",
 		"@vueuse/integrations": "^9.13.0",
 		"@vueuse/nuxt": "^9.9.0",
-		"daisyui": "^2.51.5",
 		"focus-trap": "^7.4.0",
 		"gsap": "^3.11.4",
 		"lite-youtube-embed": "^0.2.0",
@@ -37,6 +38,9 @@
 		"postcss-preset-env": "^7.8.3",
 		"vue-lite-youtube-embed": "^1.2.0",
 		"vue-multiselect": "3.0.0-beta.2"
+	},
+	"resolutions": {
+		"@nuxt/kit": ">=3.2.3"
 	},
 	"browserslist": [
 		">0.3%",

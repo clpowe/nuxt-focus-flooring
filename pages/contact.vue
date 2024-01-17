@@ -8,7 +8,7 @@
 	<div>
 		<Hero img="IMG_4743.jpg">Contact</Hero>
 
-		<div class="container">
+		<div class="container mx-auto">
 			<Sidebar>
 				<div class="space-y-4">
 					<ul class="flex gap-4 text-lg uppercase font-bold md:flex-col">

@@ -1,225 +1,182 @@
 <script setup>
-	import { animate } from 'motion'
-	import { useFocusTrap } from '@vueuse/integrations/useFocusTrap'
-
-	const expanded = ref(false)
-
-	const navigation = ref()
-	const backdrop = ref()
-
-	const { hasFocus, activate, deactivate } = useFocusTrap(navigation)
-
-	const mobileNav = ref(true)
-
-	const { width } = useWindowSize()
-
-	const mobile = computed(() => {
-		if (width.value <= 800) {
-			return true
-		} else {
-			mobileNav.value = false
-			return false
+	function handleBuy() {
+		let pass = window.prompt()
+		if (pass === 'Jesus') {
+			window.location.href =
+				'https://envision-cs.com/store/Focus-Flooring-c156562751'
 		}
-	})
-
-	function handleClick() {
-		expanded.value = !expanded.value
 	}
 
-	function openDrawer() {
-		navigation.value.style.display = 'flex'
-		backdrop.value.style.display = 'block'
-		animate(
-			navigation.value,
-			{ transform: ['translateX(0)'] },
-			{ easing: 'ease-out' }
-		)
-		animate(backdrop.value, { opacity: [0, 0.7] }, { easing: 'ease-out' })
-		document.body.style.overflow = 'hidden'
-	}
+	const details = ref(null)
+	const drawerInput = ref(null)
 
-	function openDrawerTab() {
-		openDrawer()
-		activate()
-	}
+	const route = useRoute()
 
-	function closeDrawer() {
-		animate(
-			navigation.value,
-			{ transform: ['translateX(-100%)'] },
-			{ easing: 'ease-out' }
-		).finished.then(() => {
-			navigation.value.style.removeProperty('transform')
-			navigation.value.style.removeProperty('display')
-		})
-		animate(
-			backdrop.value,
-			{ opacity: [0.7, 0] },
-			{ easing: 'ease-out' }
-		).finished.then(() => {
-			backdrop.value.style.removeProperty('display')
-		})
-		document.body.style.overflow = 'scroll'
-		deactivate()
-	}
+	watch(
+		() => route.fullPath,
+		() => {
+			if (details.value.open) details.value.removeAttribute('open')
 
-	onMounted(() => {
-		document.addEventListener('keydown', (e) => {
-			if (window.innerWidth > 801) return
-			if (hasFocus) {
-				if (e.key === 'Escape') {
-					closeDrawer()
-				}
-			}
-		})
-	})
+			if (drawerInput.value.checked) drawerInput.value.checked = false
+		},
+		{ deep: true, immediate: false }
+	)
+
+	function close() {
+		drawerInput.value.checked = false
+	}
 </script>
 
 <template>
 	<header class="header">
-		<div class="container navigation">
-			<NuxtLink prefetch to="/">
-				<img
-					src="/Focus_Flooring_logo_white.svg"
-					alt="Focus Flooring Logo"
-					width="120"
-				/>
-			</NuxtLink>
-			<button
-				tabindex="0"
-				class="menu-icon"
-				v-show="mobile"
-				@keydown.enter="openDrawerTab"
-				@click="openDrawer"
-			>
-				Menu
-				<Icon name="line-md:menu" size="1.25em" />
-			</button>
-			<nav
-				role="menubar"
-				class="menubar-navigation list-none"
-				aria-label="primary"
-				ref="navigation"
-			>
-				<button
-					v-show="mobile"
-					class="ml-auto mb-4"
-					@click="closeDrawer"
-					ref="firstFocusableElement"
-				>
-					<Icon name="line-md:close" size="1.25em" />
-				</button>
-				<li role="menuitem">
-					<NuxtLink prefetch to="/" exactActiveClass="nuxt-link-active"
-						>Home</NuxtLink
-					>
-				</li>
+		<div class="navbar bg-primary">
+			<div class="navbar-start flex justify-start">
+				<div class="flex">
+					<div class="drawer lg:hidden" @keydown.escape="close">
+						<input
+							id="my-drawer"
+							type="checkbox"
+							class="drawer-toggle"
+							ref="drawerInput"
+						/>
+						<div class="drawer-content">
+							<label for="my-drawer" class="btn btn-primary drawer-button"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="h-5 w-5"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M4 6h16M4 12h8m-8 6h16"
+									/></svg
+							></label>
+						</div>
+						<div class="drawer-side">
+							<label
+								for="my-drawer"
+								aria-label="close sidebar"
+								class="drawer-overlay"
+							>
+							</label>
 
-				<li role="menuitem" class="dropdown" ref="menulink">
-					<button
-						ref="button"
-						type="button"
-						:aria-expanded="expanded"
-						aria-controls="id_about_menu"
-						aria-label="More About pages"
-						@click="handleClick"
-						class="flex items-center normal-case md:uppercase gap-1"
-					>
-						About
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="down fill-[var(--focus-white)]"
-							width="12"
-							height="9"
-							viewBox="0 0 12 9"
+							<ul
+								tabindex="0"
+								class="menu menu-lg min-h-full z-[1] p-4 shadow bg-primary w-80"
+							>
+								<button class="btn" @click="close">Close</button>
+
+								<li>
+									<NuxtLink prefetch to="/our-history">Our History</NuxtLink>
+								</li>
+								<li>
+									<a>About</a>
+									<ul class="p-2">
+										<li>
+											<NuxtLink prefetch to="/about-us">About Us</NuxtLink>
+										</li>
+										<li>
+											<NuxtLink prefetch to="/meet-the-team"
+												>Meet the team</NuxtLink
+											>
+										</li>
+										<li>
+											<NuxtLink prefetch to="/join-our-team"
+												>Join our team</NuxtLink
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
+								</li>
+								<li>
+									<NuxtLink prefetch to="/portfolio">Portfolio</NuxtLink>
+								</li>
+								<li>
+									<NuxtLink
+										prefetch
+										to="/contact/general-contact"
+										ref="lastFocusableElement"
+										>Contact</NuxtLink
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<NuxtLink prefetch to="/" class="btn btn-ghost text-xl">
+						<img
+							src="/Focus_Flooring_logo_white.svg"
+							alt="Focus Flooring Logo"
+							width="120"
+						/>
+					</NuxtLink>
+				</div>
+			</div>
+			<div class="navbar-center hidden lg:flex">
+				<ul class="menu menu-horizontal px-1" style="--tw-text-opacity: unset">
+					<li>
+						<NuxtLink prefetch to="/our-history" class="text-white"
+							>Our History</NuxtLink
 						>
-							<polygon points="1 0, 11 0, 6 8"></polygon>
-						</svg>
-					</button>
-					<ul
-						v-show="expanded"
-						class="sub-menu"
-						role="menu"
-						aria-label="About"
-						ref="submenu"
-						@click="() => (expanded = !expanded)"
-					>
-						<li role="menuitem">
-							<NuxtLink
-								prefetch
-								to="/about-us"
-								exactActiveClass="nuxt-link-active"
-								>About Us</NuxtLink
-							>
-						</li>
-
-						<li role="menuitem">
-							<NuxtLink
-								prefetch
-								to="/meet-the-team"
-								exactActiveClass="nuxt-link-active"
-								>Meet the team</NuxtLink
-							>
-						</li>
-
-						<li role="menuitem">
-							<NuxtLink
-								prefetch
-								to="/join-our-team"
-								exactActiveClass="nuxt-link-active"
-								>Join our team</NuxtLink
-							>
-						</li>
-						<!-- <li role="menuitem">
-							<NuxtLink
-								prefetch
-								to="/join-our-team"
-								role="menuitem"
-								exactActiveClass="nuxt-link-active"
-								>Join our team</NuxtLink
-							>
-						</li> -->
-					</ul>
-				</li>
-				<li role="menuitem">
-					<NuxtLink
-						prefetch
-						to="/our-history"
-						exactActiveClass="nuxt-link-active"
-						>Our History</NuxtLink
-					>
-				</li>
-				<li role="menuitem">
-					<NuxtLink
-						prefetch
-						to="/our-process"
-						exactActiveClass="nuxt-link-active"
-						>Our Process</NuxtLink
-					>
-				</li>
-
-				<li role="menuitem">
-					<NuxtLink prefetch to="/portfolio" exactActiveClass="nuxt-link-active"
-						>Portfolio</NuxtLink
-					>
-				</li>
-				<li role="menuitem">
-					<NuxtLink
-						prefetch
-						to="/contact/general-contact"
-						exactActiveClass="nuxt-link-active"
-						ref="lastFocusableElement"
-						>Contact</NuxtLink
-					>
-				</li>
-			</nav>
-			<div class="backdrop" ref="backdrop" @click="closeDrawer"></div>
+					</li>
+					<li>
+						<details ref="details">
+							<summary>About</summary>
+							<ul class="p-2 bg-primary w-40">
+								<li>
+									<NuxtLink prefetch to="/about-us">About Us</NuxtLink>
+								</li>
+								<li>
+									<NuxtLink prefetch to="/meet-the-team"
+										>Meet the team</NuxtLink
+									>
+								</li>
+								<li>
+									<NuxtLink prefetch to="/join-our-team"
+										>Join our team</NuxtLink
+									>
+								</li>
+							</ul>
+						</details>
+					</li>
+					<li>
+						<NuxtLink prefetch to="/our-process">Our Process</NuxtLink>
+					</li>
+					<li>
+						<NuxtLink prefetch to="/portfolio">Portfolio</NuxtLink>
+					</li>
+					<li>
+						<NuxtLink
+							prefetch
+							to="/contact/general-contact"
+							ref="lastFocusableElement"
+							>Contact</NuxtLink
+						>
+					</li>
+					<li>
+						<a @click="handleBuy" class="">Shop</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</header>
 </template>
 
 <style scoped>
+	dialog {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 	.header {
+		--tw-text-opacity: unset;
+
 		position: relative;
 		background-color: var(--midnight);
 		color: var(--focus-white);
@@ -309,5 +266,9 @@
 
 	.menu-icon {
 		margin-left: auto;
+	}
+
+	.menu {
+		--tw-text-opacity: unset;
 	}
 </style>

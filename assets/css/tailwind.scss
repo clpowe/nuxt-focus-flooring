@@ -56,26 +56,9 @@ h3 {
 	font-weight: 700;
 }
 
-a {
-	color: currentColor;
-}
-
-table {
-	border-collapse: collapse;
-}
-
-th {
-	text-align: left;
-}
-
 :focus {
 	outline: 2px solid var(--focus-yellow);
 	outline-offset: 0.15em;
-}
-
-ol {
-	list-style-type: none;
-	padding: 0;
 }
 
 .container {
@@ -169,9 +152,4 @@ h3 {
 
 .main {
 	@apply space-y-10 md:space-y-20 lg:space-y-40;
-}
-
-.hero > * {
-	grid-column-start: unset;
-	grid-row-start: unset;
 }

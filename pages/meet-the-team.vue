@@ -76,16 +76,6 @@
 			bio: 'Sarita coordinates with the field and office personnel to effectively communicate the progress of the project’s production, change events, constraints, quality and all necessary reporting. Sarita is originally from St. Croix, U.S Virgin Islands, and in her spare time, enjoys spending time with her family at the beach, fishing, horseback riding, car racing and completing DIY projects.',
 			category: 'Field Management'
 		},
-
-		// {
-		// 	id: 7,
-		// 	image: '/Char_Goyens.png',
-		// 	firstName: 'Charlayne',
-		// 	lastName: 'Goyens',
-		// 	title: 'Internal Operations Coordinator',
-		// 	bio: 'Residing in the Tampa Bay Area with 2 children, 3 stepchildren and 2 grandchildren, Charlayne enjoys spending time with her family, reading and the beach.',
-		// 	category: 'Admin'
-		// },
 		{
 			id: 6,
 			image: '/Andres_Ramos_III.png',
@@ -170,12 +160,21 @@
 		},
 		{
 			id: 14,
-			image: '/JohnnieCollins.png',
+			image: '/Johnnie_Collins.webp',
 			firstName: 'Johnnie',
 			lastName: 'Collins',
 			title: 'Project Manager',
 			bio: 'With his years of experience in Estimating and Project Management, Johnnie Collins serves as Project Manager for the Focus Flooring team. Johnnie will be responsible for validating scopes of work, tracking project changes, maintaining customer communications and project schedules, conducting site visits, maintaining and updating project management tools, and providing estimates and budgets. In his free time, Johnnie enjoys teaching robotics, fishing, and gardening.',
 			category: 'Project Planning'
+		},
+		{
+			id: 15,
+			image: '/Aritsa_Ramos.png',
+			firstName: 'Aritsa',
+			lastName: 'Ramos',
+			title: 'Field Tech',
+			bio: '',
+			category: 'Field'
 		}
 	])
 
@@ -183,10 +182,8 @@
 		'All',
 		'Leadership',
 		'Preconstruction',
-		'Marketing & Sales',
 		'Project Planning',
 		'Field Management',
-		'Admin',
 		'Field'
 	])
 
@@ -200,7 +197,6 @@
 		} else {
 			curruntMember.value = index
 		}
-		// drawerVisible.value = true
 	}
 
 	function handleClose() {
@@ -211,32 +207,6 @@
 <template>
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
-		<!-- <Drawer :drawerVisible="drawerVisible" @close="closeDrawer">
-			<div v-if="curruntMember" class="">
-				<div class="space-y-[var(--s1)] overflow-auto">
-					<nuxt-img
-						provider="imagekit"
-						:src="`/team_members/${curruntMember.image}`"
-						:alt="`A photo of ${curruntMember.firstName} ${curruntMember.lastName}`"
-						fit="cover"
-						height="400"
-						width="358"
-						format="webp"
-						quality="90"
-					/>
-					<div>
-						<p class="font-bold uppercase">
-							{{ curruntMember.firstName }} {{ curruntMember.lastName }}
-						</p>
-						<p class="text-[var(--focus-yellow)]">{{ curruntMember.title }}</p>
-					</div>
-					<div class="overflow-auto" v-if="curruntMember.bio">
-						<p class="font-bold uppercase">Bio</p>
-						<p v-html="curruntMember.bio"></p>
-					</div>
-				</div>
-			</div>
-		</Drawer> -->
 
 		<div class="container">
 			<div class="form-control w-full max-w-xs mb-8">
@@ -251,12 +221,6 @@
 			</div>
 
 			<div class="">
-				<!-- <aside class="bg-[#f3f4f6]">
-					<label class="sq-radio" v-for="cat in catagories" style="padding: 0">
-						<input type="radio" name="radio" v-model="category" :value="cat" />
-						<span class="chip">{{ cat }}</span>
-					</label>
-				</aside> -->
 				<main id="main">
 					<h2 class="margin-bottom">{{ category }}</h2>
 					<div class="team-container">
