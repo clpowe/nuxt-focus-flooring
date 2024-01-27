@@ -45,6 +45,7 @@ export default defineNuxtConfig({
 	},
 	modules: [
 		'@nuxt/devtools',
+		'nuxt-vercel-analytics',
 		'@vueuse/nuxt',
 		'@formkit/nuxt',
 		'@nuxtjs/google-fonts',

@@ -29,6 +29,9 @@ dependencies:
   '@nuxtjs/robots':
     specifier: ^3.0.0
     version: 3.0.0
+  '@vercel/analytics':
+    specifier: ^1.1.2
+    version: 1.1.2
   '@vueuse/gesture':
     specifier: 2.0.0-beta.1
     version: 2.0.0-beta.1(vue@3.4.14)
@@ -94,6 +97,9 @@ devDependencies:
   nuxt-schema-org:
     specifier: ^2.1.2
     version: 2.2.0(@unhead/vue@1.8.10)
+  nuxt-vercel-analytics:
+    specifier: ^1.0.0
+    version: 1.0.0
   sass:
     specifier: ^1.57.1
     version: 1.69.7
@@ -2425,6 +2431,11 @@ packages:
       hookable: 5.5.3
       unhead: 1.8.10
       vue: 3.4.14
+
+  /@vercel/analytics@1.1.2:
+    resolution: {integrity: sha512-CodhkLCQ/EHzjX8k+Qg+OzTBY0UadykrcfolfSOJVZZY/ZJM5nbhztm9KdbYvMfqKlasAr1+OYy0ThZnDA/MYA==}
+    dependencies:
+      server-only: 0.0.1
 
   /@vercel/nft@0.24.4:
     resolution: {integrity: sha512-KjYAZty7boH5fi5udp6p+lNu6nawgs++pHW+3koErMgbRkkHuToGX/FwjN5clV1FcaM3udfd4zW/sUapkMgpZw==}
@@ -5708,6 +5719,17 @@ packages:
       - supports-color
     dev: false
 
+  /nuxt-vercel-analytics@1.0.0:
+    resolution: {integrity: sha512-ob1FpLypY2a6uqjM6SPDH/PZjtYslC6LVN4Pe9tark/TC009N/+65Q99a2NjDN+QQv2x9HA7NcWlJoGGznGn3w==}
+    dependencies:
+      '@nuxt/kit': 3.9.2
+      '@vercel/analytics': 1.1.2
+      defu: 6.1.4
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
   /nuxt@3.9.2(sass@1.69.7)(vite@4.5.1):
     resolution: {integrity: sha512-BGfqqIsvUOm8bmjSORcF7LnsMN7fFQ99JzZ81li2fx9Xw++sEiIC2R1G8PKZ6CwhrRE9X+IVIyrqLkWx3ooHWg==}
     engines: {node: ^14.18.0 || >=16.10.0}
@@ -7107,6 +7129,9 @@ packages:
       send: 0.18.0
     transitivePeerDependencies:
       - supports-color
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
 
   /set-blocking@2.0.0:
     resolution: {integrity: sha512-KiKBS8AnWGEyLzofFfmvKwpdPzqiy16LvQfK3yv/fVH7Bj13/wl3JSR1J+rfgRE9q7xUJK4qvgS8raSOeLUehw==}
