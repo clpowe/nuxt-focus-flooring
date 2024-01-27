@@ -30,7 +30,6 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	ssr: true,
 	css: ['@/assets/css/tailwind.scss'],
 	vite: {
 		plugins: [
