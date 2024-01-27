@@ -30,6 +30,7 @@ export default defineNuxtConfig({
 			]
 		}
 	},
+	ssr: true,
 	css: ['@/assets/css/tailwind.scss'],
 	vite: {
 		plugins: [
@@ -44,18 +45,18 @@ export default defineNuxtConfig({
 		}
 	},
 	modules: [
-        '@nuxt/devtools',
-        '@vueuse/nuxt',
-        '@formkit/nuxt',
-        '@nuxtjs/google-fonts',
-        'nuxt-icon',
-        '@nuxtjs/robots',
-        '@nuxt/image-edge',
-        '@nuxtjs/tailwindcss',
-        'nuxt-schema-org',
-        'nuxt-swiper',
-        "@nuxt/image"
-    ],
+		'@nuxt/devtools',
+		'@vueuse/nuxt',
+		'@formkit/nuxt',
+		'@nuxtjs/google-fonts',
+		'nuxt-icon',
+		'@nuxtjs/robots',
+		'@nuxt/image-edge',
+		'@nuxtjs/tailwindcss',
+		'nuxt-schema-org',
+		'nuxt-swiper',
+		'@nuxt/image'
+	],
 	googleFonts: {
 		families: {
 			Inter: [400, 700]

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	const props = defineProps({
 		id: Number,
-		image: String,
+		srcImg: String,
 		firstName: String,
 		lastName: String,
 		title: String,
@@ -18,8 +18,7 @@
 	<div v-bind="$attrs" class="card shadow-xl text-left">
 		<figure>
 			<nuxt-img
-				provider="imagekit"
-				:src="`/team_members/${image}`"
+				:src="srcImg"
 				loading="lazy"
 				format="webp"
 				width="479"
