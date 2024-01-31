@@ -1,7 +1,7 @@
 <script setup>
 	function handleBuy() {
 		let pass = window.prompt()
-		if (pass === 'Jesus') {
+		if (pass === 'FFFstore01') {
 			window.location.href =
 				'https://envision-cs.com/store/Focus-Flooring-c156562751'
 		}
