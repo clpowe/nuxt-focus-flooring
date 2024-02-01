@@ -23,7 +23,8 @@
 				format="webp"
 				width="479"
 				sizes="50vw md:400px"
-				:alt="`${firstName} ${lastName}`"
+				class="h-auto w-full"
+				:alt="`Photo of ${firstName} ${lastName}`"
 			/>
 		</figure>
 		<div class="card-body justify-between">
