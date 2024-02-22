@@ -1,11 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-	content: ['./src/**/*.{html,js,vue}'],
+	content: ['./src/**/*.{html,js,vue}', './node_modules/preline/preline.js'],
 	theme: {
+		container: {
+			center: true
+		},
 		extend: {}
 	},
-	plugins: [require('daisyui')],
+	darkMode: 'class',
+	plugins: [require('preline/plugin'), require('daisyui')],
 	daisyui: {
 		themes: [
 			{

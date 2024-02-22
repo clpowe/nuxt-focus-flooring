@@ -39,7 +39,18 @@
 </script>
 
 <template>
-	<div v-if="success">
+	<div class="max-w-xl">
+		<iframe
+			class="airtable-embed"
+			src="https://airtable.com/embed/appL4MkUPOT899Tfd/pag5RKIch5iMxwm6x/form"
+			frameborder="0"
+			onmousewheel=""
+			width="100%"
+			height="1700"
+			style="background: transparent"
+		></iframe>
+	</div>
+	<!-- <div v-if="success">
 		Thank you we will contact you soon
 		<button @click="handleReset">Reset</button>
 	</div>
@@ -164,7 +175,7 @@
 				<button class="btn btn-accent">Submit</button>
 			</FormKit>
 		</ClientOnly>
-	</div>
+	</div> -->
 </template>
 
 <style scoped>

@@ -1,45 +1,41 @@
-<script setup>
+<script setup lang="ts">
 	definePageMeta({
 		key: (route) => route.fullPath
 	})
 
-	const success = ref(false)
-	const fail = ref(false)
+	const iframe = ref<HTMLIFrameElement>()
 
-	async function handleSubmit(data) {
-		const fData = new FormData()
+	onMounted(() => {
+		// if (iframe.value) {
+		// 	iframe.value.contentWindow?.addEventListener('load', () => {
+		// 		console.log('hello')
+		// 		const form = document.getElementsByClassName('css-1na73vl')
+		// 		console.log(form)
+		// 	})
+		// } else {
+		// 	return
+		// }
+	})
 
-		if (data) {
-			for (let [key, value] of Object.entries(data)) {
-				fData.append(key, value)
-			}
-		}
-
-		try {
-			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbwFXNy3oXTIABlly-PQ5qsA00eDkMXou8nDnKP9UsVT4A2hS6cquHXMKbh8_b91qnky/exec',
-				{
-					method: 'POST',
-					body: fData
-				}
-			)
-			if (res.result === 'success') {
-				success.value = true
-			}
-		} catch (e) {
-			fail.value = true
-			//console.error(e)
-		}
-	}
-
-	function handleReset() {
-		success.value = false
-		fail.value = false
-	}
+	watchEffect(() => {})
 </script>
 
 <template>
-	<div v-if="success">
+	<div class="max-w-xl">
+		<ClientOnly>
+			<iframe
+				class="airtable-embed"
+				src="https://airtable.com/embed/app2pIu0GZUtM07Kx/pagQDG3JHGtbiEt60/form"
+				frameborder="0"
+				width="100%"
+				height="1200"
+				ref="iframe"
+				loading="eager"
+				style="background: transparent; padding-top: 0"
+			></iframe>
+		</ClientOnly>
+	</div>
+	<!-- <div v-if="success">
 		Thank you we will contact you soon
 		<button @click="handleReset">Reset</button>
 	</div>
@@ -133,11 +129,18 @@
 				<button class="btn btn-accent">Submit</button>
 			</FormKit>
 		</ClientOnly>
-	</div>
+	</div> -->
 </template>
 
 <style>
+	.airtable-embed {
+		margin-top: 0;
+	}
 	form {
 		max-inline-size: none;
+	}
+
+	.css-1na73vl {
+		padding-top: 48px;
 	}
 </style>

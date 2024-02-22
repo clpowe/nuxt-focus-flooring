@@ -22,8 +22,9 @@
 				loading="lazy"
 				format="webp"
 				width="479"
-				sizes="50vw md:400px"
-				class="h-auto w-full"
+				sizes="200px md:400px"
+				class="h-auto"
+				placeholder
 				:alt="`Photo of ${firstName} ${lastName}`"
 			/>
 		</figure>

@@ -55,8 +55,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
 		'nuxt-swiper',
-		'@nuxt/image'
+		'@nuxt/image',
+		'@hebilicious/vue-query-nuxt'
 	],
+	plugins: ['~/plugins/preline.client.ts'],
 	googleFonts: {
 		families: {
 			Inter: [400, 700]

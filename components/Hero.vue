@@ -21,6 +21,7 @@
 			fit="exact"
 			provider="imagekit"
 			quality="90"
+			height="255"
 			:src="img"
 			class="w-full absolute h-full object-cover image"
 		/>

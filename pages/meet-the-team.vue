@@ -15,24 +15,33 @@
 		category: string
 	}
 
-	const { data: team } = await useAsyncData('teammembers', () =>
-		$fetch('/team')
-	)
+	// const { data: team } = await useAsyncData('teammembers', () =>
+	// 	$fetch('/team')
+	// )
 
-	// console.log(data.value)
+	const {
+		data: team,
+		suspense,
+		isLoading
+	} = useQuery({
+		queryKey: ['teammembers'],
+		queryFn: () => $fetch('/team')
+	})
+
+	onServerPrefetch(async () => {
+		await suspense()
+	})
 
 	const curruntMember = ref<Number | null>(null)
 
-	const catagories = ref([
-		'All',
-		'Leadership',
-		'Preconstruction',
-		'Project Planning',
-		'Field Management',
-		'Field'
-	])
+	const catagories = computed(() => {
+		const set = new Set(['All'])
+		team.value?.forEach((m) => set.add(m.category!))
+		return set
+	})
 
 	const filtered = computed(() => {
+		//@ts-ignore
 		return useFilter(team.value, category.value)
 	})
 
@@ -67,17 +76,20 @@
 
 			<div class="">
 				<main id="main">
-					<h2 class="margin-bottom">{{ category }}</h2>
-					<div class="team-container">
-						<TeamMember
-							v-for="(member, index) in filtered"
-							:key="member.id"
-							:data-index="index"
-							:selected="curruntMember"
-							v-bind="member"
-							@click="handleClick(member.id)"
-							@close="handleClose"
-						/>
+					<div v-if="isLoading">Loading...</div>
+					<div v-else>
+						<h2 class="margin-bottom">{{ category }}</h2>
+						<div class="team-container">
+							<TeamMember
+								v-for="(member, index) in filtered"
+								:key="member.id"
+								:data-index="index"
+								:selected="curruntMember"
+								v-bind="member"
+								@click="handleClick(member.id)"
+								@close="handleClose"
+							/>
+						</div>
 					</div>
 				</main>
 			</div>

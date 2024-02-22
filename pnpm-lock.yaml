@@ -23,12 +23,24 @@ dependencies:
   '@formkit/vue':
     specifier: 1.0.0-beta.15
     version: 1.0.0-beta.15(tailwindcss@3.4.1)(vue@3.4.14)
+  '@hebilicious/vue-query-nuxt':
+    specifier: ^0.3.0
+    version: 0.3.0(@tanstack/vue-query@5.22.2)(nuxt@3.9.2)
   '@notionhq/client':
     specifier: ^2.2.14
     version: 2.2.14
   '@nuxtjs/robots':
     specifier: ^3.0.0
     version: 3.0.0
+  '@preline/collapse':
+    specifier: ^2.0.2
+    version: 2.0.2
+  '@preline/dropdown':
+    specifier: ^2.0.2
+    version: 2.0.2
+  '@tanstack/vue-query':
+    specifier: ^5.22.2
+    version: 5.22.2(vue@3.4.14)
   '@vercel/analytics':
     specifier: ^1.1.2
     version: 1.1.2
@@ -62,6 +74,9 @@ dependencies:
   postcss-preset-env:
     specifier: ^7.8.3
     version: 7.8.3(postcss@8.4.33)
+  preline:
+    specifier: ^2.0.3
+    version: 2.0.3
   vue-lite-youtube-embed:
     specifier: ^1.2.0
     version: 1.2.1(vue@3.4.14)
@@ -1236,6 +1251,24 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
+  /@hebilicious/vue-query-nuxt@0.3.0(@tanstack/vue-query@5.22.2)(nuxt@3.9.2):
+    resolution: {integrity: sha512-3ULFb4Sq4vp7VCuMFTlvHOIipgLsFPTAUfSoPNrXiUzvuetsLquijaIFWMlgetWC/+1o5WEBXSVcrmX46uZB6w==}
+    requiresBuild: true
+    peerDependencies:
+      '@tanstack/vue-query': ^5.4.3
+      nuxt: ^3.8.0
+    dependencies:
+      '@nuxt/kit': 3.9.2
+      '@tanstack/vue-query': 5.22.2(vue@3.4.14)
+      defu: 6.1.4
+      esbuild: 0.19.11
+      magicast: 0.3.3
+      nuxt: 3.9.2(sass@1.69.7)(vite@4.5.1)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: false
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -2028,6 +2061,18 @@ packages:
   /@polka/url@1.0.0-next.24:
     resolution: {integrity: sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==}
 
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+    dev: false
+
+  /@preline/collapse@2.0.2:
+    resolution: {integrity: sha512-EEHv8tg0zXxLYYjNYc3x7IZzSVx1f49zZwCVosT6+2lY5LkJHWqu5zTbzswqBoeWolIZ0jDfoHv35NIyTPtWKQ==}
+    dev: false
+
+  /@preline/dropdown@2.0.2:
+    resolution: {integrity: sha512-Y3daIlYPWqkFmO4ONOInZQC2y3PT/pAZE/4THN2gOm4kRhVLW7/EMpv2xHHzzvw2e7XmPYXOUafKFgFWnVxSww==}
+    dev: false
+
   /@rollup/plugin-alias@5.1.0(rollup@4.9.5):
     resolution: {integrity: sha512-lpA3RZ9PdIG7qqhEfv79tBffNaoDuukFDrmhLqg9ifv99u/ehn+lOg30x2zmhf8AQqQUZaMk/B9fZraQ6/acDQ==}
     engines: {node: '>=14.0.0'}
@@ -2324,6 +2369,33 @@ packages:
   /@sindresorhus/merge-streams@1.0.0:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
+
+  /@tanstack/match-sorter-utils@8.11.8:
+    resolution: {integrity: sha512-3VPh0SYMGCa5dWQEqNab87UpCMk+ANWHDP4ALs5PeEW9EpfTAbrezzaOk/OiM52IESViefkoAOYuxdoa04p6aA==}
+    engines: {node: '>=12'}
+    dependencies:
+      remove-accents: 0.4.2
+    dev: false
+
+  /@tanstack/query-core@5.22.2:
+    resolution: {integrity: sha512-z3PwKFUFACMUqe1eyesCIKg3Jv1mysSrYfrEW5ww5DCDUD4zlpTKBvUDaEjsfZzL3ULrFLDM9yVUxI/fega1Qg==}
+    dev: false
+
+  /@tanstack/vue-query@5.22.2(vue@3.4.14):
+    resolution: {integrity: sha512-4Vg73x3Po4ED1ttv5TOb5ebqNMtOwY9EmSGHbN1Y208zlVaTw9jwe7I27D4wew3UbFEuqjx3I6roykye096j1A==}
+    peerDependencies:
+      '@vue/composition-api': ^1.1.2
+      vue: ^2.6.0 || ^3.3.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      '@tanstack/match-sorter-utils': 8.11.8
+      '@tanstack/query-core': 5.22.2
+      '@vue/devtools-api': 6.5.1
+      vue: 3.4.14
+      vue-demi: 0.14.7(vue@3.4.14)
+    dev: false
 
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
@@ -6798,6 +6870,12 @@ packages:
     dev: true
     optional: true
 
+  /preline@2.0.3:
+    resolution: {integrity: sha512-V/sLmRIHd23UCdvJNRKKszntgUqA0381erVzRpQ48NjjMOgI7DyFW4mr+lg387V0oeBc5Dx9Jxa5voppVoH9GA==}
+    dependencies:
+      '@popperjs/core': 2.11.8
+    dev: false
+
   /pretty-bytes@6.1.1:
     resolution: {integrity: sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -6950,6 +7028,10 @@ packages:
     engines: {node: '>=4'}
     dependencies:
       redis-errors: 1.2.0
+
+  /remove-accents@0.4.2:
+    resolution: {integrity: sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==}
+    dev: false
 
   /replace-in-file@6.3.5:
     resolution: {integrity: sha512-arB9d3ENdKva2fxRnSjwBEXfK1npgyci7ZZuwysgAp7ORjHSyxz6oqIjTEv8R0Ydl4Ll7uOAZXL4vbkhGIizCg==}
@@ -8285,6 +8367,21 @@ packages:
       vue: 3.4.14
     dev: false
 
+  /vue-demi@0.14.7(vue@3.4.14):
+    resolution: {integrity: sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.4.14
+    dev: false
+
   /vue-devtools-stub@0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
 
@@ -8298,7 +8395,7 @@ packages:
         optional: true
     dependencies:
       vue: 3.4.14
-      vue-demi: 0.14.6(vue@3.4.14)
+      vue-demi: 0.14.7(vue@3.4.14)
     dev: false
 
   /vue-multiselect@3.0.0-beta.2:
