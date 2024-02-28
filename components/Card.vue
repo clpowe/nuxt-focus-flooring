@@ -1,5 +1,5 @@
 <template>
-	<div class="card">
+	<div class="grid grid-cols-[1fr_auto] gap-4 p-5 border bottom-4 rounded-xl">
 		<div v-if="svg || img">
 			<svg-icon :name="svg" v-if="svg" class="h-14" />
 			<img :src="image" v-if="img" role="presentation" />
@@ -42,17 +42,11 @@
 	img {
 		height: 4rem;
 	}
-	.card {
-		display: grid;
-		grid-template-columns: 1fr auto;
-		gap: var(--s1);
-		padding: 0cqi;
-	}
 
 	@container (min-width: 700px) {
 		.card {
 			display: flex;
-			flex-grow: 1;
+			max-width: 400px;
 			flex-direction: column;
 		}
 	}

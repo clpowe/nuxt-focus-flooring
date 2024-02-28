@@ -33,6 +33,7 @@
 }
 
 html {
-	font-size: var(--s0);
-	font-size: clamp(var(--s0), 0.95rem + 0.25vw, var(--s4));
+	overflow: scroll;
+	// font-size: var(--s0);
+	// font-size: clamp(var(--s0), 0.95rem + 0.25vw, var(--s4));
 }

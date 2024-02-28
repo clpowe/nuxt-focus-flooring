@@ -38,6 +38,9 @@ dependencies:
   '@preline/dropdown':
     specifier: ^2.0.2
     version: 2.0.2
+  '@preline/scrollspy':
+    specifier: ^2.0.2
+    version: 2.0.2
   '@tanstack/vue-query':
     specifier: ^5.22.2
     version: 5.22.2(vue@3.4.14)
@@ -2071,6 +2074,10 @@ packages:
 
   /@preline/dropdown@2.0.2:
     resolution: {integrity: sha512-Y3daIlYPWqkFmO4ONOInZQC2y3PT/pAZE/4THN2gOm4kRhVLW7/EMpv2xHHzzvw2e7XmPYXOUafKFgFWnVxSww==}
+    dev: false
+
+  /@preline/scrollspy@2.0.2:
+    resolution: {integrity: sha512-vjeHwpQDEZojFxASFhuybzCzRpEKm1S5hKPL/wqiLljgaUKf3hKTH3EiXq/up1k44j0EDIlrvjrd1Awi4VCl2w==}
     dev: false
 
   /@rollup/plugin-alias@5.1.0(rollup@4.9.5):

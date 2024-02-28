@@ -2,33 +2,13 @@
 	useHead({
 		title: 'Focus Flooring - Our Process'
 	})
-	const route = useRoute()
-	const router = useRouter()
-	import { useElementVisibility } from '@vueuse/core'
-
-	const sec1 = ref()
-	const sec2 = ref()
-	const sec3 = ref()
-
-	const sec1visable = useElementVisibility(sec1)
-	const sec2visable = useElementVisibility(sec2)
-	const sec3visable = useElementVisibility(sec3)
-
-	const { stop } = useIntersectionObserver(
-		sec1,
-		([{ isIntersecting }], observerElement) => {}
-	)
-
-	// watch(sec1visable, () => router.replace('/our-process#preconstruction'))
-
-	const hash = computed(() => route.hash)
 
 	const main = ref()
 
 	const sections = ref([
-		{ text: 'Preconstruction', id: 'preconstruction', visable: sec1visable },
-		{ text: 'Project Planning', id: 'project-planning', visable: sec2visable },
-		{ text: 'Project Execution', id: 'project-execution', visable: sec3visable }
+		{ text: 'Preconstruction', id: 'preconstruction' },
+		{ text: 'Project Planning', id: 'project-planning' },
+		{ text: 'Project Execution', id: 'project-execution' }
 	])
 
 	const preconstruction = [
@@ -70,24 +50,28 @@
 		{
 			id: 1,
 			svg: '01',
+			title: 'Pre-Installation Planning',
 			content:
 				'Before installation, we have a dedicated superintendent survey the job site to determine how materials will be staged.'
 		},
 		{
 			id: 2,
 			svg: '02',
+			title: 'Efficient Flooring Installation',
 			content:
 				'Then, our highly trained crews follow a clear plan to rapidly install your flooring. Depending on the complexity of your materials and installation, our crews may train specifically for your project.'
 		},
 		{
 			id: 3,
 			svg: '03',
+			title: 'Embracing a "Zero-Punch" Philosophy',
 			content:
 				'Our team has a “zero-punch” philosophy. As we progress through the project, our teams are creating our own internal punch list and correcting items as we go. The goal of this approach is to ensure that once we receive the client and owner’s punch list, our items to correct are minimum.'
 		},
 		{
 			id: 4,
 			svg: '04',
+			title: 'Streamlined Solutions',
 			content:
 				'Because of our execution system, our team can efficiently complete any commercial flooring installation project. Our experienced team will coordinate material procurement so that you’re never waiting on a specialty floor. We will also find time-sensitive material alternatives to help stay in line with your project schedule'
 		}
@@ -169,52 +153,134 @@
 		'Sequence/Scheduling',
 		'Pre-Execution Analysis'
 	]
-	// const currentsection = ref('preconstruction')
 </script>
 
 <template>
 	<div>
 		<Hero>Our <span>Process</span> </Hero>
-		<div
-			class="sticky top-0 form-control w-full bg-[#f3f4f6] mb-8 py-4 z-10 shadow-xl"
-		>
-			<div class="container mx-auto">
-				<nav>
-					<ul class="flex justify-center flex-col sm:flex-row gap-2 md:gap-4">
-						<li v-for="link in sections">
-							<a
-								:href="`#${link.id}`"
-								class="uppercase font-bold"
-								:class="{ active: link.visable }"
-								>{{ link.text }}</a
-							>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="container relative">
-			<!-- <Sidebar> -->
-			<!-- <aside class="relative menu">
-					<nav class="sticky top-12">
-						<ol
-							class="static min-[742px]:sticky top-4 uppercase font-bold list-none menu-list list-outside"
-						>
-							<template v-for="link in sections">
-								<li>
-									<a
-										:href="`#${link.id}`"
-										:class="{ active: link.id == currentsection }"
-										>{{ link.text }}</a
-									>
-								</li>
-							</template>
-						</ol>
-					</nav>
-				</aside> -->
 
-			<main id="main" class="main max-w-[75ch] mx-auto" ref="main">
-				<article id="preconstruction" ref="sec1">
+		<!-- Scrollspy -->
+		<header
+			class="sticky top-0 flex bg-[#171d1a] z-10 flex-wrap sm:justify-start sm:flex-nowrap w-full text-white text-sm py-4 dark:bg-gray-800"
+		>
+			<nav
+				class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
+				aria-label="Page"
+			>
+				<div class="sm:order-3 flex items-center gap-x-2">
+					<button
+						type="button"
+						class="sm:hidden hs-collapse-toggle p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+						data-hs-collapse="#page-navbar-alignment"
+						aria-controls="page-navbar-alignment"
+						aria-label="Toggle navigation"
+					>
+						<svg
+							class="hs-collapse-open:hidden flex-shrink-0 size-4"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<line x1="3" x2="21" y1="6" y2="6" />
+							<line x1="3" x2="21" y1="12" y2="12" />
+							<line x1="3" x2="21" y1="18" y2="18" />
+						</svg>
+						<svg
+							class="hs-collapse-open:block hidden flex-shrink-0 size-4"
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path d="M18 6 6 18" />
+							<path d="m6 6 12 12" />
+						</svg>
+					</button>
+				</div>
+				<div
+					id="page-navbar-alignment"
+					class="hs-collapse hidden overflow-hidden transition-all mx-auto duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2"
+				>
+					<div
+						data-hs-scrollspy="#scrollspy-1"
+						data-hs-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1"
+						class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 [--scrollspy-offset:100]"
+					>
+						<a
+							v-for="link in sections"
+							:href="`#${link.id}`"
+							class="hs-scrollspy-active:text-[#cce70b]"
+							>{{ link.text }}</a
+						>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Scrollspy End -->
+
+		<div class="container relative">
+			<main id="main" class="main max-w-[85ch] mx-auto" ref="main">
+				<!-- Icon Blocks -->
+
+				<section
+					id="preconstruction"
+					class="max-w-[85rem] px-4 py-10 lg:py-14 mx-auto"
+				>
+					<div class="mx-auto">
+						<!-- Grid -->
+						<div class="grid gap-12">
+							<div>
+								<h2
+									class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white"
+								>
+									Pre&shyconstruction
+								</h2>
+								<p class="mt-3 text-gray-800 dark:text-gray-400">
+									Our team will become familiar with the project documents to
+									ensure our scope is fully captured. We will then partner with
+									you to ensure you stay within your budget throughout all
+									pricing efforts and obtain cost certainty for your project.
+								</p>
+							</div>
+
+							<div class="space-y-6 lg:space-y-10">
+								<!-- Icon Block -->
+								<template v-for="item in preconstruction" :key="item.id">
+									<div class="flex">
+										<svg-icon :name="item.svg" class="h-10" />
+										<div class="ms-5 sm:ms-8">
+											<h3
+												class="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+											>
+												{{ item.title }}
+											</h3>
+											<p class="mt-1 text-gray-600 dark:text-gray-400">
+												{{ item.content }}
+											</p>
+										</div>
+									</div>
+								</template>
+								<!-- End Icon Block -->
+							</div>
+						</div>
+						<!-- End Grid -->
+					</div>
+				</section>
+				<!-- End Icon Blocks -->
+
+				<!-- <article>
 					<nuxt-img
 						src="ourProcess.jpg"
 						alt="A man and a woman looking at blueprints"
@@ -249,9 +315,109 @@
 							</template>
 						</Content>
 					</div>
-				</article>
+				</article> -->
 
-				<article id="project-planning" ref="sec2">
+				<!-- Icon Blocks -->
+				<section
+					id="project-planning"
+					class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+				>
+					<!-- Grid -->
+					<h2
+						class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white"
+					>
+						Project Planning
+					</h2>
+					<div class="mt-3 grid md:grid-cols-2 gap-12">
+						<div class="">
+							<p class="text-gray-800 dark:text-gray-400">
+								Our internal project planning systems and tools allow us to
+								alleviate the risk of material price escalations through
+								tracking all products “good-through” pricing dates, lead time
+								tracking, establish early procurement, create material storage
+								plans, and achieve on-time scheduling.
+							</p>
+							<div class="mt-4">
+								<nuxt-img
+									src="threeUniquesSupporting.jpg"
+									alt="Woman working in a warehouse"
+									fit="cover"
+									sizes="sm:100vw md:700px lg:700px"
+									format="webp"
+									class="inset-0 h-full w-full object-cover object-top rounded-md"
+								/>
+							</div>
+						</div>
+						<!-- End Col -->
+
+						<div class="space-y-2 lg:space-y-4">
+							<!-- Icon Block -->
+							<div class="flex">
+								<!-- Icon -->
+								<div class="">
+									<p>
+										<strong>Materials lead time report</strong> &mdash; Our
+										internal reporting that allows you to know the procurement
+										status of all materials, as well as when you can expect to
+										receive your materials based on the updated lead times and
+										scheduled installation dates.
+									</p>
+								</div>
+							</div>
+							<!-- End Icon Block -->
+							<!-- Icon Block -->
+							<div class="flex">
+								<!-- Icon -->
+								<div class="">
+									<p>
+										<strong>Mobilization Reporting</strong> &mdash; Material
+										Handling & Sequencing: Our team will take the project
+										schedule and break out all of the materials needed based on
+										their installation date. This will help our team both manage
+										and sequence all deliveries, as well as stage materials at
+										the job site.
+									</p>
+								</div>
+							</div>
+							<!-- End Icon Block -->
+							<!-- Icon Block -->
+							<div class="flex">
+								<!-- Icon -->
+								<div class="">
+									<p>
+										<strong>Submittals</strong>
+									</p>
+								</div>
+							</div>
+							<!-- End Icon Block -->
+							<!-- Icon Block -->
+							<div class="flex">
+								<!-- Icon -->
+								<div class="">
+									<p>
+										<strong>Project Staffing Planning</strong>
+									</p>
+								</div>
+							</div>
+							<!-- End Icon Block -->
+							<!-- Icon Block -->
+							<div class="flex">
+								<!-- Icon -->
+								<div class="">
+									<p>
+										<strong>Pre-Execution Analysis</strong>
+									</p>
+								</div>
+							</div>
+							<!-- End Icon Block -->
+						</div>
+						<!-- End Col -->
+					</div>
+					<!-- End Grid -->
+				</section>
+				<!-- End Icon Blocks -->
+
+				<!-- <article id="project-planning">
 					<nuxt-img
 						src="threeUniquesSupporting.jpg"
 						alt="Woman working in a warehouse"
@@ -301,9 +467,80 @@
 							<p class="mt-1"><strong>Pre-Execution Analysis</strong></p>
 						</li>
 					</ul>
-				</article>
+				</article> -->
 
-				<div id="project-execution" ref="sec3">
+				<section
+					id="project-execution"
+					class="max-w-[85rem] px-4 py-10 lg:py-14 mx-auto"
+				>
+					<div class="mx-auto">
+						<div class="grid gap-12">
+							<div>
+								<h2
+									class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white"
+								>
+									Project Execution
+								</h2>
+								<p class="mt-4 font-bold text-xl mb-2">
+									Why we’re your easy button: Our step by step execution process
+								</p>
+								<p class="text-gray-800 dark:text-gray-400">
+									Through our full-time onsite supervision, a dedicated field
+									technician and QAQC protocols, we are able to implement our
+									“Zero Punch” philosophy reducing all quality punch list items
+									to almost “0”.
+								</p>
+							</div>
+
+							<div class="space-y-6 lg:space-y-10">
+								<template v-for="item in projectExecutionSteps" :key="item.id">
+									<!-- Icon Block -->
+
+									<div class="flex">
+										<!-- Icon -->
+										<span
+											class="flex-shrink-0 inline-flex justify-center items-center size-[46px]"
+										>
+											<svg-icon :name="item.svg" class="h-10" />
+										</span>
+										<div class="ms-5 sm:ms-8">
+											<h3
+												class="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200"
+											>
+												{{ item.title }}
+											</h3>
+											<p class="mt-1 text-gray-600 dark:text-gray-400">
+												{{ item.content }}
+											</p>
+										</div>
+									</div>
+									<!-- End Icon Block -->
+								</template>
+							</div>
+						</div>
+						<div class="pt-14">
+							<div class="grid sm:grid-cols-2 gap-8">
+								<template v-for="item in projectExecution" :key="item.id">
+									<Card :title="item.title" :component="item.component">
+										<p class="mb-4">{{ item.content }}</p>
+
+										<ul
+											v-if="item.list"
+											role="list"
+											class="list-disc list-outside ml-4"
+										>
+											<li v-for="item in item.list">
+												{{ item }}
+											</li>
+										</ul>
+									</Card>
+								</template>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- <div id="project-execution" class="pt-6">
 					<div class="space-y-16">
 						<SideBy class="mb-8">
 							<template v-slot:text>
@@ -333,7 +570,7 @@
 							</Content>
 						</div>
 
-						<div class="p-8 bg-[var(--grey-2)]">
+						<div class="p-8">
 							<Content>
 								<template v-for="item in projectExecution" :key="item.id">
 									<Card :title="item.title" :component="item.component">
@@ -353,7 +590,7 @@
 							</Content>
 						</div>
 					</div>
-				</div>
+				</div> -->
 			</main>
 			<!-- </Sidebar> -->
 		</div>
@@ -366,6 +603,7 @@
 		border-bottom: 2px solid var(--focus-yellow);
 		border-spacing: 0.25rem;
 	}
+
 	.menu {
 		display: none;
 	}
@@ -380,6 +618,7 @@
 		max-inline-size: none;
 		position: sticky;
 	}
+
 	.menu-list {
 		margin-left: var(--s-1);
 	}
@@ -396,12 +635,4 @@
 			width: 46%;
 		}
 	}
-
-	/* aside a.active::before {
-		content: '';
-		height: 1rem;
-		width: 1rem;
-		background-color: var(--focus-yellow);
-		position: absolute;
-	} */
 </style>
