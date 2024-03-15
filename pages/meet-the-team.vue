@@ -62,10 +62,12 @@
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
 
-		<div class="container">
-			<div class="form-control w-full max-w-xs mb-8">
+		<div
+			class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl"
+		>
+			<div class="container">
 				<select
-					class="select w-full select-bordered max-w-xs"
+					class="py-3 px-4 pe-9 block w-full max-w-xs border-gray-400 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
 					v-model="category"
 				>
 					<option v-for="cat in catagories" :value="cat">
@@ -73,7 +75,8 @@
 					</option>
 				</select>
 			</div>
-
+		</div>
+		<div class="container relative">
 			<div class="">
 				<main id="main">
 					<div v-if="isLoading">Loading...</div>

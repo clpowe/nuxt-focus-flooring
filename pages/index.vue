@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 	const whatWeDo = [
 		{
 			id: 1,
@@ -73,6 +73,19 @@
 				'From transitions to stair treads, flooring accessories are specialty products that will tie together your design and product needs.'
 		}
 	]
+
+	const vid = ref<HTMLVideoElement | null>(null)
+
+	import Poster from '../assets/poster.jpg'
+
+	function playPause() {
+		if (!vid.value) return
+		if (vid.value.paused) {
+			vid.value.play()
+		} else {
+			vid.value.pause()
+		}
+	}
 </script>
 
 <template>
@@ -83,7 +96,10 @@
 			</template>
 			<template v-slot:actions>
 				<div class="actions justify-center flex flex-col sm:flex-row">
-					<NuxtLink to="/contact/general-contact" class="btn btn-accent"
+					<NuxtLink
+						to="/contact/general-contact"
+						type="button"
+						class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-focusyellow-500 text-midnight hover:bg-focusyellow-400 disabled:opacity-50 disabled:pointer-events-none"
 						>contact us</NuxtLink
 					>
 					<NuxtLink
@@ -98,8 +114,79 @@
 			</template>
 		</HomeHero>
 	</header>
-	<main id="main" class="main">
-		<section class="container">
+	<main id="main" class="main lg:space-y-16">
+		<div class="max-w-4xl -mt-24 mx-auto z-20" @click="playPause">
+			<video
+				width="720"
+				height="480"
+				:poster="Poster"
+				controlslist="nofullscreen nodownload"
+				class="relative"
+				ref="vid"
+			>
+				<source
+					src="https://iz5hjhzjql5fyivm.public.blob.vercel-storage.com/Focus%20Flooring_%20Our%20Story.mp4"
+					type="video/mp4"
+				/>
+
+				Your browser does not support the video tag.
+			</video>
+			<!-- <YouTube class="w-full" /> -->
+		</div>
+		<!-- Features -->
+		<div
+			class="max-w-[85rem] px-4 pt-20 pb-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
+		>
+			<!-- Grid -->
+			<div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
+				<div>
+					<nuxt-img
+						class=""
+						src="/WhoWeAre.webp"
+						format="webp"
+						alt="Man instaliing flooring wearing a yellow shirt"
+					/>
+				</div>
+				<!-- End Col -->
+
+				<div class="mt-5 sm:mt-10 lg:mt-0">
+					<div class="space-y-6 sm:space-y-8">
+						<!-- Title -->
+						<div class="space-y-2 md:space-y-4">
+							<h2
+								class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-gray-200"
+							>
+								Our Focus
+							</h2>
+							<div class="space-y-4">
+								<p>
+									At Focus Flooring, we offer advanced solutions in commercial
+									flooring and wall tile.
+								</p>
+								<p>
+									We have disciplined our flooring processes to focus on the
+									details that greatly impact our clients and deliver a high
+									quality service they can count on.
+								</p>
+								<p>
+									Focus Flooring is a minority-owned firm based out of Tampa,
+									Florida with a
+									<strong
+										>guarantee to eliminate your risk through our internal
+										processes.</strong
+									>
+								</p>
+							</div>
+						</div>
+						<!-- End Title -->
+					</div>
+				</div>
+				<!-- End Col -->
+			</div>
+			<!-- End Grid -->
+		</div>
+		<!-- End Features -->
+		<!-- <section class="container">
 			<div class="mx-auto max-w-screen-xl py-8 sm:py-12 lg:py-16">
 				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
 					<div class="pic relative h-64 sm:h-80 lg:order-last lg:h-full">
@@ -139,9 +226,49 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="container">
+		<!-- Testimonials -->
+		<div
+			class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto grid-bg"
+		>
+			<!-- Blockquote -->
+			<div class="lg:mx-auto lg:w-3/5">
+				<h2
+					class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-6"
+				>
+					Our History
+				</h2>
+
+				<div class="mt-6 lg:mt-10 text-center">
+					<p>
+						The flooring division begins to outgrow being a “division” and
+						begins to require a space of its own. The Envision team discovered
+						that though both the construction management division and flooring
+						division of the business are both client, systems, and process
+						driven, the flooring business at this scale required very different
+						systems, processes and team members than the construction management
+						business.
+					</p>
+					<p class="pb-4">
+						Learn more about our journey from Envision Flooring to Focus
+						Flooring
+					</p>
+					<NuxtLink
+						prefetch
+						to="/our-history"
+						role="link"
+						exactActiveClass="nuxt-link-active"
+						class="btn btn-accent"
+						>Our History</NuxtLink
+					>
+				</div>
+			</div>
+			<!-- End Blockquote -->
+		</div>
+		<!-- End Testimonials -->
+
+		<!-- <section class="container">
 			<div class="flex-1 max-w-xl mx-0">
 				<h2 class="margin-bottom">Our History</h2>
 				<div class="space-y-6">
@@ -168,13 +295,40 @@
 					>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<div class="container mb-8">
-			<YouTube />
+		<!-- Icon Blocks -->
+		<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+			<h2
+				class="font-bold text-3xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-6"
+			>
+				What we do
+			</h2>
+			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
+				<!-- Icon Block -->
+				<div v-for="item in whatWeDo" :key="item.id" class="">
+					<svg-icon :name="item.svg" class="h-14" />
+
+					<div
+						class="bg-gradient-to-r from-[var(--focus-yellow)] via-[var(--focus-yellow-light)] to-white/0 h-0.5 mt-6"
+					>
+						<div class="bg-[var(--midnight)] w-9 h-0.5"></div>
+					</div>
+					<div class="mt-5">
+						<h3 class="text-lg font-semibold text-gray-800 dark:text-white">
+							{{ item.title }}
+						</h3>
+						<p class="mt-1 text-gray-600 dark:text-gray-400">
+							{{ item.content }}
+						</p>
+					</div>
+				</div>
+				<!-- End Icon Block -->
+			</div>
 		</div>
+		<!-- End Icon Blocks -->
 
-		<section class="container">
+		<!-- <section class="container">
 			<div size="--s-3" class="margin-bottom">
 				<h2 class="margin-bottom">What we do</h2>
 			</div>
@@ -191,7 +345,7 @@
 					<p>{{ item.content }}</p>
 				</Card>
 			</Grid>
-		</section>
+		</section> -->
 
 		<section class="container">
 			<LazySectores />
@@ -204,6 +358,13 @@
 </template>
 
 <style scoped>
+	.grid-bg {
+		background-image: url('/grid2.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom;
+	}
+
 	.actions {
 		gap: 1rem;
 	}
@@ -228,11 +389,11 @@
 		z-index: -1;
 	}
 
-	p {
+	/* p {
 		animation: fade linear both;
 		animation-timeline: view();
 		animation-range: entry 50% cover 50%;
-	}
+	} */
 
 	@keyframes fade {
 		from {

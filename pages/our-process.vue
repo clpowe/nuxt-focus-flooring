@@ -1,7 +1,42 @@
 <script setup>
+	const route = useRoute()
+	const router = useRouter()
 	useHead({
 		title: 'Focus Flooring - Our Process'
 	})
+
+	const precon = ref(null)
+	const project = ref(null)
+	const execution = ref(null)
+
+	const preconIsVisible = ref(false)
+	const projectIsVisible = ref(false)
+	const executionIsVisible = ref(false)
+
+	useIntersectionObserver(
+		precon,
+		([{ isIntersecting }]) => {
+			// route.hash = '#preconstruction'
+			preconIsVisible.value = isIntersecting
+		},
+		{ threshold: 0.5 }
+	)
+
+	useIntersectionObserver(
+		project,
+		([{ isIntersecting }]) => {
+			// route.hash = '#project-planning'
+			projectIsVisible.value = isIntersecting
+		},
+		{ threshold: 0.7 }
+	)
+	useIntersectionObserver(
+		execution,
+		([{ isIntersecting }]) => {
+			executionIsVisible.value = isIntersecting
+		},
+		{ threshold: 0.2 }
+	)
 
 	const main = ref()
 
@@ -161,7 +196,7 @@
 
 		<!-- Scrollspy -->
 		<header
-			class="sticky top-0 flex bg-[#171d1a] z-10 flex-wrap sm:justify-start sm:flex-nowrap w-full text-white text-sm py-4 dark:bg-gray-800"
+			class="sticky top-0 flex bg-[#171d1a] z-10 flex-wrap sm:justify-start sm:flex-nowrap w-full text-sm py-4"
 		>
 			<nav
 				class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
@@ -218,10 +253,22 @@
 						class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 [--scrollspy-offset:100]"
 					>
 						<a
-							v-for="link in sections"
-							:href="`#${link.id}`"
-							class="hs-scrollspy-active:text-[#cce70b]"
-							>{{ link.text }}</a
+							href="#preconstruction"
+							class="hs-scrollspy-active:text-[#cce70b] text-white"
+							:class="{ active: preconIsVisible }"
+							>Preconstruction</a
+						>
+						<a
+							href="#project-planning"
+							class="hs-scrollspy-active:text-[#cce70b] text-white"
+							:class="{ active: projectIsVisible }"
+							>Project Planning</a
+						>
+						<a
+							href="#project-execution"
+							class="hs-scrollspy-active:text-[#cce70b] text-white"
+							:class="{ active: executionIsVisible }"
+							>Project Execution</a
 						>
 					</div>
 				</div>
@@ -231,11 +278,12 @@
 		<!-- Scrollspy End -->
 
 		<div class="container relative">
-			<main id="main" class="main max-w-[85ch] mx-auto" ref="main">
+			<main id="scrollspy-1" class="main max-w-[85ch] mx-auto" ref="main">
 				<!-- Icon Blocks -->
 
 				<section
 					id="preconstruction"
+					ref="precon"
 					class="max-w-[85rem] px-4 py-10 lg:py-14 mx-auto"
 				>
 					<div class="mx-auto">
@@ -320,6 +368,7 @@
 				<!-- Icon Blocks -->
 				<section
 					id="project-planning"
+					ref="project"
 					class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
 				>
 					<!-- Grid -->
@@ -471,6 +520,7 @@
 
 				<section
 					id="project-execution"
+					ref="execution"
 					class="max-w-[85rem] px-4 py-10 lg:py-14 mx-auto"
 				>
 					<div class="mx-auto">
@@ -599,7 +649,6 @@
 
 <style scoped>
 	.active {
-		font-weight: 900;
 		border-bottom: 2px solid var(--focus-yellow);
 		border-spacing: 0.25rem;
 	}
