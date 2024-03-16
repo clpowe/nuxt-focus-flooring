@@ -81,9 +81,7 @@ export default defineNuxtConfig({
 		configFile: './formkit.config.ts'
 	},
 	image: {
-		imagekit: {
-			baseURL: 'https://ik.imagekit.io/focusflooring/'
-		}
+		format: ['avif', 'webp']
 	},
 	schemaOrg: {
 		host: 'https://focus-flooring.com'

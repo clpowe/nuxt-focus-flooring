@@ -1,4 +1,6 @@
 <script setup lang="ts">
+	import { useTeam } from '~/composables/states'
+
 	useHead({
 		title: 'Focus Flooring - Meet the team'
 	})
@@ -13,24 +15,10 @@
 		title: string
 		bio: string
 		category: string
+		slug: string
 	}
 
-	// const { data: team } = await useAsyncData('teammembers', () =>
-	// 	$fetch('/team')
-	// )
-
-	const {
-		data: team,
-		suspense,
-		isLoading
-	} = useQuery({
-		queryKey: ['teammembers'],
-		queryFn: () => $fetch('/team')
-	})
-
-	onServerPrefetch(async () => {
-		await suspense()
-	})
+	const { data: team } = await useTeam()
 
 	const curruntMember = ref<Number | null>(null)
 
@@ -79,8 +67,8 @@
 		<div class="container relative">
 			<div class="">
 				<main id="main">
-					<div v-if="isLoading">Loading...</div>
-					<div v-else>
+					<!-- <div v-if="isLoading">Loading...</div> -->
+					<div>
 						<h2 class="margin-bottom">{{ category }}</h2>
 						<div class="team-container">
 							<TeamMember

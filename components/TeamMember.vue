@@ -8,6 +8,7 @@
 		bio: String,
 		group: String,
 		spaner: Boolean,
+		slug: String,
 		selected: Number
 	})
 
@@ -15,63 +16,34 @@
 </script>
 
 <template>
-	<div v-bind="$attrs" class="card shadow-xl text-left">
-		<figure>
-			<nuxt-img
-				:src="srcImg"
-				loading="lazy"
-				format="webp"
-				width="479"
-				sizes="200px md:400px"
-				class="h-auto"
-				placeholder
-				:alt="`Photo of ${firstName} ${lastName}`"
-			/>
-		</figure>
-		<div class="card-body justify-between">
+	<div
+		v-bind="$attrs"
+		class="flex flex-col bg-white border shadow-sm rounded-xl"
+	>
+		<NuxtImg
+			:src="srcImg"
+			loading="lazy"
+			width="479"
+			sizes="200px md:400px"
+			class="w-full h-auto rounded-t-xl"
+			placeholder
+			:alt="`Photo of ${firstName} ${lastName}`"
+		/>
+
+		<div class="p-4 md:p-5">
+			<h3 class="text-lg font-bold text-gray-800">
+				{{ firstName }} {{ lastName }}
+			</h3>
 			<div>
-				<h3 class="">{{ firstName }} {{ lastName }}</h3>
 				<p class="text-sm">{{ title }}</p>
 			</div>
 			<div v-if="bio" class="card-actions mt-2 justify-between">
-				<button
-					@click="$emit('open')"
-					class="btn btn-primary text-[var(--focus-white)] btn-xs w-full"
+				<NuxtLink
+					:to="`/meet-the-team/${slug}/`"
+					class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-midnight text-white disabled:opacity-50 disabled:pointer-events-none"
 				>
 					Learn More
-				</button>
-			</div>
-		</div>
-	</div>
-
-	<div
-		v-if="show && bio"
-		class="card sm:card-side shadow-xl text-[var(-midnight)] col-span-full relative overflow-hidden"
-	>
-		<div class="card-body">
-			<div class="card-actions justify-end">
-				<button
-					tabindex="0"
-					class="btn btn-xs self-end btn-primary text-[var(--focus-white)]"
-					@click="$emit('close')"
-				>
-					close
-				</button>
-			</div>
-			<div class="max-w-[65ch] mx-auto">
-				<div
-					class="mb-4 text-[clamp(3rem,9vw,5rem)] font-black uppercase leading-[.9em]"
-				>
-					{{ firstName }}<br />
-					{{ lastName }}
-				</div>
-
-				<div class="">
-					<h4 class="mb-4 font-bold text-xl">Bio</h4>
-					<div class="bio-section">
-						<p class="bio text-sm prose" v-html="bio"></p>
-					</div>
-				</div>
+				</NuxtLink>
 			</div>
 		</div>
 	</div>

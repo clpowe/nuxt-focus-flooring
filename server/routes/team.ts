@@ -22,6 +22,10 @@ type TeamMember = {
 	title?: string
 	bio?: string
 	category?: string
+	office?: string
+	mobile?: string
+	address?: string
+	email?: string
 }
 
 export default defineEventHandler(async () => {
@@ -41,7 +45,11 @@ export default defineEventHandler(async () => {
 						srcImg: member.fields.image[0].url,
 						title: member.fields.title,
 						category: member.fields.category,
-						bio: member.fields.bio
+						bio: member.fields.bio,
+						office: member.fields.office,
+						mobile: member.fields.mobile,
+						address: member.fields.address,
+						email: member.fields.email
 					} as TeamMember)
 				}
 			})

@@ -39,4 +39,8 @@
 		}),
 		defineWebPage()
 	])
+
+	const { data: teammembers } = useFetch('/team')
+
+	console.log(teammembers.value)
 </script>
