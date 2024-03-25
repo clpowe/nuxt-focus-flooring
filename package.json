@@ -56,7 +56,7 @@
 	"resolutions": {
 		"@nuxt/kit": ">=3.2.3"
 	},
-	"overrides": {
+	"peerDependencies": {
 		"consola": "^3.0.0"
 	},
 	"browserslist": [
