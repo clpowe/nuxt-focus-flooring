@@ -20,29 +20,14 @@
 </script>
 
 <template>
-	<!-- Hero -->
 	<div class="relative overflow-hidden bg-[var(--midnight)] hero">
-		<!-- Gradients -->
-		<!-- <div
-			aria-hidden="true"
-			class="flex absolute -top-96 start-1/2 transform -translate-x-1/2"
-		>
-			<div
-				class="bg-gradient-to-r from-[var(--midnight)] to-[var(--focus-yellow)] blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem]"
-			></div>
-			<div
-				class="bg-gradient-to-tl from-[var(--midnight)] via-[var(--focus-yellow-light)] to-[var(--focus-yellow)] blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem]"
-			></div>
-		</div> -->
-		<!-- End Gradients -->
-
 		<div class="relative z-10 pb-28">
 			<div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
 				<div class="max-w-2xl text-center mx-auto">
 					<!-- Title -->
 					<div class="mt-5">
 						<h1
-							class="block font-semibold text-white text-4xl md:text-5xl lg:text-6xl mx-auto"
+							class="block font-extrabold text-white text-4xl md:text-5xl lg:text-6xl mx-auto"
 						>
 							<slot name="header" />
 						</h1>

@@ -18,10 +18,12 @@
 		image: string
 		alt?: string
 		category: string
-		date: Date
+		date?: Date
 	}
 
-	const projects = ref<Project[]>([
+	const { data: projects } = useProjects()
+
+	const projectts = ref<Project[]>([
 		{
 			id: 1,
 			name: 'Veolia - Tampa Water treatment',
@@ -29,8 +31,7 @@
 			cost: 1367,
 			client: 'Wehr Constructors',
 			scope: 'Resilient flooring, vinyl base',
-			image:
-				'/Focus_Flooring_Projects/Veolia-TampaWaterTreatment.jpeg?updatedAt=1679969240764',
+			image: '/Veolia-TampaWaterTreatment.jpeg?updatedAt=1679969240764',
 			category: 'Industrial',
 			date: new Date('04/24/2020')
 		},
@@ -42,7 +43,7 @@
 			client: 'Ryan Companies',
 			scope:
 				'Floor tile, wall tile, interlocking floor mats, carpet tile, tile base, vinyl base, epoxy floor coating, sealed concrete, epoxy integral base, final cleaning, kerdi shower system, schluter, vinyl transition, marble thresholds',
-			image: '/Focus_Flooring_Projects/DTP3_Amazon.jpeg',
+			image: 'Focus_Flooring_Projects/DTP3_Amazon.jpeg',
 			category: 'Industrial',
 			date: new Date('12/14/2020')
 		},
@@ -54,7 +55,7 @@
 			client: 'Revealing Truth Ministries',
 			scope:
 				'Extensive floor prep, carpet tile, large format tile, porcelain tile, LVT, broadloom carpet, millwork base',
-			image: '/Focus_Flooring_Projects/RevealingTruthMinistries.jpg',
+			image: '/RevealingTruthMinistries.jpg',
 			category: 'Worship Centers',
 			date: new Date('09/28/2021')
 		},
@@ -65,7 +66,7 @@
 			cost: 62000,
 			client: 'Mount Olive Baptist Church',
 			scope: 'Extensive floor prep, carpet tile, porcelain tile, LVT',
-			image: '/Focus_Flooring_Projects/MountOliveBaptist.jpg',
+			image: '/MountOliveBaptist.jpg',
 			category: 'Worship Centers',
 			date: new Date('12/14/2020')
 		},
@@ -76,7 +77,7 @@
 			cost: 20000,
 			client: 'The Rock Church of God by Faith',
 			scope: 'Carpet tile, rubber cove base',
-			image: '/Focus_Flooring_Projects/TheRockChurchofGodbyFaith.jpg',
+			image: '/TheRockChurchofGodbyFaith.jpg',
 			category: 'Worship Centers',
 			date: new Date('01/01/2018')
 		},
@@ -88,7 +89,7 @@
 			client: 'Suffolk',
 			scope:
 				'Three towers; floor tile, wall tile, LVT, vinyl base, sealed concrete, marble thresholds, tile base, schluter, vinyl transitions',
-			image: '/Focus_Flooring_Projects/WestRiver.jpg',
+			image: '/WestRiver.jpg',
 			category: 'Residential & Hospitality',
 			date: new Date('10/20/2020')
 		},
@@ -100,7 +101,7 @@
 			client: 'Coastal',
 			scope:
 				'Floor tile, wall tile, large format tile, resilient flooring, carpet tile, tile base, resilient base, mud bed, ditra underlayment, geniemat underlayment, schluter, rubber transitions, extensive floor prep',
-			image: '/Focus_Flooring_Projects/Heron_Tampa.jpg',
+			image: '/Heron_Tampa.jpg',
 			category: 'Residential & Hospitality',
 			date: new Date('05/28/2021')
 		},
@@ -111,7 +112,7 @@
 			cost: 253008,
 			client: 'Moss',
 			scope: 'Resilient base throughout all units and corridors',
-			image: '/Focus_Flooring_Projects/TheCora.png',
+			image: '/TheCora.png',
 			category: 'Residential & Hospitality',
 			date: new Date('08/01/2021')
 		},
@@ -122,7 +123,7 @@
 			cost: 1960617,
 			client: 'Suffolk',
 			scope: 'LVT,carpet tile, resilient base, schluter, Aquaflex',
-			image: '/Focus_Flooring_Projects/asher_f2.png',
+			image: '/asher_f2.png',
 			category: 'Residential & Hospitality',
 			date: new Date('04/11/2022')
 		},
@@ -134,7 +135,7 @@
 			client: 'Kast',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/Focus_Flooring_Projects/tempo_encore.jpeg',
+			image: '/tempo_encore.jpeg',
 			category: 'Residential & Hospitality',
 			date: new Date('09/01/2018')
 		},
@@ -146,7 +147,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, wall tile, tile base, carpet, rubber flooring, LVT, rubber base, schluter, vinyl transitions',
-			image: '/Focus_Flooring_Projects/Cortona_Apartments.jpg',
+			image: '/Cortona_Apartments.jpg',
 			category: 'Residential & Hospitality',
 			date: new Date('10/01/2018')
 		},
@@ -158,7 +159,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions',
-			image: '/Focus_Flooring_Projects/TampaOaksSeniorLiving.jpeg',
+			image: '/TampaOaksSeniorLiving.jpeg',
 			category: 'Residential & Hospitality',
 			date: new Date('11/01/2017')
 		},
@@ -169,7 +170,7 @@
 			cost: 200000,
 			client: 'LMG',
 			scope: 'Broadloom carpet, base',
-			image: '/Focus_Flooring_Projects/WestShoreGrand.jpeg',
+			image: '/WestShoreGrand.jpeg',
 			category: 'Residential & Hospitality',
 			date: new Date('o1/14/2017')
 		},
@@ -181,7 +182,7 @@
 			client: 'LMG',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/Focus_Flooring_Projects/EVEN_Hotels.jpeg',
+			image: '/EVEN_Hotels.jpeg',
 			category: 'Residential & Hospitality',
 			date: new Date('02/14/2017')
 		},
@@ -193,7 +194,7 @@
 			client: 'JE Dunn',
 			scope:
 				'LVT, Static Dissipative tile, rubber flooring, broadloam carpet, carpet tile, wood flooring, rubber base, heat weld, skudoboard, rubber transitions',
-			image: '/Focus_Flooring_Projects/SkyCenterOne.jpeg',
+			image: '/SkyCenterOne.jpeg',
 			category: 'Commercial Office & Retail',
 			date: new Date('03/23/2021')
 		},
@@ -204,7 +205,7 @@
 			cost: 250000,
 			client: 'Rubicon Construction',
 			scope: 'Rubber Flooring, Floor tile, Wall tile',
-			image: '/Focus_Flooring_Projects/RivergateTower.jpeg',
+			image: '/RivergateTower.jpeg',
 			category: 'Commercial Office & Retail',
 			date: new Date('12/14/2017')
 		},
@@ -215,7 +216,7 @@
 			cost: 150000,
 			client: 'Onicx Construction',
 			scope: 'Floor tile, wall tile, resilient flooring, broadloom carpet',
-			image: '/Focus_Flooring_Projects/Anand_Vihar_Clubhouse.jpeg',
+			image: '/Anand_Vihar_Clubhouse.jpeg',
 			category: 'Residential & Hospitality',
 			date: new Date('12/14/2020')
 		},
@@ -227,7 +228,7 @@
 			client: 'Beck Group',
 			scope:
 				'Carpet tile, resilient flooring, rubber base, wall tile, transition strips',
-			image: '/Focus_Flooring_Projects/ChamberOfCommerce.jpg',
+			image: '/ChamberOfCommerce.jpg',
 			category: 'Commercial Office & Retail',
 			date: new Date('03/20/2020')
 		},
@@ -240,7 +241,7 @@
 			client: 'DPR',
 			scope:
 				'Tile demo, carpet inset demo, floor tile, wall tile, resilient, carpet tile, tile base, rubber base, waterproofing, crack isolation, schluter',
-			image: '/Focus_Flooring_Projects/Citi_Tampa_Amenities.jpg',
+			image: '/Citi_Tampa_Amenities.jpg',
 			category: 'Commercial Office & Retail',
 			date: new Date('11/30/2022')
 		},
@@ -252,7 +253,7 @@
 			client: 'DPR',
 			scope:
 				'Floor tile, wall tile, static control VCT, sheet flooring, LVT, interlocking mats, carpet tile, tile base, rubber base, rubber flooring, heat weld, crack isolation, schluter, rubber transition',
-			image: '/Focus_Flooring_Projects/citi_amminities.jpg',
+			image: '/citi_amminities.jpg',
 			category: 'Commercial Office & Retail',
 			date: new Date('09/26/2022')
 		},
@@ -264,8 +265,7 @@
 			client: 'Hensel Phelps',
 			scope:
 				'Floor tile, wall tile, static dissipative tile/resilient flooring, caret tile, broadloam carpet, rubber base, waterproofing, epoxy grout, schluter',
-			image:
-				'/Focus_Flooring_Projects/TAMPAINTERNATIONALAIRPORT_MAIN_BLUE.jpeg',
+			image: '/TAMPAINTERNATIONALAIRPORT_MAIN_BLUE.jpeg',
 			category: 'Aviation',
 			date: new Date('10/1/2021')
 		},
@@ -276,7 +276,7 @@
 			cost: 2600000,
 			client: 'Skanksa',
 			scope: 'Extensive floor prep',
-			image: '/Focus_Flooring_Projects/TAMPAINTERNATIONALAIRPORT.jpeg',
+			image: '/TAMPAINTERNATIONALAIRPORT.jpeg',
 			category: 'Aviation',
 			date: new Date('08/31/2018')
 		},
@@ -287,7 +287,7 @@
 			cost: 140000,
 			client: 'Beck Group',
 			scope: 'Wall tile, schulter, tile polishing',
-			image: '/Focus_Flooring_Projects/TIA_Security.jpeg',
+			image: '/TIA_Security.jpeg',
 			category: 'Aviation',
 			date: new Date('04/10/2020')
 		},
@@ -299,8 +299,7 @@
 			client: 'Haskell Company',
 			scope:
 				'Floor tile, wall tile, carpet tile, rubber flooring, rubber base, schluter, floor prep',
-			image:
-				'/Focus_Flooring_Projects/unitedtpahangar-2southwestaerial-150482.jpg',
+			image: '/unitedtpahangar-2southwestaerial-150482.jpg',
 			category: 'Aviation',
 			date: new Date('05/04/2020')
 		},
@@ -311,7 +310,7 @@
 			cost: 82380,
 			client: 'DPR',
 			scope: 'Carpet demo, tile demo, floor tile, schluter, crack isolation',
-			image: '/Focus_Flooring_Projects/TPATicketLevelInteriorRefurbishment.png',
+			image: '/TPATicketLevelInteriorRefurbishment.png',
 			category: 'Aviation',
 			date: new Date('05/24/2021')
 		},
@@ -323,8 +322,7 @@
 			client: 'Reno Building',
 			scope:
 				'Tile demo, carpet demo, base demo, floor tile, wall tile, carpet tile, broadloam carpet, tile base, rubber base, schluter',
-			image:
-				'/Focus_Flooring_Projects/Terminal_Building-3900-Rehabilitation-Aviation.jpeg',
+			image: '/Terminal_Building-3900-Rehabilitation-Aviation.jpeg',
 			category: 'Aviation',
 			date: new Date('06/08/2020')
 		},
@@ -335,7 +333,7 @@
 			cost: 33458,
 			client: 'Reno Building',
 			scope: 'VCT and rubber base installation, moisture mitigation',
-			image: '/Focus_Flooring_Projects/Peter_O_Knight_Airport.jpeg',
+			image: '/Peter_O_Knight_Airport.jpeg',
 			category: 'Aviation',
 			date: new Date('10/29/2020')
 		},
@@ -347,7 +345,7 @@
 			client: 'Beck Group',
 			scope:
 				'Vinyl flooring demo, floor tile, wall tile, tile base, schluter, moisture mitigation, wood flooring, rubber base, extensive floor prep, sheet vinyl, heat weld, floor prep',
-			image: '/Focus_Flooring_Projects/TGH_New_Physicians_Lounge.jpeg',
+			image: '/TGH_New_Physicians_Lounge.jpeg',
 			category: 'Healthcare',
 			date: new Date('01/10/2019')
 		},
@@ -360,7 +358,7 @@
 			scope:
 				'Carpet demo, base demo, sheet vinyl, heat weld, carpet tile, carpet patch/repair, vinyl base',
 			image:
-				'/Focus_Flooring_Projects/Moffitt_Cancer_Center-CTScanRoom-Three_StretcherLogoCleared.jpeg',
+				'./Moffitt_Cancer_Center-CTScanRoom-Three_StretcherLogoCleared.jpeg',
 			category: 'Healthcare',
 			date: new Date('08/14/2020')
 		},
@@ -371,7 +369,7 @@
 			cost: 77989,
 			client: 'DPR',
 			scope: 'Resilient flooring, vinyl base, floor paint',
-			image: '/Focus_Flooring_Projects/Moffitt_CEP_upgrade.jpeg',
+			image: '/Moffitt_CEP_upgrade.jpeg',
 			category: 'Healthcare',
 			date: new Date('02/21/2023')
 		},
@@ -382,7 +380,7 @@
 			cost: 8390,
 			client: 'Wehr Constructors',
 			scope: 'Sheet vinyl, heat weld',
-			image: '/Focus_Flooring_Projects/Memorial_Hospital_Tampa.jpeg',
+			image: '/Memorial_Hospital_Tampa.jpeg',
 			category: 'Healthcare',
 			date: new Date('02/12/2020')
 		},
@@ -393,7 +391,7 @@
 			cost: 1060000,
 			client: 'Hillsborough County Public Schools',
 			scope: 'Carpet demo, installation & maintenance',
-			image: '/Focus_Flooring_Projects/HCPS.jpg',
+			image: '/HCPS.jpg',
 			category: 'Education',
 			date: new Date('12/21/2022')
 		},
@@ -405,7 +403,7 @@
 			client: 'Ajax',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/Focus_Flooring_Projects/AlonsoHighSchool.jpeg',
+			image: '/AlonsoHighSchool.jpeg',
 			category: 'Education',
 			date: new Date('2018')
 		},
@@ -417,7 +415,7 @@
 			client: 'CORE Construction',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter, quartz flooring',
-			image: '/Focus_Flooring_Projects/High_School.jpg',
+			image: '/High_School.jpg',
 			category: 'Education',
 			date: new Date('11/08/2019')
 		},
@@ -429,7 +427,7 @@
 			client: 'Allstate',
 			scope:
 				'Floor tile, wall tile, tile base, waterproofing, marble thresholds, schluter',
-			image: '/Focus_Flooring_Projects/ElementarySchool_D.jpeg',
+			image: '/ElementarySchool_D.jpeg',
 			category: 'Education',
 			date: new Date('05/04/2020')
 		},
@@ -441,7 +439,7 @@
 			client: 'Core',
 			scope:
 				'Floor tile, resilient flooring, carpet tile, tile base, rubber base, marble thresholds, schluter',
-			image: '/Focus_Flooring_Projects/BellamyES.jpeg',
+			image: '/BellamyES.jpeg',
 			category: 'Education',
 			date: new Date('05/04/2020')
 		},
@@ -452,7 +450,7 @@
 			cost: 64478,
 			client: 'Reno Building',
 			scope: 'Extensive floor prep, quartz flooring, vinyl base',
-			image: '/Focus_Flooring_Projects/east_bay.jpeg',
+			image: '/east_bay.jpeg',
 			category: 'Education',
 			date: new Date('06/14/2020')
 		},
@@ -464,7 +462,7 @@
 			client: 'Beck',
 			scope:
 				'Floor tile, wall tile, tile base, carpet tile, rubber flooring, LVT, rubber base, schluter, vinyl transitions, extensive floor prep',
-			image: '/Focus_Flooring_Projects/Sligh_Middle_School.jpg',
+			image: '/Sligh_Middle_School.jpg',
 			category: 'Education',
 			date: new Date('10/30/2020')
 		},
@@ -476,7 +474,7 @@
 			client: 'JE Dunn',
 			scope:
 				'Floor tile, wall tile, restoration and installation of salvaged tile from the original building, tile base, waterproofing, crack isolation, schluter',
-			image: '/Focus_Flooring_Projects/Tampa_HeightsRestoration.jpeg',
+			image: '/Tampa_HeightsRestoration.jpeg',
 			category: 'Education',
 			date: new Date('06/22/2020')
 		},
@@ -488,14 +486,17 @@
 			client: 'Beck Group',
 			scope:
 				'Floor tile, wall tile, tile base, schluter, kerdi shower system, marble thresholds',
-			image: '/Focus_Flooring_Projects/USFSP_Residence.jpg',
+			image: '/USFSP_Residence.jpg',
 			category: 'Education',
 			date: new Date('02/28/2020')
 		}
 	])
 
 	const filteredProjects = computed(() => {
+		if (projects.value === null) return
+		// @ts-ignore
 		return useFilter(projects.value, category.value).sort(
+			// @ts-ignore
 			(a, b) => b.date - a.date
 		)
 	})
@@ -503,7 +504,7 @@
 	const catagories = computed(() => {
 		const set = new Set()
 		set.add('All')
-		projects.value.forEach((project) => set.add(project.category))
+		projects.value?.forEach((project) => set.add(project.category))
 		return set
 	})
 </script>
@@ -526,26 +527,21 @@
 			</div>
 		</div>
 		<div class="container">
-			<!-- <Sidebar> -->
-			<!-- <div>
-					<label class="sq-radio" v-for="cat in catagories">
-						{{ cat }}
-						<input type="radio" name="radio" v-model="category" :value="cat" />
-						<span class="checkmark"></span>
-					</label>
-				</div> -->
-
 			<main id="main">
 				<h2 class="margin-bottom">
 					{{ category === 'All' ? 'All Projects' : category }}
 				</h2>
-				<div
-					class="projects grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+
+				<UBlogList
+					orientation="horizontal"
+					class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16"
+					:ui="{
+						horizontal: ''
+					}"
 				>
 					<ProjectCard v-for="item in filteredProjects" v-bind="item" />
-				</div>
+				</UBlogList>
 			</main>
-			<!-- </Sidebar> -->
 		</div>
 	</div>
 </template>
@@ -553,5 +549,21 @@
 <style scoped>
 	.projects {
 		container-type: inline-size;
+	}
+
+	.team-container {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+		grid-auto-flow: dense;
+	}
+
+	@media (min-width: 741px) {
+		.team-container {
+			display: grid;
+			gap: 1rem;
+			grid-auto-flow: dense;
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		}
 	}
 </style>

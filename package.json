@@ -14,7 +14,7 @@
 		"@nuxtjs/google-fonts": "3.0.0-1",
 		"@nuxtjs/tailwindcss": "^6.4.0",
 		"@tailwindcss/forms": "^0.5.7",
-		"nuxt": "^3.9.2",
+		"nuxt": "^3.11.1",
 		"nuxt-icon": "^0.2.6",
 		"nuxt-schema-org": "^2.1.2",
 		"nuxt-vercel-analytics": "^1.0.0",
@@ -29,6 +29,8 @@
 		"@formkit/vue": "1.0.0-beta.15",
 		"@hebilicious/vue-query-nuxt": "^0.3.0",
 		"@notionhq/client": "^2.2.14",
+		"@nuxt/ui": "^2.14.2",
+		"@nuxt/ui-pro": "^1.0.2",
 		"@nuxtjs/robots": "^3.0.0",
 		"@preline/collapse": "^2.0.2",
 		"@preline/dropdown": "^2.0.2",
@@ -47,7 +49,9 @@
 		"postcss-preset-env": "^7.8.3",
 		"preline": "^2.0.3",
 		"vue-lite-youtube-embed": "^1.2.0",
-		"vue-multiselect": "3.0.0-beta.2"
+		"vue-multiselect": "3.0.0-beta.2",
+		"yup": "^1.4.0",
+		"zod": "^3.22.4"
 	},
 	"resolutions": {
 		"@nuxt/kit": ">=3.2.3"

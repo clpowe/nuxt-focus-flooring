@@ -3,20 +3,6 @@
 		title: 'Focus Flooring - Join our team'
 	})
 
-	import 'swiper/css/navigation'
-	import 'swiper/css/pagination'
-
-	onMounted(() => {
-		document
-			.querySelectorAll('.horizontal-media-scroller')
-			.forEach((scroller) =>
-				rovingIndex({
-					element: scroller,
-					target: 'a'
-				})
-			)
-	})
-
 	const communityList = [
 		'ACE Mentor',
 		'American Heart Association',
@@ -172,10 +158,10 @@
 						class="my-grid grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4"
 					>
 						<div v-for="pic in communityPictures">
-							<nuxt-img
-								provider="imagekit"
+							<NuxtImg
 								:src="pic.img"
 								:alt="pic.alt"
+								provider="imagekit"
 								fit="cover"
 								height="350"
 								width="400"

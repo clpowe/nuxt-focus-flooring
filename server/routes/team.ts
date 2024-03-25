@@ -26,6 +26,7 @@ type TeamMember = {
 	mobile?: string
 	address?: string
 	email?: string
+	allowMessage?: boolean
 }
 
 export default defineEventHandler(async () => {
@@ -42,6 +43,7 @@ export default defineEventHandler(async () => {
 						id: member.id,
 						firstName: member.get('firstName'),
 						lastName: member.fields.lastName,
+						//@ts-ignore
 						srcImg: member.fields.image[0].url,
 						title: member.fields.title,
 						category: member.fields.category,
@@ -49,7 +51,8 @@ export default defineEventHandler(async () => {
 						office: member.fields.office,
 						mobile: member.fields.mobile,
 						address: member.fields.address,
-						email: member.fields.email
+						email: member.fields.email,
+						allowMessage: member.fields.allowMessage
 					} as TeamMember)
 				}
 			})

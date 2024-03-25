@@ -43,7 +43,6 @@
 						<div>
 							<h3 class="text-base mb-4">Tour Our New Office Space</h3>
 							<nuxt-img
-								provider="imagekit"
 								src="Focus_Flooring.png"
 								alt=""
 								fit="contain"

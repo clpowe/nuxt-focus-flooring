@@ -1,50 +1,16 @@
 <script setup>
-	const route = useRoute()
-	const router = useRouter()
 	useHead({
 		title: 'Focus Flooring - Our Process'
 	})
+
+	const nuxtApp = useNuxtApp()
+	const { activeHeadings, updateHeadings } = useScrollspy()
 
 	const precon = ref(null)
 	const project = ref(null)
 	const execution = ref(null)
 
-	const preconIsVisible = ref(false)
-	const projectIsVisible = ref(false)
-	const executionIsVisible = ref(false)
-
-	useIntersectionObserver(
-		precon,
-		([{ isIntersecting }]) => {
-			// route.hash = '#preconstruction'
-			preconIsVisible.value = isIntersecting
-		},
-		{ threshold: 0.5 }
-	)
-
-	useIntersectionObserver(
-		project,
-		([{ isIntersecting }]) => {
-			// route.hash = '#project-planning'
-			projectIsVisible.value = isIntersecting
-		},
-		{ threshold: 0.7 }
-	)
-	useIntersectionObserver(
-		execution,
-		([{ isIntersecting }]) => {
-			executionIsVisible.value = isIntersecting
-		},
-		{ threshold: 0.2 }
-	)
-
 	const main = ref()
-
-	const sections = ref([
-		{ text: 'Preconstruction', id: 'preconstruction' },
-		{ text: 'Project Planning', id: 'project-planning' },
-		{ text: 'Project Execution', id: 'project-execution' }
-	])
 
 	const preconstruction = [
 		{
@@ -156,131 +122,58 @@
 		}
 	]
 
-	const systemTools = [
+	const links = computed(() => [
 		{
-			id: 1,
-			component: 'h3',
-			title: 'Materials lead time report',
-			content:
-				'Our internal reporting that allows you to know the procurement status of all materials, as well as when you can expect to receive your materials based on the updated lead times and scheduled installation dates.'
+			label: 'Preconstruction',
+			to: '#preconstruction',
+			active:
+				activeHeadings.value.includes('preconstruction') &&
+				!activeHeadings.value.includes('project-planning')
 		},
 		{
-			id: 2,
-			component: 'h3',
-			title: 'Daily reports and weekly production reports',
-			content:
-				'This tool gives you the ability to track our performance and pace throughout the project.'
+			label: 'Project Planning',
+			to: '#project-planning',
+			active:
+				activeHeadings.value.includes('project-planning') &&
+				!activeHeadings.value.includes('project-execution')
 		},
 		{
-			id: 3,
-			component: 'h3',
-			title: 'Mobilization reports',
-			content:
-				'This internal planning tool allows us to take the project schedule and break out all of the materials needed based on their install date. This will help our team both manage and sequence all deliveries, as well as stage materials at the job site.'
+			label: 'Project Execution',
+			to: '#project-execution',
+			active: activeHeadings.value.includes('project-execution')
 		}
-	]
+	])
 
-	const projectPlanning = [
-		'Submittals',
-		'Project Staffing Plan',
-		'Material Handling',
-		'Material Lead Time Report',
-		'Sequence/Scheduling',
-		'Pre-Execution Analysis'
-	]
+	nuxtApp.hooks.hookOnce('page:finish', () => {
+		updateHeadings([
+			document.querySelector('#preconstruction'),
+			document.querySelector('#project-planning'),
+			document.querySelector('#project-execution')
+		])
+	})
+
+	const ui = {
+		base: 'text-midnight-950',
+		active: 'text-midnight-950  hover:text-midnight-950',
+		inactive: 'text-midnight-950 hover:text-midnight-950'
+	}
 </script>
 
 <template>
 	<div>
 		<Hero>Our <span>Process</span> </Hero>
-
-		<!-- Scrollspy -->
 		<header
-			class="sticky top-0 flex bg-[#171d1a] z-10 flex-wrap sm:justify-start sm:flex-nowrap w-full text-sm py-4"
+			class="flex sticky top-0 bg-neutral-300 z-10 sm:justify-start sm:flex-nowrap w-full text-sm py-4 justify-center"
 		>
-			<nav
-				class="max-w-[85rem] w-full mx-auto px-4 flex flex-wrap basis-full items-center justify-between"
-				aria-label="Page"
-			>
-				<div class="sm:order-3 flex items-center gap-x-2">
-					<button
-						type="button"
-						class="sm:hidden hs-collapse-toggle p-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-gray-700 dark:text-white dark:hover:bg-white/10 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-						data-hs-collapse="#page-navbar-alignment"
-						aria-controls="page-navbar-alignment"
-						aria-label="Toggle navigation"
-					>
-						<svg
-							class="hs-collapse-open:hidden flex-shrink-0 size-4"
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<line x1="3" x2="21" y1="6" y2="6" />
-							<line x1="3" x2="21" y1="12" y2="12" />
-							<line x1="3" x2="21" y1="18" y2="18" />
-						</svg>
-						<svg
-							class="hs-collapse-open:block hidden flex-shrink-0 size-4"
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
-							<path d="M18 6 6 18" />
-							<path d="m6 6 12 12" />
-						</svg>
-					</button>
-				</div>
-				<div
-					id="page-navbar-alignment"
-					class="hs-collapse hidden overflow-hidden transition-all mx-auto duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2"
-				>
-					<div
-						data-hs-scrollspy="#scrollspy-1"
-						data-hs-scrollspy-scrollable-parent="#scrollspy-scrollable-parent-1"
-						class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5 [--scrollspy-offset:100]"
-					>
-						<a
-							href="#preconstruction"
-							class="hs-scrollspy-active:text-[#cce70b] text-white"
-							:class="{ active: preconIsVisible }"
-							>Preconstruction</a
-						>
-						<a
-							href="#project-planning"
-							class="hs-scrollspy-active:text-[#cce70b] text-white"
-							:class="{ active: projectIsVisible }"
-							>Project Planning</a
-						>
-						<a
-							href="#project-execution"
-							class="hs-scrollspy-active:text-[#cce70b] text-white"
-							:class="{ active: executionIsVisible }"
-							>Project Execution</a
-						>
-					</div>
-				</div>
-			</nav>
+			<UHeaderLinks
+				:links="links"
+				class="sticky top-0 mx-auto text-midnight-950"
+				:ui="ui"
+			/>
 		</header>
-
-		<!-- Scrollspy End -->
 
 		<div class="container relative">
 			<main id="scrollspy-1" class="main max-w-[85ch] mx-auto" ref="main">
-				<!-- Icon Blocks -->
-
 				<section
 					id="preconstruction"
 					ref="precon"
@@ -326,46 +219,7 @@
 						<!-- End Grid -->
 					</div>
 				</section>
-				<!-- End Icon Blocks -->
 
-				<!-- <article>
-					<nuxt-img
-						src="ourProcess.jpg"
-						alt="A man and a woman looking at blueprints"
-						sizes="sm:100vw md:700px lg:700px"
-						format="webp"
-						class="inset-0 h-full w-full object-cover"
-					/>
-
-					<div class="space-y-10 mt-6">
-						<div>
-							<h2 class="mb-4" data-section="preconstruction">
-								Pre&shyconstruction
-							</h2>
-							<p class="">
-								Our team will become familiar with the project documents to
-								ensure our scope is fully captured. We will then partner with
-								you to ensure you stay within your budget throughout all pricing
-								efforts and obtain cost certainty for your project.
-							</p>
-						</div>
-						<Content>
-							<template v-for="item in preconstruction" :key="item.id">
-								<article class="card">
-									<div>
-										<svg-icon :name="item.svg" class="h-14" />
-									</div>
-									<div>
-										<h3 class="mb-[var(--s-1)]">{{ item.title }}</h3>
-										<p class="">{{ item.content }}</p>
-									</div>
-								</article>
-							</template>
-						</Content>
-					</div>
-				</article> -->
-
-				<!-- Icon Blocks -->
 				<section
 					id="project-planning"
 					ref="project"
@@ -466,58 +320,6 @@
 				</section>
 				<!-- End Icon Blocks -->
 
-				<!-- <article id="project-planning">
-					<nuxt-img
-						src="threeUniquesSupporting.jpg"
-						alt="Woman working in a warehouse"
-						fit="cover"
-						sizes="sm:100vw md:700px lg:700px"
-						format="webp"
-						class="inset-0 h-full w-full object-cover object-top"
-					/>
-
-					<h2 data-section="project-planning" class="mb-4 mt-6">
-						Project Planning
-					</h2>
-					<p class="">
-						Our internal project planning systems and tools allow us to
-						alleviate the risk of material price escalations through tracking
-						all products “good-through” pricing dates, lead time tracking,
-						establish early procurement, create material storage plans, and
-						achieve on-time scheduling.
-					</p>
-					<ul class="space-y-4 mt-8 list-disc list-outside ml-4">
-						<li>
-							<p class="mt-1">
-								<strong>Materials lead time report</strong> &mdash; Our internal
-								reporting that allows you to know the procurement status of all
-								materials, as well as when you can expect to receive your
-								materials based on the updated lead times and scheduled
-								installation dates.
-							</p>
-						</li>
-						<li>
-							<p class="mt-1">
-								<strong>Mobilization Reporting</strong> &mdash; Material
-								Handling & Sequencing: Our team will take the project schedule
-								and break out all of the materials needed based on their
-								installation date. This will help our team both manage and
-								sequence all deliveries, as well as stage materials at the job
-								site.
-							</p>
-						</li>
-						<li>
-							<p class="mt-1"><strong>Submittals</strong></p>
-						</li>
-						<li>
-							<p class="mt-1"><strong>Project Staffing Planning</strong></p>
-						</li>
-						<li>
-							<p class="mt-1"><strong>Pre-Execution Analysis</strong></p>
-						</li>
-					</ul>
-				</article> -->
-
 				<section
 					id="project-execution"
 					ref="execution"
@@ -589,58 +391,6 @@
 						</div>
 					</div>
 				</section>
-
-				<!-- <div id="project-execution" class="pt-6">
-					<div class="space-y-16">
-						<SideBy class="mb-8">
-							<template v-slot:text>
-								<div class="flex-1">
-									<h2 data-section="project-execution" class="mb-4">
-										Project Execution
-									</h2>
-									<p class="">
-										Through our full-time onsite supervision, a dedicated field
-										technician and QAQC protocols, we are able to implement our
-										“Zero Punch” philosophy reducing all quality punch list
-										items to almost “0”.
-									</p>
-								</div>
-							</template>
-						</SideBy>
-						<div>
-							<p class="font-bold text-xl mb-6">
-								Why we’re your easy button: Our step by step execution process
-							</p>
-							<Content>
-								<template v-for="item in projectExecutionSteps" :key="item.id">
-									<Card component="h4" :svg="item.svg" :image="item.image">
-										<p>{{ item.content }}</p>
-									</Card>
-								</template>
-							</Content>
-						</div>
-
-						<div class="p-8">
-							<Content>
-								<template v-for="item in projectExecution" :key="item.id">
-									<Card :title="item.title" :component="item.component">
-										<p class="mb-4">{{ item.content }}</p>
-
-										<ul
-											v-if="item.list"
-											role="list"
-											class="list-disc list-outside ml-4"
-										>
-											<li v-for="item in item.list">
-												{{ item }}
-											</li>
-										</ul>
-									</Card>
-								</template>
-							</Content>
-						</div>
-					</div>
-				</div> -->
 			</main>
 			<!-- </Sidebar> -->
 		</div>

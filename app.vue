@@ -2,7 +2,11 @@ import { NuxtLoadingIndicator } from '#build/components';
 <script lang="ts"></script>
 
 <template>
-	<NuxtLayout>
-		<NuxtPage />
-	</NuxtLayout>
+	<Navigation />
+	<UMain>
+		<NuxtLayout>
+			<NuxtPage />
+		</NuxtLayout>
+	</UMain>
+	<Footer />
 </template>

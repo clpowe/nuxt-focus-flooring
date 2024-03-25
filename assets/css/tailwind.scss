@@ -56,11 +56,6 @@ h3 {
 	font-weight: 700;
 }
 
-:focus {
-	outline: 2px solid var(--focus-yellow);
-	outline-offset: 0.15em;
-}
-
 .container {
 	max-width: 1440px;
 	margin-inline: auto;
@@ -106,25 +101,6 @@ h1::after {
 	width: 1rem;
 	background-color: var(--focus-yellow);
 	border-radius: 4px;
-}
-
-h2 {
-	position: relative;
-	padding-bottom: 0.5rem;
-	text-transform: uppercase;
-	font-weight: 700;
-	container-type: inline-size;
-}
-
-h2::after {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 5%;
-	height: 0.5em;
-	background-color: var(--focus-yellow);
-	z-index: -1;
-	width: 30cqi;
 }
 
 h3 {

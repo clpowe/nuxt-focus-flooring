@@ -12,13 +12,8 @@
 	</div> -->
 
 	<a href="#main" class="skip-link button visually-hidden">Skip to main</a>
-	<PancakeStack>
-		<Navigation />
-		<div>
-			<slot />
-		</div>
-		<Footer />
-	</PancakeStack>
+
+	<slot />
 </template>
 
 <script lang="ts" setup>
@@ -41,6 +36,4 @@
 	])
 
 	const { data: teammembers } = useFetch('/team')
-
-	console.log(teammembers.value)
 </script>

@@ -1,7 +1,7 @@
 <script setup>
 	defineProps({
 		id: {
-			type: Number
+			type: String
 		},
 		name: {
 			type: String
@@ -18,7 +18,7 @@
 		scope: {
 			type: String
 		},
-		image: {
+		srcImg: {
 			type: String
 		},
 		alt: {
@@ -28,26 +28,31 @@
 			type: String
 		}
 	})
+
+	const show = ref(false)
 </script>
 
 <template>
-	<div class="card bg-base-100 shadow-xl">
-		<figure>
-			<nuxt-img
-				provider="imagekit"
-				:src="image"
+	<UBlogPost
+		:image="{ src: srcImg, alt: alt }"
+		:title="name"
+		description="As Envision Flooring"
+		:ui="{
+			image: {
+				wrapper: 'aspect-[9/10]'
+			}
+		}"
+	>
+		<!-- <div class="h-80 object-cover">
+			<NuxtImg
+				:src="srcImg"
 				:alt="alt"
-				format="webp"
-				height="500"
-				fit="fit"
 				loading="lazy"
-				sizes="sm:100vw md:60vw lg:80vw"
-				:modifiers="{ aspectRatio: '16/9' }"
+				class="w-full object-cover object-center h-80"
 			/>
-		</figure>
+		</div> -->
+
 		<div class="p-4">
-			<h3 class="card-title">{{ name }}</h3>
-			<p class="text-sm mb-4">As Envision Flooring</p>
 			<p>
 				<span class="font-bold">Size: </span>
 				<span class="uppercase">{{ size }}</span>
@@ -55,7 +60,7 @@
 			<p><span class="font-bold">Client: </span> {{ client }}</p>
 			<p><span class="font-bold">Scope: </span> {{ scope }}</p>
 		</div>
-	</div>
+	</UBlogPost>
 </template>
 
 <style scoped>
@@ -74,5 +79,15 @@
 		.sideby {
 			grid-template-columns: 1fr 1fr;
 		}
+	}
+
+	.v-enter-active,
+	.v-leave-active {
+		transition: transform 0.4s ease;
+	}
+
+	.v-enter-from,
+	.v-leave-to {
+		transform: translateY(-100%);
 	}
 </style>

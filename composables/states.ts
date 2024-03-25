@@ -10,3 +10,6 @@ export const useTeam = () =>
 			}))
 		}
 	})
+
+export const useProjects = () =>
+	useAsyncData('projects', () => $fetch('/projects'))

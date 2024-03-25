@@ -32,18 +32,6 @@
 		//@ts-ignore
 		return useFilter(team.value, category.value)
 	})
-
-	const handleClick = (index: number) => {
-		if (curruntMember.value == index) {
-			curruntMember.value = null
-		} else {
-			curruntMember.value = index
-		}
-	}
-
-	function handleClose() {
-		curruntMember.value = null
-	}
 </script>
 
 <template>
@@ -51,17 +39,10 @@
 		<Hero>Meet the <span>team</span></Hero>
 
 		<div
-			class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl"
+			class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl bg-neutral-300"
 		>
-			<div class="container">
-				<select
-					class="py-3 px-4 pe-9 block w-full max-w-xs border-gray-400 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-					v-model="category"
-				>
-					<option v-for="cat in catagories" :value="cat">
-						{{ cat }}
-					</option>
-				</select>
+			<div class="container bg-neutral-300">
+				<USelectMenu v-model="category" :options="catagories" />
 			</div>
 		</div>
 		<div class="container relative">
@@ -70,17 +51,19 @@
 					<!-- <div v-if="isLoading">Loading...</div> -->
 					<div>
 						<h2 class="margin-bottom">{{ category }}</h2>
-						<div class="team-container">
+						<UBlogList
+							orientation="horizontal"
+							class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16"
+							:ui="{
+								horizontal: ''
+							}"
+						>
 							<TeamMember
 								v-for="(member, index) in filtered"
 								:key="member.id"
-								:data-index="index"
-								:selected="curruntMember"
 								v-bind="member"
-								@click="handleClick(member.id)"
-								@close="handleClose"
 							/>
-						</div>
+						</UBlogList>
 					</div>
 				</main>
 			</div>

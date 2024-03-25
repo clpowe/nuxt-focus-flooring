@@ -1,23 +1,5 @@
 <script setup>
-	defineProps({
-		title: {
-			type: String,
-			required: true
-		},
-		image: {
-			type: String,
-			required: true,
-			default: '/Heron_Tampa.jpg'
-		},
-		description: {
-			type: String,
-			required: true
-		},
-		route: {
-			type: String,
-			required: true
-		}
-	})
+	defineProps(['title', 'image', 'description', 'route'])
 </script>
 
 <template>

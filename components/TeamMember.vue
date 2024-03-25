@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	const props = defineProps({
-		id: Number,
+		id: String,
 		srcImg: String,
 		firstName: String,
 		lastName: String,
@@ -16,7 +16,26 @@
 </script>
 
 <template>
-	<div
+	<UBlogPost
+		:title="`${firstName} ${lastName}`"
+		:image="{ src: srcImg, alt: `Photo of ${firstName} ${lastName}` }"
+		:description="title"
+		:ui="{
+			image: {
+				wrapper: 'aspect-[9/10]'
+			}
+		}"
+	>
+		<UButton
+			color="midnight"
+			v-if="bio"
+			class="mt-4 bg-midnight-950"
+			:to="`/meet-the-team/${slug}/`"
+		>
+			Learn More
+		</UButton>
+	</UBlogPost>
+	<!-- <div
 		v-bind="$attrs"
 		class="flex flex-col bg-white border shadow-sm rounded-xl"
 	>
@@ -37,16 +56,13 @@
 			<div>
 				<p class="text-sm">{{ title }}</p>
 			</div>
-			<div v-if="bio" class="card-actions mt-2 justify-between">
-				<NuxtLink
-					:to="`/meet-the-team/${slug}/`"
-					class="mt-2 py-2 px-3 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-midnight text-white disabled:opacity-50 disabled:pointer-events-none"
-				>
+			<div>
+				<UButton color="primary" v-if="bio" :to="`/meet-the-team/${slug}/`">
 					Learn More
-				</NuxtLink>
+				</UButton>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </template>
 
 <style>

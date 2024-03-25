@@ -1,3 +1,4 @@
+import { base } from 'airtable'
 import svgLoader from 'vite-svg-loader'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -43,11 +44,13 @@ export default defineNuxtConfig({
 			}
 		}
 	},
+	extends: ['@nuxt/ui-pro'],
 	modules: [
 		'@nuxt/devtools',
 		'nuxt-vercel-analytics',
 		'@vueuse/nuxt',
 		'@formkit/nuxt',
+		'@nuxt/ui',
 		'@nuxtjs/google-fonts',
 		'nuxt-icon',
 		'@nuxtjs/robots',
@@ -55,9 +58,15 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
 		'nuxt-swiper',
-		'@nuxt/image',
-		'@hebilicious/vue-query-nuxt'
+		'@nuxt/image'
 	],
+	features: {
+		devLogs: false
+		// or 'silent' to allow you to handle yourself with `dev:ssr-logs` hook
+	},
+	colorMode: {
+		preference: 'light'
+	},
 	plugins: ['~/plugins/preline.client.ts'],
 	googleFonts: {
 		families: {
@@ -81,9 +90,25 @@ export default defineNuxtConfig({
 		configFile: './formkit.config.ts'
 	},
 	image: {
-		format: ['avif', 'webp']
+		format: ['avif', 'webp'],
+		imagekit: {
+			baseURL: 'https://ik.imagekit.io/focusflooring/'
+		}
 	},
 	schemaOrg: {
 		host: 'https://focus-flooring.com'
+	},
+	devServer: {
+		port: 8000
+	},
+	$development: {
+		nitro: {
+			storage: {
+				projects: {
+					driver: 'fs',
+					base: 'projects'
+				}
+			}
+		}
 	}
 })

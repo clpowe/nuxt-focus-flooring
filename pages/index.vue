@@ -96,19 +96,18 @@
 			</template>
 			<template v-slot:actions>
 				<div class="actions justify-center flex flex-col sm:flex-row">
-					<NuxtLink
+					<UButton
 						to="/contact/general-contact"
-						type="button"
-						class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-focusyellow-500 text-midnight hover:bg-focusyellow-400 disabled:opacity-50 disabled:pointer-events-none"
-						>contact us</NuxtLink
+						class="text-midnight-950"
+						color="focusyellow"
+						>contact us</UButton
 					>
-					<NuxtLink
+					<UButton
 						to="/our-process"
-						quality="80"
-						loading="lazy"
-						format="webp"
-						class="btn btn-outline btn-secondary"
-						>Learn more</NuxtLink
+						class="hover:text-midnight-950"
+						variant="outline"
+						color="focusyellow"
+						>Learn more</UButton
 					>
 				</div>
 			</template>
