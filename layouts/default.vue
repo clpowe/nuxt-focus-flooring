@@ -35,5 +35,6 @@
 		defineWebPage()
 	])
 
-	const { data: teammembers } = useFetch('/team')
+	useFetch('/team')
+	useFetch('/projects')
 </script>

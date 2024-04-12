@@ -9,7 +9,7 @@
 		group: String,
 		spaner: Boolean,
 		slug: String,
-		selected: Number
+		selected: String
 	})
 
 	let show = computed(() => props.selected === props.id)
@@ -30,39 +30,42 @@
 			color="midnight"
 			v-if="bio"
 			class="mt-4 bg-midnight-950"
-			:to="`/meet-the-team/${slug}/`"
+			@click="$emit('open')"
 		>
 			Learn More
 		</UButton>
 	</UBlogPost>
-	<!-- <div
-		v-bind="$attrs"
-		class="flex flex-col bg-white border shadow-sm rounded-xl"
+	<div
+		v-if="show && bio"
+		class="card sm:card-side text-[var(-midnight)] col-span-full relative overflow-hidden"
 	>
-		<NuxtImg
-			:src="srcImg"
-			loading="lazy"
-			width="479"
-			sizes="200px md:400px"
-			class="w-full h-auto rounded-t-xl"
-			placeholder
-			:alt="`Photo of ${firstName} ${lastName}`"
-		/>
-
-		<div class="p-4 md:p-5">
-			<h3 class="text-lg font-bold text-gray-800">
-				{{ firstName }} {{ lastName }}
-			</h3>
-			<div>
-				<p class="text-sm">{{ title }}</p>
+		<div class="card-body">
+			<div class="card-actions justify-end">
+				<button
+					tabindex="0"
+					class="btn btn-xs self-end btn-primary text-[var(--focus-white)]"
+					@click="$emit('close')"
+				>
+					close
+				</button>
 			</div>
-			<div>
-				<UButton color="primary" v-if="bio" :to="`/meet-the-team/${slug}/`">
-					Learn More
-				</UButton>
+			<div class="max-w-[65ch] mx-auto">
+				<div
+					class="mb-4 text-[clamp(3rem,9vw,5rem)] font-black uppercase leading-[.9em]"
+				>
+					{{ firstName }}<br />
+					{{ lastName }}
+				</div>
+
+				<div class="">
+					<h4 class="mb-4 font-bold text-xl">Bio</h4>
+					<div class="bio-section">
+						<p class="bio text-sm prose" v-html="bio"></p>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </template>
 
 <style>

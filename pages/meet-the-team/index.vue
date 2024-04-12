@@ -8,7 +8,7 @@
 	const category = ref<string>('All')
 
 	type TeamMember = {
-		id: number
+		id: string
 		image: string
 		firstName: string
 		lastName: string
@@ -20,18 +20,39 @@
 
 	const { data: team } = await useTeam()
 
-	const curruntMember = ref<Number | null>(null)
+	const curruntMember = ref<String | null>(null)
 
 	const catagories = computed(() => {
 		const set = new Set(['All'])
 		team.value?.forEach((m) => set.add(m.category!))
-		return set
+		return [...set]
 	})
 
 	const filtered = computed(() => {
 		//@ts-ignore
 		return useFilter(team.value, category.value)
 	})
+
+	const handleClick = (index: string) => {
+		if (curruntMember.value == index) {
+			curruntMember.value = null
+		} else {
+			curruntMember.value = index
+		}
+	}
+
+	function test(index: any) {
+		console.log(index === curruntMember.value)
+		if (curruntMember.value == index) {
+			curruntMember.value = null
+		} else {
+			curruntMember.value = index
+		}
+	}
+
+	function handleClose() {
+		curruntMember.value = null
+	}
 </script>
 
 <template>
@@ -53,7 +74,7 @@
 						<h2 class="margin-bottom">{{ category }}</h2>
 						<UBlogList
 							orientation="horizontal"
-							class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16"
+							class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 grid-flow-dense"
 							:ui="{
 								horizontal: ''
 							}"
@@ -61,7 +82,11 @@
 							<TeamMember
 								v-for="(member, index) in filtered"
 								:key="member.id"
+								:data-index="index"
+								:selected="curruntMember"
 								v-bind="member"
+								@open="handleClick(member.id)"
+								@close="handleClose"
 							/>
 						</UBlogList>
 					</div>

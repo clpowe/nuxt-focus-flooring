@@ -3,26 +3,74 @@
 		key: (route) => route.fullPath
 	})
 
-	const iframe = ref<HTMLIFrameElement>()
+	import { z } from 'zod'
+	import type { FormSubmitEvent } from '#ui/types'
+	import { GeneralContactSchema } from '~/schemas/GeneralContact'
 
-	onMounted(() => {
-		// if (iframe.value) {
-		// 	iframe.value.contentWindow?.addEventListener('load', () => {
-		// 		console.log('hello')
-		// 		const form = document.getElementsByClassName('css-1na73vl')
-		// 		console.log(form)
-		// 	})
-		// } else {
-		// 	return
-		// }
+	type Schema = z.output<typeof GeneralContactSchema>
+	const state = reactive({
+		first_name: '',
+		last_name: '',
+		email: '',
+		phone_number: '',
+		job_title: '',
+		industry: '',
+		how_did_you_hear_about_us: '',
+		message: ''
 	})
+	const form: Ref<HTMLFormElement | undefined> = ref()
 
-	watchEffect(() => {})
+	async function onSubmit(event: FormSubmitEvent<Schema>) {}
+
+	// const iframe = ref<HTMLIFrameElement>()
 </script>
 
 <template>
 	<div class="max-w-xl">
-		<ClientOnly>
+		<h2>General Contact</h2>
+		<p
+			>To reach us, simply fill out the form below, and we’ll be in contact as
+			soon as possible. Or, you may call us at our Tampa office location.</p
+		>
+		<UForm ref="form" :state="state" @submit="onSubmit">
+			<UFormGroup label="First Name" name="first_name">
+				<UInput v-model="state.first_name" />
+			</UFormGroup>
+			<UFormGroup label="Last Name" name="last_name">
+				<UInput v-model="state.last_name" />
+			</UFormGroup>
+			<UFormGroup label="Email" name="email">
+				<UInput v-model="state.email" placeholder="name@domain.com" />
+			</UFormGroup>
+			<UFormGroup label="Phone Number" name="phone_number">
+				<UInput v-model="state.phone_number" placeholder="888-888-8888" />
+			</UFormGroup>
+			<UFormGroup label="Job Title" name="job_title">
+				<UInput
+					v-model="state.job_title"
+					placeholder="What is your job title?"
+				/>
+			</UFormGroup>
+			<UFormGroup label="Industry" name="industry">
+				<UInput
+					v-model="state.industry"
+					placeholder="What industry are you in?"
+				/>
+			</UFormGroup>
+			<UFormGroup
+				label="How did you hear about us?"
+				name="how_did_you_hear_about_us"
+			>
+				<UTextarea
+					v-model="state.how_did_you_hear_about_us"
+					placeholder="How did you hear about us?"
+				/>
+			</UFormGroup>
+			<UFormGroup label="Message" name="message">
+				<UTextarea v-model="state.message" placeholder="Comments / Message" />
+			</UFormGroup>
+		</UForm>
+		<!-- <ClientOnly>
 			<iframe
 				class="airtable-embed"
 				src="https://airtable.com/embed/app2pIu0GZUtM07Kx/pagQDG3JHGtbiEt60/form"
@@ -33,103 +81,8 @@
 				loading="eager"
 				style="background: transparent; padding-top: 0"
 			></iframe>
-		</ClientOnly>
+		</ClientOnly> -->
 	</div>
-	<!-- <div v-if="success">
-		Thank you we will contact you soon
-		<button @click="handleReset">Reset</button>
-	</div>
-	<div v-else-if="fail">
-		Sorry something has gone wrong on our end. Please try again later
-		<button @click="handleReset">Reset</button>
-	</div>
-	<div v-else>
-		<h3 class="mb-4">General Contact</h3>
-		<p class="mb-8 text-[var(--grey-6)]">
-			To reach us, simply fill out the form below, and we’ll be in contact as
-			soon as possible. Or, you may call us at our Tampa office location.
-		</p>
-		<ClientOnly>
-			<FormKit
-				type="form"
-				method="post"
-				:actions="false"
-				action="https://script.google.com/macros/s/AKfycbyWB9FrPV2WvXa1k9rh2GVeLc_sldzYYuIUGaWDvugaOU4HjtT3u96oBRvbG2EmloSJ/exec"
-				@submit="handleSubmit"
-				class="form"
-			>
-				<FormKit
-					type="text"
-					name="firstName"
-					label="First Name"
-					help="Enter your first name"
-					placeholder="First Name"
-				/>
-				<FormKit
-					type="text"
-					name="lastName"
-					label="Last Name"
-					help="Enter your last name"
-					placeholder="Last Name"
-				/>
-				<FormKit
-					type="email"
-					name="email"
-					validation="required"
-					label="Email Address"
-					help="Please enter your email address"
-					placeholder="Email address"
-				/>
-				<FormKit
-					type="tel"
-					name="telephoneNumber"
-					validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-					:validation-messages="{
-						matches: 'Phone number must be in the format xxx-xxx-xxxx'
-					}"
-					validation-visibility="dirty"
-					label="Phone Number"
-					help="Please enter your phone number"
-					placeholder="xxx-xxx-xxxx"
-				/>
-
-				<FormKit
-					type="text"
-					name="jobTitle"
-					validation="required"
-					label="Job Title"
-					help="Please enter your current job title"
-					placeholder="Job Title"
-				/>
-				<FormKit
-					type="text"
-					name="industry"
-					validation="required"
-					label="Industry"
-					help="What sector do you currently work in"
-					placeholder="Current Sector"
-				/>
-
-				<FormKit
-					type="textarea"
-					name="hearAboutUs"
-					label="How did you hear about us?"
-					rows="5"
-					placeholder="How did you hear about us?"
-					class="max-w-none w-full"
-				/>
-				<FormKit
-					type="textarea"
-					name="commentMessage"
-					label="Comment / Message"
-					rows="10"
-					placeholder="Comments/Message"
-				/>
-
-				<button class="btn btn-accent">Submit</button>
-			</FormKit>
-		</ClientOnly>
-	</div> -->
 </template>
 
 <style>

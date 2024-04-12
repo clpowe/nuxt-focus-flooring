@@ -1,7 +1,6 @@
-const success = ref(false)
-const fail = ref(false)
-
 async function handleSubmit(data: any) {
+	const success = ref(false)
+	const fail = ref(false)
 	const fData = new FormData()
 
 	if (data) {

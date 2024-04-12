@@ -48,15 +48,6 @@
 		<div
 			class="relative bg-midnight mx-auto gap-8 max-w-4xl -mt-40 z-10 p-6 grid grid-cols-1 grid-rows-auto md:grid-cols-[350px_auto] md:grid-rows-[auto_1fr] rounded-2xl"
 		>
-			<UButton
-				class="absolute left-6 -top-6 text-midnight-950"
-				color="focusyellow"
-				to="/meet-the-team/"
-				icon="i-heroicons-chevron-left"
-				size="sm"
-				label="Meet the team"
-				variant="solid"
-			/>
 			<div>
 				<h1 class="text-5xl">
 					{{ TeamMember?.firstName }} {{ TeamMember?.lastName }}
@@ -97,7 +88,7 @@
 					About {{ TeamMember?.firstName }}
 				</h2>
 				<p class="text-midnight mt-4">{{ TeamMember?.bio }}</p>
-				<div
+				<!-- <div
 					v-if="TeamMember.allowMessage"
 					class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
 				>
@@ -179,7 +170,7 @@
 							</UForm>
 						</UCard>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<!-- Comment Form -->

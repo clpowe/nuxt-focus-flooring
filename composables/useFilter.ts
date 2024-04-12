@@ -12,7 +12,7 @@ type Project = {
 }
 
 type TeamMember = {
-	id: number
+	id: string
 	image: string
 	firstName: string
 	lastName: string
