@@ -4,6 +4,10 @@
 		img: {
 			type: String,
 			default: 'aviation.jpeg'
+		},
+		hasDot: {
+			type: Boolean,
+			default: true
 		}
 	})
 </script>
@@ -14,7 +18,7 @@
 			<h1>
 				<slot />
 			</h1>
-			<div class="dot"></div>
+			<div v-if="hasDot" class="dot"></div>
 		</div>
 
 		<NuxtImg

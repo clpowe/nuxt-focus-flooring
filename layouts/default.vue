@@ -10,10 +10,13 @@
 			<h1>Coming Soon</h1>
 		</div>
 	</div> -->
+	<Navigation />
+	<UMain>
+		<a href="#main" class="skip-link button visually-hidden">Skip to main</a>
 
-	<a href="#main" class="skip-link button visually-hidden">Skip to main</a>
-
-	<slot />
+		<slot />
+	</UMain>
+	<Footer />
 </template>
 
 <script lang="ts" setup>

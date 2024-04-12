@@ -8,8 +8,11 @@
 	const { data: team } = await useTeam()
 	const TeamMember = team.value?.find((t) => t.slug === route.params.name)
 
-	// Submit Form
+	definePageMeta({
+		layout: 'blank'
+	})
 
+	// Submit Form
 	type Schema = z.output<typeof TeamContactSchema>
 	const state = reactive({
 		name: '',
@@ -43,7 +46,7 @@
 </script>
 
 <template>
-	<Hero> </Hero>
+	<Hero hasDot="false"> </Hero>
 	<div class="container mx-auto relative mb-12">
 		<div
 			class="relative bg-midnight mx-auto gap-8 max-w-4xl -mt-40 z-10 p-6 grid grid-cols-1 grid-rows-auto md:grid-cols-[350px_auto] md:grid-rows-[auto_1fr] rounded-2xl"
