@@ -36,6 +36,11 @@ export default defineEventHandler(async () => {
 			let projects: Project[] = []
 			res.forEach((project) => {
 				if (project.fields.status === 'live') {
+					let image = 'placeholder.jpg'
+					if (project.fields.image) {
+						image = project.fields.image[0].url
+					}
+
 					projects.push({
 						id: project.id,
 						name: project.fields.name,
@@ -43,8 +48,7 @@ export default defineEventHandler(async () => {
 						cost: project.fields.cost,
 						client: project.fields.client,
 						scope: project.fields.scope,
-						//@ts-ignore
-						srcImg: project.fields.image[0].url,
+						srcImg: image,
 						category: project.fields.category
 					} as Project)
 				}
