@@ -68,21 +68,23 @@
 					</li>
 					<li class="listItem" v-if="TeamMember?.mobile">
 						<Icon name="streamline:phone-mobile-phone" size="32" />
-						<p>
+						<a :href="`tel:${TeamMember?.mobile}`">
 							<span class="font-bold">Mobile Phone:</span>
 							{{ TeamMember?.mobile }}
-						</p>
+						</a>
 					</li>
 					<li class="listItem" v-if="TeamMember?.office">
 						<Icon name="streamline:phone" size="32" />
-						<p>
+						<a :href="`tel:${TeamMember.office}`">
 							<span class="font-bold">Office Phone:</span>
 							{{ TeamMember?.office }}
-						</p>
+						</a>
 					</li>
 					<li class="listItem" v-if="TeamMember?.email">
 						<Icon name="streamline:mail-send-envelope" size="32" />
-						<p><span class="font-bold">Email:</span> {{ TeamMember?.email }}</p>
+						<a :href="`mailto:${TeamMember?.email}`"
+							><span class="font-bold">Email:</span> {{ TeamMember?.email }}</a
+						>
 					</li>
 				</ul>
 			</div>
