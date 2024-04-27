@@ -8,7 +8,9 @@
 		<p>
 			{{ description }}
 		</p>
-		<nuxt-link :to="route" class="btn btn-accent z-10">View Projects</nuxt-link>
+		<UButton :to="route" class="text-midnight-950 z-10 btn" color="focusyellow"
+			>View Projects</UButton
+		>
 		<div class="cover"></div>
 		<nuxt-img
 			:src="image"

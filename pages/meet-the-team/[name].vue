@@ -46,7 +46,7 @@
 </script>
 
 <template>
-	<Hero hasDot="false"> </Hero>
+	<Hero :hasDot="false"> </Hero>
 	<div class="container mx-auto relative mb-12">
 		<div
 			class="relative bg-midnight mx-auto gap-8 max-w-4xl -mt-40 z-10 p-6 grid grid-cols-1 grid-rows-auto md:grid-cols-[350px_auto] md:grid-rows-[auto_1fr] rounded-2xl"

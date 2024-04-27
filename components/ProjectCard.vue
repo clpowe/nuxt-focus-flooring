@@ -38,20 +38,13 @@
 		:title="name"
 		description="As Envision Flooring"
 		:ui="{
+			title:
+				'text-gray-900 dark:text-white text-xl whitespace-normal font-semibold  group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-200',
 			image: {
 				wrapper: 'aspect-[9/10]'
 			}
 		}"
 	>
-		<!-- <div class="h-80 object-cover">
-			<NuxtImg
-				:src="srcImg"
-				:alt="alt"
-				loading="lazy"
-				class="w-full object-cover object-center h-80"
-			/>
-		</div> -->
-
 		<div class="p-4">
 			<p>
 				<span class="font-bold">Size: </span>

@@ -253,13 +253,11 @@
 						Learn more about our journey from Envision Flooring to Focus
 						Flooring
 					</p>
-					<NuxtLink
-						prefetch
+					<UButton
 						to="/our-history"
-						role="link"
-						exactActiveClass="nuxt-link-active"
-						class="btn btn-accent"
-						>Our History</NuxtLink
+						class="text-midnight-950"
+						color="focusyellow"
+						>Our History</UButton
 					>
 				</div>
 			</div>

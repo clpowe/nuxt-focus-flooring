@@ -536,7 +536,9 @@
 					orientation="horizontal"
 					class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16"
 					:ui="{
-						horizontal: ''
+						horizontal: '',
+						title:
+							'text-gray-900 dark:text-white text-xl font-semibold group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors duration-200'
 					}"
 				>
 					<ProjectCard v-for="item in filteredProjects" v-bind="item" />

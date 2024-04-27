@@ -69,12 +69,15 @@
 	function grow(event) {
 		animate(event.target, { flexGrow: 8 }, { duration: 0.5 })
 
+		const button = event.target.children[2]
+
 		animate(
 			event.target.children[0],
 			{ fontSize: '2.5em' },
 			{ easing: 'linear' }
 		)
-		animate(event.target.children[2], { opacity: 1 }, { easing: 'linear' })
+
+		animate(button, { opacity: 1 }, { easing: 'linear' })
 
 		animate(event.target.children[4], {
 			opacity: 0.8,
@@ -97,9 +100,6 @@
 			mixBlendMode: 'luminosity'
 		})
 	}
-	function goto(event) {
-		//console.log(event)
-	}
 </script>
 <template>
 	<div class="">
@@ -113,7 +113,6 @@
 				:route="sector.route"
 				@mouseenter="grow"
 				@mouseleave="shrink"
-				@click="goto"
 			/>
 		</div>
 	</div>
