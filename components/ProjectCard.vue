@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 	defineProps({
 		id: {
 			type: String
@@ -29,7 +29,7 @@
 		}
 	})
 
-	const show = ref(false)
+	const isOpen = ref(false)
 </script>
 
 <template>
@@ -45,15 +45,59 @@
 			}
 		}"
 	>
-		<div class="p-4">
-			<p>
-				<span class="font-bold">Size: </span>
-				<span class="uppercase">{{ size }}</span>
-			</p>
-			<p><span class="font-bold">Client: </span> {{ client }}</p>
-			<p><span class="font-bold">Scope: </span> {{ scope }}</p>
-		</div>
+		<UButton
+			label="Learn More"
+			class="text-midnight-950"
+			color="focusyellow"
+			@click="isOpen = true"
+		/>
 	</UBlogPost>
+	<UModal
+		v-model="isOpen"
+		:ui="{
+			rounded: 'rounded-2xl',
+			width: 'w-full sm:max-w-5xl '
+		}"
+	>
+		<UCard
+			:ui="{
+				base: 'h-full flex flex-col',
+				rounded: '',
+				divide: 'divide-y divide-gray-100 dark:divide-gray-800',
+				body: {
+					base: 'grow'
+				}
+			}"
+		>
+			<template #header>
+				<div class="flex items-center justify-between">
+					<h3
+						class="text-base font-semibold leading-6 text-gray-900 dark:text-white"
+					>
+						{{ name }}
+					</h3>
+					<UButton
+						color="gray"
+						variant="ghost"
+						icon="i-heroicons-x-mark-20-solid"
+						class="-my-1"
+						@click="isOpen = false"
+					/>
+				</div>
+			</template>
+			<NuxtImg :src="srcImg" class="w-full" :alt="alt" />
+			<div class="p-4">
+				<div class="p-4">
+					<p>
+						<span class="font-bold">Size: </span>
+						<span class="uppercase">{{ size }}</span>
+					</p>
+					<p><span class="font-bold">Client: </span> {{ client }}</p>
+					<p><span class="font-bold">Scope: </span> {{ scope }}</p>
+				</div>
+			</div>
+		</UCard>
+	</UModal>
 </template>
 
 <style scoped>
