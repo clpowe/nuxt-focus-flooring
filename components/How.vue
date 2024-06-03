@@ -89,10 +89,11 @@
 								{{ step.description }}
 							</p>
 						</div>
-						<nuxt-link
+						<UButton
 							:to="step.link"
-							class="btn btn-yellow text-[var(--midnight)]"
-							>Learn More</nuxt-link
+							class="text-midnight-950"
+							color="focusyellow"
+							>Learn More</UButton
 						>
 					</div>
 				</li>
@@ -157,5 +158,9 @@
 
 	li {
 		max-inline-size: none;
+	}
+
+	a {
+		background-color: var(--focus-yellow);
 	}
 </style>

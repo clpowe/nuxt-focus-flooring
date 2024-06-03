@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 				lang: 'en-US'
 			},
 			charset: 'utf-16',
-			viewport: 'width=500, initial-scale=1',
+			viewport: 'width=device-width,initial-scale=1.0',
 			title: 'Focus Flooring',
 			meta: [
 				// <meta name="description" content="My amazing site">
@@ -35,14 +35,7 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [
 			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme
-		],
-		css: {
-			preprocessorOptions: {
-				sass: {
-					additionalData: '@import "@/assets/css/_variables.scss"'
-				}
-			}
-		}
+		]
 	},
 	extends: ['@nuxt/ui-pro'],
 	modules: [
@@ -99,7 +92,7 @@ export default defineNuxtConfig({
 		host: 'https://focus-flooring.com'
 	},
 	devServer: {
-		port: 8000
+		port: 8080
 	},
 	$development: {
 		nitro: {
