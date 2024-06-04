@@ -66,7 +66,7 @@
 				<USelectMenu v-model="category" :options="catagories" />
 			</div>
 		</div>
-		<div class="container relative">
+		<div class="container relative pb-14">
 			<div class="">
 				<main id="main">
 					<!-- <div v-if="isLoading">Loading...</div> -->

@@ -433,7 +433,6 @@
 
 	.wrapper {
 		margin-inline: auto;
-		padding-inline: 1rem;
 	}
 
 	.accordion {
@@ -452,7 +451,7 @@
 		.accordion {
 			flex-direction: row;
 			height: 90vh;
-			max-height: 800px;
+			max-height: 700px;
 		}
 	}
 

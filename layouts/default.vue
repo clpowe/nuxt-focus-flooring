@@ -11,7 +11,7 @@
 		</div>
 	</div> -->
 	<Navigation />
-	<UMain>
+	<UMain class="mb-0">
 		<a href="#main" class="skip-link button visually-hidden">Skip to main</a>
 
 		<slot />
