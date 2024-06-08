@@ -31,7 +31,12 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	css: ['@/assets/css/tailwind.scss'],
+	css: [
+		'@/assets/css/forms.css',
+		'@/assets/css/tokens.css',
+		'@/assets/css/reset.css',
+		'@/assets/css/tailwind.css'
+	],
 	vite: {
 		plugins: [
 			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme

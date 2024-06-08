@@ -36,7 +36,7 @@
 
 /* On mouse-over, add a grey background color */
 .sq-radio:hover input ~ .checkmark {
-	background-color: #var(--focus-white);
+	background-color: var(--focus-white);
 }
 
 /* When the radio button is checked, add a blue background

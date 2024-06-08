@@ -64,7 +64,9 @@
 						<div class="icon">
 							<svg-icon :name="step.icon" />
 						</div>
-						<h3 class="mt-5 font-bold text-2xl text-white">{{ step.title }}</h3>
+						<h3 class="step-title mt-5 font-bold text-2xl text-white">{{
+							step.title
+						}}</h3>
 						<p class="mt-1 text-neutral-400">
 							{{ step.description }}
 						</p>
@@ -104,12 +106,17 @@
 		width: 5rem;
 	}
 
+	.step-title {
+		font-size: clamp(1rem, 1px + 2.5vw, 1.5rem);
+		line-height: clamp(1.2em, 1px + 3vw, 3em);
+	}
+
 	@keyframes scale-up {
 		from {
 			height: 0;
 		}
 		to {
-			height: 37rem;
+			height: 70%;
 		}
 	}
 

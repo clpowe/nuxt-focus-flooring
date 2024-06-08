@@ -295,14 +295,6 @@
 </template>
 
 <style scoped lang="scss">
-	.swiper {
-		width: 100%;
-		height: 100%;
-	}
-	.swiper-wrapper {
-		max-width: 100vw;
-		width: 100vw;
-	}
 	.media-scroller {
 		margin-top: 4rem;
 		--_spacer: 0.5rem;

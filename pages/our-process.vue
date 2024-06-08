@@ -180,7 +180,6 @@
 					class="max-w-[85rem] px-4 py-10 lg:py-14 mx-auto"
 				>
 					<div class="mx-auto">
-						<!-- Grid -->
 						<div class="grid gap-12">
 							<div>
 								<h2
@@ -216,7 +215,6 @@
 								<!-- End Icon Block -->
 							</div>
 						</div>
-						<!-- End Grid -->
 					</div>
 				</section>
 
@@ -225,7 +223,6 @@
 					ref="project"
 					class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
 				>
-					<!-- Grid -->
 					<h2
 						class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white"
 					>
@@ -316,7 +313,6 @@
 						</div>
 						<!-- End Col -->
 					</div>
-					<!-- End Grid -->
 				</section>
 				<!-- End Icon Blocks -->
 

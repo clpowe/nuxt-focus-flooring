@@ -130,13 +130,11 @@
 
 				Your browser does not support the video tag.
 			</video>
-			<!-- <YouTube class="w-full" /> -->
 		</div>
-		<!-- Features -->
+
 		<div
 			class="max-w-[85rem] px-4 pt-20 pb-10 sm:px-6 lg:px-8 lg:py-14 mx-auto"
 		>
-			<!-- Grid -->
 			<div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
 				<div>
 					<nuxt-img
@@ -186,52 +184,8 @@
 				</div>
 				<!-- End Col -->
 			</div>
-			<!-- End Grid -->
 		</div>
-		<!-- End Features -->
-		<!-- <section class="container">
-			<div class="mx-auto max-w-screen-xl py-8 sm:py-12 lg:py-16">
-				<div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-					<div class="pic relative h-64 sm:h-80 lg:order-last lg:h-full">
-						<nuxt-img
-							src="/WhoWeAre.png"
-							alt=""
-							sizes="sm:100vw md:700px lg:700px"
-							fit="cover"
-							class="absolute inset-0 h-full w-full object-cover"
-							format="webp"
-							quality="80"
-						/>
-					</div>
 
-					<div class="lg:py-24">
-						<h2 class="margin-bottom">Our Focus</h2>
-
-						<div class="space-y-4">
-							<p>
-								At Focus Flooring, we offer advanced solutions in commercial
-								flooring and wall tile.
-							</p>
-							<p>
-								We have disciplined our flooring processes to focus on the
-								details that greatly impact our clients and deliver a high
-								quality service they can count on.
-							</p>
-							<p>
-								Focus Flooring is a minority-owned firm based out of Tampa,
-								Florida with a
-								<strong
-									>guarantee to eliminate your risk through our internal
-									processes.</strong
-								>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
-
-		<!-- Testimonials -->
 		<div
 			class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto grid-bg"
 		>
@@ -271,38 +225,7 @@
 			</div>
 			<!-- End Blockquote -->
 		</div>
-		<!-- End Testimonials -->
 
-		<!-- <section class="container">
-			<div class="flex-1 max-w-xl mx-0">
-				<h2 class="margin-bottom">Our History</h2>
-				<div class="space-y-6">
-					<p>
-						The flooring division begins to outgrow being a “division” and
-						begins to require a space of its own. The Envision team discovered
-						that though both the construction management division and flooring
-						division of the business are both client, systems, and process
-						driven, the flooring business at this scale required very different
-						systems, processes and team members than the construction management
-						business.
-					</p>
-					<p class="pb-4">
-						Learn more about our journey from Envision Flooring to Focus
-						Flooring
-					</p>
-					<NuxtLink
-						prefetch
-						to="/our-history"
-						role="link"
-						exactActiveClass="nuxt-link-active"
-						class="btn btn-accent"
-						>Our History</NuxtLink
-					>
-				</div>
-			</div>
-		</section> -->
-
-		<!-- Icon Blocks -->
 		<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 			<h2
 				class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
@@ -335,26 +258,7 @@
 				<!-- End Icon Block -->
 			</div>
 		</div>
-		<!-- End Icon Blocks -->
 
-		<!-- <section class="container">
-			<div size="--s-3" class="margin-bottom">
-				<h2 class="margin-bottom">What we do</h2>
-			</div>
-
-			<Grid>
-				<Card
-					v-for="item in whatWeDo"
-					:key="item.id"
-					:svg="item.svg"
-					:title="item.title"
-					:style="'h-20 mb-4'"
-					:component="item.component"
-				>
-					<p>{{ item.content }}</p>
-				</Card>
-			</Grid>
-		</section> -->
 		<section class="max-w-[85rem] mx-auto pt-14">
 			<h2 class="font-bold px-4 uppercase text-4xl lg:text-4xl mb-10">
 				Sectores we
@@ -366,16 +270,9 @@
 			<ExpanderMenuCopy />
 		</section>
 
-		<!-- <section class="container">
-			<LazySectores />
-		</section> -->
 		<section class="max-w-[85rem] px-4 py-14 mx-auto bg-[var(--midnight)]">
 			<HowWe />
 		</section>
-
-		<!-- <section>
-			<LazyHow />
-		</section> -->
 	</main>
 </template>
 
