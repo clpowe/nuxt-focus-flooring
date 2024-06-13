@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 
-
-// Global CSS starts
-
 body {
 	line-height: 1.5;
 	padding-bottom: get-size('600');
@@ -121,9 +118,6 @@ h3 {
 
 .formkit-wrapper .formkit-fieldset {
 	max-width: 80rem;
-}
-
-.main {
 }
 
 .css-1na73vl {

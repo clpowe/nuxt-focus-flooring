@@ -25,6 +25,7 @@
 			fit="exact"
 			quality="90"
 			height="255"
+			fetchpriority="high"
 			:src="img"
 			class="w-full absolute h-full object-cover image"
 		/>

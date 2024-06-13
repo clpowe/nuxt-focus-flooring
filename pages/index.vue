@@ -1,4 +1,14 @@
 <script setup lang="ts">
+	useHead({
+		link: [
+			{
+				rel: 'preload',
+				href: 'https://iz5hjhzjql5fyivm.public.blob.vercel-storage.com/Focus%20Flooring_%20Our%20Story.mp4',
+				as: 'video'
+			}
+		]
+	})
+
 	const whatWeDo = [
 		{
 			id: 1,
@@ -76,7 +86,7 @@
 
 	const vid = ref<HTMLVideoElement | null>(null)
 
-	import Poster from '../assets/poster.jpg'
+	import Poster from '../assets/poster.webp'
 
 	function playPause() {
 		if (!vid.value) return
@@ -114,7 +124,7 @@
 		</HomeHero>
 	</header>
 	<main id="main" class="main">
-		<div class="max-w-4xl -mt-24 mx-auto z-20" @click="playPause">
+		<div class="max-w-4xl -mt-24 mx-auto z-40 relative" @click="playPause">
 			<video
 				width="720"
 				height="480"
@@ -122,6 +132,7 @@
 				controlslist="nofullscreen nodownload"
 				class="relative"
 				ref="vid"
+				preload="none"
 			>
 				<source
 					src="https://iz5hjhzjql5fyivm.public.blob.vercel-storage.com/Focus%20Flooring_%20Our%20Story.mp4"

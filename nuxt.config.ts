@@ -32,7 +32,6 @@ export default defineNuxtConfig({
 		}
 	},
 	css: [
-		'@/assets/css/forms.css',
 		'@/assets/css/tokens.css',
 		'@/assets/css/reset.css',
 		'@/assets/css/tailwind.css'
@@ -47,7 +46,6 @@ export default defineNuxtConfig({
 		'@nuxt/devtools',
 		'nuxt-vercel-analytics',
 		'@vueuse/nuxt',
-		'@formkit/nuxt',
 		'@nuxt/ui',
 		'@nuxtjs/google-fonts',
 		'nuxt-icon',
@@ -55,9 +53,11 @@ export default defineNuxtConfig({
 		'@nuxt/image-edge',
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
-		'nuxt-swiper',
 		'@nuxt/image'
 	],
+	nitro: {
+		compressPublicAssets: true
+	},
 	features: {
 		devLogs: false
 		// or 'silent' to allow you to handle yourself with `dev:ssr-logs` hook
@@ -83,9 +83,6 @@ export default defineNuxtConfig({
 				}
 			}
 		}
-	},
-	formkit: {
-		configFile: './formkit.config.ts'
 	},
 	image: {
 		format: ['avif', 'webp'],
