@@ -36,7 +36,7 @@
 					<!-- End Buttons -->
 				</div>
 			</div>
-            <div class="absolute inset-x-0 bottom-0 max-w-[100ch] m-auto">
+			<div class="absolute inset-x-0 bottom-0 max-w-[100ch] m-auto -z-10">
 				<svg
 					id="uuid-ede1c65f-6d61-4296-8317-3ea68a441a71"
 					xmlns="http://www.w3.org/2000/svg"

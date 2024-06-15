@@ -100,7 +100,7 @@
 					<UButton
 						label="Learn More"
 						color="focusyellow"
-						class="text-midnight-950 alink"
+						class="text-midnight-950 bottom-8 right-8 alink"
 						to="/portfolio?category=Industrial"
 					/>
 					<NuxtImg

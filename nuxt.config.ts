@@ -53,7 +53,8 @@ export default defineNuxtConfig({
 		'@nuxt/image-edge',
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
-		'@nuxt/image'
+		'@nuxt/image',
+		'@nuxtjs/partytown'
 	],
 	nitro: {
 		compressPublicAssets: true
@@ -67,6 +68,7 @@ export default defineNuxtConfig({
 	},
 	plugins: ['~/plugins/preline.client.ts'],
 	googleFonts: {
+		display: 'swap',
 		families: {
 			Inter: [400, 700]
 		}

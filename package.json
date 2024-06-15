@@ -30,9 +30,9 @@
 		"@formkit/themes": "1.0.0-beta.16-18186fe",
 		"@formkit/vue": "1.0.0-beta.15",
 		"@hebilicious/vue-query-nuxt": "^0.3.0",
-		
 		"@nuxt/ui": "^2.14.2",
 		"@nuxt/ui-pro": "^1.0.2",
+		"@nuxtjs/partytown": "^1.5.0",
 		"@nuxtjs/robots": "^3.0.0",
 		"@preline/collapse": "^2.0.2",
 		"@preline/dropdown": "^2.0.2",
