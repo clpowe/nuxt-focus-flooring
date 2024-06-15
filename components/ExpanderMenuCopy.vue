@@ -603,6 +603,20 @@
 			opacity 500ms 250ms ease-in-out;
 	}
 
+	@starting-style {
+		.alink {
+			position: absolute;
+			bottom: 2rem;
+			right: 2rem;
+			transform: translateX(100%);
+			opacity: 0;
+
+			transition:
+				transform 500ms 250ms ease-in-out,
+				opacity 500ms 250ms ease-in-out;
+		}
+	}
+
 	.accordion-panel:has([aria-expanded='true']) .alink {
 		transform: translateX(0);
 		opacity: 1;
