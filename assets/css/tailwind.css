@@ -125,3 +125,37 @@ h3 {
 .css-1na73vl {
 	padding-top: 48px;
 }
+
+.alink {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		transform: translateX(100%);
+		opacity: 1;
+
+		transition:
+			transform 500ms 250ms ease-in-out,
+			opacity 500ms 250ms ease-in-out;
+	}
+
+
+	.accordion-panel:has([aria-expanded='true']) .alink {
+		transform: translateX(0);
+		opacity: 1;
+		bottom: 2rem;
+		right: 2rem;
+
+		@starting-style {
+			opacity: 0;
+		}
+
+	}
+
+
+	.accordion-panel:has([aria-expanded='false']) .alink {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		transform: translateX(100%);
+		opacity: 0;
+	}

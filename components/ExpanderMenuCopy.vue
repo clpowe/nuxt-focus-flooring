@@ -33,7 +33,7 @@
 <template>
 	<div class="wrapper" @focusin="useAccordion">
 		<div class="accordion" ref="accordion" @click="useAccordion">
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="true">
 				<h3 id="panel1-heading">
 					<button
 						class="accordion-trigger"
@@ -73,7 +73,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="false">
 				<h3 id="panel2-heading">
 					<button
 						class="accordion-trigger"
@@ -112,7 +112,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="false">
 				<h3 id="panel3-heading">
 					<button
 						class="accordion-trigger"
@@ -151,7 +151,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="false">
 				<h3 id="panel4-heading">
 					<button
 						class="accordion-trigger"
@@ -190,7 +190,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="false">
 				<h3 id="panel5-heading">
 					<button
 						class="accordion-trigger"
@@ -231,7 +231,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel">
+			<div class="accordion-panel" aria-expanded="false">
 				<h3 id="panel6-heading">
 					<button
 						class="accordion-trigger"
@@ -603,24 +603,18 @@
 			opacity 500ms 250ms ease-in-out;
 	}
 
-	@starting-style {
-		.alink {
-			position: absolute;
-			bottom: 2rem;
-			right: 2rem;
-			transform: translateX(100%);
-			opacity: 0;
-
-			transition:
-				transform 500ms 250ms ease-in-out,
-				opacity 500ms 250ms ease-in-out;
-		}
-	}
-
 	.accordion-panel:has([aria-expanded='true']) .alink {
 		transform: translateX(0);
 		opacity: 1;
 		bottom: 2rem;
 		right: 2rem;
+	}
+
+	.accordion-panel:has([aria-expanded='false']) .alink {
+		position: absolute;
+		bottom: 2rem;
+		right: 2rem;
+		transform: translateX(100%);
+		opacity: 0;
 	}
 </style>
