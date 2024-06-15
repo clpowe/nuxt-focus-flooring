@@ -70,8 +70,10 @@
 						<p class="mt-1 text-neutral-400">
 							{{ step.description }}
 						</p>
-						<NuxtLink class="uppercase font-bold text-[var(--focus-white)]"
-							>Learn More</NuxtLink
+						<ULink
+							:to="step.link"
+							class="uppercase font-bold text-[var(--focus-white)] :hover:text-red-500"
+							>Learn More</ULink
 						>
 					</div>
 				</div>
