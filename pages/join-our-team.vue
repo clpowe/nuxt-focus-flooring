@@ -1,47 +1,19 @@
-<script setup>
+<script setup lang="ts">
+	import { z } from 'zod'
+	import type { FormSubmitEvent } from '#ui/types'
+
 	useHead({
-		title: 'Focus Flooring - Join our team'
+		title: 'Focus Flooring - Join our team',
+		meta: [
+			{
+				name: 'description',
+				content:
+					"Join the team at Focus Flooring and be part of an organization dedicated to eliminating client risks through precise processes. We're committed to fostering a positive and collaborative culture that empowers our team to illuminate the industry. Make an impact with us and grow your career in commercial flooring. Interested in joining? Fill out the form or contact us at 813-280-0621. Together, we can achieve greater success."
+			}
+		]
 	})
 
-	const communityList = [
-		'ACE Mentor',
-		'American Heart Association',
-		'AMIkids',
-		'Amplify Clearwater (Clearwater Chamber of Commerce)',
-		'Associated Builders and Contractors Florida ',
-		'Gulf Coast',
-		'Boys & Girls Club',
-		'Bullard Family Foundation',
-		'CDC of Tampa',
-		'Embracing Legacy',
-		'Florida Educational Facilities Planners’ Association',
-		'Ford Next Generation Learning',
-		'Greater Tampa Chamber of Commerce',
-		'Habitat for Humanity',
-		'Hernando Education Foundation',
-		'HCC Foundation',
-		'Hillsborough Alliance for Black Educators',
-		'Hillsborough Education Foundation',
-		'Leadership Tampa Bay',
-		'Lutz Preparatory School',
-		'Manatee Education Foundation',
-		'Metropolitan Ministries',
-		'Moffitt Cancer Center',
-		'National Association of Black Women in Construction',
-		'Pasco Education Foundation',
-		'Pepin Academies',
-		'PHSC Foundation',
-		'Pinellas Education Foundation',
-		'Revealing Truth Ministries',
-		'Safety Harbor Chamber of Commerce',
-		'Special Olympics',
-		'Salvation Army',
-		'Start Right Now',
-		'Tampa Organization of Black Affairs (TOBA)',
-		'Toys for Tots',
-		'University of South Florida',
-		'Upper Tampa Bay Chamber of Commerce'
-	]
+	const { data } = await useFetch('/api/join-our-team')
 
 	const communityPictures = [
 		{
@@ -97,43 +69,74 @@
 	const success = ref(false)
 	const fail = ref(false)
 
-	async function handleSubmit(data) {
-		const fData = new FormData()
+	// Form
 
-		//console.log(data)
+	const interest = [
+		'Marketing',
+		'Skilled Labor',
+		'Project Planning/Management',
+		'Field Management/Site Supervision'
+	]
 
-		if (data) {
-			for (let [key, value] of Object.entries(data)) {
-				fData.append(key, value)
-			}
-		}
+	const schema = z.object({
+		firstName: z.string().min(1, 'Required'),
+		lastName: z.string().min(1, 'Required'),
+		email: z.string().min(1, 'Required'),
+		phone: z.string().min(1, 'Required'),
+		howDidYouHear: z.string(),
+		deptOfInterest: z.string(),
+		comments: z.string()
+	})
 
-		try {
-			const res = await $fetch(
-				'https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec',
-				{
-					method: 'POST',
-					body: fData
-				}
-			)
-			//console.log(res)
-			if (res.result === 'success') {
-				success.value = true
-			}
-			if (res.result === 'error') {
-				fail.value = true
-				throw new Error(res.error)
-			}
-		} catch (e) {
-			fail.value = true
-			//console.error(e)
-		}
-	}
+	type Schema = z.output<typeof schema>
 
-	function handleReset() {
-		success.value = false
-		fail.value = false
-	}
+	const state = reactive({
+		firstName: undefined,
+		lastName: undefined,
+		email: undefined,
+		phone: undefined,
+		howDidYouHear: undefined,
+		deptOfInterest: undefined,
+		comments: undefined
+	})
+
+	// async function handleSubmit(data) {
+	// 	const fData = new FormData()
+
+	// 	//console.log(data)
+
+	// 	if (data) {
+	// 		for (let [key, value] of Object.entries(data)) {
+	// 			fData.append(key, value)
+	// 		}
+	// 	}
+
+	// 	try {
+	// 		const res = await $fetch(
+	// 			'https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec',
+	// 			{
+	// 				method: 'POST',
+	// 				body: fData
+	// 			}
+	// 		)
+	// 		//console.log(res)
+	// 		if (res.result === 'success') {
+	// 			success.value = true
+	// 		}
+	// 		if (res.result === 'error') {
+	// 			fail.value = true
+	// 			throw new Error(res.error)
+	// 		}
+	// 	} catch (e) {
+	// 		fail.value = true
+	// 		//console.error(e)
+	// 	}
+	// }
+
+	// function handleReset() {
+	// 	success.value = false
+	// 	fail.value = false
+	// }
 </script>
 
 <template>
@@ -181,7 +184,7 @@
 						Sorry something has gone wrong on our end. Please try again later
 						<button @click="handleReset">Reset</button>
 					</div>
-					<div v-else class="container">
+					<div v-else class="max-w-lg mx-auto">
 						<div>
 							<h2 class="margin-bottom">Join our team</h2>
 						</div>
@@ -206,87 +209,84 @@
 							contact as soon as possible. Or, you can call us at any of our
 							locations.
 						</p>
-						<ClientOnly>
-							<FormKit
-								type="form"
-								method="post"
-								:actions="false"
-								action="https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec"
-								@submit="handleSubmit"
+						<UForm :schema="schema" :state="state" class="max-w-lg mx-auto">
+							<UFormGroup label="First Name" name="firstName">
+								<UInput
+									padded
+									size="md"
+									color="gray"
+									variant="outline"
+									v-model="state.firstName"
+								/>
+							</UFormGroup>
+							<UFormGroup label="Last Name" name="lastName">
+								<UInput
+									padded
+									size="md"
+									color="gray"
+									variant="outline"
+									v-model="state.lastName"
+								/>
+							</UFormGroup>
+							<UFormGroup label="Email" name="email">
+								<UInput
+									padded
+									size="md"
+									color="gray"
+									variant="outline"
+									v-model="state.email"
+								/>
+							</UFormGroup>
+							<UFormGroup label="Phone Number" name="phone">
+								<UInput
+									padded
+									size="md"
+									color="gray"
+									variant="outline"
+									v-model="state.phone"
+								/>
+							</UFormGroup>
+							<UFormGroup
+								label="How did you hear about us?"
+								name="howDidYouHear"
 							>
-								<FormKit
-									type="text"
-									name="firstName"
-									label="First Name"
-									help="Enter your first name"
-									placeholder="First Name"
+								<UTextarea
+									padded
+									size="md"
+									color="gray"
+									variant="outline"
+									v-model="state.howDidYouHear"
 								/>
-								<FormKit
-									type="text"
-									name="lastName"
-									label="Last Name"
-									help="Enter your last name"
-									placeholder="Last Name"
+							</UFormGroup>
+							<UFormGroup
+								label="What is your department of interest?"
+								name="deptOfInterest"
+							>
+								<USelectMenu
+									padded
+									size="md"
+									v-model="state.deptOfInterest"
+									:options="interest"
 								/>
-
-								<FormKit
-									type="email"
-									name="email"
-									validation="required"
-									label="Email Address"
-									help="Please enter your email address"
-									placeholder="Email address"
+							</UFormGroup>
+							<UFormGroup label="Comments" name="comments">
+								<UTextarea
+									padded
+									size="md"
+									color="focusyellow"
+									variant="outline"
+									v-model="state.comments"
 								/>
-								<FormKit
-									type="tel"
-									name="phone"
-									validation="matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/"
-									:validation-messages="{
-										matches: 'Phone number must be in the format xxx-xxx-xxxx'
-									}"
-									validation-visibility="dirty"
-									label="Phone Number"
-									help="Please enter your phone Number"
-									placeholder="xxx-xxx-xxxx"
-								/>
-
-								<div class="grid grid-col-1 md:grid-cols-2 gap-4"></div>
-								<FormKit
-									class="w-full"
-									type="textarea"
-									name="howDidYouHear"
-									label="How did you hear about us?"
-									rows="5"
-									placeholder="How did you hear about us?"
-								/>
-								<FormKit
-									type="radio"
-									name="deptOfInterest"
-									label="To help us fulfill your request, please select your area(s) of interest:"
-									decorator-icon="check"
-									multiple=""
-									:options="[
-										'Skilled Labor',
-										'Field Management/Site Supervision',
-										'Estimating/Preconstruction',
-										'Project Planning/Management',
-										'Procurement',
-										'Accounting',
-										'Internal Operations',
-										'Marketing',
-										'Sales'
-									]"
-								/>
-								<FormKit
-									type="textarea"
-									name="comments"
-									label="Comment / Message"
-									rows="10"
-									placeholder="Comments/Message"
-								/>
-								<button class="btn btn-accent">Submit</button>
-							</FormKit>
-						</ClientOnly>
+							</UFormGroup>
+							<UButton
+								variant="solid"
+								type="submit"
+								class="text-midnight-950"
+								color="focusyellow"
+							>
+								Submit
+							</UButton>
+						</UForm>
 					</div>
 				</article>
 			</main>

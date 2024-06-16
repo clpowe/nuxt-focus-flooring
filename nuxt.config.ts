@@ -1,4 +1,3 @@
-import { base } from 'airtable'
 import svgLoader from 'vite-svg-loader'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -12,8 +11,11 @@ export default defineNuxtConfig({
 			viewport: 'width=device-width,initial-scale=1.0',
 			title: 'Focus Flooring',
 			meta: [
-				// <meta name="description" content="My amazing site">
-				{ name: 'description', content: 'My amazing site.' }
+				{
+					name: 'description',
+					content:
+						'Discover advanced commercial flooring and wall tile solutions with Focus Flooring. Based in Tampa, Florida, our minority-owned firm guarantees risk elimination through precise processes, cost certainty, and real-time schedule management. Specializing in carpet, wood, ceramic, stone, concrete, LVT, resilient, and laminate flooring, we serve various sectors including industrial, healthcare, aviation, and more. Our "Zero Punch" philosophy ensures top-quality service with minimal quality punch list items. Partner with us for reliable and innovative flooring solutions. Contact us today!'
+				}
 			],
 			link: [
 				{
@@ -31,6 +33,9 @@ export default defineNuxtConfig({
 			]
 		}
 	},
+	routeRules: {
+		'/': { prerender: true }
+	},
 	css: [
 		'@/assets/css/tokens.css',
 		'@/assets/css/reset.css',
@@ -41,12 +46,16 @@ export default defineNuxtConfig({
 			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme
 		]
 	},
+	devtools: {
+		enabled: false
+	},
 	extends: ['@nuxt/ui-pro'],
 	modules: [
-		'@nuxt/devtools',
 		'nuxt-vercel-analytics',
 		'@vueuse/nuxt',
 		'@nuxt/ui',
+		'@hebilicious/server-block-nuxt',
+		'@hebilicious/form-actions-nuxt',
 		'@nuxtjs/google-fonts',
 		'nuxt-icon',
 		'@nuxtjs/robots',
@@ -60,8 +69,7 @@ export default defineNuxtConfig({
 		compressPublicAssets: true
 	},
 	features: {
-		devLogs: false
-		// or 'silent' to allow you to handle yourself with `dev:ssr-logs` hook
+		devLogs: true
 	},
 	colorMode: {
 		preference: 'light'
@@ -94,18 +102,5 @@ export default defineNuxtConfig({
 	},
 	schemaOrg: {
 		host: 'https://focus-flooring.com'
-	},
-	devServer: {
-		port: 8080
-	},
-	$development: {
-		nitro: {
-			storage: {
-				projects: {
-					driver: 'fs',
-					base: 'projects'
-				}
-			}
-		}
 	}
 })

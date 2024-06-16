@@ -1,5 +1,13 @@
 <script setup lang="ts">
 	useHead({
+		title: 'Focus Flooring',
+		meta: [
+			{
+				name: 'description',
+				content:
+					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring. Based in Tampa, Florida, our minority-owned firm guarantees risk elimination through precise processes, cost certainty, and real-time schedule management. Specializing in carpet, wood, ceramic, stone, concrete, LVT, resilient, and laminate flooring, we serve various sectors including industrial, healthcare, aviation, and more. Our "Zero Punch" philosophy ensures top-quality service with minimal quality punch list items. Partner with us for reliable and innovative flooring solutions. Contact us today!'
+			}
+		],
 		link: [
 			{
 				rel: 'preload',

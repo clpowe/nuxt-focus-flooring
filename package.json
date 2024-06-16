@@ -24,11 +24,9 @@
 		"vitest": "^1.4.0"
 	},
 	"dependencies": {
-		"@formkit/addons": "1.0.0-beta.15",
-		"@formkit/icons": "1.0.0-beta.15",
-		"@formkit/nuxt": "1.0.0-beta.12",
-		"@formkit/themes": "1.0.0-beta.16-18186fe",
-		"@formkit/vue": "1.0.0-beta.15",
+		"@hebilicious/form-actions-nuxt": "^0.3.0",
+		"@hebilicious/server-block-nuxt": "^0.3.4",
+		"@hebilicious/sfc-server-volar": "^0.3.4",
 		"@hebilicious/vue-query-nuxt": "^0.3.0",
 		"@nuxt/ui": "^2.14.2",
 		"@nuxt/ui-pro": "^1.0.2",
@@ -49,7 +47,6 @@
 		"postcss-preset-env": "^7.8.3",
 		"preline": "^2.0.3",
 		"vue-multiselect": "3.0.0-beta.2",
-		"yup": "^1.4.0",
 		"zod": "^3.22.4"
 	},
 	"resolutions": {
