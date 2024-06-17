@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	import { z } from 'zod'
-	import type { FormSubmitEvent } from '#ui/types'
+	import type { FormError, FormSubmitEvent } from '#ui/types'
 
 	useHead({
 		title: 'Focus Flooring - Join our team',
@@ -12,8 +12,6 @@
 			}
 		]
 	})
-
-	const { data } = await useFetch('/api/join-our-team')
 
 	const communityPictures = [
 		{
@@ -66,9 +64,6 @@
 		}
 	]
 
-	const success = ref(false)
-	const fail = ref(false)
-
 	// Form
 
 	const interest = [
@@ -77,6 +72,16 @@
 		'Project Planning/Management',
 		'Field Management/Site Supervision'
 	]
+
+	const state = reactive({
+		firstName: undefined,
+		lastName: undefined,
+		email: undefined,
+		phone: undefined,
+		howDidYouHear: undefined,
+		deptOfInterest: undefined,
+		comments: undefined
+	})
 
 	const schema = z.object({
 		firstName: z.string().min(1, 'Required'),
@@ -89,54 +94,26 @@
 	})
 
 	type Schema = z.output<typeof schema>
-
-	const state = reactive({
-		firstName: undefined,
-		lastName: undefined,
-		email: undefined,
-		phone: undefined,
-		howDidYouHear: undefined,
-		deptOfInterest: undefined,
-		comments: undefined
-	})
-
-	// async function handleSubmit(data) {
-	// 	const fData = new FormData()
-
-	// 	//console.log(data)
-
-	// 	if (data) {
-	// 		for (let [key, value] of Object.entries(data)) {
-	// 			fData.append(key, value)
-	// 		}
-	// 	}
-
-	// 	try {
-	// 		const res = await $fetch(
-	// 			'https://script.google.com/macros/s/AKfycbyzPPvQS9fBZIcFEq3w755xxFlaCgA8pOs47K_DXhhxWFY95zJ9GdJ-gn6gbHGNZPZWSA/exec',
-	// 			{
-	// 				method: 'POST',
-	// 				body: fData
-	// 			}
-	// 		)
-	// 		//console.log(res)
-	// 		if (res.result === 'success') {
-	// 			success.value = true
-	// 		}
-	// 		if (res.result === 'error') {
-	// 			fail.value = true
-	// 			throw new Error(res.error)
-	// 		}
-	// 	} catch (e) {
-	// 		fail.value = true
-	// 		//console.error(e)
-	// 	}
-	// }
-
-	// function handleReset() {
-	// 	success.value = false
-	// 	fail.value = false
-	// }
+	let pending = ref(false)
+	let success = ref(false)
+	let fail = ref(false)
+	async function onSubmit(event: FormSubmitEvent<Schema>) {
+		pending.value = true
+		try {
+			const res: any = await $fetch('/join-our-team', {
+				method: 'POST',
+				body: event.data
+			})
+			if (res.statusCode === 200) {
+				pending.value = false
+				success.value = true
+			}
+		} catch (error) {
+			pending.value = false
+			fail.value = true
+			console.log(error)
+		}
+	}
 </script>
 
 <template>
@@ -147,7 +124,14 @@
 			<main id="main" class="main pt-16">
 				<article class="container space-y-6">
 					<div>
-						<h2 class="margin-bottom">Culture</h2>
+						<h2
+							class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
+						>
+							<span
+								class="underline decoration-[var(--focus-yellow)] decoration-4 underline-offset-8"
+								>Culture</span
+							>
+						</h2>
 						<p class="max-w-lg">
 							<strong
 								>Illuminating our industry with positivity, partnership, &
@@ -175,7 +159,20 @@
 						</div>
 					</div>
 				</article>
-				<article>
+				<article class="max-w-lg mx-auto">
+					<h2
+						class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
+					>
+						<span
+							class="underline decoration-[var(--focus-yellow)] decoration-4 underline-offset-8"
+							>Join</span
+						>
+						Our Team to Make a
+						<span
+							class="underline decoration-[var(--focus-yellow)] decoration-4 underline-offset-8"
+							>Difference</span
+						>
+					</h2>
 					<div v-if="success">
 						Thank you we will contact you soon
 						<button @click="handleReset">Reset</button>
@@ -184,33 +181,30 @@
 						Sorry something has gone wrong on our end. Please try again later
 						<button @click="handleReset">Reset</button>
 					</div>
-					<div v-else class="max-w-lg mx-auto">
-						<div>
-							<h2 class="margin-bottom">Join our team</h2>
-						</div>
+					<div v-else>
 						<div class="margin-bottom space-y-2">
 							<p>
-								At Focus Flooring, we see each one of our projects as an
-								opportunity to eliminate our clients’ risks through our
-								processes.
-							</p>
-							<p>
-								When you join ur team you are becoming a part of something
-								bigger than us.
-							</p>
-							<p>
-								Our team, community, and impact becoming greater starts with
-								you!
-							</p>
-							<p>Interested in joining us? We want to hear from you.</p>
+								Joining us means being part of something bigger. Your role makes
+								our team, community, and impact grow. Interested? We're eager to
+								hear from you.</p
+							>
 						</div>
 						<p class="mb-8">
 							To reach us, simply fill out the form below, and we’ll be in
 							contact as soon as possible. Or, you can call us at any of our
 							locations.
 						</p>
-						<UForm :schema="schema" :state="state" class="max-w-lg mx-auto">
-							<UFormGroup label="First Name" name="firstName">
+						<UForm
+							:schema="schema"
+							:state="state"
+							class="max-w-lg mx-auto"
+							@submit="onSubmit"
+						>
+							<UFormGroup
+								label="First Name"
+								name="firstName"
+								v-slot="{ error }"
+							>
 								<UInput
 									padded
 									size="md"
@@ -273,7 +267,7 @@
 								<UTextarea
 									padded
 									size="md"
-									color="focusyellow"
+									color="gray"
 									variant="outline"
 									v-model="state.comments"
 								/>

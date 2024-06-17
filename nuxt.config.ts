@@ -54,7 +54,6 @@ export default defineNuxtConfig({
 		'nuxt-vercel-analytics',
 		'@vueuse/nuxt',
 		'@nuxt/ui',
-		'@hebilicious/server-block-nuxt',
 		'@hebilicious/form-actions-nuxt',
 		'@nuxtjs/google-fonts',
 		'nuxt-icon',

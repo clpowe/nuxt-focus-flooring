@@ -36,9 +36,9 @@ export default defineEventHandler(async () => {
 			let projects: Project[] = []
 			res.forEach((project) => {
 				if (project.fields.status === 'live') {
-					let image = '/placeholder.jpg'
+					let image: string = '/placeholder.jpg'
 					if (project.fields.image) {
-						image = project.fields.image[0].url
+						image = project.fields.image[0].url ?? '/placeholder.jpg'
 					}
 
 					projects.push({
