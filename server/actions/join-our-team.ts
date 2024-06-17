@@ -1,7 +1,7 @@
 import Airtable from 'airtable'
 
 Airtable.configure({ apiKey: process.env.AIRTABLE_FORM })
-var base = Airtable.base('ppMDLS774dmy6UBH')
+var base = Airtable.base('appMDLS774dmy6UBH')
 
 type AirtableError = {
 	error: string
