@@ -27,6 +27,15 @@
 		defineWebPage()
 	])
 
+	useHead({
+		script: [
+			{
+				src: '../assets/js/clarity.js',
+				defer: true,
+				type: 'text/javascript'
+			}
+		]
+	})
 	// useFetch('/team')
 	// useFetch('/projects')
 </script>
