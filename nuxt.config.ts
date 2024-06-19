@@ -98,7 +98,9 @@ export default defineNuxtConfig({
 				features: {
 					'nesting-rules': true
 				}
-			}
+			},
+			cssnano: {},
+			autoprefixer: {}
 		}
 	},
 	image: {
