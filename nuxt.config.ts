@@ -30,12 +30,15 @@ export default defineNuxtConfig({
 					href: '/favicon-dark.svg',
 					media: '(prefers-color-scheme: light)'
 				}
-			],
-			script: [{ src: './assets/js/clarity.js', type: 'text/javascript' }]
+			]
 		}
 	},
 	routeRules: {
-		'/': { prerender: true }
+		'/': { prerender: true },
+		'/about-us': { prerender: true },
+		'join-our-team': { prerender: true },
+		'our-history': { prerender: true },
+		'our-process': { prerender: true }
 	},
 	css: [
 		'@/assets/css/tokens.css',
