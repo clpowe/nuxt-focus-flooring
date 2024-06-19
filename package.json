@@ -37,6 +37,7 @@
 		"@preline/scrollspy": "^2.0.2",
 		"@tanstack/vue-query": "^5.22.2",
 		"@vercel/analytics": "^1.1.2",
+		"@vercel/speed-insights": "^1.0.12",
 		"@vueuse/gesture": "2.0.0-beta.1",
 		"@vueuse/integrations": "^9.13.0",
 		"@vueuse/nuxt": "^9.9.0",
@@ -56,12 +57,12 @@
 		"consola": "^3.0.0"
 	},
 	"pnpm": {
-    "overrides": {
-      "nuxi": "3.7.3"
-    }
-  },
+		"overrides": {
+			"nuxi": "3.7.3"
+		}
+	},
 	"overrides": {
-		"nuxi":"3.7.3"
+		"nuxi": "3.7.3"
 	},
 	"browserslist": [
 		">0.3%",
