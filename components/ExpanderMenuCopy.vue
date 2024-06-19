@@ -11,16 +11,23 @@
 	function toggleAccordion(panalToActivate: Element) {
 		const buttons =
 			panalToActivate.parentElement?.querySelectorAll('.accordion-trigger')
+		const links = panalToActivate.parentElement?.querySelectorAll('.alink')
 		const contents =
 			panalToActivate.parentElement?.querySelectorAll('.accordion-content')
 
 		buttons?.forEach((button) => {
 			button.setAttribute('aria-expanded', 'false')
 		})
+		links?.forEach((link) => {
+			link.style.display = 'none'
+			link.setAttribute('disabled', 'true')
+		})
 		contents?.forEach((content) => {
 			content.setAttribute('aria-hidden', 'true')
 		})
 
+		panalToActivate.querySelector('.alink').style.display = 'block'
+		panalToActivate.querySelector('.alink').setAttribute('disabled', 'false')
 		panalToActivate
 			.querySelector('.accordion-trigger')
 			?.setAttribute('aria-expanded', 'true')
@@ -61,6 +68,7 @@
 						@focus="useAccordion"
 						label="Learn More"
 						color="focusyellow"
+						aria-hidden="true"
 						class="text-midnight-950 alink"
 						to="/portfolio?category=Industrial"
 					/>
@@ -68,8 +76,9 @@
 						class="accordion-image"
 						src="/Industrial.jpeg"
 						fit="fit"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						sizes="400px sm:640px md:500px lg:700px"
 						format="webp"
+						loading="lazy"
 						alt="A digital rendering of the extirior of an Amazon facility"
 					/>
 				</div>
@@ -109,7 +118,8 @@
 						src="/healthcare.jpeg"
 						fit="fit"
 						format="webp"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						loading="lazy"
+						sizes="400px sm:640px md:500px lg:700px"
 						alt="A cozy area with wooden tables and chairs arranged neatly in the center of the room."
 					/>
 				</div>
@@ -149,7 +159,8 @@
 						src="/aviation.jpeg"
 						fit="fit"
 						format="webp"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						loading="lazy"
+						sizes="400px sm:640px md:500px lg:700px"
 						alt="Airport terminal, featuring modern design and spacious waiting areas."
 					/>
 				</div>
@@ -189,7 +200,8 @@
 						src="/ResidentialHospitality.jpeg"
 						fit="fit"
 						format="webp"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						loading="lazy"
+						sizes="400px sm:640px md:500px lg:700px"
 						alt="The grand entrance to the EVEN awaits, adorned with a majestic sign, beckoning guests to indulge in luxury and elegance."
 					/>
 				</div>
@@ -231,7 +243,8 @@
 						src="/WorshipCenters.jpeg"
 						fit="fit"
 						format="webp"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						loading="lazy"
+						sizes="400px sm:640px md:500px lg:700px"
 						alt="A church with purple lighting and pews, creating a serene ambiance."
 					/>
 				</div>
@@ -271,7 +284,8 @@
 						src="/RivergateTower.jpeg"
 						fit="fit"
 						format="webp"
-						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						loading="lazy"
+						sizes="400px sm:640px md:500px lg:700px"
 						alt="Modern office with glass doors, showcasing sleek design and professional ambiance."
 					/>
 				</div>
@@ -610,6 +624,9 @@
 	}
 
 	.accordion-panel:has([aria-expanded='true']) .alink {
+		@starting-style {
+			transform: translateX(155%);
+		}
 		transform: translateX(0);
 		opacity: 1;
 		bottom: 2rem;
@@ -617,6 +634,9 @@
 	}
 
 	.accordion-panel:has([aria-expanded='false']) .alink {
+		@starting-style {
+			transform: translateX(0);
+		}
 		position: absolute;
 		bottom: 2rem;
 		right: 2rem;
