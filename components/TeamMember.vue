@@ -18,7 +18,11 @@
 <template>
 	<UBlogPost
 		:title="`${firstName} ${lastName}`"
-		:image="{ src: srcImg, alt: `Photo of ${firstName} ${lastName}` }"
+		:image="{
+			src: srcImg,
+			alt: `Photo of ${firstName} ${lastName}`,
+			sizes: `100vw sm:300px md:400px`
+		}"
 		:description="title"
 		:ui="{
 			image: {

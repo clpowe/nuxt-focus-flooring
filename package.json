@@ -55,6 +55,14 @@
 	"peerDependencies": {
 		"consola": "^3.0.0"
 	},
+	"pnpm": {
+    "overrides": {
+      "nuxi": "3.7.3"
+    }
+  },
+	"overrides": {
+		"nuxi":"3.7.3"
+	},
 	"browserslist": [
 		">0.3%",
 		"not ie 11",

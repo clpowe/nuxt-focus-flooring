@@ -27,7 +27,7 @@ type Project = {
 }
 
 export default defineEventHandler(async () => {
-	const team = base('Table 1')
+	const projects = base('Table 1')
 		.select({
 			view: 'Grid view'
 		})
@@ -57,5 +57,5 @@ export default defineEventHandler(async () => {
 		})
 		.catch((error) => console.log(error))
 
-	return team
+	return projects
 })

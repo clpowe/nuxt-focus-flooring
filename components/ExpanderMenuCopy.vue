@@ -68,6 +68,7 @@
 						class="accordion-image"
 						src="/Industrial.jpeg"
 						fit="fit"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
 						format="webp"
 						alt="A digital rendering of the extirior of an Amazon facility"
 					/>
@@ -108,7 +109,8 @@
 						src="/healthcare.jpeg"
 						fit="fit"
 						format="webp"
-						alt="A digital rendering of the extirior of an Amazon facility"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						alt="A cozy area with wooden tables and chairs arranged neatly in the center of the room."
 					/>
 				</div>
 			</div>
@@ -147,7 +149,8 @@
 						src="/aviation.jpeg"
 						fit="fit"
 						format="webp"
-						alt="A digital rendering of the extirior of an Amazon facility"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						alt="Airport terminal, featuring modern design and spacious waiting areas."
 					/>
 				</div>
 			</div>
@@ -186,7 +189,8 @@
 						src="/ResidentialHospitality.jpeg"
 						fit="fit"
 						format="webp"
-						alt="A digital rendering of the extirior of an Amazon facility"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						alt="The grand entrance to the EVEN awaits, adorned with a majestic sign, beckoning guests to indulge in luxury and elegance."
 					/>
 				</div>
 			</div>
@@ -227,7 +231,8 @@
 						src="/WorshipCenters.jpeg"
 						fit="fit"
 						format="webp"
-						alt="A digital rendering of the extirior of an Amazon facility"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						alt="A church with purple lighting and pews, creating a serene ambiance."
 					/>
 				</div>
 			</div>
@@ -266,7 +271,8 @@
 						src="/RivergateTower.jpeg"
 						fit="fit"
 						format="webp"
-						alt="A digital rendering of the extirior of an Amazon facility"
+						sizes="100vw, sm: 300px, md: 500px, lg:700px"
+						alt="Modern office with glass doors, showcasing sleek design and professional ambiance."
 					/>
 				</div>
 			</div>
@@ -568,7 +574,7 @@
 	}
 
 	.accordion-panel:has([aria-expanded='true']) .accordion-image {
-		filter: brightness(0.5);
+		filter: brightness(1);
 	}
 
 	.accordion-trigger {

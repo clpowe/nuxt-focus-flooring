@@ -34,7 +34,7 @@
 
 <template>
 	<UBlogPost
-		:image="{ src: srcImg, alt: alt }"
+		:image="{ src: srcImg, alt: alt, format: 'webp' }"
 		:title="name"
 		description="As Envision Flooring"
 		:ui="{
@@ -85,7 +85,7 @@
 					/>
 				</div>
 			</template>
-			<NuxtImg :src="srcImg" class="w-full" :alt="alt" />
+			<NuxtImg :src="srcImg" class="w-full" :alt="alt" format="webp" />
 			<div class="p-4">
 				<div class="p-4">
 					<p>

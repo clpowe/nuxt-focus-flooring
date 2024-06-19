@@ -30,7 +30,8 @@ export default defineNuxtConfig({
 					href: '/favicon-dark.svg',
 					media: '(prefers-color-scheme: light)'
 				}
-			]
+			],
+			script: [{ src: './assets/js/clarity.js', type: 'text/javascript' }]
 		}
 	},
 	routeRules: {
@@ -47,7 +48,8 @@ export default defineNuxtConfig({
 		]
 	},
 	devtools: {
-		enabled: false
+		componentInspector: true,
+		enabled: true
 	},
 	extends: ['@nuxt/ui-pro'],
 	modules: [
@@ -65,7 +67,10 @@ export default defineNuxtConfig({
 		'@nuxtjs/partytown'
 	],
 	nitro: {
-		compressPublicAssets: true
+		compressPublicAssets: true,
+		devProxy: {
+			host: '127.0.0.1'
+		}
 	},
 	features: {
 		devLogs: true

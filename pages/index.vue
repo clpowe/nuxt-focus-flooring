@@ -161,9 +161,11 @@
 			<div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
 				<div>
 					<nuxt-img
-						class=""
+						class="w-full h-full"
+						fit="cover"
 						src="/WhoWeAre.webp"
 						format="webp"
+						sizes="100vw sm:400px md:600px"
 						alt="Man instaliing flooring wearing a yellow shirt"
 					/>
 				</div>
