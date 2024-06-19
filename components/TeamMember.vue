@@ -21,7 +21,8 @@
 		:image="{
 			src: srcImg,
 			alt: `Photo of ${firstName} ${lastName}`,
-			sizes: `100vw sm:300px md:400px`
+			sizes: `150px sm:225px md:350px`,
+			placeholder: '[50,35]'
 		}"
 		:description="title"
 		:ui="{

@@ -24,10 +24,10 @@
 		<NuxtImg
 			fit="exact"
 			quality="90"
-			height="255"
-			sizes="xs:100vw sm:400px md:600px lg:800px xl:1400px"
+			sizes="100vw sm:400px md:600px lg:800px xl:1400px"
 			:src="img"
 			class="w-full absolute h-full object-cover image"
+			placeholder
 		/>
 	</div>
 </template>
