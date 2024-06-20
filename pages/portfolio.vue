@@ -1,6 +1,12 @@
 <script setup lang="ts">
 	useHead({
-		title: 'Focus Flooring - Portfolio'
+		title: 'Focus Flooring - Portfolio',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/portfolio'
+			}
+		]
 	})
 
 	const route = useRoute()

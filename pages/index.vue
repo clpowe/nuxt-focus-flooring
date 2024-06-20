@@ -10,6 +10,10 @@
 		],
 		link: [
 			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/'
+			},
+			{
 				rel: 'preload',
 				href: 'https://iz5hjhzjql5fyivm.public.blob.vercel-storage.com/Focus%20Flooring_%20Our%20Story.mp4'
 			}

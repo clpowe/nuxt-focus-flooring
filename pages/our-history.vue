@@ -2,7 +2,13 @@
 	import { animate, scroll, timeline } from 'motion'
 
 	useHead({
-		title: 'Focus Flooring - Our History'
+		title: 'Focus Flooring - Our History',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/our-history'
+			}
+		]
 	})
 
 	const dates = [

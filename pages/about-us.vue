@@ -1,6 +1,12 @@
 <script setup>
 	useHead({
-		title: 'Focus Flooring - About us'
+		title: 'Focus Flooring - About us',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/about-us'
+			}
+		]
 	})
 
 	const coreValues = [

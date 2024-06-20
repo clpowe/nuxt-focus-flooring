@@ -1,6 +1,12 @@
 <script setup>
 	useHead({
-		title: 'Focus Flooring - Contact'
+		title: 'Focus Flooring - Contact',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/contact'
+			}
+		]
 	})
 </script>
 

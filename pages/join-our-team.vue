@@ -4,6 +4,12 @@
 
 	useHead({
 		title: 'Focus Flooring - Join our team',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/join-our-team'
+			}
+		],
 		meta: [
 			{
 				name: 'description',

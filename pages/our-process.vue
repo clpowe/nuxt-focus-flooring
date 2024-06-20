@@ -1,6 +1,12 @@
 <script setup>
 	useHead({
-		title: 'Focus Flooring - Our Process'
+		title: 'Focus Flooring - Our Process',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/our-process'
+			}
+		]
 	})
 
 	const nuxtApp = useNuxtApp()

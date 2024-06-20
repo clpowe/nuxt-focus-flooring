@@ -70,18 +70,6 @@
 				<UTextarea v-model="state.message" placeholder="Comments / Message" />
 			</UFormGroup>
 		</UForm>
-		<!-- <ClientOnly>
-			<iframe
-				class="airtable-embed"
-				src="https://airtable.com/embed/app2pIu0GZUtM07Kx/pagQDG3JHGtbiEt60/form"
-				frameborder="0"
-				width="100%"
-				height="1200"
-				ref="iframe"
-				loading="eager"
-				style="background: transparent; padding-top: 0"
-			></iframe>
-		</ClientOnly> -->
 	</div>
 </template>
 

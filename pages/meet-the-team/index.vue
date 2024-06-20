@@ -2,7 +2,13 @@
 	import { useTeam } from '~/composables/states'
 
 	useHead({
-		title: 'Focus Flooring - Meet the team'
+		title: 'Focus Flooring - Meet the team',
+		link: [
+			{
+				rel: 'canonical',
+				href: 'https://focus-flooring.com/meet-the-team'
+			}
+		]
 	})
 
 	const category = ref<string>('All')
