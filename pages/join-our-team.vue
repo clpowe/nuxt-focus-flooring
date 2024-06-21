@@ -159,7 +159,6 @@
 								height="350"
 								width="400"
 								quality="90"
-								loading="lazy"
 								format="webp"
 							/>
 						</div>

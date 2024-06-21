@@ -106,8 +106,6 @@
 
 	const vid = ref<HTMLVideoElement | null>(null)
 
-	import Poster from '../assets/poster.webp'
-
 	function playPause() {
 		if (!vid.value) return
 		if (vid.value.paused) {
