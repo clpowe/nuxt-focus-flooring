@@ -20,6 +20,7 @@
 		})
 		links?.forEach((link) => {
 			link.style.display = 'none'
+			link.tabindex = -1
 			link.setAttribute('disabled', 'true')
 		})
 		contents?.forEach((content) => {
@@ -27,6 +28,7 @@
 		})
 
 		panalToActivate.querySelector('.alink').style.display = 'block'
+		panalToActivate.querySelector('.alink').tabindex = 1
 		panalToActivate.querySelector('.alink').setAttribute('disabled', 'false')
 		panalToActivate
 			.querySelector('.accordion-trigger')
