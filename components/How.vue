@@ -10,7 +10,8 @@
 			title: 'Preconstruction',
 			description:
 				'We will partner with you to ensure you stay within your budget throughout all pricing efforts and obtain cost certainty for your project.',
-			link: '/our-process#preconstruction'
+			link: '/our-process#preconstruction',
+			linkText: 'more about our process'
 		},
 		{
 			icon: 'how_three',
@@ -18,7 +19,8 @@
 			title: 'Project Planning',
 			description:
 				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.',
-			link: '/our-process#project-planning'
+			link: '/our-process#project-planning',
+			linkText: 'more about how we plan'
 		},
 		// {
 		// 	icon: 'how_two',
@@ -35,7 +37,8 @@
 			title: 'Project Execution',
 			description:
 				'Through our full-time onsite supervision, a dedicated field technician and QAQC protocols, we are able to implement our “Zero Punch” philosophy reducing all quality punch list items to almost “0”.',
-			link: '/our-process#project-execution'
+			link: '/our-process#project-execution',
+			linkText: 'more about project execution'
 		}
 	]
 
@@ -93,7 +96,7 @@
 							:to="step.link"
 							class="text-midnight-950"
 							color="focusyellow"
-							>Learn More</UButton
+							>{{ step.linkText }}</UButton
 						>
 					</div>
 				</li>

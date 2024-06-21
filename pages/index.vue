@@ -5,7 +5,20 @@
 			{
 				name: 'description',
 				content:
-					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring. Based in Tampa, Florida, our minority-owned firm guarantees risk elimination through precise processes, cost certainty, and real-time schedule management. Specializing in carpet, wood, ceramic, stone, concrete, LVT, resilient, and laminate flooring, we serve various sectors including industrial, healthcare, aviation, and more. Our "Zero Punch" philosophy ensures top-quality service with minimal quality punch list items. Partner with us for reliable and innovative flooring solutions. Contact us today!'
+					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
+			},
+			{
+				property: 'og:title',
+				content: 'Focus Flooring'
+			},
+			{
+				property: 'og:description',
+				content:
+					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
+			},
+			{
+				property: 'og:url',
+				content: 'https://focus-flooring.com/'
 			}
 		],
 		link: [
@@ -121,14 +134,14 @@
 						to="/contact/general-contact"
 						class="text-midnight-950"
 						color="focusyellow"
-						>contact us</UButton
+						>Contact us</UButton
 					>
 					<UButton
 						to="/our-process"
 						class="hover:text-midnight-950"
 						variant="outline"
 						color="focusyellow"
-						>Learn more</UButton
+						>See our process</UButton
 					>
 				</div>
 			</template>
@@ -172,11 +185,8 @@
 						alt="Man instaliing flooring wearing a yellow shirt"
 					/>
 				</div>
-				<!-- End Col -->
-
 				<div class="mt-5 sm:mt-10 lg:mt-0">
 					<div class="space-y-6 sm:space-y-8">
-						<!-- Title -->
 						<div class="space-y-2 md:space-y-4">
 							<h2
 								class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
@@ -207,17 +217,13 @@
 								</p>
 							</div>
 						</div>
-						<!-- End Title -->
 					</div>
 				</div>
-				<!-- End Col -->
 			</div>
 		</div>
-
 		<div
 			class="relative max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto grid-bg"
 		>
-			<!-- Blockquote -->
 			<div class="lg:mx-auto lg:w-3/5">
 				<h2
 					class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
@@ -228,7 +234,6 @@
 					>
 					History
 				</h2>
-
 				<div class="mt-6 lg:mt-10 text-center">
 					<p>
 						The flooring division begins to outgrow being a “division” and
@@ -251,9 +256,7 @@
 					>
 				</div>
 			</div>
-			<!-- End Blockquote -->
 		</div>
-
 		<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 			<h2
 				class="font-bold uppercase text-4xl lg:text-4xl text-gray-800 dark:text-gray-200 mb-4"
@@ -268,7 +271,6 @@
 				<!-- Icon Block -->
 				<div v-for="item in whatWeDo" :key="item.id" class="">
 					<svg-icon :name="item.svg" class="h-14" />
-
 					<div
 						class="bg-gradient-to-r from-[var(--focus-yellow)] via-[var(--focus-yellow-light)] to-white/0 h-0.5 mt-6"
 					>
@@ -283,10 +285,8 @@
 						</p>
 					</div>
 				</div>
-				<!-- End Icon Block -->
 			</div>
 		</div>
-
 		<section class="max-w-[85rem] mx-auto pt-14">
 			<h2 class="font-bold px-4 uppercase text-4xl lg:text-4xl mb-10">
 				Sectores we
@@ -297,7 +297,6 @@
 			</h2>
 			<ExpanderMenuCopy />
 		</section>
-
 		<section class="max-w-[85rem] px-4 py-14 mx-auto bg-[var(--midnight)]">
 			<HowWe />
 		</section>

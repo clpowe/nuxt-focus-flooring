@@ -10,9 +10,20 @@
 	})
 
 	const route = useRoute()
+	const router = useRouter()
 
 	const category = ref<any>('')
-	category.value = route.query.category ? route.query.category : 'All'
+
+	category.value = route.query.category?.split('+').join('')
+		? route.query.category
+		: 'All'
+
+	watchEffect(() => {
+		router.push({
+			path: '/portfolio',
+			query: { category: category.value.split('+').join('') }
+		})
+	})
 
 	type Project = {
 		id: number
@@ -510,7 +521,9 @@
 	const catagories = computed(() => {
 		const set = new Set()
 		set.add('All')
-		projects.value?.forEach((project) => set.add(project.category))
+
+		projects.value?.forEach((project) => set.add(project.category?.trim()))
+		//console.log(set)
 		return set
 	})
 </script>

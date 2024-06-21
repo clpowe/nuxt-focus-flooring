@@ -69,7 +69,6 @@
 								<NuxtLink
 									prefetch
 									to="/about-us"
-									role="menuitem"
 									exactActiveClass="nuxt-link-active"
 									>About Us</NuxtLink
 								>

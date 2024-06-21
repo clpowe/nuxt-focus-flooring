@@ -19,15 +19,13 @@
 			button.setAttribute('aria-expanded', 'false')
 		})
 		links?.forEach((link) => {
-			link.style.display = 'none'
-			link.setAttribute('disabled', 'true')
+			link.disabled = true
 		})
 		contents?.forEach((content) => {
 			content.setAttribute('aria-hidden', 'true')
 		})
 
-		panalToActivate.querySelector('.alink').style.display = 'block'
-		panalToActivate.querySelector('.alink').setAttribute('disabled', 'false')
+		panalToActivate.querySelector('.alink').disabled = false
 		panalToActivate
 			.querySelector('.accordion-trigger')
 			?.setAttribute('aria-expanded', 'true')
@@ -40,7 +38,7 @@
 <template>
 	<div class="wrapper" @focusin="useAccordion">
 		<div class="accordion" ref="accordion" @click="useAccordion">
-			<div class="accordion-panel" aria-expanded="true">
+			<div class="accordion-panel">
 				<h3 id="panel1-heading">
 					<button
 						class="accordion-trigger"
@@ -60,13 +58,9 @@
 					aria-hidden="true"
 					role="region"
 				>
-					<!-- <p
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex,
-						ipsa dolores amet sunt fugiat voluptate.</p
-					> -->
 					<UButton
 						@focus="useAccordion"
-						label="Learn More"
+						label="See our Industrial Portfolio"
 						color="focusyellow"
 						aria-hidden="true"
 						class="text-midnight-950 alink"
@@ -83,7 +77,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel" aria-expanded="false">
+			<div class="accordion-panel">
 				<h3 id="panel2-heading">
 					<button
 						class="accordion-trigger"
@@ -103,15 +97,11 @@
 					aria-hidden="true"
 					role="region"
 				>
-					<!-- <p
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex,
-						ipsa dolores amet sunt fugiat voluptate.</p
-					> -->
 					<UButton
-						label="Learn More"
+						label="See our Healthcare Portfolio"
 						color="focusyellow"
 						class="text-midnight-950 bottom-8 right-8 alink"
-						to="/portfolio?category=Industrial"
+						to="/portfolio?category=Healthcare"
 					/>
 					<NuxtImg
 						class="accordion-image"
@@ -124,7 +114,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel" aria-expanded="false">
+			<div class="accordion-panel">
 				<h3 id="panel3-heading">
 					<button
 						class="accordion-trigger"
@@ -149,10 +139,10 @@
 						ipsa dolores amet sunt fugiat voluptate.</p
 					> -->
 					<UButton
-						label="Learn More"
+						label="See our Aviation Portfolio"
 						color="focusyellow"
 						class="text-midnight-950 alink"
-						to="/portfolio?category=Industrial"
+						to="/portfolio?category=Aviation"
 					/>
 					<NuxtImg
 						class="accordion-image"
@@ -165,7 +155,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel" aria-expanded="false">
+			<div class="accordion-panel">
 				<h3 id="panel4-heading">
 					<button
 						class="accordion-trigger"
@@ -185,15 +175,11 @@
 					aria-hidden="true"
 					role="region"
 				>
-					<!-- <p
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex,
-						ipsa dolores amet sunt fugiat voluptate.</p
-					> -->
 					<UButton
-						label="Learn More"
+						label="See our Residential Portfolio"
 						color="focusyellow"
 						class="text-midnight-950 alink"
-						to="/portfolio?category=Industrial"
+						to="/portfolio?category=Residential+%26+Hospitality"
 					/>
 					<NuxtImg
 						class="accordion-image"
@@ -206,7 +192,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel" aria-expanded="false">
+			<div class="accordion-panel">
 				<h3 id="panel5-heading">
 					<button
 						class="accordion-trigger"
@@ -228,15 +214,11 @@
 					aria-hidden="true"
 					role="region"
 				>
-					<!-- <p
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex,
-						ipsa dolores amet sunt fugiat voluptate.</p
-					> -->
 					<UButton
-						label="Learn More"
+						label="See our Worship Centers Portfolio"
 						color="focusyellow"
 						class="text-midnight-950 alink"
-						to="/portfolio?category=Industrial"
+						to="/portfolio?category=Worship+Centers"
 					/>
 					<NuxtImg
 						class="accordion-image"
@@ -249,7 +231,7 @@
 					/>
 				</div>
 			</div>
-			<div class="accordion-panel" aria-expanded="false">
+			<div class="accordion-panel">
 				<h3 id="panel6-heading">
 					<button
 						class="accordion-trigger"
@@ -269,15 +251,11 @@
 					aria-hidden="true"
 					role="region"
 				>
-					<!-- <p
-						>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex,
-						ipsa dolores amet sunt fugiat voluptate.</p
-					> -->
 					<UButton
-						label="Learn More"
+						label="See our Commercial Office Portfolio"
 						color="focusyellow"
 						class="text-midnight-950 alink"
-						to="/portfolio?category=Industrial"
+						to="/portfolio?category=Commercial+Office+%26+Retail"
 					/>
 					<NuxtImg
 						class="accordion-image"

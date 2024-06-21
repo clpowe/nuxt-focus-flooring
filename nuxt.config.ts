@@ -54,6 +54,10 @@ export default defineNuxtConfig({
 		componentInspector: true,
 		enabled: true
 	},
+	sourcemap: {
+		server: true,
+		client: false
+	},
 	extends: ['@nuxt/ui-pro'],
 	modules: [
 		'nuxt-vercel-analytics',
@@ -66,8 +70,7 @@ export default defineNuxtConfig({
 		'@nuxt/image-edge',
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
-		'@nuxt/image',
-		'@nuxtjs/partytown'
+		'@nuxt/image'
 	],
 	nitro: {
 		compressPublicAssets: true,

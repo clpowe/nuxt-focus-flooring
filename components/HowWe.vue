@@ -6,7 +6,8 @@
 			title: 'Preconstruction',
 			description:
 				'We will partner with you to ensure you stay within your budget throughout all pricing efforts and obtain cost certainty for your project.',
-			link: '/our-process#preconstruction'
+			link: '/our-process#preconstruction',
+			linkText: 'more about our process'
 		},
 		{
 			icon: 'how_three',
@@ -14,7 +15,8 @@
 			title: 'Project Planning',
 			description:
 				'Our internal tools such as our “Material Lead Time” report, “Production” report and “Mobilization” report, are system generated to equip you with what you need, when you need it.',
-			link: '/our-process#project-planning'
+			link: '/our-process#project-planning',
+			linkText: 'more about how we plan'
 		},
 		// {
 		// 	icon: 'how_two',
@@ -31,7 +33,8 @@
 			title: 'Project Execution',
 			description:
 				'Through our full-time onsite supervision, a dedicated field technician and QAQC protocols, we are able to implement our “Zero Punch” philosophy reducing all quality punch list items to almost “0”.',
-			link: '/our-process#project-execution'
+			link: '/our-process#project-execution',
+			linkText: 'more about project execution'
 		}
 	]
 </script>
@@ -67,13 +70,13 @@
 						<h3 class="step-title mt-5 font-bold text-2xl text-white">{{
 							step.title
 						}}</h3>
-						<p class="mt-1 text-neutral-400">
+						<p class="mt-1 text-neutral-400 pb-4">
 							{{ step.description }}
 						</p>
 						<ULink
 							:to="step.link"
-							class="uppercase font-bold text-[var(--focus-white)] :hover:text-red-500"
-							>Learn More</ULink
+							class="uppercase font-bold text-[var(--focus-white)] hover:text-[var(--focus-yellow)]"
+							>{{ step.linkText }}</ULink
 						>
 					</div>
 				</div>
