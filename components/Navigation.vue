@@ -50,10 +50,12 @@
 <template>
 	<UHeader :links="links" class="reletive">
 		<template #logo>
-			<img
+			<NuxtImg
 				src="/Focus_Flooring_logo_white.svg"
 				alt="Focus Flooring Logo"
 				width="120"
+				fit="contain"
+				height="30"
 			/>
 		</template>
 		<template #right>

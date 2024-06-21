@@ -46,6 +46,9 @@ export default defineNuxtConfig({
 		'@/assets/css/tailwind.css'
 	],
 	vite: {
+		css: {
+			lightningcss: {}
+		},
 		plugins: [
 			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme
 		]

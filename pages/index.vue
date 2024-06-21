@@ -288,10 +288,10 @@
 					>serve</span
 				>
 			</h2>
-			<ExpanderMenuCopy />
+			<LazyExpanderMenuCopy />
 		</section>
 		<section class="max-w-[85rem] px-4 py-14 mx-auto bg-[var(--midnight)]">
-			<HowWe />
+			<LazyHowWe />
 		</section>
 	</main>
 </template>
