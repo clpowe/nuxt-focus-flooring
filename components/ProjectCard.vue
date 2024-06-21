@@ -34,7 +34,12 @@
 
 <template>
 	<UBlogPost
-		:image="{ src: srcImg, alt: alt, format: 'webp' }"
+		:image="{
+			src: srcImg,
+			alt: alt,
+			format: 'webp',
+			sizes: `150px sm:225px md:350px`
+		}"
 		:title="name"
 		description="As Envision Flooring"
 		:ui="{
