@@ -19,15 +19,15 @@
 			button.setAttribute('aria-expanded', 'false')
 		})
 		links?.forEach((link) => {
-			// @ts-ignore
-			link.disabled = true
+			link.style.display = 'none'
+			link.setAttribute('disabled', 'true')
 		})
 		contents?.forEach((content) => {
 			content.setAttribute('aria-hidden', 'true')
 		})
 
-		// @ts-ignore
-		panalToActivate.querySelector('.alink').disabled = false
+		panalToActivate.querySelector('.alink').style.display = 'block'
+		panalToActivate.querySelector('.alink').setAttribute('disabled', 'false')
 		panalToActivate
 			.querySelector('.accordion-trigger')
 			?.setAttribute('aria-expanded', 'true')
