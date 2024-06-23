@@ -109,7 +109,7 @@
 					/>
 					<NuxtImg
 						class="accordion-image"
-						src="/Healthcare.jpeg"
+						src="/TGH_New_Physicians_Lounge.jpeg"
 						fit="fit"
 						format="webp"
 						loading="lazy"
