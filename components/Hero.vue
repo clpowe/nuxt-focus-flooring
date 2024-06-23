@@ -24,6 +24,7 @@
 		<NuxtImg
 			fit="exact"
 			quality="90"
+			aria-hidden="true"
 			sizes="100vw sm:400px md:600px lg:800px xl:1400px"
 			:src="img"
 			class="w-full absolute h-full object-cover image"
