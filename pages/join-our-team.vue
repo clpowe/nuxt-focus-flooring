@@ -21,52 +21,68 @@
 
 	const communityPictures = [
 		{
-			img: 'community/IMG_0300-2.jpg'
+			img: 'community/IMG_0300-2.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_9789.jpg'
+			img: 'community/IMG_9789.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_0570.jpg'
+			img: 'community/IMG_0570.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_0430.jpg'
+			img: 'community/IMG_0430.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_0184.jpg'
+			img: 'community/IMG_0184.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_0563.jpg'
+			img: 'community/IMG_0563.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_8186.jpg'
+			img: 'community/IMG_8186.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1564.jpg'
+			img: 'community/_DSF1564.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1229.jpg'
+			img: 'community/_DSF1229.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1267.jpg'
+			img: 'community/_DSF1267.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1746.jpg'
+			img: 'community/_DSF1746.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_6450.jpg'
+			img: 'community/IMG_6450.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/IMG_9967.jpg'
+			img: 'community/IMG_9967.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1185.jpg'
+			img: 'community/_DSF1185.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/DSCF9955.jpg'
+			img: 'community/DSCF9955.jpg',
+			alt: 'focus floor team photo'
 		},
 		{
-			img: 'community/_DSF1549__1_.jpg'
+			img: 'community/_DSF1549__1_.jpg',
+			alt: 'focus floor team photo'
 		}
 	]
 
@@ -264,6 +280,7 @@
 								<USelectMenu
 									padded
 									size="md"
+									aria-label="Select Department of Interest"
 									v-model="state.deptOfInterest"
 									:options="interest"
 								/>
