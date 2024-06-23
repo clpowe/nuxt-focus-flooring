@@ -109,7 +109,7 @@
 					/>
 					<NuxtImg
 						class="accordion-image"
-						src="/healthcare.jpeg"
+						src="/Healthcare.jpeg"
 						fit="fit"
 						format="webp"
 						loading="lazy"
