@@ -38,8 +38,7 @@ export default defineEventHandler(async () => {
 		.then((res) => {
 			let teamMembers: TeamMember[] = []
 			res.forEach((member) => {
-				const stringToRemove =
-					'https://v5.airtableusercontent.com/v3/u/32/32/1724385600000/'
+				const stringToRemove = `https://v5.airtableusercontent.com/v3/u/32/32/`
 
 				const resultString = member.fields.image[0].url.replace(
 					stringToRemove,

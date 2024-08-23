@@ -39,7 +39,7 @@ export default defineEventHandler(async () => {
 					let image: string = '/placeholder.jpg'
 					if (project.fields.image) {
 						const stringToRemove =
-							'https://v5.airtableusercontent.com/v3/u/32/32/1724385600000/'
+							'https://v5.airtableusercontent.com/v3/u/32/32/'
 
 						const resultString = project.fields.image[0].url.replace(
 							stringToRemove,

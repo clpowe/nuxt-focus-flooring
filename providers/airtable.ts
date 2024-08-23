@@ -7,7 +7,7 @@ export const getImage: ProviderGetImage = (
 	src,
 	{
 		modifiers = {},
-		baseURL = 'https://v5.airtableusercontent.com/v3/u/32/32/1724385600000/'
+		baseURL = 'https://v5.airtableusercontent.com/v3/u/32/32/'
 	} = {}
 ) => {
 	if (!baseURL) {
