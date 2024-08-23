@@ -1,16 +1,22 @@
 import { joinURL } from 'ufo'
 import type { ProviderGetImage } from '@nuxt/image'
+import { createOperationsGenerator } from '#image'
 
+const operationsGenerator = createOperationsGenerator()
 export const getImage: ProviderGetImage = (
 	src,
 	{
 		modifiers = {},
-		baseURL = 'https://https://v5.airtableusercontent.com/v3/u/27/27/'
+		baseURL = 'https://v5.airtableusercontent.com/v3/u/32/32/1724385600000/'
 	} = {}
 ) => {
-	// https://spoonacular.com/cdn/ingredients_{SIZE}/
+	if (!baseURL) {
+		baseURL = useRuntimeConfig().public.siteUrl
+	}
+
+	const operations = operationsGenerator(modifiers)
 
 	return {
-		url: joinURL(baseURL, src)
+		url: joinURL(baseURL, src + (operations ? '?' + operations : ''))
 	}
 }

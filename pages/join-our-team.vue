@@ -172,8 +172,9 @@
 								:alt="pic.alt"
 								provider="imagekit"
 								fit="cover"
-								height="350"
-								width="400"
+								height="380"
+								width="333"
+								sizes="100vw sm:400px md:600px lg:800px xl:1400px"
 								quality="90"
 								format="webp"
 							/>

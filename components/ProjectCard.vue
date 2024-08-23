@@ -35,10 +35,11 @@
 <template>
 	<UBlogPost
 		:image="{
+			provider: 'airtable',
 			src: srcImg,
 			alt: alt,
 			format: 'webp',
-			sizes: `150px sm:225px md:350px`
+			sizes: '150px sm:225px md:350px'
 		}"
 		:title="name"
 		description="As Envision Flooring"
@@ -90,7 +91,14 @@
 					/>
 				</div>
 			</template>
-			<NuxtImg :src="srcImg" class="w-full" :alt="alt" format="webp" />
+			<NuxtImg
+				provider="airtable"
+				:src="srcImg"
+				class="w-full"
+				:alt="alt"
+				format="webp"
+				loading="lazy"
+			/>
 			<div class="p-4">
 				<div class="p-4">
 					<p>

@@ -38,7 +38,15 @@ export default defineEventHandler(async () => {
 				if (project.fields.status === 'live') {
 					let image: string = '/placeholder.jpg'
 					if (project.fields.image) {
-						image = project.fields.image[0].url ?? '/placeholder.jpg'
+						const stringToRemove =
+							'https://v5.airtableusercontent.com/v3/u/32/32/1724385600000/'
+
+						const resultString = project.fields.image[0].url.replace(
+							stringToRemove,
+							''
+						)
+
+						image = resultString ?? '/placeholder.jpg'
 					}
 
 					projects.push({
