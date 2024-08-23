@@ -39,7 +39,8 @@
 			src: srcImg,
 			alt: alt,
 			format: 'webp',
-			sizes: '150px sm:225px md:350px'
+			sizes: '150px sm:225px md:350px',
+			placeholder
 		}"
 		:title="name"
 		description="As Envision Flooring"
