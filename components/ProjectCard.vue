@@ -91,7 +91,6 @@
 				</div>
 			</template>
 			<NuxtImg
-				provider="airtable"
 				:src="srcImg"
 				class="w-full"
 				:alt="alt"
