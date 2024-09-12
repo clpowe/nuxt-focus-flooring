@@ -5,10 +5,7 @@ import { createOperationsGenerator } from '#image'
 const operationsGenerator = createOperationsGenerator()
 export const getImage: ProviderGetImage = (
 	src,
-	{
-		modifiers = {},
-		baseURL = 'https://v5.airtableusercontent.com/v3/u/32/32/'
-	} = {}
+	{ modifiers = {}, baseURL = '' } = {}
 ) => {
 	if (!baseURL) {
 		baseURL = useRuntimeConfig().public.siteUrl

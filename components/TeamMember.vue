@@ -19,15 +19,14 @@
 	<UBlogPost
 		:title="`${firstName} ${lastName}`"
 		:image="{
-			provider: 'airtable',
 			src: srcImg,
 			alt: `Photo of ${firstName} ${lastName}`,
-			sizes: `150px sm:225px md:350px`,
-			placeholder
+			sizes: `150px sm:225px md:350px`
 		}"
 		:description="title"
 		:ui="{
 			image: {
+				base: '',
 				wrapper: 'aspect-[9/10]'
 			}
 		}"

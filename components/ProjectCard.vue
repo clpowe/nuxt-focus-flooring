@@ -35,12 +35,10 @@
 <template>
 	<UBlogPost
 		:image="{
-			provider: 'airtable',
 			src: srcImg,
 			alt: alt,
 			format: 'webp',
-			sizes: '150px sm:225px md:350px',
-			placeholder
+			sizes: '150px sm:225px md:350px'
 		}"
 		:title="name"
 		description="As Envision Flooring"

@@ -38,12 +38,12 @@ export default defineEventHandler(async () => {
 		.then((res) => {
 			let teamMembers: TeamMember[] = []
 			res.forEach((member) => {
-				const stringToRemove = `https://v5.airtableusercontent.com/v3/u/32/32/`
+				// const stringToRemove = `https://v5.airtableusercontent.com/v3/u/33/33/`
 
-				const resultString = member.fields.image[0].url.replace(
-					stringToRemove,
-					''
-				)
+				// const resultString = member.fields.image[0].url.replace(
+				// 	stringToRemove,
+				// 	''
+				// )
 
 				if (member.fields.status === 'live') {
 					teamMembers.push({
@@ -51,7 +51,7 @@ export default defineEventHandler(async () => {
 						firstName: member.get('firstName'),
 						lastName: member.fields.lastName,
 						//@ts-ignore
-						srcImg: resultString,
+						srcImg: member.fields.image[0].url,
 						title: member.fields.title,
 						category: member.fields.category,
 						bio: member.fields.bio,
