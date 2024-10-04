@@ -5,6 +5,7 @@
 
 	// Get Team Member
 	const route = useRoute()
+	console.log(route.params.name)
 	const { data: team } = await useTeam()
 	const TeamMember = team.value?.find((t) => t.slug === route.params.name)
 
@@ -58,11 +59,7 @@
 				<p class="text-white">{{ TeamMember?.title }}</p>
 			</div>
 			<div class="col-start-1 row-span-2 row-start-2 md:row-start-1">
-				<NuxtImg
-					provider="airtable"
-					:src="TeamMember?.srcImg"
-					class="w-full md:mt-0 rounded-2xl"
-				/>
+				<NuxtImg :src="TeamMember?.srcImg" class="w-full md:mt-0 rounded-2xl" />
 				<ul class="flex flex-col mt-6">
 					<li class="listItem" v-if="TeamMember?.address">
 						<Icon name="streamline:location-pin-3" size="32" />

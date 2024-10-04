@@ -6,7 +6,7 @@ export const useTeam = () =>
 		transform: (data) => {
 			return data.map((m) => ({
 				...m,
-				slug: `${m.firstName?.toLowerCase()}${m.lastName?.toLowerCase()}`
+				slug: `${m.firstName?.toLowerCase().trim()}${m.lastName?.toLowerCase().trim()}`
 			}))
 		}
 	})
