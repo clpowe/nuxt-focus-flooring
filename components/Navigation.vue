@@ -17,6 +17,7 @@
 		},
 		{
 			label: 'About',
+			icon: 'i-heroicons-square-3-stack-3d',
 			children: [
 				{
 					label: 'About Us',
