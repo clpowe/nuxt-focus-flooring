@@ -112,6 +112,9 @@ export default defineNuxtConfig({
 			registry: {
 				googleAnalytics: {
 					id: 'G-43HSQWN2L1'
+				},
+				googleTagManager: {
+					id: 'G-43HSQWN2L1'
 				}
 			}
 		}

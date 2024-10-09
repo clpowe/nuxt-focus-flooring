@@ -150,6 +150,7 @@
 				controlslist="nofullscreen nodownload"
 				class="relative"
 				ref="vid"
+				preload="none"
 			>
 				<source
 					src="https://iz5hjhzjql5fyivm.public.blob.vercel-storage.com/Focus%20Flooring_%20Our%20Story.mp4"
