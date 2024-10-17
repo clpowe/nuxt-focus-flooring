@@ -144,8 +144,6 @@
 	<main id="main" class="main">
 		<div class="max-w-4xl -mt-24 mx-auto z-40 relative" @click="playPause">
 			<video
-				width="720"
-				height="480"
 				poster="/poster.webp"
 				controlslist="nofullscreen nodownload"
 				class="relative"

@@ -60,6 +60,9 @@ importers:
       motion:
         specifier: ^10.18.0
         version: 10.18.0
+      nuxt-lazy-load:
+        specifier: ^3.0.4
+        version: 3.0.4(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
       postcss-preset-env:
         specifier: ^7.8.3
         version: 7.8.3(postcss@8.4.47)
@@ -3485,6 +3488,9 @@ packages:
     resolution: {integrity: sha512-Cg+ygRmhonE6PwAtDeKvKU/0VRqEyzmSSoJYfr0MzwIxQYrBSnLvw0z3UgJl/8MgFKjiZ5Y4wBUEiRsUw8O6uw==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
+
+  nuxt-lazy-load@3.0.4:
+    resolution: {integrity: sha512-NlJ/E3RPnbpHIhMigVIDHJwRaTsOHP9dVSPoUH9XhHXvSAgjkywGyoFkI21t+4x5Ug1pv13sFalPE8e75SnY4w==}
 
   nuxt-schema-org@2.2.0:
     resolution: {integrity: sha512-V0LHh4A3tZSRLGv9P+SG8zm9N4e1qZt2x6z7FgL9qYjpNDyCJ5G186vmTqT4kN0JErjRiYVxantBjDQa7DcVKQ==}
@@ -9083,6 +9089,15 @@ snapshots:
   nuxi@3.7.3:
     optionalDependencies:
       fsevents: 2.3.3
+
+  nuxt-lazy-load@3.0.4(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3):
+    dependencies:
+      '@nuxt/kit': 3.13.2(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
+      - webpack-sources
 
   nuxt-schema-org@2.2.0(@unhead/vue@1.11.7(vue@3.5.11))(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3):
     dependencies:

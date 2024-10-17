@@ -42,6 +42,7 @@
 		"focus-trap": "^7.6.0",
 		"gsap": "^3.12.5",
 		"motion": "^10.18.0",
+		"nuxt-lazy-load": "^3.0.4",
 		"postcss-preset-env": "^7.8.3",
 		"preline": "^2.5.0",
 		"vue-multiselect": "3.0.0-beta.2",
