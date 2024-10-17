@@ -52,6 +52,7 @@
 						src="/Focus_Flooring_logo_white.svg"
 						alt="Focus Flooring Logo"
 						width="200"
+						height="30"
 					/>
 				</NuxtLink>
 			</div>
