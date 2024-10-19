@@ -40,7 +40,8 @@ export default defineNuxtConfig({
 		'/about-us': { prerender: true },
 		'join-our-team': { prerender: true },
 		'our-history': { prerender: true },
-		'our-process': { prerender: true }
+		'our-process': { prerender: true },
+		'/sitemap.xml': { prerender: true }
 	},
 
 	css: [
@@ -81,7 +82,8 @@ export default defineNuxtConfig({
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
 		'@nuxt/image',
-		'@nuxt/scripts'
+		'@nuxt/scripts',
+		'@nuxtjs/sitemap'
 	],
 
 	nitro: {
@@ -149,5 +151,9 @@ export default defineNuxtConfig({
 
 	schemaOrg: {
 		host: 'https://focus-flooring.com'
+	},
+	site: {
+		url: 'https://focus-flooring.com',
+		name: 'Focus Flooring'
 	}
 })
