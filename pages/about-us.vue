@@ -1,6 +1,6 @@
 <script setup>
-	useHead({
-		title: 'Focus Flooring - About us',
+	useServerHead({
+		title: 'Focus Flooring | About us',
 		link: [
 			{
 				rel: 'canonical',

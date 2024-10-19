@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	useHead({
-		title: 'Focus Flooring - Portfolio',
+	useServerHead({
+		title: 'Focus Flooring | Portfolio',
 		link: [
 			{
 				rel: 'canonical',

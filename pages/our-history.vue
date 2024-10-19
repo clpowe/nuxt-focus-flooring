@@ -1,8 +1,8 @@
 <script setup lang="ts">
 	import { animate, scroll, timeline } from 'motion'
 
-	useHead({
-		title: 'Focus Flooring - Our History',
+	useServerHead({
+		title: 'Focus Flooring | Our History',
 		link: [
 			{
 				rel: 'canonical',

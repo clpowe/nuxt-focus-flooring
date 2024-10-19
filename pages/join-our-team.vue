@@ -2,8 +2,8 @@
 	import { z } from 'zod'
 	import type { FormError, FormSubmitEvent } from '#ui/types'
 
-	useHead({
-		title: 'Focus Flooring - Join our team',
+	useServerHead({
+		title: 'Focus Flooring | Join our team',
 		link: [
 			{
 				rel: 'canonical',

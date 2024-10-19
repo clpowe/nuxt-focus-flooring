@@ -1,8 +1,8 @@
 <script setup lang="ts">
 	import { useTeam } from '~/composables/states'
 
-	useHead({
-		title: 'Focus Flooring - Meet the team',
+	useServerHead({
+		title: 'Focus Flooring | Meet the team',
 		link: [
 			{
 				rel: 'canonical',
