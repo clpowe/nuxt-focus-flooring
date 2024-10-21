@@ -1,6 +1,7 @@
 <script setup lang="ts">
 	useServerHead({
 		title: 'Focus Flooring | Portfolio',
+		description: 'fhak',
 		link: [
 			{
 				rel: 'canonical',
