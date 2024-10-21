@@ -2,21 +2,10 @@
 	import { z } from 'zod'
 	import type { FormError, FormSubmitEvent } from '#ui/types'
 
-	useServerHead({
+	useServerSeoMeta({
 		title: 'Focus Flooring | Join our team',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/join-our-team'
-			}
-		],
-		meta: [
-			{
-				name: 'description',
-				content:
-					"Join the team at Focus Flooring and be part of an organization dedicated to eliminating client risks through precise processes. We're committed to fostering a positive and collaborative culture that empowers our team to illuminate the industry. Make an impact with us and grow your career in commercial flooring. Interested in joining? Fill out the form or contact us at 813-280-0621. Together, we can achieve greater success."
-			}
-		]
+		description:
+			"Join the team at Focus Flooring and be part of an organization dedicated to eliminating client risks through precise processes. We're committed to fostering a positive and collaborative culture that empowers our team to illuminate the industry. Make an impact with us and grow your career in commercial flooring. Interested in joining? Fill out the form or contact us at 813-280-0621. Together, we can achieve greater success."
 	})
 
 	const communityPictures = [

@@ -1,14 +1,8 @@
 <script setup>
-	useServerHead({
+	useServerSeoMeta({
 		title: 'About us | Focus Flooring',
 		description:
-			'Focus Flooring, a 100% minority-owned business, specializes in versatile, client-centered commercial flooring, delivering seamless results from project inception to completion.',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/about-us'
-			}
-		]
+			'Focus Flooring, a 100% minority-owned business, specializes in versatile, client-centered commercial flooring, delivering seamless results from project inception to completion.'
 	})
 
 	const coreValues = [

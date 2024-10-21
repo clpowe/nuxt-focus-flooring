@@ -1,5 +1,5 @@
 <script setup>
-	useServerHead({
+	useServerSeoMeta({
 		title: 'Focus Flooring | Contact',
 		link: [
 			{

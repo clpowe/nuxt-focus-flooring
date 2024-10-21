@@ -1,19 +1,8 @@
 <script setup>
-	useServerHead({
-		title: 'Our Process | Focus Flooring ',
+	useServerSeoMeta({
+		title: 'Our Process | Focus Flooring',
 		description:
-			'Discover our seamless flooring process from preconstruction planning and detailed proposals to efficient execution and quality assurance for every project.',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/our-process'
-			}
-		]
-	})
-
-	useSeoMeta({
-		title: '',
-		description: 'This is my amazing site, let me tell you all about it.'
+			'Discover our seamless flooring process from preconstruction planning and detailed proposals to efficient execution and quality assurance for every project.'
 	})
 
 	const nuxtApp = useNuxtApp()

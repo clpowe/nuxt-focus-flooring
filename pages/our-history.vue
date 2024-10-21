@@ -1,14 +1,9 @@
 <script setup lang="ts">
 	import { animate, scroll, timeline } from 'motion'
 
-	useServerHead({
+	useServerSeoMeta({
 		title: 'Focus Flooring | Our History',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/our-history'
-			}
-		]
+		description: 'A timeline of the history of Focus Flooring'
 	})
 
 	const dates = [

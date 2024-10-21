@@ -1,14 +1,10 @@
 <script setup lang="ts">
 	import { useTeam } from '~/composables/states'
 
-	useServerHead({
-		title: 'Focus Flooring | Meet the team',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/meet-the-team'
-			}
-		]
+	useServerSeoMeta({
+		title: 'Meet the team | Focus Flooring',
+		description:
+			'Focus Flooring, a 100% minority-owned business, specializes in versatile, client-centered commercial flooring, delivering seamless results from project inception to completion.'
 	})
 
 	const category = ref<string>('All')

@@ -1,13 +1,8 @@
 <script setup lang="ts">
-	useServerHead({
-		title: 'Focus Flooring | Portfolio',
-		description: 'fhak',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/portfolio'
-			}
-		]
+	useServerSeoMeta({
+		title: 'Portfolio | Focus Flooring',
+		description:
+			'Somme of the high quaility flooring solutions delivered by Focus flooring'
 	})
 
 	const route = useRoute()
