@@ -1,6 +1,6 @@
 <script setup lang="ts">
 	useServerHead({
-		title: 'Focus Flooring | Commercial Flooring Contractor',
+		title: 'Flooring Contractor | Focus Flooring',
 		meta: [
 			{
 				name: 'description',

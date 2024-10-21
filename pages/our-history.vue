@@ -1,8 +1,8 @@
 <script setup lang="ts">
 	import { animate, scroll, timeline } from 'motion'
 
-	useServerSeoMeta({
-		title: 'Focus Flooring | Our History',
+	useSeoMeta({
+		title: 'Our History | Focus Flooring',
 		description: 'A timeline of the history of Focus Flooring'
 	})
 

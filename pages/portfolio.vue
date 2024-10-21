@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	useServerSeoMeta({
+	useSeoMeta({
 		title: 'Portfolio | Focus Flooring',
 		description:
 			'Somme of the high quaility flooring solutions delivered by Focus flooring'

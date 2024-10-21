@@ -1,5 +1,5 @@
 <script setup>
-	useServerSeoMeta({
+	useSeoMeta({
 		title: 'Our Process | Focus Flooring',
 		description:
 			'Discover our seamless flooring process from preconstruction planning and detailed proposals to efficient execution and quality assurance for every project.'

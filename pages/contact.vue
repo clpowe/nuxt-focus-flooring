@@ -1,6 +1,6 @@
 <script setup>
-	useServerSeoMeta({
-		title: 'Focus Flooring | Contact',
+	useSeoMeta({
+		title: 'Contact | Focus Flooring',
 		link: [
 			{
 				rel: 'canonical',
