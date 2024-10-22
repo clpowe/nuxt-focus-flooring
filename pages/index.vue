@@ -1,32 +1,8 @@
 <script setup lang="ts">
-	useServerHead({
+	useSeoMeta({
 		title: 'Flooring Contractor | Focus Flooring',
-		meta: [
-			{
-				name: 'description',
-				content:
-					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
-			},
-			{
-				property: 'og:title',
-				content: 'Focus Flooring'
-			},
-			{
-				property: 'og:description',
-				content:
-					'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
-			},
-			{
-				property: 'og:url',
-				content: 'https://focus-flooring.com/'
-			}
-		],
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/'
-			}
-		]
+		description:
+			'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
 	})
 
 	const whatWeDo = [

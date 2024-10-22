@@ -1,7 +1,7 @@
 <script setup lang="ts">
 	import { useTeam } from '~/composables/states'
 
-	useServerSeoMeta({
+	useSeoMeta({
 		title: 'Meet the team | Focus Flooring',
 		description:
 			'Focus Flooring, a 100% minority-owned business, specializes in versatile, client-centered commercial flooring, delivering seamless results from project inception to completion.'

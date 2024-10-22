@@ -1,12 +1,6 @@
 <script setup>
 	useSeoMeta({
-		title: 'Contact | Focus Flooring',
-		link: [
-			{
-				rel: 'canonical',
-				href: 'https://focus-flooring.com/contact'
-			}
-		]
+		title: 'Contact | Focus Flooring'
 	})
 </script>
 

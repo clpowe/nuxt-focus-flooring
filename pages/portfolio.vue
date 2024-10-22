@@ -9,7 +9,7 @@
 	const router = useRouter()
 
 	const category = ref<any>('')
-
+	// @ts-ignore
 	category.value = route.query.category?.split('+').join('')
 		? route.query.category
 		: 'All'

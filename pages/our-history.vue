@@ -95,6 +95,7 @@
 				[item.children[0], { opacity: [1, 0], y: [0, -100] }, { at: '<' }],
 				[item.children[1], { opacity: [1, 0], y: [0, -100] }, { at: '<' }]
 			]
+			// @ts-ignore
 			scroll(timeline(sequence), {
 				target: item,
 				offset: ['start end', 'end end', 'start start', 'end start']
