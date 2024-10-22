@@ -157,24 +157,5 @@ export default defineNuxtConfig({
 		url: 'https://focus-flooring.com',
 		name: 'Focus Flooring'
 	},
-	sitemap: {
-		urls: [
-			{
-				loc: 'https://focus-flooring.com',
-				images: [
-					{
-						loc: 'https://focus-flooring.com/poster.webp',
-						caption: 'Focus Flooring | Who is flooring'
-					}
-				],
-				videos: [
-					{
-						title: 'Focus Flooring | Who is flooring',
-						thumbnail_loc: 'https://focus-flooring.com/poster.webp',
-						description: 'An introduction to Focus Flooring'
-					}
-				]
-			}
-		]
-	}
+	sitemap: {}
 })
