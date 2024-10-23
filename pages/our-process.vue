@@ -159,6 +159,15 @@
 		active: 'text-midnight-950  hover:text-midnight-950',
 		inactive: 'text-midnight-950 hover:text-midnight-950'
 	}
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
 </script>
 
 <template>

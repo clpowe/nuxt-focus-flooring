@@ -4,7 +4,15 @@
 		description:
 			'Discover advanced commercial flooring and wall tile solutions with Focus Flooring in Tampa, FL. Our "Zero Punch" philosophy ensures top-quality service with precise processes, cost certainty, and real-time schedule management. Contact us today!'
 	})
-
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
 	const whatWeDo = [
 		{
 			id: 1,

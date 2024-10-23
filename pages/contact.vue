@@ -2,6 +2,16 @@
 	useSeoMeta({
 		title: 'Contact | Focus Flooring'
 	})
+
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
 </script>
 
 <template>

@@ -8,6 +8,16 @@
 			"Join the team at Focus Flooring and be part of an organization dedicated to eliminating client risks through precise processes. We're committed to fostering a positive and collaborative culture that empowers our team to illuminate the industry. Make an impact with us and grow your career in commercial flooring. Interested in joining? Fill out the form or contact us at 813-280-0621. Together, we can achieve greater success."
 	})
 
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
+
 	const communityPictures = [
 		{
 			img: 'community/IMG_0300-2.jpg',

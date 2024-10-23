@@ -7,6 +7,16 @@
 			'Focus Flooring, a 100% minority-owned business, specializes in versatile, client-centered commercial flooring, delivering seamless results from project inception to completion.'
 	})
 
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
+
 	const category = ref<string>('All')
 
 	type TeamMember = {

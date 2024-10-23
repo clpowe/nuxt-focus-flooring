@@ -6,6 +6,16 @@
 		description: 'A timeline of the history of Focus Flooring'
 	})
 
+	const route = useRoute()
+	useHead(() => ({
+		link: [
+			{
+				rel: 'canonical',
+				href: 'focus-flooring.com/' + route.path
+			}
+		]
+	}))
+
 	const dates = [
 		{
 			year: '2005',
