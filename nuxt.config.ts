@@ -34,15 +34,13 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	robots: {},
 
 	routeRules: {
 		'/': { prerender: true },
 		'/about-us': { prerender: true },
 		'join-our-team': { prerender: true },
 		'our-history': { prerender: true },
-		'our-process': { prerender: true },
-		'/sitemap.xml': { prerender: true }
+		'our-process': { prerender: true }
 	},
 
 	css: [

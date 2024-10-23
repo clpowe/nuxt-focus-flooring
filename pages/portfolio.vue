@@ -25,7 +25,7 @@
 		link: [
 			{
 				rel: 'canonical',
-				href: 'focus-flooring.com/' + route.path
+				href: 'https://focus-flooring.com' + route.path
 			}
 		]
 	}))
