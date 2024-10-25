@@ -12,9 +12,6 @@ importers:
 
   .:
     dependencies:
-      '@nuxtjs/partytown':
-        specifier: ^1.5.0
-        version: 1.5.0(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
       '@nuxtjs/robots':
         specifier: ^3.0.0
         version: 3.0.0(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
@@ -100,6 +97,9 @@ importers:
       '@nuxtjs/google-fonts':
         specifier: 3.0.0-1
         version: 3.0.0-1(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
+      '@nuxtjs/partytown':
+        specifier: ^1.5.0
+        version: 1.5.0(magicast@0.3.5)(rollup@4.24.0)(webpack-sources@3.2.3)
       '@nuxtjs/sitemap':
         specifier: ^6.1.2
         version: 6.1.2(h3@1.13.0)(magicast@0.3.5)(rollup@4.24.0)(vite@5.4.8(@types/node@22.7.4)(sass@1.79.4)(terser@5.34.1))(vue@3.5.11)(webpack-sources@3.2.3)
