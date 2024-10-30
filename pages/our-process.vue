@@ -172,7 +172,7 @@
 
 <template>
 	<div>
-		<Hero>Our <span>Process</span> </Hero>
+		<Hero img="/ResidentialHospitality.jpeg">Our <span>Process</span> </Hero>
 		<header
 			class="flex sticky top-0 bg-neutral-300 z-10 sm:justify-start sm:flex-nowrap w-full text-sm py-4 justify-center"
 		>

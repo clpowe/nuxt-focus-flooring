@@ -136,12 +136,6 @@ export default defineNuxtConfig({
 	},
 
 	image: {
-		providers: {
-			// airtable: {
-			// 	name: 'airtable',
-			// 	provider: '../providers/airtable.ts'
-			// }
-		},
 		format: ['avif', 'webp'],
 		imagekit: {
 			baseURL: 'https://ik.imagekit.io/focusflooring/'

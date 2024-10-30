@@ -1,6 +1,4 @@
 <script setup lang="ts">
-	import { useTeam } from '~/composables/states'
-
 	useSeoMeta({
 		title: 'Meet the team | Focus Flooring',
 		description:
@@ -30,7 +28,16 @@
 		slug: string
 	}
 
-	const { data: team } = await useTeam()
+	const { data: team, status } = useFetch('/team', {
+		transform: (data) => {
+			return data.map((m) => ({
+				...m,
+				slug: `${m.firstName?.toLowerCase().trim()}${m.lastName?.toLowerCase().trim()}`
+			}))
+		},
+		lazy: true,
+		key: 'teamMembers'
+	})
 
 	const curruntMember = ref<String | null>(null)
 
@@ -72,18 +79,33 @@
 		<Hero>Meet the <span>team</span></Hero>
 
 		<div
-			class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl bg-neutral-300"
+			class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl"
 		>
-			<div class="container bg-neutral-300">
+			<div class="container">
 				<USelectMenu v-model="category" :options="catagories" />
 			</div>
 		</div>
 		<div class="container relative pb-14">
 			<div class="">
 				<main id="main">
-					<!-- <div v-if="isLoading">Loading...</div> -->
-					<div>
-						<h2 class="margin-bottom">{{ category }}</h2>
+					<h2 class="margin-bottom">{{ category }}</h2>
+					<div v-if="status === 'pending'">
+						<UBlogList
+							orientation="horizontal"
+							class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 grid-flow-dense"
+							:ui="{
+								horizontal: ''
+							}"
+						>
+							<div v-for="member in 10">
+								<USkeleton class="aspect-[9/10] w-full" />
+								<USkeleton class="mt-6 h-[28px] w-[15ch]" />
+								<USkeleton class="mt-1 h-[14px] w-[7ch]" />
+								<USkeleton class="mt-4 h-[32px] w-[95px]" />
+							</div>
+						</UBlogList>
+					</div>
+					<div v-else>
 						<UBlogList
 							orientation="horizontal"
 							class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 grid-flow-dense"

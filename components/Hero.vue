@@ -3,7 +3,7 @@
 		title: String,
 		img: {
 			type: String,
-			default: 'aviation.jpeg'
+			default: '/aviation.jpeg'
 		},
 		hasDot: {
 			type: Boolean,

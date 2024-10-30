@@ -140,7 +140,7 @@
 <template>
 	<div>
 		<div class="">
-			<Hero>Join our<span>team</span></Hero>
+			<Hero img="/TheCora.png">Join our<span>team</span></Hero>
 
 			<main id="main" class="main pt-16">
 				<article class="container space-y-6">
