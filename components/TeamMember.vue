@@ -16,21 +16,15 @@
 </script>
 
 <template>
-	<UBlogPost
-		:title="`${firstName} ${lastName}`"
-		:image="{
-			src: srcImg,
-			alt: `Photo of ${firstName} ${lastName}`,
-			sizes: `150px sm:225px md:350px`
-		}"
-		:description="title"
-		:ui="{
-			image: {
-				base: '',
-				wrapper: 'aspect-[9/10]'
-			}
-		}"
-	>
+	<div class="grid">
+		<NuxtImg
+			class="rounded-lg"
+			:src="srcImg"
+			:alt="'Photo of ' + firstName + ' ' + lastName"
+			sizes="150px sm:225px md:350px"
+		/>
+		<h3 class="mt-4"> {{ firstName }} {{ lastName }} </h3>
+		<p>{{ title }}</p>
 		<UButton
 			color="midnight"
 			v-if="bio"
@@ -39,7 +33,7 @@
 		>
 			Learn More
 		</UButton>
-	</UBlogPost>
+	</div>
 	<div
 		v-if="show && bio"
 		class="card sm:card-side text-[var(-midnight)] col-span-full relative overflow-hidden"
