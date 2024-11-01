@@ -22,6 +22,7 @@
 		<NuxtImg
 			class="rounded-lg"
 			:src="srcImg"
+			quality="80"
 			:alt="'Photo of ' + firstName + ' ' + lastName"
 			format="webp"
 			sizes="155px md:224px lg:328px"
