@@ -110,9 +110,9 @@ export default defineNuxtConfig({
 	$production: {
 		scripts: {
 			registry: {
-				googleAnalytics: {
-					id: 'G-43HSQWN2L1'
-				}
+				// googleAnalytics: {
+				// 	id: 'G-43HSQWN2L1'
+				// }
 			}
 		}
 	},
