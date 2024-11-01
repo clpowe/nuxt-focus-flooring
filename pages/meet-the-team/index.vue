@@ -108,7 +108,7 @@
 							v-auto-animate
 							id="team-grid"
 						>
-							<TeamMember
+							<LazyTeamMember
 								v-for="(member, index) in filtered"
 								:key="member.id"
 								:data-index="index"

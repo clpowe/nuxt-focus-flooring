@@ -23,7 +23,8 @@
 			class="rounded-lg"
 			:src="srcImg"
 			:alt="'Photo of ' + firstName + ' ' + lastName"
-			sizes="150px sm:225px md:350px"
+			format="webp"
+			sizes="155px md:224px lg:328px"
 		/>
 		<h3 class="mt-2"> {{ firstName }} {{ lastName }} </h3>
 		<p>{{ title }}</p>
