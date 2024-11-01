@@ -1,39 +1,44 @@
 <script setup lang="ts">
-	const props = defineProps({
-		id: String,
-		srcImg: String,
-		firstName: String,
-		lastName: String,
-		title: String,
-		bio: String,
-		group: String,
-		spaner: Boolean,
-		slug: String,
-		selected: String
-	})
+	const props = defineProps<{
+		id: string
+		srcImg: string
+		firstName: string
+		lastName: string
+		title: string
+		bio: string
+		group: string
+		spaner: boolean
+		slug: string
+		selected?: string
+	}>()
 
 	let show = computed(() => props.selected === props.id)
+
+	defineEmits(['open', 'close'])
 </script>
 
 <template>
-	<div class="grid">
+	<div class="">
 		<NuxtImg
 			class="rounded-lg"
 			:src="srcImg"
 			:alt="'Photo of ' + firstName + ' ' + lastName"
 			sizes="150px sm:225px md:350px"
 		/>
-		<h3 class="mt-4"> {{ firstName }} {{ lastName }} </h3>
+		<h3 class="mt-2"> {{ firstName }} {{ lastName }} </h3>
 		<p>{{ title }}</p>
-		<UButton
-			color="midnight"
-			v-if="bio"
-			class="mt-4 bg-midnight-950"
-			@click="$emit('open')"
-		>
-			Learn More
-		</UButton>
+		<div>
+			<UButton
+				color="midnight"
+				v-if="bio"
+				class="mt-4 bg-midnight-950"
+				@click="$emit('open')"
+			>
+				Learn More
+			</UButton>
+		</div>
 	</div>
+
 	<div
 		v-if="show && bio"
 		class="card sm:card-side text-[var(-midnight)] col-span-full relative overflow-hidden"
