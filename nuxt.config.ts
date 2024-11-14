@@ -60,6 +60,26 @@ export default defineNuxtConfig({
 		'nuxt-swiper',
 		'@nuxt/image'
 	],
+	nitro: {
+		compressPublicAssets: true,
+		devProxy: {
+			host: "127.0.0.1",
+		},
+		routeRules: {
+			"/team": {
+				cache: {
+					maxAge: 20 * 60 * 1000,
+					swr: false,
+				},
+			},
+			"/projects": {
+				cache: {
+					maxAge: 20 * 60 * 1000,
+					swr: false,
+				},
+			},
+		},
+	},
 	features: {
 		devLogs: false
 		// or 'silent' to allow you to handle yourself with `dev:ssr-logs` hook
