@@ -148,13 +148,13 @@ export default defineNuxtConfig({
 			'/team': {
 				cache: {
 					maxAge: 20 * 60 * 1000,
-					swr: true
+					swr: false
 				}
 			},
 			'/projects': {
 				cache: {
 					maxAge: 20 * 60 * 1000,
-					swr: true
+					swr: false
 				}
 			}
 		}
