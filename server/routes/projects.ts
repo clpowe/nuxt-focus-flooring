@@ -27,7 +27,7 @@ type Project = {
 }
 
 export default defineEventHandler(async () => {
-	const team = base('Table 1')
+	const projects = base('Table 1')
 		.select({
 			view: 'Grid view'
 		})
@@ -36,9 +36,17 @@ export default defineEventHandler(async () => {
 			let projects: Project[] = []
 			res.forEach((project) => {
 				if (project.fields.status === 'live') {
-					let image = '/placeholder.jpg'
+					let image: string = '/placeholder.jpg'
 					if (project.fields.image) {
-						image = project.fields.image[0].url
+						const stringToRemove =
+							'https://v5.airtableusercontent.com/v3/u/32/32/'
+
+						const resultString = project.fields.image[0].url.replace(
+							stringToRemove,
+							''
+						)
+
+						image = resultString ?? '/placeholder.jpg'
 					}
 
 					projects.push({
@@ -57,5 +65,5 @@ export default defineEventHandler(async () => {
 		})
 		.catch((error) => console.log(error))
 
-	return team
+	return projects
 })

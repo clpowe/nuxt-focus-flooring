@@ -15,7 +15,7 @@ type image = {
 
 type TeamMember = {
 	id?: string
-	image?: image[]
+	image?: image
 	srcImg?: string
 	firstName?: string
 	lastName?: string
@@ -38,6 +38,13 @@ export default defineEventHandler(async () => {
 		.then((res) => {
 			let teamMembers: TeamMember[] = []
 			res.forEach((member) => {
+				// const stringToRemove = `https://v5.airtableusercontent.com/v3/u/33/33/`
+
+				// const resultString = member.fields.image[0].url.replace(
+				// 	stringToRemove,
+				// 	''
+				// )
+
 				if (member.fields.status === 'live') {
 					teamMembers.push({
 						id: member.id,
