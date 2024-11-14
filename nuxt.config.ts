@@ -2,26 +2,16 @@ import svgLoader from 'vite-svg-loader'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-<<<<<<< HEAD
-=======
 	compatibilityDate: '2024-10-04',
 	future: {
 		compatibilityVersion: 4
 	},
->>>>>>> 6dd3464 (update config)
 	app: {
 		head: {
 			htmlAttrs: {
 				lang: 'en-US'
 			},
 			charset: 'utf-16',
-<<<<<<< HEAD
-			viewport: 'width=500, initial-scale=1',
-			title: 'Focus Flooring',
-			meta: [
-				// <meta name="description" content="My amazing site">
-				{ name: 'description', content: 'My amazing site.' }
-=======
 			viewport: 'width=device-width,initial-scale=1.0',
 			title: 'Focus Flooring',
 			meta: [
@@ -30,7 +20,6 @@ export default defineNuxtConfig({
 					content:
 						'Looking for reliable commercial flooring solutions? Focus Flooring in Tampa delivers projects on time and within budget. Our minority-owned business offers expert installation of carpet, wood, tile, stone, and more, ensuring precision, cost certainty. Contact us for top-quality, innovative flooring in healthcare, industrial, aviation, and other sectors.'
 				}
->>>>>>> 6dd3464 (update config)
 			],
 			link: [
 				{
@@ -48,30 +37,6 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-<<<<<<< HEAD
-	css: ['@/assets/css/tailwind.scss'],
-	vite: {
-		plugins: [
-			svgLoader() // https://github.com/jpkleemans/vite-svg-loader#readme
-		],
-		css: {
-			preprocessorOptions: {
-				sass: {
-					additionalData: '@import "@/assets/css/_variables.scss"'
-				}
-			}
-		}
-	},
-	extends: ['@nuxt/ui-pro'],
-	modules: [
-		'@nuxt/devtools',
-		'nuxt-vercel-analytics',
-		'@vueuse/nuxt',
-		'@formkit/nuxt',
-		'@nuxt/ui',
-		'@nuxtjs/google-fonts',
-		'nuxt-icon',
-=======
 
 	routeRules: {
 		'/': { prerender: true },
@@ -115,25 +80,10 @@ export default defineNuxtConfig({
 		'@formkit/auto-animate/nuxt',
 		'@nuxtjs/google-fonts',
 		'@nuxt/icon',
->>>>>>> 6dd3464 (update config)
 		'@nuxtjs/robots',
 		'@nuxt/image-edge',
 		'@nuxtjs/tailwindcss',
 		'nuxt-schema-org',
-<<<<<<< HEAD
-		'nuxt-swiper',
-		'@nuxt/image'
-	],
-	features: {
-		devLogs: false
-		// or 'silent' to allow you to handle yourself with `dev:ssr-logs` hook
-	},
-	colorMode: {
-		preference: 'light'
-	},
-	plugins: ['~/plugins/preline.client.ts'],
-	googleFonts: {
-=======
 		'@nuxt/image',
 		'@nuxt/scripts',
 		'@nuxtjs/sitemap'
@@ -170,16 +120,10 @@ export default defineNuxtConfig({
 
 	googleFonts: {
 		display: 'swap',
->>>>>>> 6dd3464 (update config)
 		families: {
 			Inter: [400, 700]
 		}
 	},
-<<<<<<< HEAD
-	build: {
-		transpile: ['@nuxt/image']
-	},
-=======
 	$production: {
 		scripts: {
 			registry: {
@@ -194,7 +138,6 @@ export default defineNuxtConfig({
 		transpile: ['@nuxt/image']
 	},
 
->>>>>>> 6dd3464 (update config)
 	postcss: {
 		plugins: {
 			'postcss-preset-env': {
@@ -202,45 +145,18 @@ export default defineNuxtConfig({
 				features: {
 					'nesting-rules': true
 				}
-<<<<<<< HEAD
-			}
-		}
-	},
-	formkit: {
-		configFile: './formkit.config.ts'
-	},
-=======
 			},
 			cssnano: {},
 			autoprefixer: {}
 		}
 	},
 
->>>>>>> 6dd3464 (update config)
 	image: {
 		format: ['avif', 'webp'],
 		imagekit: {
 			baseURL: 'https://ik.imagekit.io/focusflooring/'
 		}
 	},
-<<<<<<< HEAD
-	schemaOrg: {
-		host: 'https://focus-flooring.com'
-	},
-	devServer: {
-		port: 8000
-	},
-	$development: {
-		nitro: {
-			storage: {
-				projects: {
-					driver: 'fs',
-					base: 'projects'
-				}
-			}
-		}
-	}
-=======
 
 	schemaOrg: {
 		host: 'https://focus-flooring.com'
@@ -250,5 +166,4 @@ export default defineNuxtConfig({
 		name: 'Focus Flooring'
 	},
 	sitemap: {}
->>>>>>> 6dd3464 (update config)
 })
