@@ -37,7 +37,6 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-
 	routeRules: {
 		'/': { prerender: true },
 		'/about-us': { prerender: true },

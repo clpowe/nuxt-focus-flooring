@@ -20,7 +20,7 @@
 	}))
 
 	const category = ref<string>('All')
-	const curruntMember = ref<String | null>(null)
+	const curruntMember = ref<string | null>(null)
 
 	type TeamMember = {
 		id: string
@@ -36,6 +36,7 @@
 	// Use lazy loading with suspense for better hydration handling
 	const { data: team, status } = useFetch('/team', {
 		transform: (data) => {
+			console.log(data)
 			return data.map((m) => ({
 				...m,
 				slug: `${m.firstName?.toLowerCase().trim()}${m.lastName?.toLowerCase().trim()}`
@@ -70,6 +71,7 @@
 	onMounted(() => {
 		isMounted.value = true
 	})
+
 </script>
 
 <template>

@@ -56,7 +56,11 @@ type Project = {
   date?: Date;
 };
 
-const { data: projects } = useProjects();
+const { data: projects } = await useFetch("/api/projects",{
+		key: 'projects'
+}); 
+
+console.log(projects)
 
 const filteredProjects = computed(() => {
   if (projects.value === null) return;
@@ -69,9 +73,9 @@ const filteredProjects = computed(() => {
 
 const catagories = computed(() => {
   if (!projects.value) return ["All"];
-  projects.value.forEach((project: Project) =>
-    set.value.add(project.category?.trim()),
-  );
+  for (const project of projects.value as Project[]) {
+    set.value.add(project.category?.trim());
+  }
   return Array.from(set.value);
 });
 </script>

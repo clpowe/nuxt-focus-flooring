@@ -1,24 +1,31 @@
 <script setup lang="ts">
 	const props = defineProps<{
 		id: string
-		srcImg: string
-		firstName: string
-		lastName: string
-		title: string
-		bio: string
-		group: string
-		spaner: boolean
-		slug: string
+		srcImg?: string
+		firstName?: string
+		lastName?: string
+		title?: string
+		bio?: string
+		group?: string
+		spaner?: boolean
+		slug?: string
 		selected?: string
+		category?: string
+		office?: string
+		mobile?: string
+		address?: string
+		email?: string
+		allowMessage?: boolean
+		dataIndex?: number
 	}>()
 
-	let show = computed(() => props.selected === props.id)
+	const show = computed(() => props.selected === props.id)
 
 	defineEmits(['open', 'close'])
 </script>
 
 <template>
-	<div class="">
+	<div class="" :data-index="dataIndex">
 		<NuxtImg
 			class="rounded-lg"
 			:src="srcImg"

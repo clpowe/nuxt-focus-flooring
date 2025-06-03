@@ -1,71 +1,35 @@
 import Airtable from 'airtable'
 
-Airtable.configure({ apiKey: process.env.AIRTABLE_TOKEN })
-var base = Airtable.base('appX4S4Y72F1Ppq2Q')
-
-type image = {
-	id: string
-	width: number
-	height: number
-	url: string
-	size: number
-	type: string
-	thumbnails: any
-}
-
-type TeamMember = {
-	id?: string
-	image?: image
-	srcImg?: string
-	firstName?: string
-	lastName?: string
-	title?: string
-	bio?: string
-	category?: string
-	office?: string
-	mobile?: string
-	address?: string
-	email?: string
-	allowMessage?: boolean
-}
-
 export default defineEventHandler(async () => {
-	const team = base('Table 1')
-		.select({
-			view: 'Grid view'
-		})
-		.all()
-		.then((res) => {
-			let teamMembers: TeamMember[] = []
-			res.forEach((member) => {
-				// const stringToRemove = `https://v5.airtableusercontent.com/v3/u/33/33/`
+	Airtable.configure({ apiKey: process.env.AIRTABLE_TOKEN })
+	const base = Airtable.base('appX4S4Y72F1Ppq2Q')
 
-				// const resultString = member.fields.image[0].url.replace(
-				// 	stringToRemove,
-				// 	''
-				// )
+	try {
+		const records = await base('Table 1').select({ view: 'Grid view' }).all()
 
-				if (member.fields.status === 'live') {
-					teamMembers.push({
-						id: member.id,
-						firstName: member.get('firstName'),
-						lastName: member.fields.lastName,
-						//@ts-ignore
-						srcImg: member.fields.image[0].url,
-						title: member.fields.title,
-						category: member.fields.category,
-						bio: member.fields.bio,
-						office: member.fields.office,
-						mobile: member.fields.mobile,
-						address: member.fields.address,
-						email: member.fields.email,
-						allowMessage: member.fields.allowMessage
-					} as TeamMember)
-				}
-			})
-			return teamMembers
-		})
-		.catch((error) => console.log(error))
+		const teamMembers = records
+			.filter((r) => r.fields.status === 'live')
+			.map((r) => {
+				const img = r.fields.image?.[0]?.url.replace(/^.{35}/, "https://ik.imagekit.io/focusflooring/");
+				
+				return {
+				id: r.id,
+				firstName: r.get('firstName') as string,
+				lastName: r.fields.lastName as string,
+				srcImg: img,
+				title: r.fields.title as string,
+				category: r.fields.category as string,
+				bio: r.fields.bio as string,
+				office: r.fields.office as string,
+				mobile: r.fields.mobile as string,
+				address: r.fields.address as string,
+				email: r.fields.email as string,
+				allowMessage: r.fields.allowMessage as boolean
+			}})
 
-	return team
+		return teamMembers
+	} catch (err) {
+		console.error(err)
+		return []
+	}
 })

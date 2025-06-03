@@ -10,7 +10,7 @@ type image = {
 	url: string
 	size: number
 	type: string
-	thumbnails: any
+	thumbnails: { [key: string]: { url: string } }
 }
 
 type Project = {
@@ -27,26 +27,20 @@ type Project = {
 }
 
 export default defineEventHandler(async () => {
+	console.log('server/projects')
 	const projects = base('Table 1')
 		.select({
 			view: 'Grid view'
 		})
 		.all()
 		.then((res) => {
-			let projects: Project[] = []
-			res.forEach((project) => {
+			const projects: Project[] = []
+			for (const project of res) {
 				if (project.fields.status === 'live') {
-					let image: string = '/placeholder.jpg'
-					if (project.fields.image) {
-						const stringToRemove =
-							'https://v5.airtableusercontent.com/v3/u/32/32/'
-
-						const resultString = project.fields.image[0].url.replace(
-							stringToRemove,
-							''
-						)
-
-						image = resultString ?? '/placeholder.jpg'
+					let img: string | undefined = undefined;
+					const images = project.fields.image;
+					if (Array.isArray(images) && images.length > 0 && typeof images[0] === 'object' && images[0] !== null && 'url' in images[0]) {
+						img = (images[0] as { url: string }).url.replace(/^.{35}/, "https://ik.imagekit.io/focusflooring/");
 					}
 
 					projects.push({
@@ -56,14 +50,16 @@ export default defineEventHandler(async () => {
 						cost: project.fields.cost,
 						client: project.fields.client,
 						scope: project.fields.scope,
-						srcImg: image,
+						srcImg: img,
 						category: project.fields.category
 					} as Project)
 				}
-			})
+			}
 			return projects
 		})
 		.catch((error) => console.log(error))
+
+	
 
 	return projects
 })
