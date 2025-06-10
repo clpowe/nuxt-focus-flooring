@@ -85,6 +85,7 @@ export default defineNuxtConfig({
 		'nuxt-schema-org',
 		'@nuxt/image',
 		'@nuxt/scripts',
+		'@nuxtjs/critters',
 		'@nuxtjs/sitemap'
 	],
 
