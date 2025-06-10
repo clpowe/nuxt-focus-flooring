@@ -33,6 +33,7 @@
 			quality="80"
 			:alt="'Photo of ' + firstName + ' ' + lastName"
 			format="webp"
+			height="410"
 			sizes="155px md:351px lg:328px"
 		/>
 		<h3 class="mt-2"> {{ firstName }} {{ lastName }} </h3>
