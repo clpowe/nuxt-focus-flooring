@@ -10,7 +10,7 @@ export default defineEventHandler(async () => {
 		const teamMembers = records
 			.filter((r) => r.fields.status === 'live')
 			.map((r) => {
-				const img = r.fields.image?.[0]?.url.replace(/^.{35}/, "https://ik.imagekit.io/focusflooring/");
+				const img = r.fields.image?.[0]?.url.replace(/^.{35}/, "");
 				return {
 				id: r.id,
 				firstName: r.get('firstName') as string,

@@ -27,12 +27,13 @@
 <template>
 	<div class="" :data-index="dataIndex">
 		<NuxtImg
+			provider="imagekit"
 			class="rounded-lg"
 			:src="srcImg"
 			quality="80"
 			:alt="'Photo of ' + firstName + ' ' + lastName"
 			format="webp"
-			sizes="155px md:224px lg:328px"
+			sizes="155px md:351px lg:328px"
 		/>
 		<h3 class="mt-2"> {{ firstName }} {{ lastName }} </h3>
 		<p>{{ title }}</p>
