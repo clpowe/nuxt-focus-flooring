@@ -44,12 +44,16 @@ export default defineNuxtConfig({
 		'our-history': { prerender: true },
 		'our-process': { prerender: true }
 	},
+	
 
 	css: [
 		'@/assets/css/tokens.css',
 		'@/assets/css/reset.css',
 		'@/assets/css/tailwind.css'
 	],
+	ui: {
+    colorMode: false,
+  },
 
 	vite: {
 		css: {

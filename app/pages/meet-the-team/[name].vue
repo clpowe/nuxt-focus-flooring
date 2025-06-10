@@ -5,7 +5,7 @@
 
 	// Get Team Member
 	const route = useRoute()
-	console.log(route.params.name)
+
 	const { data: team } = await useTeam()
 	const TeamMember = team.value?.find((t) => t.slug === route.params.name)
 

@@ -34,9 +34,8 @@
 	}
 
 	// Use lazy loading with suspense for better hydration handling
-	const { data: team, status } = useFetch('/team', {
+	const { data: team, status } = useFetch('/api/team', {
 		transform: (data) => {
-			console.log(data)
 			return data.map((m) => ({
 				...m,
 				slug: `${m.firstName?.toLowerCase().trim()}${m.lastName?.toLowerCase().trim()}`

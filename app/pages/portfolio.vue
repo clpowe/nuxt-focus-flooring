@@ -60,7 +60,7 @@ const { data: projects } = await useFetch("/api/projects",{
 		key: 'projects'
 }); 
 
-console.log(projects)
+
 
 const filteredProjects = computed(() => {
   if (projects.value === null) return;

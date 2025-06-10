@@ -27,7 +27,7 @@ type Project = {
 }
 
 export default defineEventHandler(async () => {
-	console.log('server/projects')
+	
 	const projects = base('Table 1')
 		.select({
 			view: 'Grid view'

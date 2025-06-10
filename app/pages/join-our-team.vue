@@ -13,7 +13,7 @@
 		link: [
 			{
 				rel: 'canonical',
-				href: 'https://focus-flooring.com' + route.path
+				href: `https://focus-flooring.com${route.path}`
 			}
 		]
 	}))
@@ -115,13 +115,13 @@
 	})
 
 	type Schema = z.output<typeof schema>
-	let pending = ref(false)
-	let success = ref(false)
-	let fail = ref(false)
+	const pending = ref(false)
+	const success = ref(false)
+	const fail = ref(false)
 	async function onSubmit(event: FormSubmitEvent<Schema>) {
 		pending.value = true
 		try {
-			const res: any = await $fetch('/join-our-team', {
+			const res:unknown = await $fetch('/join-our-team', {
 				method: 'POST',
 				body: event.data
 			})
@@ -132,7 +132,7 @@
 		} catch (error) {
 			pending.value = false
 			fail.value = true
-			console.log(error)
+		
 		}
 	}
 </script>

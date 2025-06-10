@@ -11,7 +11,6 @@ export default defineEventHandler(async () => {
 			.filter((r) => r.fields.status === 'live')
 			.map((r) => {
 				const img = r.fields.image?.[0]?.url.replace(/^.{35}/, "https://ik.imagekit.io/focusflooring/");
-				
 				return {
 				id: r.id,
 				firstName: r.get('firstName') as string,
@@ -26,7 +25,6 @@ export default defineEventHandler(async () => {
 				email: r.fields.email as string,
 				allowMessage: r.fields.allowMessage as boolean
 			}})
-
 		return teamMembers
 	} catch (err) {
 		console.error(err)
