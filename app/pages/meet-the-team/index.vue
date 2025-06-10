@@ -91,17 +91,16 @@ onMounted(() => {
 
 					<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-16 grid-flow-dense"
 						v-auto-animate id="team-grid">
-						<div v-if="status === 'pending'">
-							<div v-for="member in filtered.length">
-								<USkeleton class="rounded-lg w-full aspect-[308/385]" />
-								<USkeleton class="mt-4 h-5" />
-								<USkeleton class="h-2" />
-								<USkeleton class="mt-4 h-8" />
-							</div>
-						</div>
-						<LazyTeamMember v-else v-for="(member, index) in filtered" :key="member.id" :data-index="index"
-							:selected="curruntMember" v-bind="member" @open="handleClick(member.id)"
+						<TeamMember v-if="status === 'success'" v-for="(member, index) in filtered" :key="member.id"
+							:data-index="index" :selected="curruntMember" v-bind="member" @open="handleClick(member.id)"
 							@close="handleClose" />
+						<div v-else v-for="member in filtered.length">
+							<USkeleton class="rounded-lg w-full aspect-[308/385]" />
+							<USkeleton class="mt-4 h-5" />
+							<USkeleton class="h-2" />
+							<USkeleton class="mt-4 h-8" />
+						</div>
+
 					</div>
 
 				</main>
