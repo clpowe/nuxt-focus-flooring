@@ -2,7 +2,7 @@ export const useDrawer = () => useState<boolean>('drawer', () => false)
 export const useNavDrawer = () => useState<boolean>('navDrawer', () => false)
 
 export const useTeam = () =>
-	useAsyncData('team', () => $fetch('/team'), {
+	useAsyncData('team', () => $fetch('/api/team'), {
 		transform: (data) => {
 			return data.map((m) => ({
 				...m,
