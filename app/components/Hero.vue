@@ -21,7 +21,7 @@ defineProps({
 			<div v-if="hasDot" class="dot"></div>
 		</div>
 
-		<NuxtImg provider="imagekit" fit="exact" quality="80" aria-hidden="true" format="webp" height="255"
+		<NuxtImg provider="imagekit" fit="exact" quality="80" aria-hidden="true" format="webp" width="1000" height="255"
 			sizes="100vw sm:400px md:600px lg:800px xl:1000px" :src="img"
 			class="w-full absolute h-full object-cover image" placeholder />
 	</div>
