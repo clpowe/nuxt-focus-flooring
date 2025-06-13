@@ -1,7 +1,7 @@
 <script setup>
-	defineProps({
-		title: String
-	})
+defineProps({
+	title: String
+})
 </script>
 
 <template>
@@ -11,9 +11,7 @@
 				<div class="max-w-2xl text-center mx-auto">
 					<!-- Title -->
 					<div class="mt-5">
-						<h1
-							class="block font-extrabold text-white text-4xl md:text-5xl lg:text-6xl mx-auto"
-						>
+						<h1 class="block font-extrabold text-white text-4xl md:text-5xl lg:text-6xl mx-auto">
 							<slot name="header" />
 						</h1>
 					</div>
@@ -37,22 +35,11 @@
 				</div>
 			</div>
 			<div class="absolute inset-x-0 bottom-0 max-w-[100ch] m-auto -z-10">
-				<svg
-					id="uuid-ede1c65f-6d61-4296-8317-3ea68a441a71"
-					xmlns="http://www.w3.org/2000/svg"
-					xmlns:xlink="http://www.w3.org/1999/xlink"
-					viewBox="0 0 1552 776"
-				>
+				<svg id="uuid-ede1c65f-6d61-4296-8317-3ea68a441a71" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1552 776" height="505">
 					<defs>
-						<radialGradient
-							id="uuid-58a7a71f-3bb0-4b76-a463-fa64ba41cc0f"
-							cx="771.93"
-							cy="497.02"
-							fx="771.93"
-							fy="915.91"
-							r="652.24"
-							gradientUnits="userSpaceOnUse"
-						>
+						<radialGradient id="uuid-58a7a71f-3bb0-4b76-a463-fa64ba41cc0f" cx="771.93" cy="497.02"
+							fx="771.93" fy="915.91" r="652.24" gradientUnits="userSpaceOnUse">
 							<stop offset="0" stop-color="#cce70b" />
 							<stop offset=".87" stop-color="#cce70b" stop-opacity="0" />
 						</radialGradient>
@@ -62,8 +49,7 @@
 						style="
 							fill: url(#uuid-58a7a71f-3bb0-4b76-a463-fa64ba41cc0f);
 							stroke-width: 0px;
-						"
-					/>
+						" />
 				</svg>
 			</div>
 		</div>
@@ -71,56 +57,58 @@
 </template>
 
 <style scoped>
-	.blob {
-		background: linear-gradient(
-			to right,
+.blob {
+	background: linear-gradient(to right,
 			rgba(23, 29, 26, 1) 0%,
-			rgba(204, 231, 11, 1) 100%
-		);
-		aspect-ratio: 1;
-		height: 300px;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		translate: -50% -50%;
-		border-radius: 50%;
-		animation: rotate 20s infinite;
+			rgba(204, 231, 11, 1) 100%);
+	aspect-ratio: 1;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	border-radius: 50%;
+	animation: rotate 20s infinite;
+}
+
+@keyframes rotate {
+	from {
+		rotate: 0deg;
 	}
 
-	@keyframes rotate {
-		from {
-			rotate: 0deg;
-		}
-		50% {
-			scale: 1 1.5;
-		}
-		to {
-			rotate: 360deg;
-		}
+	50% {
+		scale: 1 1.5;
 	}
 
-	.blur {
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		z-index: 2;
-		backdrop-filter: blur(200px);
+	to {
+		rotate: 360deg;
 	}
-	.hero {
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: bottom;
-	}
-	.h-image {
-		filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
-	}
+}
 
-	.content {
-		box-sizing: border-box;
-		display: flex;
-		width: 100%;
-		align-items: baseline;
-		justify-items: center;
-		z-index: 2;
-	}
+.blur {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+	backdrop-filter: blur(200px);
+}
+
+.hero {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+}
+
+.h-image {
+	filter: opacity(1) brightness(0.1) grayscale(1) saturate(0) contrast(0.8);
+}
+
+.content {
+	box-sizing: border-box;
+	display: flex;
+	width: 100%;
+	align-items: baseline;
+	justify-items: center;
+	z-index: 2;
+}
 </style>

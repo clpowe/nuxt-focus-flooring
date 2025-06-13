@@ -133,8 +133,10 @@ function playPause() {
 		<div class="max-w-[85rem] px-4 pt-20 pb-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
 			<div class="md:grid md:grid-cols-2 md:items-center md:gap-12">
 				<div>
-					<nuxt-img class="w-full h-full" fit="cover" src="/WhoWeAre.webp" format="webp"
-						sizes="100vw sm:400px md:600px" alt="Man instaliing flooring wearing a yellow shirt" />
+					<NuxtImg class="w-full h-full" height="416" width="624" fit="cover"
+						src="https://ik.imagekit.io/focusflooring/home%20page%201_HDVknoSqN?updatedAt=1749784662362"
+						format="webp" sizes="100vw sm:400px md:600px"
+						alt="Man instaliing flooring wearing a yellow shirt" />
 				</div>
 				<div class="mt-5 sm:mt-10 lg:mt-0">
 					<div class="space-y-6 sm:space-y-8">
