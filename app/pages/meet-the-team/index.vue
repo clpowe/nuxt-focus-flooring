@@ -77,10 +77,8 @@ onMounted(() => {
 	<div>
 		<Hero>Meet the <span>team</span></Hero>
 		<div class="sticky top-0 form-control w-full bg-[var(--midnight)] mb-8 py-4 z-10 shadow-xl">
-			<div class="container">
-				<ClientOnly>
-					<USelectMenu v-model="category" :options="catagories" />
-				</ClientOnly>
+			<div v-if="category.length > 0" class="container">
+				<USelectMenu v-model="category" :options="catagories" />
 			</div>
 		</div>
 
